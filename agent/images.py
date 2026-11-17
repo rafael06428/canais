@@ -4,7 +4,7 @@ usage: python3 images.py <prompts_json> <out_dir> [WxH]
   prompts_json: ["prompt 0", "prompt 1", ...]  ->  out_dir/NNN.jpg (1344x768) + out_dir/NNN.npy (depth)
 Already-downloaded images are skipped, so the script can be re-run after a failure.
 """
-import io, json, os, sys, time, urllib.parse, urllib.request
+import io, json, os, sys, time, urllib.error, urllib.parse, urllib.request
 import numpy as np, cv2
 from PIL import Image
 
@@ -14,14 +14,23 @@ STYLE = ", cinematic film still, photorealistic, dramatic natural lighting, 35mm
 
 
 KEY = os.environ.get("POLLINATIONS_KEY", "").strip()      # free account key (sk_...): real Flux, no rate limit
-MODEL = os.environ.get("IMG_MODEL", "flux")
+MODELS = [m.strip() for m in os.environ.get("IMG_MODEL", "klein,flux").split(",") if m.strip()]   # first = best; next ones are fallbacks
 
 
 def fetch(prompt, seed, W=W, H=H):
     q = urllib.parse.quote(prompt + STYLE, safe="")
     if KEY:
-        url = f"https://gen.pollinations.ai/image/{q}?width={W}&height={H}&model={MODEL}&nologo=true&private=true&seed={seed}"
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Authorization": f"Bearer {KEY}"})
+        last = None
+        for m in MODELS:   # e.g. out of pollen for the better model -> try the cheaper one
+            url = f"https://gen.pollinations.ai/image/{q}?width={W}&height={H}&model={urllib.parse.quote(m, safe='')}&nologo=true&private=true&seed={seed}"
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Authorization": f"Bearer {KEY}"})
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    return r.read()
+            except urllib.error.HTTPError as e:
+                last = e
+                if e.code not in (402, 403, 429): raise
+        raise last
     else:
         url = f"https://image.pollinations.ai/prompt/{q}?width={W}&height={H}&model=flux&nologo=true&seed={seed}"
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
