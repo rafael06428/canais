@@ -27,6 +27,16 @@ def clean(b, W=W, H=H):
     if min(w, h) < 340:
         raise ValueError(f"too small {w}x{h}")
     im = im.crop((0, 0, w, int(h * 0.93)))            # drop the bottom strip (watermark)
+    g = np.asarray(im.convert("L"), np.float32)
+    def edge(rows):                                   # skip flat letterbox bands (white/black lines)
+        n = 0
+        for r in rows:
+            if r.std() < 7 and n < len(rows) * 0.12: n += 1
+            else: break
+        return n
+    t, b = edge(g), edge(g[::-1]); l, r = edge(g.T), edge(g.T[::-1])
+    if t or b or l or r:
+        im = im.crop((l + 2 * (l > 0), t + 2 * (t > 0), im.width - r - 2 * (r > 0), im.height - b - 2 * (b > 0)))
     s = max(W / im.width, H / im.height)
     im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
     x, y = (im.width - W) // 2, (im.height - H) // 2

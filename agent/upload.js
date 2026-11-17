@@ -20,24 +20,36 @@ window.ytUpload = async (job) => {
   if (!inp) throw 'no file input';
   const dt = new DataTransfer(); dt.items.add(file); inp.files = dt.files; inp.dispatchEvent(new Event('change', { bubbles: true }));
   let d; for (let i = 0; i < 60; i++) { d = document.querySelector('ytcp-uploads-dialog'); if (d && d.querySelectorAll('#textbox[contenteditable=true]').length >= 2) break; await s(500); }
-  await s(1500); st('details');
+  await s(4000); st('details');   // YouTube fills the title with the file name a moment later: wait, then overwrite and verify
   const boxes = [...d.querySelectorAll('#textbox[contenteditable=true]')];
   const set = (el, t) => { el.focus(); document.execCommand('selectAll', false, null); document.execCommand('insertText', false, t); el.dispatchEvent(new Event('input', { bubbles: true })); };
-  set(boxes[0], job.title.slice(0, 100)); set(boxes[1], job.description.slice(0, 4900)); await s(500);
-  if (job.thumb) {
+  for (let k = 0; k < 3; k++) {
+    set(boxes[0], job.title.slice(0, 100)); set(boxes[1], job.description.slice(0, 4900)); await s(1500);
+    if (boxes[0].innerText.trim() === job.title.slice(0, 100).trim() && boxes[1].innerText.trim().length > 10) break;
+  }
+  if (job.thumb) {   // only works once the channel is phone-verified
     try {
       const tb = await (await fetch(job.thumb)).blob();
-      const ti = d.querySelector('ytcp-thumbnails-compact-editor-uploader input[type=file], #file-loader');
+      const ti = d.querySelector('#file-loader');
       if (ti && !ti.disabled) { const t2 = new DataTransfer(); t2.items.add(new File([tb], 'thumb.jpg', { type: 'image/jpeg' })); ti.files = t2.files; ti.dispatchEvent(new Event('change', { bubbles: true })); await s(2500); }
     } catch (e) { console.log('thumb skipped', e); }
   }
   d.querySelector('tp-yt-paper-radio-button[name=VIDEO_MADE_FOR_KIDS_NOT_MFK]')?.click();
-  d.querySelector('#toggle-button')?.click(); await s(1200);
+  d.querySelector('#toggle-button')?.click(); await s(1500);
   for (const n of ['VIDEO_HAS_ALTERED_CONTENT_YES', 'VIDEO_PAID_PRODUCT_PLACEMENT_NO']) d.querySelector(`tp-yt-paper-radio-button[name=${n}]`)?.click();
   if (job.tags && job.tags.length) {
-    const ti = d.querySelector('ytcp-form-input-container#tags-container input, #tags-container input#text-input, input[aria-label*="Tags"], input[aria-label*="tags"]');
-    if (ti) { ti.focus(); document.execCommand('insertText', false, job.tags.join(',') + ','); ti.dispatchEvent(new Event('input', { bubbles: true })); await s(400); }
+    const ti = d.querySelector('input[aria-label="Tags"]');
+    if (ti) { ti.focus(); document.execCommand('insertText', false, job.tags.join(',') + ','); await s(400); ti.dispatchEvent(new Event('change', { bubbles: true })); ti.blur(); await s(500); }
   }
+  const pick = async (sel, label) => {   // dropdowns: video language, category
+    const el = d.querySelector(sel); if (!el) return;
+    (el.querySelector('ytcp-dropdown-trigger, #trigger, [role=button]') || el).click(); await s(1200);
+    const it = [...document.querySelectorAll('tp-yt-paper-item, [role=option]')].filter(e => e.offsetParent).find(e => e.innerText.trim() === label);
+    if (it) it.click(); else document.body.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    await s(700);
+  };
+  await pick('ytcp-form-language-input#language-input', 'Inglês');
+  await pick('ytcp-form-select#category', 'Educação');
   await s(500); st('steps');
   for (let i = 0; i < 3; i++) { d.querySelector('#next-button').click(); await s(1800); }
   d.querySelector('tp-yt-paper-radio-button[name=PUBLIC]').click(); await s(800);

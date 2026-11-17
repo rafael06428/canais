@@ -10,6 +10,7 @@ Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 
 ## Hard rules (from the channel owner)
 - **Do not use fal.ai, Wan or any paid generation.** Images: Pollinations (free, `images.py`). Voice: Microsoft Edge neural voices (free, `voice.py`).
+- The free image tier is ~1 request / 15 s (≈30 min for 90 images) and its model is weak with ships, boats and crowds of objects: it often swaps "lifeboat" for a sailing ship. Prefer concrete, simple prompts ("small wooden rowboat full of people in coats"), avoid naming famous ships/landmarks inside interior or object prompts, and when a re-roll still fails, reuse a good image from a nearby scene (copy both `.jpg` and `.npy`).
 - **Every Short needs an audio loop.** The last block stops mid-sentence and the first block completes it, e.g. last: *"They never knew they"* + first: *"only had eighteen hours."*
 - **Always upload the subtitles.**
 - Publish directly as **Public**. Use the settings Not made for kids, Altered/synthetic content = Yes, No paid promotion.
@@ -92,7 +93,8 @@ Check: `ffprobe` the durations, Read `thumb.jpg`, and run `python3 render_short.
 `python3 publish.py /home/claude/ep /home/claude/canais` puts the files on the `media` branch and writes `ep/upload.json`.
 In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `https://studio.youtube.com/channel/UCqNclACz0xvuvrYg3RP6BkQ/videos/upload?d=ud`:
 1. Paste `agent/upload.js` with javascript_tool, then start the long video job: `window.__res=null; ytUpload({...upload.long, thumb: upload.long.thumb}).then(r=>window.__res=r).catch(e=>window.__res='ERR '+e); 'started'`. Poll `window.__state+' | '+window.__res` every ~45 s until it returns a link.
-2. **Subtitles:** open `https://studio.youtube.com/video/<ID>/translations`. If asked, set the video language to English. On the English row, choose Add (Adicionar), then Upload file (Enviar arquivo), then **With timing** (Com marcação de tempo), then Continue (Continuar). Before Continue, override `HTMLInputElement.prototype.click` for `type=file` so the native picker doesn't open. Then set `#captions-file-loader` from the SRT URL (fetch, `DataTransfer`, `change`) and click **Publish (Publicar)**. Confirm the row shows Published (Publicada).
+   (`ytUpload` also sets tags, video language = Inglês and category = Educação. If the dialog shows the file name as title, the title/description didn't stick: set them again before publishing.)
+2. **Subtitles:** open `https://studio.youtube.com/video/<ID>/translations`. If asked, set the video language to English. Hover the English row and click its **Adicionar** button (use `find "Adicionar"`), then Upload file (Enviar arquivo), then **With timing** (Com marcação de tempo), then Continue (Continuar). Before Continue, override `HTMLInputElement.prototype.click` for `type=file` so the native picker doesn't open. Then set `#captions-file-loader` from the SRT URL (fetch, `DataTransfer`, `change`) and click **Publish (Publicar)**. Confirm the row shows Published (Publicada).
 3. Shorts: for each item in `upload.shorts`, replace `{LONG_URL}` with the long video link and run the same `ytUpload`. Reload the upload URL before each one.
 4. Verify on `…/videos/short` and `…/videos/upload` that everything is Public. If one failed, retry it once and don't duplicate.
 
