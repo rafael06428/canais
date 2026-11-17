@@ -18,6 +18,8 @@ EP = json.load(open(f"{ED}/episode.json")); V = json.load(open(f"{ED}/voice.json
 SCENES = [s for c in EP["chapters"] for s in c["scenes"]]
 CHAP = [ci for ci, c in enumerate(EP["chapters"]) for _ in c["scenes"]]
 NS = len(SCENES); DUR = V["dur"]
+import os as _os
+if _os.environ.get("RENDER_UNTIL"): DUR = min(DUR, float(_os.environ["RENDER_UNTIL"]))   # partial preview render
 B = V["blocks"]
 starts = [0.0] + [B[i][0] - 0.2 for i in range(1, NS)]
 ends = starts[1:] + [DUR]

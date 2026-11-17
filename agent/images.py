@@ -17,8 +17,45 @@ KEY = os.environ.get("POLLINATIONS_KEY", "").strip()      # free account key (sk
 MODELS = [m.strip() for m in os.environ.get("IMG_MODEL", "klein,flux").split(",") if m.strip()]   # first = best; next ones are fallbacks
 
 
+CF_ACC = os.environ.get("CF_ACCOUNT_ID", "").strip()     # free Cloudflare Workers AI: 10,000 neurons/day
+CF_TOK = os.environ.get("CF_API_TOKEN", "").strip()
+CF_KLEIN_MAX = int(os.environ.get("CF_KLEIN_MAX", 55))     # ~100 neurons each at 1024x576; the rest use flux-1-schnell (~58)
+_cf_count = 0
+
+
+def cf_run(model, prompt, seed, W, H):
+    import base64, uuid
+    url = f"https://api.cloudflare.com/client/v4/accounts/{CF_ACC}/ai/run/@cf/black-forest-labs/{model}"
+    hdr = {"Authorization": f"Bearer {CF_TOK}", "User-Agent": "Mozilla/5.0"}
+    if model.startswith("flux-2"):                         # FLUX.2 models take multipart form data
+        b = uuid.uuid4().hex; parts = []
+        for k, v in (("prompt", prompt), ("width", W), ("height", H), ("seed", seed)):
+            parts.append(f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n')
+        body = ("".join(parts) + f"--{b}--\r\n").encode(); hdr["Content-Type"] = f"multipart/form-data; boundary={b}"
+    else:
+        body = json.dumps({"prompt": prompt, "steps": 4, "seed": seed}).encode(); hdr["Content-Type"] = "application/json"
+    with urllib.request.urlopen(urllib.request.Request(url, data=body, headers=hdr), timeout=180) as r:
+        data = r.read(); ct = r.headers.get("Content-Type", "")
+    if "json" in ct:
+        j = json.loads(data)
+        if not j.get("success", True): raise RuntimeError(str(j.get("errors"))[:200])
+        return base64.b64decode(j["result"]["image"])
+    return data
+
+
 def fetch(prompt, seed, W=W, H=H):
+    global _cf_count
     q = urllib.parse.quote(prompt + STYLE, safe="")
+    if CF_ACC and CF_TOK:
+        w, h = (1024, 576) if W >= H else (576, 1024)
+        models = (["flux-2-klein-4b"] if _cf_count < CF_KLEIN_MAX else []) + ["flux-1-schnell"]
+        last = None
+        for m in models:
+            try:
+                b = cf_run(m, (prompt + STYLE)[:2000], seed, w, h); _cf_count += 1; return b
+            except Exception as e:
+                last = e; print("cloudflare", m, "failed:", str(e)[:120], flush=True)
+        if not KEY: raise last
     if KEY:
         last = None
         for m in MODELS:   # e.g. out of pollen for the better model -> try the cheaper one
@@ -90,7 +127,7 @@ def main(prompts, out, W=W, H=H):
                     print("retry", i, a, e, flush=True); time.sleep(18 + a * 6)
             if not os.path.exists(f):
                 raise SystemExit(f"image {i} failed")
-            time.sleep(float(os.environ.get("IMG_GAP", 1 if KEY else 14)))  # anonymous tier: ~1 request per 15 s
+            time.sleep(float(os.environ.get("IMG_GAP", 1 if (KEY or CF_ACC) else 14)))  # anonymous tier: ~1 request per 15 s
         if not os.path.exists(f[:-4] + ".npy"):
             np.save(f[:-4] + ".npy", depth(f).astype(np.float16))
         print(f"img {i + 1}/{len(prompts)}", flush=True)

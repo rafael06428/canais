@@ -9,7 +9,8 @@ Channel: **You Were There POV**, @youwereintime, ID `UCqNclACz0xvuvrYg3RP6BkQ`.
 Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 
 ## Hard rules (from the channel owner)
-- **Do not use fal.ai, Wan or any paid generation.** Images: Pollinations (free, `images.py`). Voice: Microsoft Edge neural voices (free, `voice.py`).
+- **Do not use fal.ai, Wan or any paid generation.** Images: **Cloudflare Workers AI free tier** (`images.py` with `CF_ACCOUNT_ID`/`CF_API_TOKEN`: FLUX.2 klein 4B for the first 55 images of a run, then flux-1-schnell; 10,000 free neurons/day, reset 00:00 UTC ≈ 21:00 Brasília). Voice: Microsoft Edge neural voices (free, `voice.py`).
+- Budget the daily quota: ~90 long-video scenes + ~18 Short images. Don't re-roll more than ~10 images. If Cloudflare answers with a quota/limit error, the script falls back to Pollinations (anonymous = weak model): re-check those images strictly and reuse good nearby images instead of publishing bad ones.
 - The free image tier is ~1 request / 15 s (≈30 min for 90 images) and its model is weak with ships, boats and crowds of objects: it often swaps "lifeboat" for a sailing ship. Prefer concrete, simple prompts ("small wooden rowboat full of people in coats"), avoid naming famous ships/landmarks inside interior or object prompts, and when a re-roll still fails, reuse a good image from a nearby scene (copy both `.jpg` and `.npy`).
 - **Every Short needs an audio loop.** The last block stops mid-sentence and the first block completes it, e.g. last: *"They never knew they"* + first: *"only had eighteen hours."*
 - **Always upload the subtitles.**
