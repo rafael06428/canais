@@ -59,10 +59,10 @@ def main(prompts, out, W=W, H=H):
                 try:
                     clean(fetch(p, 1000 + i * 7 + a, W, H), W, H).save(f, quality=93); break
                 except Exception as e:
-                    print("retry", i, a, e, flush=True); time.sleep(8 + a * 6)
+                    print("retry", i, a, e, flush=True); time.sleep(18 + a * 6)
             if not os.path.exists(f):
                 raise SystemExit(f"image {i} failed")
-            time.sleep(1.5)
+            time.sleep(float(os.environ.get("IMG_GAP", 14)))  # anonymous tier: ~1 request per 15 s
         if not os.path.exists(f[:-4] + ".npy"):
             np.save(f[:-4] + ".npy", depth(f).astype(np.float16))
         print(f"img {i + 1}/{len(prompts)}", flush=True)

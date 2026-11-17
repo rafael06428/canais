@@ -29,6 +29,7 @@ and `edge-tts --proxy "$HTTPS_PROXY" --text test --write-media /tmp/t.mp3`.
 If either is refused by the proxy, stop. Send the owner one PushNotification saying which domain must be allowed in Claude Settings > Capabilities (`image.pollinations.ai`, `speech.platform.bing.com`).
 
 ### 1. Pick today's topic (automatic)
+- If `agent/topics_done.json` already has an entry with today's date (America/Sao_Paulo), a video was already published today: stop quietly (no notification).
 - Read `agent/topics_done.json` and never repeat a topic.
 - Do 3 to 5 WebSearches for what's being searched now: history anniversaries this week, recent discoveries, trending documentaries or films, viral history topics. Pick the most clickable topic that fits **"you are there, hour by hour, would you survive?"** Good fits: disasters, sieges, famous last days, escapes, expeditions, plagues, shipwrecks, eruptions, heists, battles seen from a soldier or civilian.
 - Rotate eras and regions. Don't pick the same century or region two days in a row.
@@ -83,7 +84,7 @@ Structure (like Pompeii):
 cd /home/claude/canais/agent && python3 make.py /home/claude/ep voice && python3 make.py /home/claude/ep images
 python3 make.py /home/claude/ep audio && python3 make.py /home/claude/ep preview
 ```
-**Look at** `/home/claude/ep/preview_long.jpg` with Read. If an image is broken, off-topic, has text or gore, or anachronisms, rewrite that scene's prompt, delete `img/NNN.*` and rerun `make.py … images`.
+**Look at the images**: build contact sheets of `img/*.jpg` (e.g. 12 per sheet) and Read them all. The free image model often draws ships/buildings distorted or adds wrong objects when prompts are long or name famous landmarks: for any bad image, rewrite the prompt shorter and more concrete (subject, setting, light; avoid brand/landmark names), delete `img/NNN.*`, rerun `make.py … images`. Then **look at** `/home/claude/ep/preview_long.jpg` with Read. If an image is broken, off-topic, has text or gore, or anachronisms, rewrite that scene's prompt, delete `img/NNN.*` and rerun `make.py … images`.
 Then run `python3 make.py /home/claude/ep` (long render ~40 min, srt, thumb, shorts). Use a long timeout or `run_in_background` and poll.
 Check: `ffprobe` the durations, Read `thumb.jpg`, and run `python3 render_short.py ep/shorts/K "<label>" "<footer>" preview` for each Short, then Read `preview.jpg`.
 

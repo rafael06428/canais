@@ -91,11 +91,18 @@ def build(spec, out):
     voice = spec.get("voice", "en-US-AndrewMultilingualNeural"); rate = spec.get("rate", "+0%")
     lead = spec.get("lead", 0.25)
     parts = [np.zeros(int(SR * lead), np.float32)]; t = lead; allw = []; spans = []
+    async def all_blocks():
+        sem = asyncio.Semaphore(6)
+        async def one(b):
+            async with sem:
+                return await synth(b["text"], voice, rate)
+        return await asyncio.gather(*[one(b) for b in spec["blocks"]])
+    res = None if os.environ.get("VOICE_FAKE") else asyncio.run(all_blocks())
     for bi, b in enumerate(spec["blocks"]):
-        if os.environ.get("VOICE_FAKE"):
+        if res is None:
             a, words = fake(b["text"])
         else:
-            mp3, words = asyncio.run(synth(b["text"], voice, rate))
+            mp3, words = res[bi]
             a, words = trim(mp3_to_np(mp3), words)
         words = align(b["text"], words)
         d = len(a) / SR
@@ -104,7 +111,6 @@ def build(spec, out):
         g = b.get("gap", spec.get("gap", GAP_BLOCK))
         if bi == len(spec["blocks"]) - 1: g = spec.get("tail", g)
         parts.append(np.zeros(int(SR * g), np.float32)); t += g
-        print(f"voice {bi + 1}/{len(spec['blocks'])} {d:.1f}s", flush=True)
     a = np.concatenate(parts); a = a / max(1e-6, np.abs(a).max()) * 0.92
     sf.write(out + ".wav", a, SR)
     json.dump({"dur": len(a) / SR, "words": allw, "blocks": spans}, open(out + ".json", "w"), ensure_ascii=False)
