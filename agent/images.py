@@ -1,0 +1,73 @@
+"""Scene images from Pollinations (free Flux) + MiDaS depth maps for parallax.
+
+usage: python3 images.py <prompts_json> <out_dir> [WxH]
+  prompts_json: ["prompt 0", "prompt 1", ...]  ->  out_dir/NNN.jpg (1344x768) + out_dir/NNN.npy (depth)
+Already-downloaded images are skipped, so the script can be re-run after a failure.
+"""
+import io, json, os, sys, time, urllib.parse, urllib.request
+import numpy as np, cv2
+from PIL import Image
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+W, H = 1344, 768
+STYLE = ", cinematic film still, photorealistic, dramatic natural lighting, 35mm, shallow depth of field, no text, no watermark, no letters"
+
+
+def fetch(prompt, seed, W=W, H=H):
+    q = urllib.parse.quote(prompt + STYLE, safe="")
+    url = f"https://image.pollinations.ai/prompt/{q}?width={W}&height={H}&model=flux&nologo=true&seed={seed}"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return r.read()
+
+
+def clean(b, W=W, H=H):
+    im = Image.open(io.BytesIO(b)).convert("RGB")
+    w, h = im.size
+    if min(w, h) < 340:
+        raise ValueError(f"too small {w}x{h}")
+    im = im.crop((0, 0, w, int(h * 0.93)))            # drop the bottom strip (watermark)
+    s = max(W / im.width, H / im.height)
+    im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
+    x, y = (im.width - W) // 2, (im.height - H) // 2
+    return im.crop((x, y, x + W, y + H))
+
+
+_depth = None
+def depth(path):
+    global _depth
+    import onnxruntime as ort
+    if _depth is None:
+        _depth = ort.InferenceSession(os.path.join(HERE, "midas_small.onnx"))
+    im = cv2.cvtColor(cv2.imread(path), cv2.COLOR_BGR2RGB).astype(np.float32) / 255
+    x = cv2.resize(im, (256, 256), interpolation=cv2.INTER_CUBIC)
+    x = (x - [0.485, 0.456, 0.406]) / [0.229, 0.224, 0.225]
+    d = _depth.run(None, {"0": x.transpose(2, 0, 1)[None].astype(np.float32)})[0][0]
+    d = (d - d.min()) / max(1e-6, d.max() - d.min())          # 1 = near
+    return cv2.GaussianBlur(d.astype(np.float32), (0, 0), 2)
+
+
+def main(prompts, out, W=W, H=H):
+    os.makedirs(out, exist_ok=True)
+    for i, p in enumerate(prompts):
+        f = f"{out}/{i:03d}.jpg"
+        if not os.path.exists(f):
+            if os.environ.get("IMG_FAKE"):
+                src = sorted(x for x in os.listdir(os.environ["IMG_FAKE"]) if x.endswith(".jpg"))
+                clean(open(os.path.join(os.environ["IMG_FAKE"], src[i % len(src)]), "rb").read(), W, H).save(f, quality=93)
+            for a in range(0 if os.path.exists(f) else 6):
+                try:
+                    clean(fetch(p, 1000 + i * 7 + a, W, H), W, H).save(f, quality=93); break
+                except Exception as e:
+                    print("retry", i, a, e, flush=True); time.sleep(8 + a * 6)
+            if not os.path.exists(f):
+                raise SystemExit(f"image {i} failed")
+            time.sleep(1.5)
+        if not os.path.exists(f[:-4] + ".npy"):
+            np.save(f[:-4] + ".npy", depth(f).astype(np.float16))
+        print(f"img {i + 1}/{len(prompts)}", flush=True)
+
+
+if __name__ == "__main__":
+    size = [int(x) for x in sys.argv[3].split("x")] if len(sys.argv) > 3 else (W, H)
+    main(json.load(open(sys.argv[1])), sys.argv[2], *size)
