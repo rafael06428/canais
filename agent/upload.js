@@ -22,7 +22,8 @@ window.ytUpload = async (job) => {
   let d; for (let i = 0; i < 60; i++) { d = document.querySelector('ytcp-uploads-dialog'); if (d && d.querySelectorAll('#textbox[contenteditable=true]').length >= 2) break; await s(500); }
   await s(4000); st('details');   // YouTube fills the title with the file name a moment later: wait, then overwrite and verify
   const boxes = [...d.querySelectorAll('#textbox[contenteditable=true]')];
-  const set = (el, t) => { el.focus(); document.execCommand('selectAll', false, null); document.execCommand('insertText', false, t); el.dispatchEvent(new Event('input', { bubbles: true })); };
+  // select only this box's text (selectAll can grab the whole page when the browser pane is hidden)
+  const set = (el, t) => { el.focus(); const r = document.createRange(); r.selectNodeContents(el); const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r); document.execCommand('insertText', false, t); el.dispatchEvent(new Event('input', { bubbles: true })); sel.removeAllRanges(); };
   for (let k = 0; k < 3; k++) {
     set(boxes[0], job.title.slice(0, 100)); set(boxes[1], job.description.slice(0, 4900)); await s(1500);
     if (boxes[0].innerText.trim() === job.title.slice(0, 100).trim() && boxes[1].innerText.trim().length > 10) break;
@@ -41,21 +42,29 @@ window.ytUpload = async (job) => {
     const ti = d.querySelector('input[aria-label="Tags"]');
     if (ti) { ti.focus(); document.execCommand('insertText', false, job.tags.join(',') + ','); await s(400); ti.dispatchEvent(new Event('change', { bubbles: true })); ti.blur(); await s(500); }
   }
-  const pick = async (sel, label) => {   // dropdowns: video language, category
+  const pick = async (sel, label) => {   // dropdowns: video language, category (lists are long: search all items, scroll, click)
     const el = d.querySelector(sel); if (!el) return;
     (el.querySelector('ytcp-dropdown-trigger, #trigger, [role=button]') || el).click(); await s(1200);
-    const it = [...document.querySelectorAll('tp-yt-paper-item, [role=option]')].filter(e => e.offsetParent).find(e => e.innerText.trim() === label);
-    if (it) it.click(); else document.body.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', bubbles: true }));
+    const it = [...document.querySelectorAll('tp-yt-paper-item, [role=option]')].find(e => e.innerText.trim() === label);
+    if (it) { it.scrollIntoView({ block: 'center' }); await s(300); it.click(); }
+    else (document.activeElement || document.body).dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', keyCode: 27, bubbles: true }));
     await s(700);
   };
   await pick('ytcp-form-language-input#language-input', 'Inglês');
   await pick('ytcp-form-select#category', 'Educação');
+  for (let k = 0; k < 3 && boxes[0].innerText.trim() !== job.title.slice(0, 100).trim(); k++) {   // re-check after the dropdowns
+    set(boxes[0], job.title.slice(0, 100)); set(boxes[1], job.description.slice(0, 4900)); await s(1500);
+  }
+  if (boxes[0].innerText.trim() !== job.title.slice(0, 100).trim()) throw 'title did not stick: ' + boxes[0].innerText;
   await s(500); st('steps');
   for (let i = 0; i < 3; i++) { d.querySelector('#next-button').click(); await s(1800); }
   d.querySelector('tp-yt-paper-radio-button[name=PUBLIC]').click(); await s(800);
   st('uploading');
   const done = d.querySelector('#done-button');
-  for (let i = 0; i < 1800 && done.getAttribute('aria-disabled') === 'true'; i++) await s(1000);
+  for (let i = 0; i < 1800 && done.getAttribute('aria-disabled') === 'true'; i++) {
+    if (/limite diário de envios|daily upload limit/i.test(d.innerText)) throw 'daily upload limit reached (kept as draft)';
+    await s(1000);
+  }
   const link = [...d.querySelectorAll('a')].map(a => a.href).find(h => /shorts\/|youtu\.be\//.test(h)) || '';
   done.click(); await s(3000);
   document.querySelector('ytcp-uploads-still-processing-dialog #close-button, ytcp-video-share-dialog #close-button')?.click();

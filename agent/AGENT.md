@@ -98,9 +98,10 @@ In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `
 3. Shorts: for each item in `upload.shorts`, replace `{LONG_URL}` with the long video link and run the same `ytUpload`. Reload the upload URL before each one.
 4. Verify on `…/videos/short` and `…/videos/upload` that everything is Public. If one failed, retry it once and don't duplicate.
 
+**Daily upload limit:** until the channel is phone-verified YouTube allows only ~10 uploads a day; when reached, `ytUpload` throws `daily upload limit reached` and the video stays as a **draft** (Rascunho). Record such items in `pending` (step 5) and, at the start of the next run's publish step, open each pending draft (`https://studio.youtube.com/video/<ID>/edit` → Visibilidade → Público → Salvar) before uploading new ones.
 The thumbnail upload is skipped automatically until the channel is phone-verified. Once it is verified, the custom thumbnail goes up with the long video.
 
 ### 5. Wrap up
-- Append `{"date", "slug", "title", "long_url", "shorts": [...]}` to `agent/topics_done.json`, commit on `main` (end the message with the attribution lines from the system reminder) and `git push`.
+- Append `{"date", "slug", "title", "long_url", "shorts": [...], "pending": [{"id", "title"}]}` to `agent/topics_done.json`, commit on `main` (end the message with the attribution lines from the system reminder) and `git push`.
 - Send the owner one **PushNotification** in Portuguese: topic and links, short.
 - On a failure you can't fix in 2 tries, notify the owner in Portuguese with what failed and what is ready, then stop.

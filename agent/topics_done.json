@@ -1,4 +1,32 @@
 [
- {"date": "2026-11-16", "slug": "pompeii", "title": "24 Hours in Pompeii: Would You Have Survived?", "long_url": "https://youtu.be/wCn41oG4bnA",
-  "shorts": ["https://youtube.com/shorts/5fQUXhDiZgE", "https://youtube.com/shorts/ogM0KaBrMFc", "https://youtube.com/shorts/Hzilcv5HnPU", "https://youtube.com/shorts/9QwiDFZ9DSk", "https://youtube.com/shorts/Hsrv9Nq9PCQ"]}
+ {
+  "date": "2026-11-16",
+  "slug": "pompeii",
+  "title": "24 Hours in Pompeii: Would You Have Survived?",
+  "long_url": "https://youtu.be/wCn41oG4bnA",
+  "shorts": [
+   "https://youtube.com/shorts/5fQUXhDiZgE",
+   "https://youtube.com/shorts/ogM0KaBrMFc",
+   "https://youtube.com/shorts/Hzilcv5HnPU",
+   "https://youtube.com/shorts/9QwiDFZ9DSk",
+   "https://youtube.com/shorts/Hsrv9Nq9PCQ"
+  ]
+ },
+ {
+  "date": "2026-11-17",
+  "slug": "titanic",
+  "title": "24 Hours on the Titanic: Would You Have Survived?",
+  "long_url": "https://youtu.be/Dc4W6q9LbIU",
+  "shorts": [
+   "https://youtube.com/shorts/8d094NY2Bnc",
+   "https://youtube.com/shorts/PYV4dxSjT6E",
+   "https://youtube.com/shorts/eqxNypT65RQ"
+  ],
+  "pending": [
+   {
+    "id": "draft (search title in Studio)",
+    "title": "Your Ticket Decided If You Survived the Titanic #Shorts"
+   }
+  ]
+ }
 ]
