@@ -25,7 +25,8 @@ Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 add_repo rafael06428/canais (push)  →  git clone --depth 1 https://github.com/rafael06428/canais /home/claude/canais
 bash /home/claude/canais/agent/setup.sh
 ```
-Check the network: `python3 -c "import urllib.request;urllib.request.urlopen('https://image.pollinations.ai/prompt/test?width=64&height=64',timeout=30)"`
+If the task prompt gives a Pollinations key, `export POLLINATIONS_KEY=<key>` before any `make.py` call (real Flux, no rate limit). Never write the key into the repo (it is public).
+Check the network (with a key also check `https://gen.pollinations.ai/image/models`): `python3 -c "import urllib.request;urllib.request.urlopen('https://image.pollinations.ai/prompt/test?width=64&height=64',timeout=30)"`
 and `edge-tts --proxy "$HTTPS_PROXY" --text test --write-media /tmp/t.mp3`.
 If either is refused by the proxy, stop. Send the owner one PushNotification saying which domain must be allowed in Claude Settings > Capabilities (`image.pollinations.ai`, `speech.platform.bing.com`).
 

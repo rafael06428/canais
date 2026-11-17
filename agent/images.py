@@ -13,10 +13,18 @@ W, H = 1344, 768
 STYLE = ", cinematic film still, photorealistic, dramatic natural lighting, 35mm, shallow depth of field, no text, no watermark, no letters"
 
 
+KEY = os.environ.get("POLLINATIONS_KEY", "").strip()      # free account key (sk_...): real Flux, no rate limit
+MODEL = os.environ.get("IMG_MODEL", "flux")
+
+
 def fetch(prompt, seed, W=W, H=H):
     q = urllib.parse.quote(prompt + STYLE, safe="")
-    url = f"https://image.pollinations.ai/prompt/{q}?width={W}&height={H}&model=flux&nologo=true&seed={seed}"
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    if KEY:
+        url = f"https://gen.pollinations.ai/image/{q}?width={W}&height={H}&model={MODEL}&nologo=true&private=true&seed={seed}"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Authorization": f"Bearer {KEY}"})
+    else:
+        url = f"https://image.pollinations.ai/prompt/{q}?width={W}&height={H}&model=flux&nologo=true&seed={seed}"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=120) as r:
         return r.read()
 
@@ -26,7 +34,8 @@ def clean(b, W=W, H=H):
     w, h = im.size
     if min(w, h) < 340:
         raise ValueError(f"too small {w}x{h}")
-    im = im.crop((0, 0, w, int(h * 0.93)))            # drop the bottom strip (watermark)
+    if not KEY:
+        im = im.crop((0, 0, w, int(h * 0.93)))        # anonymous tier: drop the bottom strip (watermark)
     g = np.asarray(im.convert("L"), np.float32)
     def edge(rows):                                   # skip flat letterbox bands (white/black lines)
         n = 0
@@ -72,7 +81,7 @@ def main(prompts, out, W=W, H=H):
                     print("retry", i, a, e, flush=True); time.sleep(18 + a * 6)
             if not os.path.exists(f):
                 raise SystemExit(f"image {i} failed")
-            time.sleep(float(os.environ.get("IMG_GAP", 14)))  # anonymous tier: ~1 request per 15 s
+            time.sleep(float(os.environ.get("IMG_GAP", 1 if KEY else 14)))  # anonymous tier: ~1 request per 15 s
         if not os.path.exists(f[:-4] + ".npy"):
             np.save(f[:-4] + ".npy", depth(f).astype(np.float16))
         print(f"img {i + 1}/{len(prompts)}", flush=True)
