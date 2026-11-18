@@ -33,7 +33,7 @@ def cf_run(model, prompt, seed, W, H):
             parts.append(f'--{b}\r\nContent-Disposition: form-data; name="{k}"\r\n\r\n{v}\r\n')
         body = ("".join(parts) + f"--{b}--\r\n").encode(); hdr["Content-Type"] = f"multipart/form-data; boundary={b}"
     else:
-        body = json.dumps({"prompt": prompt, "steps": 4, "seed": seed}).encode(); hdr["Content-Type"] = "application/json"
+        body = json.dumps({"prompt": prompt, "steps": 4}).encode()   # flux-1-schnell rejects a "seed" field (400); hdr["Content-Type"] = "application/json"
     with urllib.request.urlopen(urllib.request.Request(url, data=body, headers=hdr), timeout=180) as r:
         data = r.read(); ct = r.headers.get("Content-Type", "")
     if "json" in ct:

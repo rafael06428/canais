@@ -20,13 +20,21 @@
   "shorts": [
    "https://youtube.com/shorts/8d094NY2Bnc",
    "https://youtube.com/shorts/PYV4dxSjT6E",
-   "https://youtube.com/shorts/eqxNypT65RQ"
-  ],
-  "pending": [
-   {
-    "id": "draft (search title in Studio)",
-    "title": "Your Ticket Decided If You Survived the Titanic #Shorts"
-   }
+   "https://youtube.com/shorts/eqxNypT65RQ",
+   "https://youtube.com/shorts/Wq53n9PSERs"
   ]
+ },
+ {
+  "date": "2026-11-18",
+  "slug": "lisbon-1755",
+  "title": "24 Hours in Lisbon, 1755: Would You Have Survived?",
+  "long_url": "https://youtu.be/1_3J3YuGjNQ",
+  "shorts": [
+   "https://youtube.com/shorts/b11DoqGcTTE",
+   "https://youtube.com/shorts/cGOjcFIyz-s",
+   "https://youtube.com/shorts/JxsERIhIO8U",
+   "https://youtube.com/shorts/3Q3y8VKsK_A"
+  ],
+  "pending": []
  }
 ]

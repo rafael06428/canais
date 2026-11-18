@@ -1,0 +1,806 @@
+{
+ "slug": "lisbon-1755",
+ "title": "24 Hours in Lisbon, 1755",
+ "title_yt": "24 Hours in Lisbon, 1755: Would You Have Survived?",
+ "description": "November 1, 1755. All Saints' Day in one of the richest cities in Europe. Then an earthquake, a tsunami and a fire, all in one morning. Hour by hour, what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Rev. Charles Davy's letters (in Modern History Sourcebook, Fordham University); EARTH Magazine, \"Benchmarks: November 1, 1755\"; ReVista, Harvard University (Pombal's grain decrees); New World Encyclopedia; Encyclopedia.com; California State University Long Beach timeline; Carmo Archaeological Museum.\n\nDeath toll estimates vary widely between sources. Visuals and narration are AI-generated, based on historical accounts.\n\n#History #POV #Lisbon",
+ "tags": [
+  "lisbon earthquake",
+  "1755 lisbon earthquake",
+  "would you survive",
+  "history",
+  "pov history",
+  "tsunami",
+  "lisbon",
+  "portugal history",
+  "marquis of pombal",
+  "history documentary",
+  "natural disaster",
+  "earthquake",
+  "all saints day",
+  "18th century"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "40 MINUTES\nTO RUN",
+ "thumb_scene": 39,
+ "title_card": {
+  "after_scene": 5,
+  "lines": [
+   "24 HOURS IN LISBON, 1755",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "Forty minutes from now, the river in front of you will pull back, and then come racing into the city.",
+     "prompt": "wide view of a calm river estuary at morning, wooden sailing ships at anchor, rooftops and church towers of 18th-century Lisbon, 1755 on hills, golden sunlight",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But first, look at the candles. Thousands of them, burning on every altar in the city.",
+     "prompt": "close-up of hundreds of lit candles on a gilded baroque church altar, flowers, warm glow, 18th century",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Today is a holy day. By tonight, those little flames will matter more than anyone can imagine.",
+     "prompt": "first-person view inside a crowded baroque church, people in 18th-century clothes kneeling, candlelight and incense haze",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "This is Lisbon, November first, 1755. Hour by hour, you'll face the same choices they did.",
+     "prompt": "aerial view of 18th-century Lisbon, 1755 at sunrise, terracotta roofs, white stone churches, wide river, many ships",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And by the end, you'll know whether you would have survived.",
+     "prompt": "silhouette of a young man in a tricorn hat and long coat on a hilltop overlooking an old European city at dawn, back to camera",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "9:00 AM  ·  ALL SAINTS' DAY",
+   "yt_chapter": "9:00 AM: All Saints' Day",
+   "scenes": [
+    {
+     "text": "You wake to church bells. Not one, but hundreds, ringing from every hill of the city.",
+     "prompt": "first-person view from a small wooden window, looking over old red-tiled rooftops and bell towers in morning light, 18th century",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You're twenty-four, a clerk for a cloth merchant, living in two small rooms above his shop.",
+     "prompt": "first-person view of hands buttoning a brown wool waistcoat in a simple 18th-century room, wooden furniture, morning light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Your little sister Rita is already dressed for church, in her good blue dress and a white shawl.",
+     "prompt": "young Portuguese woman in a dark blue 18th-century dress and white shawl, smiling, small room, morning light from window",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Lisbon is one of the richest cities in Europe. Gold from Brazil pours through its port every year.",
+     "prompt": "busy 18th-century harbor quay with merchants, wooden crates, barrels, sailing ships, porters carrying sacks, morning sun",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Around two hundred and fifty thousand people live here, packed into steep, narrow streets. And today is All Saints' Day. Almost everyone is heading to Mass.",
+     "prompt": "steep narrow cobblestone street in an 18th-century Portuguese city, tall plastered houses with balconies, people walking",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your first choice: the huge church down in the lower town, or the small chapel near your house?",
+     "prompt": "first-person view at a street fork, one way downhill toward a grand stone church, other way to a small whitewashed chapel",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Rita wants the big church. The music is better there, and the candles are magnificent. You follow her down the hill, into the Baixa, the low, flat heart of the city beside the river.",
+     "prompt": "young woman in blue dress and white shawl pointing down a sunny street, 18th century Lisbon, smiling",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Inside, the air is thick with incense. Every altar is covered in candles for the dead.",
+     "prompt": "interior of a vast baroque church full of worshippers, gold altars covered in burning candles, incense smoke, light beams",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "It's almost twenty to ten. The priest raises his hands. The church goes quiet.",
+     "prompt": "priest in white and gold vestments raising his hands at an altar, candles, congregation from behind, quiet moment",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "9:40 AM  ·  THE FIRST SHOCK",
+   "yt_chapter": "9:40 AM: The first shock",
+   "scenes": [
+    {
+     "text": "Then you hear it. A low rumble, like heavy carriages rolling over cobblestones outside.",
+     "prompt": "close-up of a man's face in an 18th-century church turning his head, listening, worried, candlelight",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "The candle flames start to tremble. Then the floor moves under your knees.",
+     "prompt": "close-up of a row of candle flames shaking on an altar, wax dripping, blurred motion",
+     "fx": "dust",
+     "shake": 1
+    },
+    {
+     "text": "An English clergyman in the city, Charles Davy, later wrote that his whole house began to shake from its foundations.",
+     "prompt": "18th-century gentleman at a writing desk, papers and quill trembling, ink pot tipping, sunlight through window",
+     "fx": "dust",
+     "shake": 1
+    },
+    {
+     "text": "The shaking doesn't stop. It gets stronger. Plaster rains from the ceiling.",
+     "prompt": "first-person view looking up at a baroque church ceiling cracking, plaster dust falling, people raising arms",
+     "fx": "dust",
+     "shake": 3
+    },
+    {
+     "text": "People scream and rush for the doors. Behind you, the great stone vault starts to give way.",
+     "prompt": "panicked crowd in 18th-century clothes running toward a bright church doorway, dust in the air, motion blur",
+     "fx": "smoke",
+     "shake": 3
+    },
+    {
+     "text": "Candles topple into curtains, flowers and wooden altars. Small fires catch in the dust.",
+     "prompt": "fallen candlesticks on a church floor, small flames catching on a red velvet curtain and wood, dust haze",
+     "fx": "fire",
+     "shake": 1
+    },
+    {
+     "text": "You grab Rita by the wrist and pull her toward the light of the door.",
+     "prompt": "first-person view, hand gripping a young woman's wrist in a blue sleeve, running toward a bright doorway through dust",
+     "fx": "smoke",
+     "shake": 2
+    },
+    {
+     "text": "Outside, the street is moving like a wave. Facades lean outward, then fall.",
+     "prompt": "narrow 18th-century street, tall house facades collapsing into the street, clouds of dust, people fleeing",
+     "fx": "dust",
+     "shake": 3
+    },
+    {
+     "text": "Witnesses described cracks in the ground several meters wide opening in the city center.",
+     "prompt": "large crack opening across a cobblestone square, dust rising, broken stones, 18th-century buildings behind",
+     "fx": "dust",
+     "shake": 2
+    },
+    {
+     "text": "Here's your choice: shelter in a doorway, or run through streets where buildings are still falling?",
+     "prompt": "first-person view from a stone doorway onto a dusty street full of rubble, light filtering through dust",
+     "fx": "dust",
+     "shake": 1
+    },
+    {
+     "text": "You run. The narrow streets become traps, buried under stone and timber.",
+     "prompt": "first-person view running over rubble in a narrow street, broken beams and stones, dust, people ahead",
+     "fx": "dust",
+     "shake": 2
+    },
+    {
+     "text": "There isn't one shock. There are three, spread over about ten minutes. The dust is so thick that for a while, the sun disappears.",
+     "prompt": "wide view of a city district in ruins under a sky darkened by dust, church tower half fallen, 18th century",
+     "fx": "dust",
+     "shake": 2
+    }
+   ]
+  },
+  {
+   "title": "9:50 AM  ·  THE WATERFRONT",
+   "yt_chapter": "9:50 AM: The waterfront",
+   "scenes": [
+    {
+     "text": "Everyone has the same idea: get to open ground, where nothing can fall on you.",
+     "prompt": "crowd of people in 18th-century clothes streaming down a street toward a wide open riverside square, dust behind",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "The great square by the river fills with thousands of people. The royal palace stands cracked behind them.",
+     "prompt": "huge open square beside a river crowded with 18th-century people, large cracked palace building behind, hazy light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Priests still in their vestments. Women half dressed. Nobles and servants, all on their knees together.",
+     "prompt": "people of all ranks kneeling in prayer on a riverside square, priests in vestments, women in shawls, 18th century",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Davy climbed over the ruins of a church to reach the river. He found the crowd crying out for mercy.",
+     "prompt": "man in a dusty 18th-century coat climbing over church rubble toward a river, hazy sunlight",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Rita is shaking. Her white shawl is grey with dust. But you're both alive.",
+     "prompt": "close-up of a young woman with a dusty white shawl and blue dress, frightened eyes, sitting on stone steps",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Many people crowd onto the brand new stone quay, built right out into the river.",
+     "prompt": "long stone pier extending into a calm river, crowded with people in 18th-century clothes, small boats beside it",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Others jump into small boats, hoping to get away from the city altogether.",
+     "prompt": "small wooden rowboats crowded with people in 18th-century coats pushing off from a stone quay, calm river",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then someone points at the river. Something is wrong with the water. The river is pulling back. Fast. Ships tilt in the mud. Old wrecks and lost cargo appear on the riverbed.",
+     "prompt": "river water receding, exposed muddy riverbed with old shipwreck timbers and barrels, sailing ships tilted on mud",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Some people walk out onto the mud, staring, curious.",
+     "prompt": "people in 18th-century clothes walking out onto a wide muddy riverbed, puddles reflecting the sky, ships tilted",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your choice: stay by the water with the crowd, or climb back uphill, into a burning, collapsing city? Most people stay. It's open. It feels safe.",
+     "prompt": "first-person view looking back from a riverside square at a hillside city with smoke rising, crowd around",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "But Rita tugs your sleeve. Your mother lives in Alfama, the old quarter on the hill. She wants to find her.",
+     "prompt": "young woman in blue dress tugging a man's brown wool sleeve, pointing up toward an old hillside neighborhood",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "10:20 AM  ·  THE WAVE",
+   "yt_chapter": "10:20 AM: The wave",
+   "scenes": [
+    {
+     "text": "About forty minutes after the earthquake, people near the water start shouting the same words.",
+     "prompt": "close-up of a frightened man shouting near a river, people behind him turning, 18th-century clothes",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The sea is coming in.",
+     "prompt": "giant ocean wave rising high over a river mouth, small wooden sailing boats in front, dark stormy sky, spray",
+     "fx": "none",
+     "shake": 1
+    },
+    {
+     "text": "A wall of water rushes up the river, as one survivor put it, rising like a mountain.",
+     "prompt": "massive wave surging up a wide river toward a city waterfront, spray and foam, wooden ships tossed",
+     "fx": "rain",
+     "shake": 2
+    },
+    {
+     "text": "It slams into the waterfront square. People are lifted off their feet and dragged back toward the river.",
+     "prompt": "brown floodwater rushing across a wide stone city square, people in 18th-century long coats running away, floating barrels and planks",
+     "fx": "rain",
+     "shake": 3
+    },
+    {
+     "text": "Davy survived by holding on to a large wooden beam until the water drained away.",
+     "prompt": "man in a soaked 18th-century coat clinging to a large wooden beam in swirling floodwater, debris around",
+     "fx": "rain",
+     "shake": 1
+    },
+    {
+     "text": "Ships snap their anchor cables and smash against each other with no wind at all.",
+     "prompt": "two wooden sailing ships colliding in rough brown water, broken masts, spray, overcast sky",
+     "fx": "rain",
+     "shake": 2
+    },
+    {
+     "text": "According to accounts gathered afterward, the new stone quay and the boats beside it disappeared under the water. Historians still debate how many people were on it. Some accounts say hundreds.",
+     "prompt": "churning muddy river water beside a broken stone pier, floating wooden planks, grey overcast sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "There isn't one wave. There are three, over the next few hours.",
+     "prompt": "wide view of a flooded riverside city district, water between buildings, smoke rising behind, 18th century",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "The royal palace by the river is wrecked. Its library, about seventy thousand books, is gone.",
+     "prompt": "grand palace library with tall wooden bookshelves, floodwater and fallen books, smoke and dust, 18th century",
+     "fx": "smoke",
+     "shake": 1
+    },
+    {
+     "text": "Paintings by masters like Titian and Rubens. Records of Portugal's great voyages of discovery. All lost.",
+     "prompt": "close-up of a damaged gilded painting frame and old maps floating in muddy water, palace interior ruins",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Because Rita pulled you uphill, you watch all this from a crowded stairway in Alfama.",
+     "prompt": "first-person view from a steep stone stairway on a hill, looking down at a flooded waterfront and river far below",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Alfama sits on solid rock. Here, the shaking was weaker, and the water can't reach.",
+     "prompt": "old hillside neighborhood with small whitewashed houses and narrow stairways, mostly standing, dust haze, 18th century",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And there, in a doorway, covered in dust, is your mother. Alive.",
+     "prompt": "older Portuguese woman in a dusty black shawl standing in a stone doorway, relief on her face, 18th century",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NOON  ·  THE FIRE",
+   "yt_chapter": "Noon: The fire",
+   "scenes": [
+    {
+     "text": "You think the worst is over. Then you smell smoke. Remember the candles? Thousands of them fell when the churches came down. Add the kitchen fires burning in every house.",
+     "prompt": "ruined church interior, fallen roof beams, flames spreading through wooden altars and curtains, smoke",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Small fires join into one. The lower town, the Baixa, begins to burn.",
+     "prompt": "wide view of a low city district burning, many columns of smoke merging, river in the background, 18th century",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "People trapped in the ruins have nowhere to go. Rescuers dig with their bare hands.",
+     "prompt": "men in 18th-century clothes digging through stone rubble with their hands, smoke drifting, no injuries shown",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Prisoners have escaped from the city's broken jails. Some houses are looted, and some are set on fire.",
+     "prompt": "shadowy figures carrying sacks through a smoky ruined street at dusk, 18th century, fire glow",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Your third choice: go back down to save the merchant's shop, and your wages, or leave everything? The shop holds everything you own. But the streets below are walls of smoke.",
+     "prompt": "first-person view looking down a hill at a burning city district, a narrow street leading down into smoke",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "You stay with your family. Together, you join thousands walking out of the city toward the open fields.",
+     "prompt": "long line of refugees in 18th-century clothes walking up a dirt road out of a smoking city, carrying bundles",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE MAN WHO STAYED",
+   "yt_chapter": "The man who stayed",
+   "scenes": [
+    {
+     "text": "Now, while you walk, let's look at the one person who decides what happens next.",
+     "prompt": "portrait of a stern 18th-century Portuguese statesman in a powdered wig and dark velvet coat, candlelit study",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "King José the First is not in the city. He heard Mass at dawn, then left for a palace in Belém, outside the center.",
+     "prompt": "18th-century royal carriage with horses driving along a country road at dawn, a river in the distance",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Most accounts say one of his daughters wanted to spend the holiday in the countryside. That wish saved the royal family.",
+     "prompt": "young woman in a pale silk 18th-century gown sitting inside a wooden horse-drawn carriage, looking out the small window at green fields, soft morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The man beside him is his secretary of state, Sebastião José de Carvalho e Melo. History will know him as the Marquis of Pombal.",
+     "prompt": "stern 18th-century statesman in a powdered wig and dark coat standing beside a seated king in a tent, maps on a table",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The king asks what can be done. The famous answer, bury the dead and feed the living, is usually attributed to him.",
+     "prompt": "18th-century king in a dark coat with his head in his hands, statesman standing beside him, candlelight in a tent",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Historians aren't sure he really said it. But letters show he acted fast.",
+     "prompt": "close-up of old handwritten letters with corrections in ink on a desk, quill and wax seal, candlelight",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "The next day, he orders bodies to be removed quickly, to stop disease. Many are taken out to sea.",
+     "prompt": "small wooden boats rowing out onto a misty grey river at dawn, distant ruined city, somber mood, no bodies visible",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Two days after the quake, he orders food distributed and freezes the price of grain.",
+     "prompt": "soldiers in 18th-century uniforms handing out bread loaves from carts to a line of townspeople",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Gallows go up. Dozens of looters are hanged without trial.",
+     "prompt": "silhouette of a wooden gallows on a hill against a smoky orange sky, distant soldiers, no people hanging",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Soldiers surround the city, so no one able to work can flee. Everyone is put to clearing the ruins.",
+     "prompt": "line of 18th-century soldiers with muskets standing guard on a road above a ruined city, smoke behind",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NIGHT  ·  THE CITY BURNS",
+   "yt_chapter": "Night: The city burns",
+   "scenes": [
+    {
+     "text": "By nightfall, you're sitting in a field outside the city, under the open sky.",
+     "prompt": "families in 18th-century clothes sitting on blankets in a dark field, makeshift shelters, city glowing on the horizon",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Behind you, Lisbon is one huge glow. The fire lights up the whole horizon.",
+     "prompt": "night view of a large old city on fire on hills beside a river, orange glow reflected in water, smoke columns",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "One survivor wrote that the light was so bright he could read by it at night.",
+     "prompt": "man reading a letter at night, his face lit orange by distant firelight, 18th century clothes",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "The ground keeps trembling. Every aftershock brings screams from the dark.",
+     "prompt": "close-up of a frightened woman holding a child under a blanket at night, firelight glow, 18th century",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Rita falls asleep against your shoulder. Your mother prays quietly beside you.",
+     "prompt": "young woman in a blue dress asleep against a man's shoulder at night, older woman praying beside them, fire glow",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "The fire will burn for about five days. Some witnesses said six.",
+     "prompt": "dawn over a smoking ruined city, blackened walls and roofless churches, thin smoke rising, grey light",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The king is so shaken that he refuses to sleep under stone again. He moves his court into tents on a hill. He never lives in a stone palace again.",
+     "prompt": "large royal tent camp on a green hill, 18th-century guards, flags, a ruined city smoking in the distance",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "AFTERMATH  ·  THE NUMBERS",
+   "yt_chapter": "Aftermath: The numbers",
+   "scenes": [
+    {
+     "text": "When the smoke clears, most of Lisbon's buildings are damaged or destroyed. Some estimates say about eighty-five percent.",
+     "prompt": "wide view of a vast ruined city, roofless stone buildings, broken church towers, people walking through rubble",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "How many died? Estimates range from about twenty thousand to more than sixty thousand. Historians still argue over the number. Many records burned with the churches that kept them.",
+     "prompt": "rows of wooden crosses and candles on a hillside at dusk, mourners in dark 18th-century clothes, solemn",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The tsunami crossed the ocean. Waves reached North Africa, southern England, and even the Caribbean.",
+     "prompt": "big waves crashing over a stone harbor wall of a North African coastal town, white houses, dramatic sky",
+     "fx": "rain",
+     "shake": 0
+    },
+    {
+     "text": "Across Europe, people asked a terrible question: why would God strike a city full of churches on a holy day?",
+     "prompt": "18th-century European gentlemen arguing over newspapers in a candlelit coffee house",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Voltaire wrote an angry poem about Lisbon, and the disaster shows up in his famous novel, Candide.",
+     "prompt": "18th-century writer in a wig writing with a quill at a desk by candlelight, stacks of books",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "A young Immanuel Kant tried to explain the quake with natural causes. His theory was wrong, but the idea was new.",
+     "prompt": "young 18th-century scholar studying a diagram of the earth by candlelight, globe and books on desk",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "TODAY  ·  HOW WE KNOW",
+   "yt_chapter": "Today: How we know",
+   "scenes": [
+    {
+     "text": "We know so much because of a questionnaire. The government sent it to parishes all over Portugal.",
+     "prompt": "old handwritten questionnaire on parchment with a wax seal, ink and quill, archival desk",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "How long did the shaking last? How many aftershocks? Did animals act strangely? What happened to the wells?",
+     "prompt": "village priest writing answers on a parchment in a small stone church, candlelight, 18th century",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "The answers are still kept in Portugal's national archive. Some scientists call it the beginning of modern seismology.",
+     "prompt": "rows of old leather-bound archive books and document boxes on shelves in a quiet archive room, soft light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Pombal rebuilt the lower town with straight streets and big squares. The new buildings hid a flexible wooden frame inside the walls.",
+     "prompt": "construction site in an 18th-century city, wooden lattice frame of diagonal beams inside stone walls, workers",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Accounts say soldiers marched around models to test whether they would survive shaking. Some of the first earthquake-resistant buildings in Europe.",
+     "prompt": "18th-century soldiers marching in formation around a small wooden building model on a square, officers watching",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And up on the hill, one church was never rebuilt. The Carmo convent still stands without a roof, open to the sky.",
+     "prompt": "ruined gothic church with tall stone arches and no roof, open blue sky above, grass and stones, present day",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In Spain, scientists have found layers of sand left by the tsunami, buried in the ground near Cádiz.",
+     "prompt": "geologist in a modern jacket examining a layer of sand in a muddy trench near the coast, present day",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "The answer: would you survive?",
+   "scenes": [
+    {
+     "text": "So, would you have survived? If you were inside one of the great churches at twenty to ten, your odds were terrible.",
+     "prompt": "interior of a collapsed church, broken columns and fallen stones lit by a beam of sunlight through dust, empty",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "If you ran to the waterfront, you escaped the falling buildings, only to face the wave.",
+     "prompt": "empty riverside square covered in mud and debris after a flood, broken boats, grey sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "If you stayed in the lower town, the fire would reach you.",
+     "prompt": "burnt-out ruins of a city street, blackened walls, thin smoke, ash falling, 18th century",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The people with the best odds went up, not down. To the hills, to the solid rock of Alfama, to the open fields.",
+     "prompt": "families in 18th-century clothes climbing a steep hillside path away from a smoking city, morning light",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "And the luckiest of all simply weren't in the city that morning, like the king.",
+     "prompt": "18th-century royal carriage on a sunny country road, green hills, peaceful",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You made it because your sister wanted the music, and then wanted her mother.",
+     "prompt": "young woman in blue dress and white shawl hugging an older woman in a black shawl, tearful smiles, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember the candles from this morning? They were lit to honor the dead. By the end of the day, they had helped burn the city that lit them.",
+     "prompt": "a single candle burning on a broken stone altar in a ruined church, soft light, dust",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Which choice would you have made? The river, or the hill? Tell me in the comments.",
+     "prompt": "first-person view at a fork in a ruined street, one path down to a river, the other up a hill toward the light",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "40 MINUTES",
+   "title": "The River Disappeared, Then Came Back #Shorts",
+   "description": "In 1755, the river in Lisbon pulled back, and people walked out to look. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Lisbon #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "the river disappeared.",
+     "prompt": "vertical composition, wide muddy riverbed exposed as the water recedes, old wooden ships tilted on the mud, 18th-century city on hills behind"
+    },
+    {
+     "text": "Lisbon, November first, 1755. Minutes ago, the ground shook so hard that whole streets fell.",
+     "prompt": "vertical composition, narrow 18th-century street with collapsing house facades, dust clouds, people running"
+    },
+    {
+     "text": "Thousands of survivors run to the waterfront, the only open space left.",
+     "prompt": "vertical composition, crowd in 18th-century clothes kneeling on a wide riverside square, hazy dusty sunlight"
+    },
+    {
+     "text": "Then the water pulls back. The riverbed shines in the sun, full of old wrecks and lost cargo.",
+     "prompt": "vertical composition, close view of exposed river mud with old barrels and broken ship timbers, puddles reflecting the sky"
+    },
+    {
+     "text": "Some people walk out onto the mud to look.",
+     "prompt": "vertical composition, people in 18th-century coats and shawls walking onto a muddy riverbed, curious, sunlight"
+    },
+    {
+     "text": "About forty minutes after the earthquake, the sea comes back. As a wall.",
+     "prompt": "vertical composition, huge dark wave rising over a river toward a city waterfront, spray, grey sky"
+    },
+    {
+     "text": "If you were standing there that morning, the last thing you'd remember is the moment",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "RIVER OR HILL?",
+   "title": "Lisbon 1755: Would You Run to the River or the Hill? #Shorts",
+   "description": "Most people made the obvious choice. It was the wrong one. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Lisbon #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "you have to choose. The river, or the hill.",
+     "prompt": "vertical composition, first-person view at a fork in a ruined 18th-century street, one way down to a river, one way up a hill"
+    },
+    {
+     "text": "It's 1755, and Lisbon is falling apart around you. Church towers, palaces, entire streets.",
+     "prompt": "vertical composition, broken church bell tower falling in a dust cloud above old rooftops"
+    },
+    {
+     "text": "Almost everyone runs down to the water. It's open. Nothing can fall on you there.",
+     "prompt": "vertical composition, crowd in 18th-century clothes hurrying down a street toward a bright riverside square"
+    },
+    {
+     "text": "But the old quarter of Alfama sits on solid rock. Up there, the shaking was weaker.",
+     "prompt": "vertical composition, steep stone stairway between small whitewashed houses on a hill, mostly standing, dust haze"
+    },
+    {
+     "text": "Forty minutes later, a tsunami hits the waterfront. Then fire spreads through the lower town for days.",
+     "prompt": "vertical composition, floodwater surging across a stone square, smoke rising from a city behind"
+    },
+    {
+     "text": "The open ground by the river turned into a trap.",
+     "prompt": "vertical composition, empty riverside square covered in mud and debris, broken boats, grey sky"
+    },
+    {
+     "text": "Most people chose the river. You have ten seconds, and",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE KING ESCAPED",
+   "title": "Why the King of Portugal Survived Lisbon 1755 #Shorts",
+   "description": "A holiday wish saved the royal family. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Lisbon #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "was not in the city that morning.",
+     "prompt": "vertical composition, 18th-century royal carriage with horses on a sunny country road, green hills"
+    },
+    {
+     "text": "On November first, 1755, King José the First heard Mass at dawn, then left the center of Lisbon.",
+     "prompt": "vertical composition, 18th-century king in a dark coat stepping into a carriage at dawn, guards nearby"
+    },
+    {
+     "text": "Most accounts say one of his daughters wanted to spend the holiday in the countryside.",
+     "prompt": "vertical composition, young 18th-century princess in a pale silk dress looking out a carriage window at fields"
+    },
+    {
+     "text": "Hours later, a huge earthquake, a tsunami and fire wrecked his riverside palace. Its library, about seventy thousand books, was lost.",
+     "prompt": "vertical composition, grand palace library with tall bookshelves, fallen books, smoke and dust"
+    },
+    {
+     "text": "The king was so shaken that he refused to sleep under stone again.",
+     "prompt": "vertical composition, king in a dark coat standing at the entrance of a large tent at dusk, worried face"
+    },
+    {
+     "text": "He moved his court into tents on a hill, and never lived in a stone palace again.",
+     "prompt": "vertical composition, royal tent camp on a green hill, flags, guards, smoke from a distant city"
+    },
+    {
+     "text": "All because a girl wanted a holiday, the king of Portugal",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE CANDLES",
+   "title": "The Candles That Helped Burn Lisbon #Shorts",
+   "description": "All Saints' Day, 1755. The candles for the dead became the fire. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Lisbon #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "lit the candles that helped burn Lisbon.",
+     "prompt": "vertical composition, hundreds of lit candles on a gilded baroque altar, warm glow, flowers"
+    },
+    {
+     "text": "November first, 1755. Every church in the city is packed, every altar covered in candles for the dead.",
+     "prompt": "vertical composition, crowded baroque church interior full of worshippers, candlelight and incense haze"
+    },
+    {
+     "text": "At about twenty to ten, the earthquake hits. Roofs fall, and candles tip into curtains, flowers and wood.",
+     "prompt": "vertical composition, fallen candlesticks setting a red velvet curtain on fire, dust and smoke"
+    },
+    {
+     "text": "Add kitchen fires. By night, the city is burning in many places at once.",
+     "prompt": "vertical composition, night view of an old city on fire on a hill, orange glow, smoke columns"
+    },
+    {
+     "text": "It burns for about five days. One survivor wrote that he could read by its light at night.",
+     "prompt": "vertical composition, man reading a letter at night, face lit orange by distant fire"
+    },
+    {
+     "text": "Today, the Carmo convent still stands without a roof, open to the sky.",
+     "prompt": "vertical composition, ruined gothic church arches with no roof, blue sky above, present day"
+    },
+    {
+     "text": "It was All Saints' Day, and the people praying for their dead had",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}

@@ -16,7 +16,7 @@ PROXY = os.environ.get("HTTPS_PROXY") or None
 async def synth(text, voice, rate):
     import edge_tts
     last = None
-    for attempt in range(4):
+    for attempt in range(12):     # the Edge service drops ~40% of requests at times: retry a lot
         try:
             com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary", proxy=PROXY)
             audio = bytearray(); words = []
@@ -29,7 +29,7 @@ async def synth(text, voice, rate):
                 raise RuntimeError("empty audio")
             return bytes(audio), words
         except Exception as e:  # network hiccup: retry
-            last = e; await asyncio.sleep(3 * (attempt + 1))
+            last = e; await asyncio.sleep(2 + 2 * attempt)
     raise last
 
 
@@ -92,7 +92,7 @@ def build(spec, out):
     lead = spec.get("lead", 0.25)
     parts = [np.zeros(int(SR * lead), np.float32)]; t = lead; allw = []; spans = []
     async def all_blocks():
-        sem = asyncio.Semaphore(6)
+        sem = asyncio.Semaphore(4)
         async def one(b):
             async with sem:
                 return await synth(b["text"], voice, rate)
