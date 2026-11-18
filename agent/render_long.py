@@ -10,7 +10,7 @@ import numpy as np, cv2
 from PIL import Image, ImageDraw, ImageFont
 
 W, H, FPS = 1920, 1080, 24
-SC = 1.14
+SC = float(__import__("os").environ.get("ZOOM_MARGIN", 1.08))   # was 1.14: less zoom = less upscaling blur
 FB = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 FT = ImageFont.truetype(FB, 64); FS = ImageFont.truetype(FB, 34); FBIG = ImageFont.truetype(FB, 104)
 ED = sys.argv[1]
@@ -124,6 +124,7 @@ VIG = (1 - 0.45 * np.clip(((xx - W / 2) / (W * 0.62)) ** 2 + ((yy - H / 2) / (H 
 rg = np.random.default_rng(5); GR = [rg.normal(0, 4.5, (H, W, 1)).astype(np.float32) for _ in range(4)]
 FOGCOL = np.array([150, 160, 175], np.float32)
 XF = 0.45
+SHARP = float(__import__("os").environ.get("SHARPEN", 0.6))
 
 
 def full(i, T):
@@ -149,7 +150,10 @@ def frame(T):
     a = full(i, T)
     if i > 0 and T - starts[i] < XF:
         w = ez((T - starts[i]) / XF); a = a * w + full(i - 1, T) * (1 - w)
-    a = a * VIG + GR[int(T * FPS) % 4]
+    a = a * VIG
+    if SHARP > 0:   # unsharp mask: recovers detail lost by upscaling 1024px images to 1080p
+        a = cv2.addWeighted(a, 1 + SHARP, cv2.GaussianBlur(a, (0, 0), 1.6), -SHARP, 0)
+    a = a + GR[int(T * FPS) % 4] * 0.6
     im = Image.fromarray(cv2.cvtColor(np.clip(a, 0, 255).astype(np.uint8), cv2.COLOR_BGR2RGB)); d = ImageDraw.Draw(im, "RGBA")
     for c, t0 in CH_T.items():
         title = EP["chapters"][c].get("title", "")
@@ -175,7 +179,7 @@ def frame(T):
 def part(p, n):
     Nf = int(DUR * FPS); per = math.ceil(Nf / n); f0, f1 = p * per, min(Nf, (p + 1) * per)
     enc = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-maxrate", "7M", "-bufsize", "14M", "-pix_fmt", "yuv420p", f"{ED}/part{p}.mp4"], stdin=subprocess.PIPE)
+                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "19", "-maxrate", "12M", "-bufsize", "24M", "-pix_fmt", "yuv420p", f"{ED}/part{p}.mp4"], stdin=subprocess.PIPE)
     for f in range(f0, f1):
         enc.stdin.write(frame(f / FPS).tobytes())
         if (f - f0) % 1200 == 0: print("render part", p, f - f0, "/", f1 - f0, flush=True)
