@@ -31,7 +31,10 @@ def load(model):
         from diffusers import WanImageToVideoPipeline, AutoencoderKLWan
         vae = AutoencoderKLWan.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", subfolder="vae", torch_dtype=torch.float32)
         p = WanImageToVideoPipeline.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", vae=vae, torch_dtype=torch.bfloat16)
-        p.enable_model_cpu_offload()
+        big = torch.cuda.get_device_properties(0).total_memory > 40 * 2**30
+        if big: p.to("cuda")             # 48GB+ cards: keep everything on the GPU (faster)
+        else: p.enable_model_cpu_offload()
+        log("gpu", torch.cuda.get_device_name(0), "offload" if not big else "full")
         try: p.vae.enable_tiling()       # decode in tiles: avoids running out of GPU memory at 1280x704
         except Exception as e: log("no vae tiling", e)
     elif model == "ltx":

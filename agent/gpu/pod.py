@@ -14,7 +14,7 @@ KEY = os.environ["RUNPOD_API_KEY"]
 STATE_F = os.path.expanduser("~/.runpod_pod")
 GPU = os.environ.get("RUNPOD_GPU", "NVIDIA GeForce RTX 4090")
 IMAGE = os.environ.get("RUNPOD_IMAGE", "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04")
-SERVER = "https://raw.githubusercontent.com/rafael06428/canais/main/agent/gpu/server.py"
+SERVER = "https://raw.githubusercontent.com/rafael06428/canais/" + os.environ.get("SERVER_REF", "main") + "/agent/gpu/server.py"
 DISK = int(os.environ.get("RUNPOD_DISK", 80)); CLOUD = os.environ.get("RUNPOD_CLOUD", "COMMUNITY")
 MAX_MIN = float(os.environ.get("MAX_MINUTES", 110))
 
