@@ -15,6 +15,7 @@ STATE_F = os.path.expanduser("~/.runpod_pod")
 GPU = os.environ.get("RUNPOD_GPU", "NVIDIA GeForce RTX 4090")
 IMAGE = os.environ.get("RUNPOD_IMAGE", "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04")
 SERVER = "https://raw.githubusercontent.com/rafael06428/canais/main/agent/gpu/server.py"
+DISK = int(os.environ.get("RUNPOD_DISK", 80)); CLOUD = os.environ.get("RUNPOD_CLOUD", "COMMUNITY")
 MAX_MIN = float(os.environ.get("MAX_MINUTES", 110))
 
 
@@ -33,7 +34,7 @@ def st():
 def call(path, body=None, raw=False, timeout=120):
     s = st(); url = f"https://{s['id']}-8000.proxy.runpod.net{path}"
     req = urllib.request.Request(url, data=json.dumps(body).encode() if body is not None else None,
-                                 headers={"X-Token": s["token"], "Content-Type": "application/json"})
+                                 headers={"X-Token": s["token"], "Content-Type": "application/json", "User-Agent": "curl/8.5"})
     b = urllib.request.urlopen(req, timeout=timeout).read()
     return b if raw else json.loads(b)
 
@@ -43,8 +44,8 @@ def start():
     args = ("bash -c 'pip install -q -U diffusers transformers accelerate imageio imageio-ffmpeg ftfy sentencepiece && "
             f"curl -sL {SERVER} -o /server.py && python /server.py'")
     q = f'''mutation {{ podFindAndDeployOnDemand(input: {{
-        cloudType: COMMUNITY, gpuCount: 1, gpuTypeId: "{GPU}", name: "canal-video",
-        imageName: "{IMAGE}", containerDiskInGb: 120, volumeInGb: 0, ports: "8000/http",
+        cloudType: {CLOUD}, gpuCount: 1, gpuTypeId: "{GPU}", name: "canal-video",
+        imageName: "{IMAGE}", containerDiskInGb: {DISK}, volumeInGb: 0, ports: "8000/http",
         dockerArgs: {json.dumps(args)}, env: [{{key: "TOKEN", value: "{token}"}}] }}) {{ id costPerHr machineId }} }}'''
     d = gql(q)["podFindAndDeployOnDemand"]
     json.dump({"id": d["id"], "token": token, "t0": time.time()}, open(STATE_F, "w"))

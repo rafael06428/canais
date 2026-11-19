@@ -7,6 +7,7 @@ Port 8000, every call needs header X-Token = $TOKEN:
 The pod is started and stopped from the workspace (gpu/pod.py); this file only generates clips.
 """
 import base64, io, json, os, queue, threading, time, traceback
+os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 TOKEN = os.environ.get("TOKEN", "")
@@ -31,10 +32,14 @@ def load(model):
         vae = AutoencoderKLWan.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", subfolder="vae", torch_dtype=torch.float32)
         p = WanImageToVideoPipeline.from_pretrained("Wan-AI/Wan2.2-TI2V-5B-Diffusers", vae=vae, torch_dtype=torch.bfloat16)
         p.enable_model_cpu_offload()
+        try: p.vae.enable_tiling()       # decode in tiles: avoids running out of GPU memory at 1280x704
+        except Exception as e: log("no vae tiling", e)
     elif model == "ltx":
         from diffusers import LTXImageToVideoPipeline
         p = LTXImageToVideoPipeline.from_pretrained("Lightricks/LTX-Video", torch_dtype=torch.bfloat16)
         p.to("cuda")
+        try: p.vae.enable_tiling()
+        except Exception: pass
     else:
         raise ValueError("unknown model " + model)
     PIPE[model] = p; STATE["loaded"] = model; log("loaded", model); return p
@@ -93,6 +98,10 @@ class H(BaseHTTPRequestHandler):
         if not self.auth(): return
         n = int(self.headers.get("Content-Length", 0)); body = json.loads(self.rfile.read(n) or b"{}")
         if self.path == "/gen": JOBS.put(body); return self.ok({"queued": body["id"], "queue": JOBS.qsize()})
+        if self.path == "/clear":   # drop jobs that haven't started
+            n = 0
+            while not JOBS.empty(): JOBS.get_nowait(); n += 1
+            return self.ok({"cleared": n})
         self.ok({"error": "?"}, 404)
 
 
