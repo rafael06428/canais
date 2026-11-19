@@ -1,0 +1,806 @@
+{
+ "slug": "essex-1820",
+ "title": "24 Hours on the Whaleship Essex",
+ "title_yt": "24 Hours on the Whaleship Essex: Would You Have Survived?",
+ "description": "November 20, 1820. A whaleship alone in the middle of the Pacific. Then a sperm whale turns and rams it, twice. The true story that inspired Moby-Dick, hour by hour: what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Owen Chase, \"Narrative of the Most Extraordinary and Distressing Shipwreck of the Whale-Ship Essex\" (1821); Thomas Nickerson's account (Nantucket Historical Association, 1984); National Geographic History; American Heritage, \"The Essex Disaster\"; Massachusetts Historical Society; PeerJ (2016) study on sperm whale head ramming; NOAA (Two Brothers wreck, 2011).\n\nSome details, like the whale's size, come from survivors' estimates. Visuals and narration are AI-generated, based on historical accounts.\n\n#History #POV #MobyDick",
+ "tags": [
+  "whaleship essex",
+  "essex 1820",
+  "moby dick true story",
+  "in the heart of the sea",
+  "would you survive",
+  "history",
+  "pov history",
+  "sperm whale",
+  "shipwreck",
+  "nantucket",
+  "whaling history",
+  "survival story",
+  "history documentary",
+  "19th century"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "A WHALE\nSANK US",
+ "thumb_scene": 32,
+ "title_card": {
+  "after_scene": 4,
+  "lines": [
+   "24 HOURS ON THE WHALESHIP ESSEX",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "Four hours from now, the ship under your feet will be gone. Not to a storm. Not to a reef. To a whale.",
+     "prompt": "wide view of a lone old wooden three-masted sailing ship from 1820 on a calm deep blue ocean at sunrise, golden light, endless horizon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember the boy at the helm. He's fourteen years old, and today his hands will steer into history.",
+     "prompt": "close-up of a thin fourteen-year-old boy in a cloth cap and rough linen shirt gripping a wooden ship's wheel on deck, ocean behind him, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "This is the whaleship Essex, November twentieth, 1820, more than a thousand miles from the nearest land.",
+     "prompt": "aerial view of a small old wooden three-masted sailing ship from 1820 alone in the middle of a vast empty blue ocean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Twenty men are aboard. Hour by hour, you'll face their choices. And by the end, you'll know whether you would have survived.",
+     "prompt": "group of weathered sailors in 1820s clothes on the wooden deck of an old ship, ropes and masts, morning sun",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DAWN  ·  THE OFFSHORE GROUND",
+   "yt_chapter": "Dawn: The offshore ground",
+   "scenes": [
+    {
+     "text": "You wake in a narrow bunk in the forecastle, at the dark front of the ship. It smells of tar, sweat and old whale oil.",
+     "prompt": "dim cramped wooden ship cabin with canvas hammocks and sea chests, lantern light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You're a green hand from Nantucket. Fifteen months ago, you left home on a voyage meant to last two and a half years.",
+     "prompt": "young sailor in a linen shirt and cap standing on the sunny deck of an old wooden sailing ship, ropes and rigging",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Down in the hold, something scrapes and shuffles. Giant tortoises, taken in the Galápagos, kept alive as fresh meat.",
+     "prompt": "several giant tortoises in the dim wooden hold of an old ship, shafts of light through the hatch",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "The captain is George Pollard. He's twenty-eight, and this is his first command.",
+     "prompt": "portrait of a ship captain in his late twenties with a short dark beard and a dark coat standing on the deck of an old wooden ship, serious, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "His first mate, Owen Chase, is twenty-three. Ambitious, tough, and impatient for oil.",
+     "prompt": "portrait of a young sailor with dark hair and sideburns in a navy wool jacket on the deck of an old wooden ship, determined look, ocean behind",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Months ago, other whalers told them about a new hunting ground, far out in the empty Pacific. The offshore ground.",
+     "prompt": "two old wooden sailing ships side by side on a calm sea, small rowboat between them, afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your job is simple. Climb, watch, row, and obey. Out here, the ship is your whole world.",
+     "prompt": "sailors in 1820s clothes hauling ropes on the deck of an old wooden ship, sails above, bright sun",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "8:00 AM  ·  THERE SHE BLOWS",
+   "yt_chapter": "8:00 AM: There she blows",
+   "scenes": [
+    {
+     "text": "At eight o'clock, a shout drops from the masthead. Spouts! Whales on the horizon!",
+     "prompt": "distant whale spouts of white mist on the horizon of a blue ocean, seen from the deck of an old sailing ship",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The whole ship comes alive. Men run to the small whaleboats hanging over the side.",
+     "prompt": "sailors in 1820s clothes rushing across a wooden ship deck toward small boats hanging over the side",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Each boat is less than thirty feet long, made of thin cedar planks, with six men at the oars.",
+     "prompt": "small wooden rowboat being lowered from the side of an old wooden ship into the sea, six sailors inside",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You climb into the first mate's boat. Owen Chase stands in the back, steering with a long oar.",
+     "prompt": "young sailor with dark hair and sideburns in a navy wool jacket standing at the back of a small wooden rowboat, holding a long steering oar, sailors rowing, open sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Captain Pollard takes the second boat. The second mate, Matthew Joy, takes the third.",
+     "prompt": "two small wooden rowboats full of sailors rowing across a blue ocean, an old sailing ship behind them",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Only a few men stay aboard the ship. The cabin boy, Thomas Nickerson, takes the helm.",
+     "prompt": "thin fourteen-year-old boy in a cloth cap and rough linen shirt at a wooden ship's wheel on a nearly empty deck, watching the sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You row until your hands burn. Then a dark back rises just ahead, wide as a barn roof.",
+     "prompt": "dark grey back of a giant whale rising out of blue ocean water right in front of a small wooden rowboat, spray",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The harpooner throws. The iron sinks in. Then the whale's tail rises, and smashes down beside you.",
+     "prompt": "enormous whale tail fluke towering over a tiny rowboat full of sailors, water pouring off the tail, dramatic",
+     "fx": "none",
+     "shake": 2
+    },
+    {
+     "text": "Planks split. Seawater bubbles up around your feet. The tail has torn a hole in the boat.",
+     "prompt": "seawater flooding the bottom of a small wooden rowboat, close-up, splashing water, sailors' boots",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Cutting the line means losing the whale, and your share of the money. Chase doesn't hesitate. He cuts it.",
+     "prompt": "close-up of a knife cutting a taut rope on the edge of a wooden boat, ocean spray",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The other two boats are miles away now, dragged off by the whales they've harpooned.",
+     "prompt": "distant small rowboat being pulled fast across the ocean by an unseen whale, white wake, wide shot",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "MID-MORNING  ·  THE WHALE",
+   "yt_chapter": "Mid-morning: The whale",
+   "scenes": [
+    {
+     "text": "Back on deck, Chase hauls the damaged boat aboard and starts nailing canvas over the hole.",
+     "prompt": "rugged young man with sideburns repairing an upside-down wooden rowboat with a hammer on a ship deck",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then someone points past the bow. A whale. Alone. Lying almost still on the surface.",
+     "prompt": "close view of the dark back and head of a sperm whale resting at the surface of calm blue ocean water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "It's enormous. Chase guessed eighty-five feet. Scientists think that's an exaggeration, but a big bull can weigh as much as seven elephants.",
+     "prompt": "enormous sperm whale swimming just below the clear blue ocean surface, seen from above, massive square head",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "It spouts once. Twice. Then it dives, and starts swimming toward the ship.",
+     "prompt": "whale blowing a tall misty spout on the calm blue ocean, sunlight",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Chase shouts at the boy to turn hard away. Nickerson throws the wheel over with everything he has.",
+     "prompt": "thin fourteen-year-old boy in a cloth cap and rough linen shirt straining to turn a big wooden ship's wheel, panic on his face",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Too late. The whale hits the ship just under the bow. The whole hull jumps, and men fall to the deck.",
+     "prompt": "sailors thrown off their feet on the deck of an old wooden ship, splinters and spray, violent impact",
+     "fx": "smoke",
+     "shake": 3
+    },
+    {
+     "text": "Chase later wrote that they looked at each other in perfect amazement.",
+     "prompt": "close-up of two shocked bearded sailors in wool caps, wide eyes, ship deck",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The whale scrapes along the keel, surfaces beside the ship, and thrashes, its jaw snapping.",
+     "prompt": "whale thrashing in white foam beside the wooden hull of an old sailing ship",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Below deck, water is pouring in. Chase orders the pumps manned. You pump until your arms shake, but it keeps rising.",
+     "prompt": "sailors pumping water with a wooden hand pump on the deck of an old sailing ship",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then a shout. The whale is back, a few hundred yards ahead, coming straight at you.",
+     "prompt": "sperm whale charging straight toward the camera across the ocean surface, huge head pushing white water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Chase wrote that it came at twice its normal speed, head half out of the water, surrounded by foam.",
+     "prompt": "close view of the huge square head of a sperm whale bursting through the waves, spray flying",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The second blow crushes the bow. The ship stops dead in the water.",
+     "prompt": "the bow of an old wooden ship being smashed, broken timbers and huge spray",
+     "fx": "smoke",
+     "shake": 3
+    },
+    {
+     "text": "Now you have seconds. Do you grab food? Water? Or run for the last spare boat?",
+     "prompt": "first-person view running across a tilting wooden ship deck toward a small boat, chaos",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Chase chooses the boat. And the steward drags out the captain's trunk, with compasses, quadrants and navigation books.",
+     "prompt": "old wooden sea chest open on a wet deck, brass compass and navigation instrument and old books inside",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NOON  ·  THE SHIP GOES DOWN",
+   "yt_chapter": "Noon: The ship goes down",
+   "scenes": [
+    {
+     "text": "Within minutes, the Essex rolls onto her side. Her masts lie almost flat on the water.",
+     "prompt": "shipwreck, old wooden sailing ship tilted over at a steep angle, sinking into the ocean, masts leaning low over the water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You row a short distance away and watch. Your home for fifteen months is going under.",
+     "prompt": "sailors in a small rowboat in the foreground watching a tilted sinking sailing ship in the distance",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Far away, in the captain's boat, a harpooner stops rowing and stares. The ship isn't where it should be.",
+     "prompt": "sailor in a small rowboat turning to stare at the horizon in shock, ocean, midday sun",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The two boats race back. Captain Pollard pulls alongside, pale, and asks: My God, Mr. Chase, what is the matter?",
+     "prompt": "ship captain in his late twenties with a short dark beard and a dark coat in a small wooden rowboat, shocked expression, another rowboat beside him, ocean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Chase answers: We have been stove by a whale. Nobody aboard has ever heard of a whale attacking a ship on purpose.",
+     "prompt": "young sailor with dark hair and sideburns in a navy wool jacket sitting in a small rowboat, exhausted, looking down, water all around",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And the whale? It swims away, and is never seen again.",
+     "prompt": "whale tail fluke above calm water, seen from behind, ocean, sunlight",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "AFTERNOON  ·  WHAT YOU SAVE",
+   "yt_chapter": "Afternoon: What you save",
+   "scenes": [
+    {
+     "text": "But the ship doesn't sink all the way. Empty barrels keep her afloat. So you climb back aboard and chop away the masts.",
+     "prompt": "sailors with axes cutting the broken mast of a half-sunken wooden ship",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You cut a hole through the deck into the hold, and start pulling out anything that might keep you alive.",
+     "prompt": "sailors pulling wooden barrels up through a hole in a ship deck with ropes",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Hard ship's biscuit. Casks of fresh water. A few live tortoises. Two compasses, two quadrants, a musket, two pistols, and tools.",
+     "prompt": "close-up of hard round ship biscuits in a wooden crate next to water casks, on a wet deck",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You raise the sides of each whaleboat with boards, and rig small masts and sails from the wreck.",
+     "prompt": "sailors fitting a small mast and sail onto a wooden rowboat, carpentry tools, ocean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "That night, you tie the boats to the wreck and lie awake, listening to the hull groan.",
+     "prompt": "three small wooden boats tied to a dark half-sunken ship at night, moonlight on the water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "By morning, there's only one question left. Which way?",
+     "prompt": "dawn over the ocean, sailors in small boats looking at each other, pale light",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NOVEMBER 22  ·  THE CHOICE",
+   "yt_chapter": "November 22: The choice",
+   "scenes": [
+    {
+     "text": "Pollard opens his navigation books. The nearest islands lie to the west, maybe a month away with the wind behind you. He wants to go.",
+     "prompt": "ship captain in his late twenties with a short dark beard and a dark coat in a small boat studying an old open navigation book and chart, ocean behind",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But Chase and Joy disagree. They've heard rumors of cannibals on those islands.",
+     "prompt": "young sailor with dark hair and sideburns in a navy wool jacket arguing with other sailors in a small boat, tense faces",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Their plan: sail south more than a thousand miles until the winds change, then turn east toward Chile or Peru.",
+     "prompt": "old hand-drawn sea chart of the Pacific Ocean on a wooden surface, compass on top, no text",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Thousands of miles in open boats, against the wind. Pollard is the captain, but he gives in. The boats turn south.",
+     "prompt": "three small wooden sailboats with patched sails alone on a huge rolling ocean, grey sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "So what would you vote for? The short way, toward islands you fear? Or the long way, toward home?",
+     "prompt": "rugged young man with short hair and stubble in a small boat looking at the horizon, sunset",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE CAPTAIN",
+   "yt_chapter": "The captain: George Pollard",
+   "scenes": [
+    {
+     "text": "Now, the man at the back of the captain's boat. George Pollard grew up on Nantucket, where boys dreamed of commanding whaleships.",
+     "prompt": "small 19th-century New England harbor town with grey wooden houses and sailing ships at a wharf, sunny",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "He'd sailed on the Essex before, as first mate. This voyage was his reward, his first command.",
+     "prompt": "ship captain in his late twenties with a short dark beard and a dark coat proudly standing at the rail of an old wooden ship leaving a harbor",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In his boat sits his young cousin, Owen Coffin. Pollard feels responsible for him.",
+     "prompt": "sunburned rugged young man with short hair and stubble, sitting in a small wooden boat, looking up",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He went against his own instincts, and followed his officers. He'll carry that for the rest of his life.",
+     "prompt": "close-up of the tired face of a ship captain in his late twenties with a short dark beard and a dark coat, salt on his beard, deep in thought",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "After this, he'll go back to sea and be wrecked again, on a reef near Hawaii.",
+     "prompt": "old wooden sailing ship stranded on a shallow coral reef, turquoise water, waves breaking",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He'll end his days as a night watchman on Nantucket. And every November twentieth, he'll quietly go without food.",
+     "prompt": "old man with grey beard holding a lantern on a dark cobblestone street at night, 19th-century New England",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DAY 30  ·  HENDERSON ISLAND",
+   "yt_chapter": "Day 30: Henderson Island",
+   "scenes": [
+    {
+     "text": "Back in the boats, the days blur into weeks. Each man gets one biscuit and half a pint of water a day.",
+     "prompt": "close-up of a hand holding a small hard biscuit and a tin cup of water in a small boat",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The sun cracks your lips. Saltwater sores cover your skin. At night, you shiver in wet clothes.",
+     "prompt": "three exhausted sunburned bearded men lying slumped in a small wooden boat under harsh sun",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "On the tenth day, the men kill the first tortoise. It's the best meal of your life.",
+     "prompt": "giant tortoise in the bottom of a small wooden boat, bearded sailors looking at it",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then, on December twentieth, exactly one month after the whale, someone shouts: Land!",
+     "prompt": "sailor in a small boat pointing excitedly at a low green island on the horizon, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "A low island, white cliffs and green trees. They think it's Ducie Island. It's actually Henderson Island.",
+     "prompt": "low tropical island with white limestone cliffs and dense green bushes, waves on a reef",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The only water is a tiny spring in the rocks on the beach, reachable only at low tide.",
+     "prompt": "sailor kneeling at a small trickle of fresh water among wet beach rocks, collecting it in a cup",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In a cave, someone finds the skeletons of earlier castaways. A warning.",
+     "prompt": "dark rocky cave entrance on a tropical island, shadows inside, sailor looking in, eerie light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Three men decide to stay: William Wright, Seth Weeks and Thomas Chappel. Would you stay, or get back in the boat?",
+     "prompt": "three ragged sailors standing on a white beach watching small boats leave, back to camera",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "On December twenty-seventh, seventeen men push off again, into the open ocean.",
+     "prompt": "small wooden sailboats leaving a tropical island beach and heading out to sea, wide shot",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "JANUARY  ·  THE LONG DRIFT",
+   "yt_chapter": "January: The long drift",
+   "scenes": [
+    {
+     "text": "Now the ocean turns against you. The winds push you the wrong way. The bread runs out.",
+     "prompt": "small wooden boat tossed on grey stormy waves, patched sail, dark sky",
+     "fx": "rain",
+     "shake": 0
+    },
+    {
+     "text": "On January tenth, the second mate, Matthew Joy, dies. He is the first.",
+     "prompt": "small boat on a calm grey sea at dawn, sailors with heads bowed, somber mood",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "One stormy night, Chase's boat loses sight of the others. Now it's alone.",
+     "prompt": "single small boat with a lantern in a dark storm at night, rain and high waves",
+     "fx": "rain",
+     "shake": 0
+    },
+    {
+     "text": "As more men die, the survivors face the darkest choice there is. Sailors of that era called it the custom of the sea.",
+     "prompt": "close-up of the hollow eyes of a starving bearded sailor in shadow, moonlight",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "To stay alive, they eat the bodies of those who have died. Chase admits it in his own book.",
+     "prompt": "silhouettes of sailors huddled in a small boat against a blood-red sunset, nothing visible in detail",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In the captain's boat, it goes further. The four men left agree to draw lots.",
+     "prompt": "close-up of a hand holding small pieces of torn paper as lots, inside a weathered boat",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The lot falls on Owen Coffin, the captain's young cousin. Pollard reportedly offers to protect him. Coffin accepts his fate.",
+     "prompt": "rugged young man with short hair and stubble in profile, calm, empty ocean behind him",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Another boat drifts away in the dark, and is never seen again.",
+     "prompt": "empty ocean at twilight, a tiny boat far away disappearing into mist",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "February eighteenth. Almost ninety days after the whale, a British ship spots a tiny boat. Inside are Chase and two others, barely alive.",
+     "prompt": "large old sailing ship approaching a tiny wooden boat with three emaciated men waving weakly, ocean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Five days later, a Nantucket whaleship finds Captain Pollard and Charles Ramsdell off the coast of Chile.",
+     "prompt": "sailors on a big ship lowering ropes to two exhausted men in a small boat, calm sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And in April, a ship reaches Henderson Island. Wright, Weeks and Chappel are still alive.",
+     "prompt": "three thin ragged men on a white beach waving at a sailing ship offshore, bright sun",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "TODAY  ·  HOW WE KNOW",
+   "yt_chapter": "Today: How we know",
+   "scenes": [
+    {
+     "text": "How do we know any of this? First, from Owen Chase. Months after his rescue, he published a book about the wreck.",
+     "prompt": "old leather-bound book open on a wooden desk with candle and quill, 19th century",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Years later, a young sailor named Herman Melville read it, aboard a whaleship in the Pacific.",
+     "prompt": "young sailor reading an old book on the deck of a whaling ship, sunlight, ocean",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In 1851, he turned it into Moby-Dick, the great American novel about a whale that fights back.",
+     "prompt": "writer at a wooden desk by a window writing with a quill, stacks of paper, 1850s room",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Then, in 1960, a family in upstate New York opened an old trunk. Inside was a manuscript by Thomas Nickerson, the boy at the helm.",
+     "prompt": "hands opening an old wooden travel trunk in a dusty attic, papers inside, window light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Historians confirmed it was real. It was finally published in 1984, a century after his death.",
+     "prompt": "historian in a modern archive examining old papers with gloves under a lamp",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In 2011, divers found the wreck of Pollard's next ship, on a reef near Hawaii. An anchor, still lying on the sand.",
+     "prompt": "diver underwater next to an old encrusted iron anchor on a sandy reef, sunlight rays, fish",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And in 2016, engineers used computer models to test the story. A sperm whale's head really can work like a battering ram.",
+     "prompt": "computer monitor in a dark lab showing a grey 3D wireframe model of a whale",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "The answer: Would you have survived?",
+   "scenes": [
+    {
+     "text": "So, would you have survived? Of twenty men on the Essex, only eight came home.",
+     "prompt": "wide view of an empty ocean at sunset, a single small boat with a patched sail",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your odds depended first on luck: which boat you were in, and how long it held together.",
+     "prompt": "three small wooden boats far apart on a vast ocean, aerial view",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Second, on the choice to avoid the closer islands. Melville believed that, going west, they would most likely have been saved.",
+     "prompt": "tropical island with palm trees and white beach at golden hour, calm lagoon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Third, on your body. Historians note the first to die were mostly the ship's Black sailors, who were likely fed worse for over a year.",
+     "prompt": "group of 1820s sailors of different backgrounds standing together on a ship deck, somber, soft light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And the three men who chose to stay on Henderson Island, the rock instead of the boat? All three survived.",
+     "prompt": "three men sitting on rocks on a tropical beach at sunset, watching the sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And the boy at the helm? Thomas Nickerson lived, became a captain himself, and died at seventy-seven. Without him, we'd never know what it felt like.",
+     "prompt": "elderly man with white beard sitting by a window in a 19th-century room looking out at a harbor",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "So. The islands, or the long way home? The rock, or the boat? Which choice would you have made? Tell me in the comments.",
+     "prompt": "lone old wooden three-masted sailing ship from 1820 sailing toward a glowing sunset on a calm ocean, wide cinematic shot",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "4 HOURS LEFT",
+   "title": "The Whale That Sank a Ship on Purpose #Shorts",
+   "description": "In 1820, a sperm whale rammed the whaleship Essex twice, in the middle of the Pacific. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Essex #MobyDick #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "watched a whale sink his ship.",
+     "prompt": "vertical composition, sperm whale charging straight toward the camera across the ocean surface, huge head pushing white water"
+    },
+    {
+     "text": "Pacific Ocean, November twentieth, 1820. The whaleship Essex is more than a thousand miles from land.",
+     "prompt": "vertical composition, aerial view of a small old wooden three-masted sailing ship from 1820 alone in the middle of a vast empty blue ocean"
+    },
+    {
+     "text": "Most of the crew are out in small boats, hunting. The ship is almost empty.",
+     "prompt": "vertical composition, two small wooden rowboats full of sailors rowing across a blue ocean, an old sailing ship behind them"
+    },
+    {
+     "text": "Then a giant sperm whale turns, and swims straight at her.",
+     "prompt": "vertical composition, enormous sperm whale swimming just below the clear blue ocean surface, seen from above, massive square head"
+    },
+    {
+     "text": "It hits the bow. Dives under the keel. Then it comes back, faster, and smashes the bow in.",
+     "prompt": "vertical composition, the bow of an old wooden ship being smashed, broken timbers and huge spray"
+    },
+    {
+     "text": "In minutes, the ship rolls over. And at the helm stands a fourteen-year-old cabin boy.",
+     "prompt": "vertical composition, thin fourteen-year-old boy in a cloth cap and rough linen shirt straining to turn a big wooden ship's wheel, panic on his face"
+    },
+    {
+     "text": "Fifty-six years later, as an old man, he wrote it all down. The day he",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE CHOICE",
+   "title": "They Feared Cannibals, So They Chose This #Shorts",
+   "description": "After a whale sank their ship in 1820, the Essex crew made one choice that changed everything. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Essex #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "chose the long way home.",
+     "prompt": "vertical composition, three small wooden sailboats with patched sails alone on a huge rolling ocean, grey sky"
+    },
+    {
+     "text": "1820. Twenty sailors adrift in three open boats in the middle of the Pacific, after a whale sank their ship.",
+     "prompt": "vertical composition, three small wooden boats far apart on a vast ocean, aerial view"
+    },
+    {
+     "text": "The nearest islands are about a month away, downwind. Easy sailing.",
+     "prompt": "vertical composition, tropical island with palm trees and white beach at golden hour, calm lagoon"
+    },
+    {
+     "text": "But the officers have heard rumors. Cannibals live on those islands, they say.",
+     "prompt": "vertical composition, young sailor with dark hair and sideburns in a navy wool jacket arguing with other sailors in a small boat, tense faces"
+    },
+    {
+     "text": "So they go the other way. Thousands of miles against the wind, toward South America.",
+     "prompt": "vertical composition, small wooden boat tossed on grey stormy waves, patched sail, dark sky"
+    },
+    {
+     "text": "Weeks later, the food runs out. And the men in the boats face the very thing they feared.",
+     "prompt": "vertical composition, close-up of a gaunt sailor's eyes in shadow, small boat, dim moonlight"
+    },
+    {
+     "text": "Herman Melville later wrote that the islands would probably have saved them. But they",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE CAPTAIN",
+   "title": "The Captain Who Never Ate on November 20th #Shorts",
+   "description": "George Pollard survived the wreck of the Essex. He never forgot it. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Essex #MobyDick #History #Shorts",
+   "blocks": [
+    {
+     "text": "went without food every November twentieth.",
+     "prompt": "vertical composition, old man with grey beard holding a lantern on a dark cobblestone street at night, 19th-century New England"
+    },
+    {
+     "text": "His name was George Pollard. At twenty-eight, he was captain of the whaleship Essex.",
+     "prompt": "vertical composition, portrait of a ship captain in his late twenties with a short dark beard and a dark coat standing on the deck of an old wooden ship, serious, morning light"
+    },
+    {
+     "text": "In 1820, a sperm whale rammed his ship, and sank it in the middle of the Pacific.",
+     "prompt": "vertical composition, close view of the huge square head of a sperm whale bursting through the waves, spray flying"
+    },
+    {
+     "text": "He wanted to sail for the nearest islands. His officers talked him out of it.",
+     "prompt": "vertical composition, ship captain in his late twenties with a short dark beard and a dark coat in a small boat studying an old open navigation book and chart, ocean behind"
+    },
+    {
+     "text": "Ninety-three days later, he was found in his boat off Chile. One of only eight survivors.",
+     "prompt": "vertical composition, sailors on a big ship lowering ropes to two exhausted men in a small boat, calm sea"
+    },
+    {
+     "text": "He went back to sea and was wrecked again. He ended his life as a night watchman on Nantucket.",
+     "prompt": "vertical composition, old wooden sailing ship stranded on a shallow coral reef, turquoise water, waves breaking"
+    },
+    {
+     "text": "Herman Melville met him, and admired him. And for the rest of his life, the captain quietly",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE TRUNK",
+   "title": "The Lost Witness Behind Moby-Dick #Shorts",
+   "description": "A cabin boy saw a whale sink his ship in 1820. His story was lost for 84 years. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#MobyDick #Essex #History #Shorts",
+   "blocks": [
+    {
+     "text": "opened an old trunk.",
+     "prompt": "vertical composition, hands opening an old wooden travel trunk in a dusty attic, papers inside, window light"
+    },
+    {
+     "text": "Inside, a handwritten story about a whale that sank a ship in 1820.",
+     "prompt": "vertical composition, old leather-bound book open on a wooden desk with candle and quill, 19th century"
+    },
+    {
+     "text": "The writer was Thomas Nickerson. At fourteen, he was the cabin boy on the whaleship Essex.",
+     "prompt": "vertical composition, close-up of a thin fourteen-year-old boy in a cloth cap and rough linen shirt gripping a wooden ship's wheel on deck, ocean behind him, morning light"
+    },
+    {
+     "text": "He was at the helm when the whale attacked. Then he survived three months in an open boat.",
+     "prompt": "vertical composition, exhausted sunburned sailors slumped in a small wooden boat under a blazing sun"
+    },
+    {
+     "text": "As an old man, he finally wrote it all down. Then the pages vanished.",
+     "prompt": "vertical composition, elderly man with white beard sitting by a window in a 19th-century room looking out at a harbor"
+    },
+    {
+     "text": "For more than eighty years, the story that inspired Moby-Dick was missing a witness.",
+     "prompt": "vertical composition, writer at a wooden desk by a window writing with a quill, stacks of paper, 1850s room"
+    },
+    {
+     "text": "Until 1960, when a family in upstate New York",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}

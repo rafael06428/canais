@@ -66,6 +66,8 @@ window.ytUpload = async (job) => {
     await s(1000);
   }
   const link = [...d.querySelectorAll('a')].map(a => a.href).find(h => /shorts\/|youtu\.be\//.test(h)) || '';
+  // "done" turns clickable before the bytes finish: wait for "Envio em X%" to end, or leaving the page interrupts the upload
+  for (let i = 0; i < 2400; i++) { const p = d.querySelector('ytcp-video-upload-progress, .progress-label')?.innerText || ''; if (!/Envio em|Enviando|Uploading/.test(p)) break; st('bytes ' + p.slice(0, 50)); await s(1000); }
   done.click(); await s(3000);
   document.querySelector('ytcp-uploads-still-processing-dialog #close-button, ytcp-video-share-dialog #close-button')?.click();
   st('done');
