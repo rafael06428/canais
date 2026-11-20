@@ -50,5 +50,24 @@
   ],
   "pending": [],
   "note": "interrupted duplicate upload hUiQCUt8GZs left in Studio (not public); owner can delete it"
+ },
+ {
+  "date": "2026-11-20",
+  "slug": "chernobyl-1986",
+  "title": "24 Hours in Chernobyl, 1986: Would You Have Survived?",
+  "long_url": "https://youtu.be/6XkdoVlrDzM",
+  "shorts": [
+   "https://youtube.com/shorts/LU4NikrcYzU",
+   "https://youtube.com/shorts/w0i43wgPxzQ",
+   "https://youtube.com/shorts/JMrCR7S9yQU"
+  ],
+  "pending": [
+   {
+    "id": null,
+    "title": "How a Pair of Shoes Exposed Chernobyl #Shorts",
+    "job": "https://raw.githubusercontent.com/rafael06428/canais/pending/pending/jobs.json"
+   }
+  ],
+  "note": "daily upload limit hit on the 4th Short; closing the dialog discarded the draft, so the file is on the 'pending' branch (jobs.json = ready ytUpload job)"
  }
 ]

@@ -1,0 +1,812 @@
+{
+ "slug": "chernobyl-1986",
+ "title": "24 Hours in Chernobyl",
+ "title_yt": "24 Hours in Chernobyl, 1986: Would You Have Survived?",
+ "description": "April 26, 1986. A reactor explodes three kilometers from Pripyat, a city of nearly fifty thousand young families, and for thirty-six hours almost nobody tells them. Hour by hour, from the night of the explosion to the evacuation: what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Serhii Plokhy, \"Chernobyl: The History of a Nuclear Catastrophe\" and HISTORY.com; Adam Higginbotham, \"Midnight in Chernobyl\" and Wilson Center Digital Archive (declassified KGB and Communist Party documents); Svetlana Alexievich, \"Voices from Chernobyl\" (Lyudmila Ignatenko's account); The Moscow Times, \"The Day a Soviet Paradise Stood Still\" (2011); Atomic Archive timeline; World Health Organization (2005/2006) health reports.\n\nSome details, like the exact time of the evacuation announcement and the number of buses, differ between sources. Long-term death toll estimates are disputed. Visuals and narration are AI-generated, based on historical accounts.\n\n#History #POV #Chernobyl",
+ "tags": [
+  "chernobyl",
+  "pripyat",
+  "chernobyl disaster",
+  "chernobyl 1986",
+  "would you survive",
+  "history",
+  "pov history",
+  "nuclear disaster",
+  "soviet union",
+  "vasily ignatenko",
+  "history documentary",
+  "20th century",
+  "cold war",
+  "evacuation"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "36 HOURS\nNO WARNING",
+ "thumb_scene": 16,
+ "title_card": {
+  "after_scene": 4,
+  "lines": [
+   "24 HOURS IN CHERNOBYL",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "Thirty-six hours from now, this whole city will be empty. Nearly fifty thousand people, gone in an afternoon.",
+     "prompt": "wide view of a 1980s Soviet city of white concrete apartment blocks on a sunny spring day, wide avenue, green trees, people walking",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember the yellow Ferris wheel in the park. It's brand new, waiting for the May Day holiday.",
+     "prompt": "a brand new yellow Ferris wheel in a small city park, spring trees, blue sky, empty seats",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "This is Pripyat, Soviet Ukraine. April 1986. Three kilometers away stands the Chernobyl nuclear power plant.",
+     "prompt": "large Soviet nuclear power plant on flat green land, white reactor buildings and a tall red and white striped chimney, spring morning",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Hour by hour, you'll face the choices its people faced. And by the end, you'll know whether you would have survived.",
+     "prompt": "over the shoulder of a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket on a ninth-floor balcony at dusk, looking at a distant industrial plant with lights",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "FRIDAY NIGHT  ·  THE ATOM CITY",
+   "yt_chapter": "Friday night: The atom city",
+   "scenes": [
+    {
+     "text": "It's Friday evening, April twenty-fifth. The air is warm, and the long holiday weekend is only days away.",
+     "prompt": "evening on a 1980s Soviet city of white concrete apartment blocks, warm golden light, couples strolling under blooming trees",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You're twenty-six. That's the average age here. Pripyat is a young city, built from nothing for the people who run the plant.",
+     "prompt": "young Soviet families with baby strollers walking on a wide sidewalk between new concrete apartment buildings, 1980s, golden hour",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "You teach at one of the city's schools. Your wife works at a shop downtown. Your daughter is one year old.",
+     "prompt": "cozy small 1980s Soviet apartment kitchen, a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket holding a one-year-old girl, a young woman at the stove, warm lamp light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Life here is better than almost anywhere in the Soviet Union. Full shops. A swimming pool. A cinema. A palace of culture.",
+     "prompt": "1980s Soviet supermarket with full shelves of bread and cans, shoppers with string bags, fluorescent light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Half the people you know work at the plant. Four reactors, and two more being built.",
+     "prompt": "workers in white coats and caps walking toward a large industrial power plant building, 1980s, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Tonight, in the control room of Reactor Number Four, a safety test is running late.",
+     "prompt": "1980s Soviet nuclear control room with huge grey panels covered in dials, switches and small lamps, operators in white coats, dim light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "They want to know if the spinning turbines can keep the cooling pumps running in a power cut. The test was planned for the afternoon.",
+     "prompt": "huge industrial turbine hall, long row of giant green turbines, a few workers far away, dim light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But Kyiv needed the electricity, so it was pushed back. The night shift, less prepared, will run it after midnight.",
+     "prompt": "tired young male engineers in white coats and white caps standing at an old analog control panel full of round dials and switches, late night, worried faces, 1980s",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Reactor Four is an RBMK, a Soviet design with a dangerous flaw. The men at the controls have never been fully told about it.",
+     "prompt": "huge 1980s reactor hall, the floor is a giant circle made of a grid of small square metal caps, a few workers in white overalls, cold light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You set the alarm, close the curtains, and go to sleep.",
+     "prompt": "dark bedroom in a 1980s apartment, a young couple asleep, a baby crib, moonlight through thin curtains",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "1:23 AM  ·  THE FLASH",
+   "yt_chapter": "1:23 AM: The flash",
+   "scenes": [
+    {
+     "text": "At one twenty-three in the morning, the operators begin the test. Power surges in seconds.",
+     "prompt": "close-up of a hand pressing a large red button on a grey 1980s control panel, warning lamps glowing red",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Someone presses the emergency shutdown button. It should stop everything. Instead, because of a design flaw, the power spikes even higher.",
+     "prompt": "male operators in white coats and caps staring at an old analog control panel with round dials and glowing red lamps, panic, dim light, 1980s",
+     "fx": "none",
+     "shake": 1
+    },
+    {
+     "text": "Two explosions tear the reactor apart. A thousand-ton lid is thrown into the air. The roof is gone.",
+     "prompt": "night, distant large industrial building with its roof blown open, orange fire and a pale column of light rising into the dark sky",
+     "fx": "fire",
+     "shake": 3
+    },
+    {
+     "text": "In your apartment, you hear a heavy thud, like a door slamming far away. Most people in Pripyat don't even wake up.",
+     "prompt": "a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket sitting up in bed in a dark room at night, listening, faint orange glow through the window",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You step onto the balcony. Over the plant, there's a glow. Some people later swear the light looked almost blue.",
+     "prompt": "from behind, a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket on a balcony at night looking at a faint glow on the horizon above a distant power plant",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "At one twenty-eight, the first fire trucks arrive. Firefighters from the plant, and from Pripyat.",
+     "prompt": "1980s red Soviet fire trucks with flashing lights driving fast at night toward a burning industrial building",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "The operators in the control room still believe the reactor is intact. They send men to pour water into a core that no longer exists.",
+     "prompt": "two young engineers in white coats and caps running down a dark industrial corridor full of steam and dust, flashlight beams",
+     "fx": "smoke",
+     "shake": 1
+    },
+    {
+     "text": "They're told it's a roof fire. Nobody tells them about radiation. They wear canvas coats and helmets. Nothing more.",
+     "prompt": "firefighters in canvas coats and brass helmets unrolling hoses at night, orange firelight on their faces",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "On the roofs, burning chunks of graphite from the core lie everywhere. The men kick them aside and climb higher.",
+     "prompt": "firefighters climbing a tall steel ladder on the side of a huge industrial building at night, smoke and orange glow above",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Here is your first choice. Do you go outside to see what's burning? Or do you shut the window and go back to bed?",
+     "prompt": "a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket hesitating at the open door of an apartment at night, coat in hand, dim stairwell light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Some neighbors walk toward the plant to watch the glow. You close the window. That simple choice is the right one.",
+     "prompt": "silhouettes of a few people standing on a dark road at night looking at a distant orange glow on the horizon",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "SATURDAY MORNING  ·  A NORMAL DAY",
+   "yt_chapter": "Saturday morning: A normal day",
+   "scenes": [
+    {
+     "text": "Saturday, April twenty-sixth. The sun comes up warm. Birds, children, the smell of spring.",
+     "prompt": "sunny spring morning in a 1980s Soviet city of white concrete apartment blocks, children playing in a courtyard, laundry on balconies",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The radio plays music. No news. No warning. The city wakes up as if nothing happened.",
+     "prompt": "an old 1980s Soviet radio on a kitchen windowsill, morning sun, a cup of tea",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "But by eight o'clock, a rumor is spreading. Something happened at the plant. An accident.",
+     "prompt": "two young women talking quietly at a bus stop in a 1980s Soviet city, worried faces, morning",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Water trucks drive slowly down the streets, spraying the asphalt. Some leave a strange white foam.",
+     "prompt": "1980s Soviet water truck spraying water on a wide city street, wet shiny asphalt, white foam on the road, morning sun",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Police cars block the road toward the plant and the fishing spots on the river.",
+     "prompt": "Soviet police car parked across a country road with a police officer in a grey uniform, spring fields",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Some people say they taste metal in their mouths. Nobody explains why.",
+     "prompt": "close-up of a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket touching his lips with a puzzled look, sunny street behind him",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "At the city hospital, plant workers arrive vomiting, their skin red as if sunburned. The young doctors have never seen anything like it.",
+     "prompt": "1980s Soviet hospital corridor with pale green walls, nurses in white coats helping a pale exhausted worker onto a bed",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You go to work. In Soviet schools, Saturday is a school day.",
+     "prompt": "plain 1980s concrete school building with large windows, children in dark uniforms with red neckerchiefs walking to the door, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Inside, the windows are shut. Wet rags lie across every doorway. Someone has put soap at every sink.",
+     "prompt": "school corridor in the 1980s, wet cloths on the floor at classroom doors, closed windows, soft light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Then a nurse comes from class to class with iodine tablets. The children swallow them without a word.",
+     "prompt": "a nurse in a white coat giving small pills to children in school uniforms sitting at wooden desks, 1980s classroom",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "After the third lesson, the children are sent home and told to stay inside.",
+     "prompt": "children with school bags leaving a school building in a hurry, teacher at the door, 1980s",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And yet, all over the city, life goes on. Wedding parties walk through the park. Boys play football.",
+     "prompt": "1980s Soviet wedding party walking in a sunny park, bride in white dress, guests with flowers",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In the shopping center, children eat ice cream. The sky above them is full of helicopters.",
+     "prompt": "children eating ice cream cones at a cafe table, through the big window a helicopter flies in the blue sky, 1980s",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NOON  ·  THE CHOICE TO LEAVE",
+   "yt_chapter": "Noon: The choice to leave",
+   "scenes": [
+    {
+     "text": "At the plant, a report goes to Moscow. One dead, one missing. Radiation levels: far lower than the truth.",
+     "prompt": "a Soviet official in a grey suit reading a typed report at a desk with telephones, serious face, office light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "The instruments that could measure the real levels either broke, or maxed out. Some men simply refused to believe them.",
+     "prompt": "close-up of an old handheld radiation meter with a needle pinned at the far right of the dial, gloved hand",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "At the station, trains still run. A few families quietly pack a suitcase and leave on their own.",
+     "prompt": "small old railway station platform with a green 1980s train, a family carrying old brown leather suitcases, spring afternoon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "This is the choice that matters most today. Do you trust the silence, or do you take your daughter and go?",
+     "prompt": "a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket holding a baby girl and looking out of a window at a sunny city, torn expression, 1980s apartment",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "If you leave now, on the afternoon train to your in-laws' village, you cut your family's exposure dramatically.",
+     "prompt": "view from a moving train window of green spring fields and a village with wooden houses, afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But leaving without permission is risky in the Soviet Union. You could be accused of spreading panic.",
+     "prompt": "a stern Soviet official in a grey suit and hat standing at a doorway, cold expression",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Only after lunch does word finally come. Stay indoors. Keep the windows closed.",
+     "prompt": "a young woman closing the window of a 1980s apartment, sunny city outside, worried face",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Volunteers go flat to flat, handing out potassium iodide pills. Your wife gives one to the baby with a spoon of water.",
+     "prompt": "young woman giving a tiny pill with a spoon to a one-year-old girl in a 1980s kitchen, soft daylight",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE FIREFIGHTER",
+   "yt_chapter": "The firefighter: Vasily Ignatenko",
+   "scenes": [
+    {
+     "text": "Across town, a young woman named Lyudmila Ignatenko is waiting for her husband to come home.",
+     "prompt": "young woman with brown hair in a simple 1980s dress standing at a window, waiting, morning light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Vasily is twenty-five. A sergeant in the Pripyat fire brigade. They live right above the fire station.",
+     "prompt": "young firefighter in his twenties with short hair and a friendly face in a Soviet fire uniform, standing by a red fire truck",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He was called out at one twenty-nine. He left in his shirt, saying he'd be back soon.",
+     "prompt": "old 1980s red Soviet fire truck with round headlights inside a fire station garage at night, firefighters in canvas coats climbing aboard",
+     "fx": "none",
+     "shake": 1
+    },
+    {
+     "text": "With Lieutenants Pravyk and Kibenok, he climbed the fire escape to the roof beside the shattered reactor.",
+     "prompt": "three firefighters in helmets climbing a narrow steel ladder up a tall concrete wall at night, orange glow and smoke above",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "The water pipes were broken. They fought the flames with almost nothing, breathing the smoke.",
+     "prompt": "firefighters on a flat industrial roof at night spraying a weak stream of water at burning debris, smoke everywhere",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "When they came down, they could barely stand. By two thirty-five, Vasily was in the city hospital.",
+     "prompt": "exhausted firefighters in plain dark canvas coats and helmets sitting on the ground at night, colleagues helping them, smoke behind",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Lyudmila is pregnant. She runs to the hospital. Through the window, his face is already swollen.",
+     "prompt": "young pregnant woman with brown hair outside a 1980s hospital building looking up at a window, worried, daylight",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "That night, the worst cases are flown to a special radiation clinic in Moscow: Hospital Number Six.",
+     "prompt": "a Soviet passenger plane on a runway at night, ambulances parked beside it, floodlights",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Lyudmila follows him. She will stay at his side for almost three weeks.",
+     "prompt": "young woman sitting beside a hospital bed holding a man's hand, white room, soft light, back view",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "SATURDAY NIGHT  ·  THE BUSES",
+   "yt_chapter": "Saturday night: The buses",
+   "scenes": [
+    {
+     "text": "Evening. The reactor is still burning. A graphite fire, hotter than any firefighter can reach.",
+     "prompt": "night, a ruined industrial building glowing orange inside, thin plume of smoke rising, seen from far away",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Around nine o'clock, new flashes rise from the ruins. The wind shifts, and pushes the invisible cloud over part of the city.",
+     "prompt": "night, a distant ruined industrial building with a bright flash and a dark smoke plume drifting toward apartment blocks",
+     "fx": "smoke",
+     "shake": 1
+    },
+    {
+     "text": "At eight o'clock, Kyiv quietly orders more than a thousand buses to get ready. They don't tell the city.",
+     "prompt": "long line of yellow and white 1980s Soviet buses parked along a dark country road at night, headlights on",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Late that night, the government commission finally decides. Pripyat will be evacuated.",
+     "prompt": "Soviet officials in suits around a table covered with maps and telephones, late night, cigarette smoke, lamp light",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "You don't know any of this. You only see the line of headlights on the road out of town.",
+     "prompt": "from a dark balcony, a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket looking at a long chain of headlights on a road in the distance at night",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Choice three. Do you put the baby in the bath, wash everything, and seal the windows with wet towels?",
+     "prompt": "young couple pressing wet towels along the bottom of a closed window in a dim 1980s apartment at night, lamp light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You do. It's a small thing. But dust from the reactor is falling on balconies, on toys, on laundry left outside.",
+     "prompt": "laundry hanging on a balcony at night with fine dust floating in the air, faint orange glow in the distance",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "SUNDAY, 1:00 PM  ·  THREE DAYS",
+   "yt_chapter": "Sunday 1 PM: Three days",
+   "scenes": [
+    {
+     "text": "Sunday, April twenty-seventh. At noon, radiation in some streets is already hundreds of times above normal.",
+     "prompt": "empty sunny street in a 1980s Soviet city of white concrete apartment blocks at noon, a lone child's bicycle on the sidewalk, eerie calm",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Soon after one o'clock, the radio speaks. The city council announces a temporary evacuation.",
+     "prompt": "a 1980s loudspeaker mounted on a lamp post in a Soviet city street, blue sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Take documents, absolutely necessary items, and food. Buses will come to every building at two o'clock.",
+     "prompt": "young woman putting passports and papers into a leather handbag on a kitchen table, 1980s apartment",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Most accounts say people were told they'd be back in about three days. The message is repeated, again and again.",
+     "prompt": "family members packing a small suitcase on a bed with folded clothes and a baby blanket, 1980s apartment",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Final choice. You have less than an hour. What do you take?",
+     "prompt": "a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket standing in the middle of his small apartment looking around at furniture and photos, deciding",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Most people pack light, as if for a weekend in the country. One woman said everyone looked dressed for camping.",
+     "prompt": "Soviet families in casual jackets with small bags and backpacks walking out of an apartment building, sunny day",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Pets must stay behind. Children cry for their dogs. Neighbors leave notes on their doors.",
+     "prompt": "a dog sitting alone on the steps of an apartment building watching people leave, sunny day, sad mood",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "At two o'clock, the buses roll in. More than a thousand of them, in one long column.",
+     "prompt": "column of old yellow and white buses on a wide avenue between plain white Soviet concrete apartment blocks, birch trees, Eastern Europe, sunny spring day",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Police check every entrance. People climb aboard calmly. There is no panic.",
+     "prompt": "Soviet police officer in a grey uniform helping a mother with a small child climb into an old bus, people with bags waiting, daylight",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In a little over two hours, nearly fifty thousand people are gone.",
+     "prompt": "aerial view of a 1980s Soviet city of white concrete apartment blocks with empty streets and a long line of buses leaving on the road out of town, afternoon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your bus drives for hours to a farming village. Families there open their homes to strangers, with milk, bread and spare beds.",
+     "prompt": "1980s Soviet bus parked in a Ukrainian village with wooden houses, villagers greeting tired families with bread, late afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "From the bus window, you see the park. The yellow Ferris wheel stands still.",
+     "prompt": "view through a dusty bus window of a yellow Ferris wheel in a park, people's reflections in the glass",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "APRIL 28  ·  THE WORLD FINDS OUT",
+   "yt_chapter": "April 28: The world finds out",
+   "scenes": [
+    {
+     "text": "Monday morning, eleven hundred kilometers away, at a nuclear plant in Forsmark, Sweden, an alarm goes off.",
+     "prompt": "modern 1980s Scandinavian nuclear power plant by a cold grey sea, Swedish forest, morning mist",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "It's a worker's shoes. They're radioactive. But the source isn't Sweden.",
+     "prompt": "close-up of an old analog radiation meter with a needle dial held next to a man's worn leather work shoes on a concrete floor, 1980s",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Scientists trace the wind back across the Baltic, toward the Soviet Union.",
+     "prompt": "scientists in a 1980s office looking at a large weather map of Europe pinned to a wall",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "That evening, Soviet television reads a short statement. An accident at Chernobyl. Measures are being taken.",
+     "prompt": "1980s Soviet family living room with an old television glowing in the dark, a family watching in silence",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "It's twenty seconds long. For you, on a cot in a village school far from home, it is the first official word.",
+     "prompt": "a young man in his twenties with short dark hair and a thin mustache, brown 1980s jacket sitting on a folding cot in a crowded school gym full of evacuated families, evening light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Soon the three days become forever. A thirty-kilometer exclusion zone is drawn around the plant.",
+     "prompt": "rusty barrier gate and a striped checkpoint pole on an empty road in a forest, warning sign without text, overcast",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In Moscow, on May thirteenth, Vasily Ignatenko dies. He was twenty-five.",
+     "prompt": "empty hospital bed with white sheets by a window in soft grey light, quiet room",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Weeks later, Lyudmila gives birth to a daughter. The baby lives only a few hours.",
+     "prompt": "a single white flower lying on a windowsill, soft morning light, melancholy",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "TODAY  ·  HOW WE KNOW",
+   "yt_chapter": "Today: How we know",
+   "scenes": [
+    {
+     "text": "Two plant workers died on the night of the explosion. Twenty-eight more died of radiation sickness within months.",
+     "prompt": "row of simple memorial portraits and red carnations on a stone wall, soft daylight",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Most of them were firefighters and operators. One hundred thirty-four people were diagnosed with acute radiation sickness.",
+     "prompt": "bronze statue of firefighters holding a hose on a stone pedestal, red carnations at its base, overcast sky",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "How many died later is still debated. The World Health Organization estimates around four thousand among the most exposed. Other studies say far more.",
+     "prompt": "researchers in a dim archive room looking through old paper files and folders, 1990s",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "The clearest evidence is in children. Thousands of thyroid cancers, mostly from drinking contaminated milk in those first weeks.",
+     "prompt": "a glass bottle of milk on a wooden table in a village kitchen, cold morning light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Today, a giant steel arch covers what is left of Reactor Four.",
+     "prompt": "enormous silver steel arch structure covering an old industrial building, overcast sky, flat landscape",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In April 2026, Chernobyl turned forty. And even now the zone isn't quiet: in 2025, a drone struck that steel arch.",
+     "prompt": "close-up of a damaged section of a huge silver steel arch roof with a patched hole, grey winter sky",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "In Pripyat, trees grow through the apartment blocks. Wolves and wild horses walk the empty avenues.",
+     "prompt": "abandoned overgrown concrete apartment blocks with trees growing on the street, wild horses walking, overcast",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Classrooms still hold children's gas masks and books, exactly where they were left.",
+     "prompt": "abandoned classroom with broken desks, old books and gas masks on the floor, peeling paint, grey light",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "The answer: Would you have survived?",
+   "scenes": [
+    {
+     "text": "So, would you have survived?",
+     "prompt": "over the shoulder of a young man with short dark hair and a brown jacket looking at abandoned grey concrete apartment blocks overgrown with trees, grey sky",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "If you lived in Pripyat, almost certainly yes. The evacuation came thirty-six hours late, but it came.",
+     "prompt": "families with small bags walking toward buses on a sunny street, 1980s, seen from a distance",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The people who died were the ones who ran toward the reactor that night. Firefighters. Operators. Men who knew, or didn't know, and went anyway.",
+     "prompt": "firefighters standing in a line at night in front of a distant glowing industrial building, silhouettes",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "For everyone else, the choices were small. Close the window. Stay inside. Don't drink the milk. Leave early if you can.",
+     "prompt": "hand closing a window latch in a 1980s apartment, sunny city outside",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Those small choices, in those first hours, are why most of them grew old.",
+     "prompt": "elderly Ukrainian couple sitting on a bench in a village garden, gentle afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And the yellow Ferris wheel? It was never officially opened. It still stands in the park, rusting, waiting for a holiday that never came.",
+     "prompt": "rusted yellow Ferris wheel in an abandoned overgrown park, trees growing around it, grey overcast sky",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Which choice would you have made? Leave on Saturday, or trust the silence? Tell me in the comments.",
+     "prompt": "rusty abandoned Ferris wheel among birch trees in an overgrown park at golden hour, quiet, wide shot, no signs",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "36 HOURS",
+   "title": "They Waited 36 Hours to Tell This City #Shorts",
+   "description": "April 1986. A reactor exploded three kilometers from a city of fifty thousand, and nobody told them. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Chernobyl #Pripyat #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "were living next to a burning reactor.",
+     "prompt": "vertical composition, night, a ruined industrial building glowing orange inside, smoke rising into the dark sky"
+    },
+    {
+     "text": "Pripyat, April twenty-sixth, 1986. At one twenty-three in the morning, Reactor Four at Chernobyl explodes.",
+     "prompt": "vertical composition, 1980s Soviet nuclear control room, grey panels with dials and red warning lamps, operators in white coats"
+    },
+    {
+     "text": "Three kilometers away, fifty thousand people sleep. Most don't even wake up.",
+     "prompt": "vertical composition, 1980s Soviet apartment blocks at night with a few lit windows, faint orange glow on the horizon"
+    },
+    {
+     "text": "In the morning, kids go to school. Couples get married. Boys play football.",
+     "prompt": "vertical composition, 1980s Soviet wedding party walking in a sunny park, bride in a white dress, guests with flowers"
+    },
+    {
+     "text": "Trucks wash the streets with foam. Helicopters fill the sky. The radio plays music.",
+     "prompt": "vertical composition, 1980s Soviet water truck spraying a wide city street, wet asphalt, helicopter in the blue sky"
+    },
+    {
+     "text": "No warning comes for a day and a half. For thirty-six hours, nobody tells them they",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "3 DAYS",
+   "title": "They Packed for 3 Days. They Never Came Back. #Shorts",
+   "description": "Pripyat, April 27, 1986: one hour to pack, a thousand buses, and a promise. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Chernobyl #Pripyat #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "three days. That was forty years ago.",
+     "prompt": "vertical composition, abandoned overgrown concrete apartment blocks with trees growing in the street, grey sky"
+    },
+    {
+     "text": "Sunday, April twenty-seventh, 1986. The radio in Pripyat announces a temporary evacuation.",
+     "prompt": "vertical composition, a 1980s loudspeaker on a lamp post in a Soviet city street, blue sky"
+    },
+    {
+     "text": "Take documents, the bare essentials, and food. The buses come at two o'clock.",
+     "prompt": "vertical composition, young woman putting passports and papers into a leather handbag on a kitchen table, 1980s"
+    },
+    {
+     "text": "More than a thousand buses roll in. Nearly fifty thousand people climb aboard. The dogs stay behind.",
+     "prompt": "vertical composition, long column of 1980s yellow and white Soviet buses on a wide avenue between apartment blocks"
+    },
+    {
+     "text": "Toys on balconies. Dinner on the table. The new Ferris wheel, waiting for May Day.",
+     "prompt": "vertical composition, a brand new yellow Ferris wheel in a small city park, spring trees, blue sky"
+    },
+    {
+     "text": "Nobody packs much. Everyone was told they'd be home soon. They were told to pack for",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE FIREFIGHTER",
+   "title": "The Firefighter Who Climbed onto Chernobyl's Roof #Shorts",
+   "description": "Vasily Ignatenko was 25 when he answered the call at 1:29 a.m. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Chernobyl #History #Firefighter #POV #Shorts",
+   "blocks": [
+    {
+     "text": "had less than three weeks to live.",
+     "prompt": "vertical composition, young firefighter with short hair in a Soviet fire uniform standing by a red fire truck at night"
+    },
+    {
+     "text": "At one twenty-nine in the morning, the Pripyat fire brigade gets a call. A fire on the roof of the power plant.",
+     "prompt": "vertical composition, firefighters jumping onto a red fire truck at night inside a bright fire station garage"
+    },
+    {
+     "text": "Sergeant Vasily Ignatenko is twenty-five. His wife Lyudmila is pregnant. He leaves in his shirt and says he'll be right back.",
+     "prompt": "vertical composition, young woman with brown hair in a simple 1980s dress standing at a window at night, waiting"
+    },
+    {
+     "text": "Nobody tells them it's radiation. They climb onto the roof beside the shattered reactor and fight the flames, breathing the smoke.",
+     "prompt": "vertical composition, firefighters climbing a tall steel ladder up a concrete wall at night, orange glow and smoke above"
+    },
+    {
+     "text": "Within hours, they can barely stand. Soon they're flown to a special hospital in Moscow.",
+     "prompt": "vertical composition, a Soviet passenger plane on a runway at night with ambulances and floodlights"
+    },
+    {
+     "text": "Lyudmila follows him and refuses to leave his side. Doctors try a bone marrow transplant from his sister.",
+     "prompt": "vertical composition, young woman sitting beside a hospital bed in a white room, soft light, back view"
+    },
+    {
+     "text": "Nothing works. That first night, nobody told them that Vasily",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE SHOES",
+   "title": "How a Pair of Shoes Exposed Chernobyl #Shorts",
+   "description": "April 28, 1986: an alarm in Sweden revealed the disaster the Soviet Union was hiding. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Chernobyl #History #ColdWar #POV #Shorts",
+   "blocks": [
+    {
+     "text": "one pair of shoes.",
+     "prompt": "vertical composition, close-up of a pair of worn leather work shoes on a concrete floor, a radiation detector beside them"
+    },
+    {
+     "text": "Monday, April twenty-eighth, 1986. A nuclear plant in Forsmark, Sweden. An alarm goes off.",
+     "prompt": "vertical composition, 1980s nuclear power plant by a cold grey sea, Swedish pine forest, morning mist"
+    },
+    {
+     "text": "It's a worker's shoes. They're radioactive. But nothing is leaking in Sweden.",
+     "prompt": "vertical composition, worried workers in 1980s overalls gathered around a radiation monitor, industrial corridor"
+    },
+    {
+     "text": "Scientists follow the wind back, eleven hundred kilometers, to the Soviet Union.",
+     "prompt": "vertical composition, scientists in a 1980s office studying a large weather map of Europe on a wall"
+    },
+    {
+     "text": "For two days, Moscow had said nothing. Now it has no choice. A twenty-second statement on the evening news.",
+     "prompt": "vertical composition, an old 1980s television glowing in a dark Soviet living room, a family watching"
+    },
+    {
+     "text": "The worst nuclear disaster in history, and the world learned about it because of",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}
