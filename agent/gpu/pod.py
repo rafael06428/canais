@@ -11,7 +11,7 @@ needs RUNPOD_API_KEY. Safety: `gen` refuses to run past MAX_MINUTES of pod life 
 import base64, json, os, secrets, sys, time, urllib.request
 
 KEY = os.environ["RUNPOD_API_KEY"]
-STATE_F = os.path.expanduser("~/.runpod_pod")
+STATE_F = os.path.expanduser(os.environ.get("RUNPOD_STATE", "~/.runpod_pod"))
 GPU = os.environ.get("RUNPOD_GPU", "NVIDIA GeForce RTX 4090")
 IMAGE = os.environ.get("RUNPOD_IMAGE", "runpod/pytorch:2.8.0-py3.11-cuda12.8.1-cudnn-devel-ubuntu22.04")
 SERVER = "https://raw.githubusercontent.com/rafael06428/canais/" + os.environ.get("SERVER_REF", "main") + "/agent/gpu/server.py"
@@ -41,7 +41,7 @@ def call(path, body=None, raw=False, timeout=120):
 
 def start():
     token = secrets.token_hex(16)
-    args = ("bash -c 'pip install -q -U diffusers transformers accelerate imageio imageio-ffmpeg ftfy sentencepiece && "
+    args = ("bash -c 'pip install -q -U diffusers transformers accelerate imageio imageio-ffmpeg ftfy sentencepiece tiktoken protobuf && "
             f"curl -sL {SERVER} -o /server.py && python /server.py'")
     q = f'''mutation {{ podFindAndDeployOnDemand(input: {{
         cloudType: {CLOUD}, gpuCount: 1, gpuTypeId: "{GPU}", name: "canal-video",
@@ -65,16 +65,18 @@ def wait(limit=1800):
 def gen(jobs_f, out):
     os.makedirs(out, exist_ok=True); jobs = json.load(open(jobs_f))
     for j in jobs:
-        if os.path.exists(f"{out}/{j['id']}.mp4"): continue
-        j = dict(j); j["image_b64"] = base64.b64encode(open(j.pop("image"), "rb").read()).decode()
-        print(call("/gen", j))
-    left = [j["id"] for j in jobs if not os.path.exists(f"{out}/{j['id']}.mp4")]
+        if os.path.exists(f"{out}/{j['id']}.{j.get('ext', 'mp4')}"): continue
+        j = dict(j)
+        if "image" in j: j["image_b64"] = base64.b64encode(open(j.pop("image"), "rb").read()).decode()
+        call("/gen", j)
+    ext = {j["id"]: j.get("ext", "mp4") for j in jobs}
+    left = [j["id"] for j in jobs if not os.path.exists(f"{out}/{j['id']}.{ext[j['id']]}")]
     while left:
         if (time.time() - st()["t0"]) / 60 > MAX_MIN: print("MAX_MINUTES reached, stopping"); stop(); return
         h = call("/health", timeout=30)
         for i in list(left):
             if i in h["done"]:
-                open(f"{out}/{i}.mp4", "wb").write(call(f"/out/{i}.mp4", raw=True, timeout=300)); left.remove(i); print("got", i, flush=True)
+                open(f"{out}/{i}.{ext[i]}", "wb").write(call(f"/out/{i}.{ext[i]}", raw=True, timeout=300)); left.remove(i); print("got", i, flush=True)
             elif i in h["failed"]:
                 print("failed", i, h["failed"][i]); left.remove(i)
         if left: time.sleep(20)

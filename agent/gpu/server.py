@@ -21,6 +21,7 @@ def log(*a):
 
 
 PIPE = {}
+T2I = {"zimage": (9, 0.0), "klein": (4, 1.0), "schnell": (4, 0.0)}   # default steps, guidance
 
 
 def load(model):
@@ -43,6 +44,15 @@ def load(model):
         p.to("cuda")
         try: p.vae.enable_tiling()
         except Exception: pass
+    elif model == "zimage":      # text-to-image, open weights (Apache 2.0)
+        from diffusers import ZImagePipeline
+        p = ZImagePipeline.from_pretrained("Tongyi-MAI/Z-Image-Turbo", torch_dtype=torch.bfloat16); p.to("cuda")
+    elif model == "klein":
+        from diffusers import Flux2KleinPipeline
+        p = Flux2KleinPipeline.from_pretrained("black-forest-labs/FLUX.2-klein-4B", torch_dtype=torch.bfloat16); p.to("cuda")
+    elif model == "schnell":
+        from diffusers import FluxPipeline
+        p = FluxPipeline.from_pretrained("black-forest-labs/FLUX.1-schnell", torch_dtype=torch.bfloat16); p.to("cuda")
     else:
         raise ValueError("unknown model " + model)
     PIPE[model] = p; STATE["loaded"] = model; log("loaded", model); return p
@@ -53,6 +63,12 @@ def run(job):
     from PIL import Image
     from diffusers.utils import export_to_video
     p = load(job.get("model", "wan5b"))
+    if job.get("model") in T2I:     # still image: {id, model, prompt, width, height, seed} -> /out/<id>.jpg
+        g = torch.Generator("cuda").manual_seed(int(job.get("seed", 1))); t0 = time.time()
+        steps, guid = T2I[job["model"]]
+        im = p(prompt=job["prompt"], width=int(job.get("width", 1344)), height=int(job.get("height", 768)),
+               num_inference_steps=int(job.get("steps", steps)), guidance_scale=guid, generator=g).images[0]
+        im.save(f"{OUT}/{job['id']}.jpg", quality=95); log("done", job["id"], round(time.time() - t0, 1), "s"); return
     img = Image.open(io.BytesIO(base64.b64decode(job["image_b64"]))).convert("RGB")
     W, H = int(job.get("width", 1280)), int(job.get("height", 704))
     img = img.resize((W, H))
