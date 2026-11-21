@@ -69,5 +69,19 @@
    }
   ],
   "note": "daily upload limit hit on the 4th Short; closing the dialog discarded the draft, so the file is on the 'pending' branch (jobs.json = ready ytUpload job)"
+ },
+ {
+  "date": "2026-11-21",
+  "slug": "hiroshima-1945",
+  "title": "One Morning in Hiroshima, 1945: Would You Have Survived?",
+  "long_url": "https://youtu.be/jZTz6QuFUxw",
+  "shorts": [
+   "https://youtube.com/shorts/QGrMjfFfUu4",
+   "https://youtube.com/shorts/LikVFRAhunA",
+   "https://youtube.com/shorts/768_R77y0JM",
+   "https://youtube.com/shorts/34M8grNEv98"
+  ],
+  "pending": [],
+  "note": "hybrid episode made in chat: 18 animated scenes + animated Shorts (Wan 2.2 on rented RunPod GPU); Chernobyl pending Short still on the 'pending' branch"
  }
 ]
