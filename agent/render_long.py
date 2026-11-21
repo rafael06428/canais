@@ -51,7 +51,34 @@ def load(i):
 ez = lambda x: (lambda v: v * v * (3 - 2 * v))(max(0.0, min(1.0, x)))
 
 
+CLIPS = {}
+ZERO = None
+
+
+def clip_frame(i, T):
+    """Animated scene: frames of ED/clips/NNN.mp4 (5 s, generated on a GPU), slowed down to at most 0.6x, then held."""
+    global ZERO
+    if i not in CLIPS:
+        if len(CLIPS) > 1: CLIPS.pop(next(iter(CLIPS)))
+        cap = cv2.VideoCapture(f"{ED}/clips/{i:03d}.mp4"); fr = []
+        while True:
+            ok, f = cap.read()
+            if not ok: break
+            s = max(W / f.shape[1], H / f.shape[0])
+            f = cv2.resize(f, (int(f.shape[1] * s) + 1, int(f.shape[0] * s) + 1), interpolation=cv2.INTER_LANCZOS4)
+            y0, x0 = (f.shape[0] - H) // 2, (f.shape[1] - W) // 2
+            fr.append(np.ascontiguousarray(f[y0:y0 + H, x0:x0 + W]))
+        CLIPS[i] = fr
+    fr = CLIPS[i]; d = max(0.1, ends[i] - starts[i]); n = len(fr)
+    speed = 1.0 if d <= n / 24 else max(0.6, (n / 24) / d)
+    x = min(n - 1.001, max(0.0, (T - starts[i]) * 24 * speed)); a = int(x); w = x - a
+    out = fr[a].astype(np.float32) * (1 - w) + fr[a + 1].astype(np.float32) * w
+    if ZERO is None: ZERO = np.zeros((H, W), np.float32)
+    return out, ZERO
+
+
 def scene(i, T):
+    if os.path.exists(f"{ED}/clips/{i:03d}.mp4"): return clip_frame(i, T)
     im, dc, fire = load(i); u = max(0.0, min(1.0, (T - starts[i]) / max(0.1, ends[i] - starts[i])))
     z = 1.0 + 0.07 * u if i % 2 == 0 else 1.07 - 0.07 * u
     dirs = [(1, 0), (-1, 0), (0.6, 0.5), (-0.6, -0.5), (1, 0.3), (-1, 0.3)]

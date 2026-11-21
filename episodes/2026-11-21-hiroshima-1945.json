@@ -1,0 +1,706 @@
+{
+ "slug": "hiroshima-1945",
+ "title": "One Morning in Hiroshima",
+ "title_yt": "One Morning in Hiroshima, 1945: Would You Have Survived?",
+ "description": "August 6, 1945. You wake up in Hiroshima to a clear blue sky. Minute by minute, from the 7:09 siren to the days after: where were you standing at 8:15, and would you have survived?\n\n{CHAPTERS}\n\nSources: City of Hiroshima (The Realities of the Atomic Bombing); Hiroshima Peace Memorial Museum; Hiroshima Peace Media Center (Chugoku Shimbun); Radiation Effects Research Foundation; US National Park Service.\n\nVisuals and narration are AI-generated, based on historical accounts. Told with respect for the victims and survivors.\n\n#Hiroshima #History #POV",
+ "tags": [
+  "hiroshima",
+  "hiroshima 1945",
+  "atomic bomb",
+  "would you survive",
+  "history",
+  "pov history",
+  "world war 2",
+  "ww2",
+  "enola gay",
+  "hibakusha",
+  "tsutomu yamaguchi",
+  "history documentary",
+  "august 6 1945",
+  "japan history"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "8:15 AM\nHIROSHIMA",
+ "thumb_scene": 31,
+ "title_card": {
+  "after_scene": 4,
+  "lines": [
+   "ONE MORNING IN HIROSHIMA",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "One hour from now, this city will be gone. And nobody here knows it.",
+     "prompt": "wide view over a Japanese city of low wooden houses and rivers on a bright summer morning, tiled roofs, a domed brick building by the river, clear blue sky, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "slow aerial drift over a quiet city of wooden houses and rivers in bright morning light, birds fly past, gentle haze"
+    },
+    {
+     "text": "Thirty-seven people are arriving for work in a concrete building beside the river. In a few minutes, one of them will walk down to the basement to look for some papers.",
+     "prompt": "office workers in 1940s Japanese clothing entering a three-story concrete building beside a river bridge, morning light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember him. Because what he does next is the difference between everyone, and one.",
+     "prompt": "close-up of a middle-aged Japanese office clerk in a white shirt holding a folder at the top of a dark stairway, 1940s, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "a middle-aged office clerk holding a folder turns and slowly walks down a dark concrete stairway, soft light from above"
+    },
+    {
+     "text": "It's Monday, August sixth, nineteen forty-five. You're in Hiroshima. The sky is perfectly clear.",
+     "prompt": "street-level view of a 1940s Japanese street with a streetcar, cyclists and pedestrians in summer clothes, clear blue sky, morning, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "a 1940s streetcar rolls slowly down a Japanese street, cyclists and pedestrians pass, morning sunlight, gentle camera push forward"
+    },
+    {
+     "text": "Today you'll live this morning minute by minute. And by the end of this video, you'll know whether you would have survived it.",
+     "prompt": "first-person view walking across a wooden-railed bridge over a wide calm river toward a city of low houses, morning sun, 1940s, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "7:09 AM  ·  THE SIREN",
+   "yt_chapter": "7:09 AM: The siren",
+   "scenes": [
+    {
+     "text": "At nine minutes past seven, the air raid siren starts to wail.",
+     "prompt": "air raid siren loudspeaker on a wooden pole above tiled roofs, clear morning sky, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 1
+    },
+    {
+     "text": "You've heard it a hundred times. Tokyo has burned. Osaka has burned. Sixty Japanese cities have been firebombed.",
+     "prompt": "a Japanese family in 1940s clothing looking up at the sky from the doorway of a wooden house, worried, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But not Hiroshima. For some reason, the bombers always pass it by. People here have started to wonder why.",
+     "prompt": "peaceful Japanese street of wooden shops with paper lanterns and noren curtains, people chatting, morning, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "High above, a single silver plane crosses the sky. It drops nothing. It's a weather plane, checking the clouds over the city.",
+     "prompt": "a single tiny silver B-29 airplane very high in a clear blue sky leaving a thin white trail, seen from the ground, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "a tiny silver airplane very high in a clear blue sky slowly crosses the frame leaving a thin white trail, seen from the ground"
+    },
+    {
+     "text": "And the sky is clear. That report has just sealed the fate of everyone around you.",
+     "prompt": "clear blue summer sky over tiled Japanese rooftops and a distant green mountain, morning, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "At seven thirty-one, the all-clear sounds. People climb out of the shelters, stretch, and go back to their morning.",
+     "prompt": "people in 1940s Japanese clothing climbing out of a small earthen backyard air raid shelter, relieved, morning light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Breakfast is small. Rice mixed with barley, maybe a little pickled radish. The war has made everyone thin.",
+     "prompt": "a simple 1940s Japanese breakfast on a low wooden table, small bowls of rice and pickles, tatami room, morning light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "8:00 AM  ·  THE CITY",
+   "yt_chapter": "8:00 AM: The city",
+   "scenes": [
+    {
+     "text": "By eight o'clock, around three hundred and fifty thousand people are in Hiroshima.",
+     "prompt": "crowded 1940s Japanese city street in the morning, pedestrians, bicycles and a streetcar, wooden buildings, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Soldiers do their morning exercises on the parade ground near the castle.",
+     "prompt": "rows of Japanese soldiers doing morning calisthenics on a parade ground with a traditional castle tower behind, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Streetcars rattle through the center, packed with commuters. Many of the drivers are teenage girls, because the men are at war.",
+     "prompt": "a teenage Japanese girl in a uniform and cap driving a crowded 1940s streetcar, seen from inside, morning light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "inside a crowded 1940s streetcar, a teenage girl in uniform and cap drives, passengers sway gently, sunlight flickers through the windows"
+    },
+    {
+     "text": "And in the streets, thousands of schoolchildren are already at work.",
+     "prompt": "large group of Japanese schoolchildren in 1940s school uniforms and work clothes walking down a street with tools, morning, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "They're twelve, thirteen, fourteen years old. Their job is to tear down houses, to make wide gaps that will stop fires from spreading when the bombers finally come.",
+     "prompt": "Japanese schoolchildren pulling ropes to tear down an old wooden house in a street, dust rising, 1945, morning sun, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0,
+     "motion": "schoolchildren in 1940s work clothes pull on ropes together to tear down an old wooden house, dust rises, morning sun"
+    },
+    {
+     "text": "More than nine thousand students are doing this today. Outdoors. In short sleeves. Under an open sky.",
+     "prompt": "schoolgirls in white blouses and work trousers carrying roof tiles in a line under a bright summer sky, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "In the concrete building by the river, the clerk you met is at his desk. His name is Eizo Nomura. He's forty-seven.",
+     "prompt": "a middle-aged Japanese clerk in a white shirt sitting at a wooden desk covered in papers in a 1940s office, window light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "He notices that some documents are missing. They must be downstairs. He stands up.",
+     "prompt": "a 1940s Japanese office clerk standing up from his desk and looking toward a door, colleagues working around him, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Three kilometers away, a young ship engineer named Tsutomu Yamaguchi is walking to the shipyard. It's the last day of his business trip. Tomorrow, he goes home to Nagasaki.",
+     "prompt": "a young Japanese man in a 1940s work suit and cap walking along a road beside potato fields toward a shipyard, morning sun, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Now, here's your choice, and you don't even know you're making it. Where are you standing at eight fifteen? Outside, or inside? Wood, or concrete? Near the center, or far?",
+     "prompt": "split view feeling of a Japanese street: a wooden house on one side and a solid concrete bank building on the other, people walking between, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "8:15 AM  ·  THE FLASH",
+   "yt_chapter": "8:15 AM: The flash",
+   "scenes": [
+    {
+     "text": "A few people look up. Three planes, very high. No siren this time. Three planes aren't a raid.",
+     "prompt": "people on a 1940s Japanese street shading their eyes and looking up at the bright sky, curious, not afraid, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "One of them is called the Enola Gay. It took off from the island of Tinian, six hours ago.",
+     "prompt": "a silver B-29 bomber flying high above scattered clouds and a coastline far below, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "At eight fifteen, a single bomb falls from it. It drops for forty-three seconds.",
+     "prompt": "view straight down from very high altitude onto a city spread across a river delta with seven river branches, clear day, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "It's aimed at a T-shaped bridge in the heart of the city. It drifts a little, and bursts about six hundred meters above a small hospital instead.",
+     "prompt": "a distinctive T-shaped bridge over a river junction in a 1940s Japanese city, seen from above, morning, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "First comes the light. A silent flash, brighter than anything you have ever seen. Survivors will call it pika. The flash.",
+     "prompt": "blinding white light flooding a Japanese street, long sharp shadows of people and bicycles, overexposed, silent, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 1,
+     "motion": "a blinding white light suddenly floods the street, shadows stretch long and sharp, everything overexposes to white"
+    },
+    {
+     "text": "With it comes heat. For a few seconds, the ground beneath the fireball is hotter than molten iron.",
+     "prompt": "roof tiles and a stone wall glowing in intense white-orange light, heat shimmer, no people, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 1
+    },
+    {
+     "text": "People as far as three and a half kilometers away feel their skin burn.",
+     "prompt": "a distant intense glow over the rooftops of a Japanese city seen from a hillside road, people shielding their faces, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Then the blast. A wall of air moving faster than sound. Almost every building within two kilometers is flattened or set on fire.",
+     "prompt": "a shock wave of dust racing down a street of wooden houses, roof tiles flying, debris in the air, no people, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "ash",
+     "shake": 3,
+     "motion": "a wall of dust and debris rushes down a street of wooden houses, roof tiles fly, the camera shakes violently"
+    },
+    {
+     "text": "Wooden houses simply fold. And then, darkness. The dust is so thick that morning turns to night.",
+     "prompt": "collapsed wooden houses under a dark brown sky thick with dust, dim red sun barely visible, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 2
+    },
+    {
+     "text": "Above the city, a cloud climbs higher and higher into the sky.",
+     "prompt": "a towering mushroom-shaped cloud rising over a distant city seen from far across a bay, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0,
+     "motion": "a towering cloud slowly rises and billows higher over a distant city seen from across a bay, smoke rolling upward"
+    }
+   ]
+  },
+  {
+   "title": "170 METERS  ·  THE BASEMENT",
+   "yt_chapter": "170 meters: The basement",
+   "scenes": [
+    {
+     "text": "Eizo Nomura is in the basement, reaching for his documents, when the lights go out.",
+     "prompt": "a dark concrete basement storeroom with shelves of paper files, a man's hand reaching for a folder, a single bulb, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0,
+     "motion": "in a dim concrete basement a man reaches for a folder on a shelf, the single light bulb flickers and goes out, dust falls from the ceiling"
+    },
+    {
+     "text": "He hears a huge roar. Something hits his head. He's sure the building has taken a direct hit.",
+     "prompt": "dust and small debris falling from the ceiling of a pitch dark concrete basement, a faint shaft of light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "ash",
+     "shake": 2
+    },
+    {
+     "text": "He is one hundred and seventy meters from the center of the explosion. Closer than any other person who will live to tell about it.",
+     "prompt": "a three-story concrete building standing damaged but upright among flattened ruins beside a river, smoke, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "He feels his way up the stairs in the dark. The world he walks out into is not the one he left.",
+     "prompt": "a man's silhouette climbing a concrete stairway toward a dim smoky doorway, rubble on the steps, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0,
+     "motion": "a man's silhouette slowly climbs a rubble-covered concrete stairway toward a dim smoky doorway, dust drifting in the light"
+    },
+    {
+     "text": "The whole neighborhood is gone. Shops, houses, temples. Fire is rising everywhere.",
+     "prompt": "a flattened district of smoking rubble and broken tiles with fires starting, a river and a ruined dome beyond, dark sky, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Thirty-seven people came to work in his building this morning. He is the only one who survives.",
+     "prompt": "an empty ruined office room with overturned desks and scattered papers, smoke drifting through broken windows, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "The only difference between him and the others was one floor of concrete.",
+     "prompt": "thick cracked concrete ceiling of a basement seen from below, dust in a beam of light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "8:30 AM  ·  THE FIRE",
+   "yt_chapter": "8:30 AM: The fire",
+   "scenes": [
+    {
+     "text": "If you're still alive, you have a new problem. The city is catching fire. All of it, all at once.",
+     "prompt": "fires spreading across collapsed wooden houses under a dark smoky sky, embers in the air, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 0,
+     "motion": "fires spread quickly across collapsed wooden houses, flames flicker, embers swirl upward into a dark smoky sky"
+    },
+    {
+     "text": "Thousands of small fires join into one. The wind begins to blow toward the center, feeding it.",
+     "prompt": "a huge wall of flame and smoke over a ruined city seen from a river bank, wind blowing sparks, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 1
+    },
+    {
+     "text": "So here is the next choice. You can stay and search the ruins for your family. Or you can walk away, right now, toward the hills.",
+     "prompt": "a person standing in a rubble-strewn street looking back at burning ruins, hills visible in the distance the other way, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Many stay. They dig. They call out names. And the fire closes in around them.",
+     "prompt": "silhouettes of people searching through the rubble of a collapsed house, smoke and orange glow behind them, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "The ones who live are mostly the ones who move. Out toward the edges. Toward the rivers, the parks, the hills.",
+     "prompt": "a long line of people walking away along a road out of a smoking city toward green hills, seen from behind, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0,
+     "motion": "a long line of people walks slowly away along a road toward green hills, smoke drifts across the sky behind them, seen from behind"
+    },
+    {
+     "text": "Hiroshima is built on seven rivers. Thousands crowd onto the banks and into the water, to escape the heat.",
+     "prompt": "crowds of people gathered on the stone steps of a wide river bank under a smoky orange sky, seen from a distance, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Then, about half an hour after the flash, it begins to rain. Thick, dark, heavy drops. Black rain.",
+     "prompt": "heavy dark rain falling on a ruined street, black streaks running down a white wall, gloomy sky, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "rain",
+     "shake": 0,
+     "motion": "heavy dark rain falls on a ruined street, black streaks run down a white plaster wall, puddles ripple"
+    },
+    {
+     "text": "People are desperately thirsty. Some open their mouths to the sky.",
+     "prompt": "a hand holding a metal cup out into dark falling rain, ruined street behind, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "rain",
+     "shake": 0
+    },
+    {
+     "text": "Nobody knows that the rain is carrying soot, ash, and radioactive dust back down on top of them.",
+     "prompt": "dark rainwater pooling among broken roof tiles and ash, close-up, ripples, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "rain",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "3 KILOMETERS  ·  THE ENGINEER",
+   "yt_chapter": "3 kilometers: The engineer",
+   "scenes": [
+    {
+     "text": "Three kilometers from the center, Tsutomu Yamaguchi sees the plane, and a small shape falling beneath a parachute.",
+     "prompt": "a young Japanese man in a work suit on a country road looking up at a bright sky, potato fields around him, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then the sky turns white. He dives into a ditch, the way he was trained.",
+     "prompt": "a potato field and an irrigation ditch washed in blinding white light, a man throwing himself to the ground, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 2
+    },
+    {
+     "text": "The blast lifts him off the ground and throws him into the field. When he opens his eyes, it's dark, and his arms and face are burned.",
+     "prompt": "a dark dusty field with flattened plants under a brown sky, a man's cap lying on the ground, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "ash",
+     "shake": 1
+    },
+    {
+     "text": "But he's alive. He was far enough. He spends the night in a shelter, and the next morning he does the only thing he can think of. He goes home.",
+     "prompt": "a crowded 1940s steam train at a damaged station platform with tired passengers, smoke in the sky, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Home is Nagasaki. He arrives on August eighth. On the morning of the ninth, bandaged, he reports to his office.",
+     "prompt": "a bandaged young Japanese man standing in a 1940s office talking to a skeptical older boss, window behind them, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He's telling his boss that a single bomb destroyed an entire city. His boss tells him that's impossible.",
+     "prompt": "an older Japanese manager in a 1940s suit shaking his head at a desk, bright window behind him, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And at that moment, the window behind them fills with white light.",
+     "prompt": "an office window flooding with intense white light, silhouettes of two men turning toward it, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 2
+    },
+    {
+     "text": "Tsutomu Yamaguchi survives that one too. He lives to be ninety-three.",
+     "prompt": "an elderly Japanese man sitting peacefully in a garden holding a cup of tea, soft afternoon light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NIGHTFALL  ·  THE DAYS AFTER",
+   "yt_chapter": "Nightfall: The days after",
+   "scenes": [
+    {
+     "text": "By evening, Hiroshima has stopped burning, mostly because there is nothing left to burn.",
+     "prompt": "a vast plain of smoking ruins at dusk with a few concrete shells standing, red sky, rivers reflecting light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0,
+     "motion": "slow aerial drift over a vast plain of smoking ruins at dusk, a few concrete shells standing, thin smoke rising, red sky"
+    },
+    {
+     "text": "From the hills, the city glows red through the night.",
+     "prompt": "people sitting on a dark hillside at night looking down at a red glowing plain below, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Schools and temples on the outskirts fill with the injured. There are almost no doctors. Most of the city's hospitals are gone.",
+     "prompt": "a crowded school hall turned into an aid station, people resting on straw mats, a nurse with a lantern, 1945, respectful, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And then something begins that no one can explain. People who seemed unhurt start to fall ill. Fever. Weakness. Their hair comes out in their hands.",
+     "prompt": "a tired woman sitting on a straw mat in a dim room looking at a comb in her hand, soft window light, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "No one in Hiroshima has ever heard the word radiation. Doctors write down what they see, and call it atomic bomb disease.",
+     "prompt": "a Japanese doctor in a white coat writing notes by lamplight beside a window in a damaged hospital, 1945, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And yet, three days after the bomb, on August ninth, a sound comes back to the ruined city.",
+     "prompt": "a single streetcar track running through a flat field of rubble under a hazy sky, wires overhead, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "A streetcar. One short line, running again through the ashes. Driven by the same teenage girls.",
+     "prompt": "a 1940s streetcar moving slowly along tracks through a field of ruins, a girl in a cap at the controls, hazy light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0,
+     "motion": "a single 1940s streetcar moves slowly along tracks through a wide field of ruins, hazy sunlight, dust drifting"
+    },
+    {
+     "text": "People stop in the rubble and stare. Some of them cry. Something still works.",
+     "prompt": "survivors standing among ruins watching a streetcar pass, seen from behind, soft morning haze, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "TODAY  ·  THE EVIDENCE",
+   "yt_chapter": "Today: The evidence",
+   "scenes": [
+    {
+     "text": "Today, a modern city of more than a million people stands on the same seven rivers.",
+     "prompt": "modern city skyline with rivers and bridges at sunrise, green parks, present day, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But at its center, one ruin has been left exactly as it was. A hall with a skeleton dome. The bomb burst almost directly above it, and so its walls stayed standing.",
+     "prompt": "the ruined brick shell of a hall with a bare steel dome frame beside a calm river, trees, blue sky, present day, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In the museum nearby, there's a wristwatch. Its hands stopped at eight fifteen.",
+     "prompt": "an old damaged wristwatch with hands at 8:15 in a museum display case, soft spotlight, close-up, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And a set of stone steps from the front of a bank, with a dark shape on them. The shadow of someone who was sitting there, waiting for the doors to open.",
+     "prompt": "old stone steps with a faint dark shadow shape on them in a dim museum display, respectful, soft light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Nobody knows the exact toll. The most careful estimates say between ninety thousand and one hundred and sixty-six thousand people had died by the end of that year.",
+     "prompt": "thousands of paper lanterns floating on a river at dusk in front of a ruined dome, present day, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0,
+     "motion": "hundreds of glowing paper lanterns float slowly down a river at dusk, reflections shimmer on the water, a ruined dome in the background"
+    },
+    {
+     "text": "Of the nine thousand students tearing down houses that morning, nearly two thirds never came home.",
+     "prompt": "rows of small old school caps and lunch boxes in a museum display case, soft light, respectful, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "The answer: would you survive?",
+   "scenes": [
+    {
+     "text": "So. Would you have survived?",
+     "prompt": "the ruined steel-frame dome against a clear blue sky, seen from below, present day, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "It was never about being brave, or smart, or fast. It was about where you happened to be standing at eight fifteen.",
+     "prompt": "an empty 1940s Japanese street intersection with long morning shadows, clock on a building, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Outdoors, within a kilometer of the center, almost no one lived.",
+     "prompt": "an open wide street in a 1940s Japanese city center under a bright sky, seen from above, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Behind thick concrete, your chances rose. A handful of people survived within five hundred meters, nearly all of them inside heavy buildings or basements.",
+     "prompt": "massive concrete wall and doorway of a 1940s bank building, strong shadows, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Three kilometers out, like Yamaguchi, most people lived, if they moved away from the fires and didn't drink the rain.",
+     "prompt": "a country road leading away from a distant smoky city toward green hills, clear sky ahead, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And one man lived at a hundred and seventy meters, because at the right moment, he went downstairs to look for some papers.",
+     "prompt": "a single folder of old papers lying on a concrete step in a shaft of light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "dust",
+     "shake": 0,
+     "motion": "dust drifts slowly through a shaft of light falling on a folder of old papers lying on a concrete step, slow camera push in"
+    },
+    {
+     "text": "He lived until nineteen eighty-two, and spent years writing down the names of the thirty-six who didn't.",
+     "prompt": "an elderly Japanese man writing carefully at a desk by a window, soft light, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Where would you have been standing that morning? Tell me in the comments.",
+     "prompt": "paper lanterns floating on a dark river at night, a ruined dome softly lit in the background, peaceful, Hiroshima Japan, summer 1945, period-accurate",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "8:15 AM",
+   "title": "Where Were You Standing at 8:15? #Shorts",
+   "description": "In Hiroshima, one thing decided who lived. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Hiroshima #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "where you were standing at eight fifteen.",
+     "prompt": "vertical composition, an empty 1940s Japanese street intersection with long morning shadows, clear sky",
+     "motion": "long morning shadows on a quiet 1940s street, a bicycle passes, laundry moves gently in the breeze"
+    },
+    {
+     "text": "Hiroshima, August sixth, nineteen forty-five. The all-clear has sounded. The sky is perfectly blue.",
+     "prompt": "vertical composition, people in 1940s Japanese clothing walking on a sunny street past wooden shops, blue sky",
+     "motion": "people in 1940s clothing walk along a sunny street past wooden shops, a streetcar passes in the background"
+    },
+    {
+     "text": "Outdoors, near the center, almost no one lived.",
+     "prompt": "vertical composition, a wide open street in a 1940s Japanese city center under bright sky, seen from above",
+     "motion": "slow aerial drift over a wide open street in a 1940s city center, tiny people walking, bright sunlight"
+    },
+    {
+     "text": "Behind thick concrete, or far from the center, people did.",
+     "prompt": "vertical composition, massive concrete doorway of a 1940s bank building with deep shadows",
+     "motion": "slow push in toward the massive concrete doorway of an old bank building, dust drifting in a beam of light"
+    },
+    {
+     "text": "It wasn't courage. It wasn't speed. That morning, your whole life depended on",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "170 METERS",
+   "title": "He Survived 170 Meters From the Hiroshima Bomb #Shorts",
+   "description": "Thirty-seven people were in his building. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Hiroshima #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "went downstairs to look for some papers.",
+     "prompt": "vertical composition, a dark concrete stairway leading down to a basement, a man in a white shirt descending, 1940s",
+     "motion": "a man in a white shirt slowly walks down a dark concrete stairway, soft light from above"
+    },
+    {
+     "text": "Eizo Nomura is a clerk in a concrete building beside the river. Thirty-seven people work there.",
+     "prompt": "vertical composition, a three-story concrete office building beside a river bridge in a 1940s Japanese city, morning",
+     "motion": "morning light on a concrete office building beside a river, people cross the bridge, water flows gently"
+    },
+    {
+     "text": "At eight fifteen, the bomb bursts one hundred and seventy meters away. He is in the basement.",
+     "prompt": "vertical composition, a pitch dark concrete basement with dust falling from the ceiling and a faint shaft of light",
+     "motion": "dust and small debris fall from the ceiling of a dark concrete basement, a faint shaft of light flickers"
+    },
+    {
+     "text": "He climbs out into a city that no longer exists.",
+     "prompt": "vertical composition, a man's silhouette in a doorway looking out at a flattened smoking city, 1945",
+     "motion": "a man's silhouette stands in a doorway as smoke drifts across a flattened city beyond"
+    },
+    {
+     "text": "He was the only one from his building who lived. All because, at the right moment, he",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "TWO BOMBS",
+   "title": "The Man Who Survived Both Atomic Bombs #Shorts",
+   "description": "Tsutomu Yamaguchi went home to Nagasaki. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Hiroshima #Nagasaki #History #Shorts",
+   "blocks": [
+    {
+     "text": "went home to Nagasaki.",
+     "prompt": "vertical composition, a 1940s steam train on a track along the Japanese coast, smoke trailing, summer",
+     "motion": "a 1940s steam train travels along a coastal track, smoke trailing behind, waves below"
+    },
+    {
+     "text": "Tsutomu Yamaguchi is in Hiroshima on a business trip. He's three kilometers away when the sky turns white.",
+     "prompt": "vertical composition, a young Japanese man in a 1940s work suit on a country road shielding his eyes from a blinding white sky",
+     "motion": "a young man on a country road raises his arm to shield his eyes as the sky floods with white light"
+    },
+    {
+     "text": "Burned, but alive, he gets on a train. Two days later, he's telling his boss that one bomb destroyed a whole city.",
+     "prompt": "vertical composition, a bandaged young Japanese man talking to an older manager in a 1940s office",
+     "motion": "a bandaged young man gestures while explaining to an older manager who shakes his head, 1940s office"
+    },
+    {
+     "text": "His boss says that's impossible. Then the window behind them fills with light.",
+     "prompt": "vertical composition, an office window flooding with intense white light, two silhouettes turning toward it",
+     "motion": "an office window suddenly floods with intense white light, two silhouettes turn toward it"
+    },
+    {
+     "text": "He survived that one too, and lived to ninety-three. All because, after the first bomb, he",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "3 DAYS LATER",
+   "title": "Three Days After the Bomb, a Streetcar Ran #Shorts",
+   "description": "The moment Hiroshima knew it would live. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#Hiroshima #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "a streetcar started to run.",
+     "prompt": "vertical composition, a 1940s streetcar moving along tracks through a wide field of ruins, hazy sunlight",
+     "motion": "a 1940s streetcar moves slowly along tracks through a wide field of ruins, hazy sunlight, dust drifting"
+    },
+    {
+     "text": "Hiroshima, August nineteen forty-five. The city is ash. Most of the streetcar crews are gone.",
+     "prompt": "vertical composition, streetcar tracks and fallen wires crossing a flat plain of rubble under a hazy sky",
+     "motion": "slow drift over streetcar tracks crossing a flat plain of rubble, thin smoke rising under a hazy sky"
+    },
+    {
+     "text": "Many of the drivers were teenage girls, trained because the men were at war.",
+     "prompt": "vertical composition, a teenage Japanese girl in a uniform cap at the controls of a 1940s streetcar, determined face",
+     "motion": "a teenage girl in a uniform cap grips the controls of a 1940s streetcar, looking ahead with determination"
+    },
+    {
+     "text": "People stopped in the rubble and stared. Some of them cried.",
+     "prompt": "vertical composition, survivors standing among ruins watching something pass, seen from behind, soft haze",
+     "motion": "survivors stand still among ruins and slowly turn their heads to watch something pass, seen from behind"
+    },
+    {
+     "text": "Something still worked. Just three days after the bomb, through the ashes,",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}

@@ -41,7 +41,7 @@ def call(path, body=None, raw=False, timeout=120):
 
 def start():
     token = secrets.token_hex(16)
-    args = ("bash -c 'pip install -q -U diffusers transformers accelerate imageio imageio-ffmpeg ftfy sentencepiece tiktoken protobuf && "
+    args = ("bash -c 'pip install -q -U diffusers transformers accelerate imageio imageio-ffmpeg ftfy sentencepiece tiktoken protobuf jinja2 && "
             f"curl -sL {SERVER} -o /server.py && python /server.py'")
     q = f'''mutation {{ podFindAndDeployOnDemand(input: {{
         cloudType: {CLOUD}, gpuCount: 1, gpuTypeId: "{GPU}", name: "canal-video",
@@ -68,7 +68,7 @@ def gen(jobs_f, out):
         if os.path.exists(f"{out}/{j['id']}.{j.get('ext', 'mp4')}"): continue
         j = dict(j)
         if "image" in j: j["image_b64"] = base64.b64encode(open(j.pop("image"), "rb").read()).decode()
-        call("/gen", j)
+        if not os.environ.get("NO_SEND"): call("/gen", j)
     ext = {j["id"]: j.get("ext", "mp4") for j in jobs}
     left = [j["id"] for j in jobs if not os.path.exists(f"{out}/{j['id']}.{ext[j['id']]}")]
     while left:
@@ -76,7 +76,9 @@ def gen(jobs_f, out):
         h = call("/health", timeout=30)
         for i in list(left):
             if i in h["done"]:
-                open(f"{out}/{i}.{ext[i]}", "wb").write(call(f"/out/{i}.{ext[i]}", raw=True, timeout=300)); left.remove(i); print("got", i, flush=True)
+                try: data = call(f"/out/{i}.{ext[i]}", raw=True, timeout=300)
+                except Exception: continue      # same id finished earlier with another extension: keep waiting
+                open(f"{out}/{i}.{ext[i]}", "wb").write(data); left.remove(i); print("got", i, flush=True)
             elif i in h["failed"]:
                 print("failed", i, h["failed"][i]); left.remove(i)
         if left: time.sleep(20)

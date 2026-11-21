@@ -35,7 +35,32 @@ def load(i):
     return cache[i]
 
 
+CL = {}
+
+
+def clipshot(i, T):
+    """Animated block from SD/clips/NNN.mp4. The last block plays clip 0 backwards so the loop lands on its first frame."""
+    import os
+    k = 0 if i == N - 1 else i
+    if k not in CL:
+        cap = cv2.VideoCapture(f"{SD}/clips/{k:03d}.mp4"); fr = []
+        while True:
+            ok, f = cap.read()
+            if not ok: break
+            sc = max(W / f.shape[1], H / f.shape[0])
+            f = cv2.resize(f, (int(f.shape[1] * sc) + 1, int(f.shape[0] * sc) + 1), interpolation=cv2.INTER_LANCZOS4)
+            y0, x0 = (f.shape[0] - H) // 2, (f.shape[1] - W) // 2
+            fr.append(np.ascontiguousarray(f[y0:y0 + H, x0:x0 + W]))
+        CL[k] = fr
+    fr = CL[k]; n = len(fr); d = max(0.1, ends[i] - starts[i])
+    t = (ends[i] - T) if i == N - 1 else (T - starts[i])
+    x = min(n - 1.001, max(0.0, t * 24 * min(1.0, max(0.6, (n / 24) / d) if d > n / 24 else 1.0))); a = int(x); w = x - a
+    return fr[a].astype(np.float32) * (1 - w) + fr[a + 1].astype(np.float32) * w
+
+
 def shot(i, T):
+    import os
+    if os.path.exists(f"{SD}/clips/{(0 if i == N - 1 else i):03d}.mp4"): return clipshot(i, T)
     im, dc = load(i); u = max(0.0, min(1.0, (T - starts[i]) / max(0.1, ends[i] - starts[i])))
     # first and last block share the same image: last zooms out to where the first starts
     z = 1.08 - 0.08 * u if i == N - 1 else (1.0 + 0.08 * u if i % 2 == 0 else 1.08 - 0.08 * u)
