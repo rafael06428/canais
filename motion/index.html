@@ -1,0 +1,253 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+:root{--bg:#06131f;--ice:#e6f1f6;--ink:#0a1c2a;--acc:#ff6b3d;--cy:#7fd6ff;--mut:#9dbccd}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;background:#000;overflow:hidden}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--bg);font-family:Inter,sans-serif;color:#fff}
+.layer{position:absolute;inset:0}
+.anton{font-family:Anton,sans-serif;text-transform:uppercase;line-height:1;letter-spacing:.02em}
+svg{display:block}
+/* ---------- map ---------- */
+#mapL{background:radial-gradient(1400px 900px at 55% 45%,#0f3048 0%,#0a2235 45%,#061521 100%)}
+#map{position:absolute;inset:0;width:1920px;height:1080px}
+#map .land{fill:#e3eef4;stroke:#ffffff;stroke-width:calc(1.2px*var(--ik));stroke-linejoin:round}
+#map .landglow{fill:none;stroke:rgba(127,214,255,.20);stroke-width:calc(14px*var(--ik));stroke-linejoin:round}
+#map .grat{fill:none;stroke:rgba(255,255,255,.07);stroke-width:calc(1px*var(--ik))}
+#map .floes{fill:rgba(205,232,245,.50);stroke:rgba(255,255,255,.55);stroke-width:calc(.8px*var(--ik))}
+#map .rt{fill:none;stroke-linecap:round;stroke-linejoin:round}
+#map .rt.halo{stroke-width:calc(12px*var(--ik));opacity:.22}
+#map .rt.main{stroke-width:calc(4px*var(--ik))}
+#map .rt.dot{stroke-dasharray:calc(1px*var(--ik)) calc(11px*var(--ik));stroke-width:calc(5px*var(--ik))}
+#map .rt.dash{stroke-dasharray:calc(14px*var(--ik)) calc(10px*var(--ik))}
+#map .mk{stroke-width:calc(24px*var(--ik));stroke:#fff;fill:none;stroke-linecap:round;stroke-linejoin:round}
+#map text{font-family:Inter,sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;paint-order:stroke;stroke-linejoin:round}
+#map .lab{font-size:19px;fill:#fff;stroke:#071a29;stroke-width:6px}
+#map .geo{font-size:30px;font-weight:600;letter-spacing:.42em;fill:rgba(18,52,74,.55)}
+#map .sea{font-size:24px;font-weight:500;font-style:italic;letter-spacing:.34em;fill:rgba(150,200,228,.42)}
+#shade{background:linear-gradient(180deg,rgba(3,11,18,.85) 0%,rgba(3,11,18,0) 20%),linear-gradient(0deg,rgba(3,11,18,.95) 0%,rgba(3,11,18,.8) 9%,rgba(3,11,18,0) 22%),linear-gradient(90deg,rgba(3,11,18,.93) 0%,rgba(3,11,18,.86) 26%,rgba(3,11,18,0) 54%)}
+#hud{pointer-events:none}
+#brand{position:absolute;left:80px;top:54px}
+#brand b{display:block;font:400 46px Anton;letter-spacing:.16em;text-transform:uppercase}
+#brand i{display:block;font:600 15px Inter;font-style:normal;letter-spacing:.3em;color:var(--mut);margin-top:8px}
+#clock{position:absolute;right:80px;top:50px;text-align:right}
+#date{font:400 60px Anton;letter-spacing:.06em}
+#day{font:600 20px Inter;letter-spacing:.3em;color:var(--acc);margin-top:6px;font-variant-numeric:tabular-nums}
+#tlbar{position:absolute;left:120px;right:120px;bottom:64px;height:60px}
+#tlbar .base{position:absolute;left:0;right:0;top:40px;height:3px;background:rgba(255,255,255,.18)}
+#tlbar .fill{position:absolute;left:0;top:40px;height:3px;width:0;background:var(--acc);box-shadow:0 0 14px var(--acc)}
+#tlbar .knob{position:absolute;top:33px;width:17px;height:17px;border-radius:50%;background:#fff;margin-left:-8px;box-shadow:0 0 0 5px rgba(255,107,61,.35)}
+#tlbar .ev{position:absolute;top:0;transform:translateX(-50%);font:700 13px Inter;letter-spacing:.2em;color:rgba(255,255,255,.32);white-space:nowrap;text-align:center}
+#tlbar .ev:after{content:"";display:block;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.32);margin:22px auto 0}
+#tlbar .ev.on{color:#fff}#tlbar .ev.on:after{background:var(--acc)}
+.card{position:absolute;left:110px;padding-left:30px;border-left:6px solid var(--acc);opacity:0;text-shadow:0 2px 18px rgba(3,11,18,.9)}
+.card .k{font:700 22px Inter;letter-spacing:.26em;color:var(--acc);text-transform:uppercase;margin-bottom:14px}
+.card .t{font:400 92px Anton;text-transform:uppercase;line-height:1.02;letter-spacing:.02em}
+.card .s{font:500 29px/1.35 Inter;color:#c4dbe7;margin-top:16px;max-width:640px}
+.card .q{font:500 italic 44px/1.3 Inter;max-width:720px}
+.card .big{font:400 250px Anton;line-height:.9;letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.pips{display:flex;gap:16px;margin-top:22px}
+.pips span{width:64px;height:64px;border-radius:50%;border:3px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font:700 34px Inter;color:transparent}
+.pips span.x{border-color:#ff4a4a;color:#ff4a4a}.pips span.ok{border-color:var(--acc);background:var(--acc);color:#fff}
+/* ---------- hook ---------- */
+#hook{background:radial-gradient(1200px 800px at 50% 40%,#0c2536 0%,#050f18 70%,#02070c 100%)}
+#h_title{position:absolute;left:140px;top:140px;font-size:176px;transform-origin:0 0;white-space:nowrap}
+#h_title span{color:var(--acc)}
+#h_men{position:absolute;left:140px;top:310px;width:1100px;display:flex;flex-wrap:wrap;gap:26px 22px}
+.man{width:54px;height:100px;opacity:0}
+.man svg{width:100%;height:100%}
+#h_menlab{position:absolute;left:140px;top:590px;font-size:84px;opacity:0}
+#h_menlab em{font-style:normal;color:var(--acc)}
+#h_ship{position:absolute;left:1270px;top:170px;width:560px;height:470px;opacity:0}
+#h_dist{position:absolute;left:140px;right:140px;top:770px;height:220px;opacity:0}
+#h_dist .ln{position:absolute;left:0;top:150px;height:4px;width:100%;background:linear-gradient(90deg,var(--acc),#fff);transform-origin:0 50%}
+#h_dist .a,#h_dist .b{position:absolute;top:172px;font:700 20px Inter;letter-spacing:.24em;color:var(--mut)}
+#h_dist .b{right:0}#h_dist .num{position:absolute;left:0;top:0;font-size:128px;font-variant-numeric:tabular-nums}
+#h_dist .cap{position:absolute;top:128px;width:4px;height:48px;background:#fff}
+#h_last{position:absolute;left:0;right:0;top:440px;text-align:center;font-size:124px;opacity:0}
+/* ---------- ship scene ---------- */
+#shipL{opacity:0;background:#06131f}
+#s_date{position:absolute;left:110px;top:90px;opacity:0;padding-left:30px;border-left:6px solid var(--acc)}
+#s_date .t{font:400 104px Anton;letter-spacing:.03em;text-transform:uppercase}
+#s_date .s{font:600 24px Inter;letter-spacing:.3em;color:#ffd9c9;margin-top:12px}
+#s_words{position:absolute;right:120px;top:120px;text-align:right}
+#s_words div{font:400 78px Anton;letter-spacing:.06em;opacity:0;text-transform:uppercase}
+/* ---------- end ---------- */
+#endL{opacity:0;background:radial-gradient(1200px 800px at 50% 45%,#0c2536 0%,#050f18 70%,#02070c 100%)}
+#e_k{position:absolute;left:0;right:0;top:150px;text-align:center;font:700 24px Inter;letter-spacing:.34em;color:var(--mut);opacity:0}
+#e_men{position:absolute;left:267px;top:230px;width:1386px;display:flex;flex-wrap:wrap;gap:30px 30px}
+#e_men .man{width:69px;height:128px;opacity:.14}
+#e_big{position:absolute;left:0;right:0;top:590px;text-align:center;font-size:230px;opacity:0}
+#e_big em{font-style:normal;color:var(--acc)}
+#e_sub{position:absolute;left:0;right:0;top:850px;text-align:center;font:500 32px Inter;letter-spacing:.12em;color:#c4dbe7;opacity:0}
+#deep{opacity:0;background:linear-gradient(180deg,#1f6688 0%,#0d3a55 14%,#07202f 45%,#030d15 100%)}
+#d_txt{position:absolute;left:1090px;top:150px;opacity:0}
+#d_txt .k{font:700 24px Inter;letter-spacing:.3em;color:var(--acc)}
+#d_txt .t{font:400 210px Anton;line-height:1;margin-top:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
+#d_txt .s{font:500 30px Inter;letter-spacing:.14em;color:#c4dbe7;margin-top:6px;text-transform:uppercase}
+#d_up{position:absolute;left:1090px;top:560px;font:700 26px Inter;letter-spacing:.3em;color:#fff;opacity:0}
+#snow,#vig,#black{position:absolute;inset:0;pointer-events:none}
+#vig{background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.55) 100%)}
+#black{background:#000;opacity:0}
+</style></head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="man" viewBox="0 0 24 46"><circle cx="12" cy="7.5" r="7"/><rect x="2.5" y="17" width="19" height="29" rx="9.5"/></symbol>
+    <!-- Endurance, side view, bow to the right. Waterline at y=0 -->
+    <g id="ship">
+      <g stroke="currentColor" fill="none" stroke-linecap="round">
+        <!-- stays and shrouds -->
+        <g stroke-width="1.6" opacity=".7">
+          <path d="M190,-338 L468,-80 M190,-250 L420,-68 M10,-356 L190,-338 M-180,-300 L10,-356 M10,-356 L190,-120 M-180,-300 L10,-110"/>
+          <path d="M190,-250 L150,-44 M190,-250 L232,-46 M190,-250 L170,-44 M190,-250 L212,-45"/>
+          <path d="M10,-262 L-30,-42 M10,-262 L52,-43 M10,-262 L-10,-42 M10,-262 L32,-43"/>
+          <path d="M-180,-225 L-218,-42 M-180,-225 L-142,-41 M-180,-225 L-198,-42 M-180,-225 L-160,-41"/>
+        </g>
+        <!-- masts -->
+        <path stroke-width="8" d="M190,-44 L190,-250 M10,-42 L10,-262 M-180,-41 L-180,-225"/>
+        <path stroke-width="5" d="M190,-250 L190,-342 M10,-262 L10,-360 M-180,-225 L-180,-304"/>
+        <!-- yards on the foremast -->
+        <path stroke-width="5.5" d="M108,-128 L272,-140 M122,-206 L258,-216 M138,-272 L242,-280 M152,-318 L228,-324"/>
+        <!-- gaffs and booms -->
+        <path stroke-width="5" d="M10,-78 L-128,-72 M10,-236 L-96,-286 M-180,-74 L-322,-66 M-180,-204 L-286,-250"/>
+        <!-- bowsprit -->
+        <path stroke-width="7" d="M352,-50 L470,-80"/>
+      </g>
+      <g fill="currentColor">
+        <path d="M-352,-58 C-362,-34 -350,-6 -322,6 C-200,34 200,34 300,8 C332,-6 356,-30 376,-56 L300,-48 L-250,-44 Z"/>
+        <rect x="-128" y="-64" width="92" height="24" rx="2"/><rect x="60" y="-60" width="70" height="18" rx="2"/>
+        <rect x="-92" y="-128" width="26" height="70" rx="3"/>
+      </g>
+    </g>
+    <g id="wreck">
+      <g stroke="currentColor" fill="none" stroke-linecap="round">
+        <path stroke-width="8" d="M190,-44 L190,-112 M10,-42 L14,-96 M-180,-41 L-180,-88"/>
+        <path stroke-width="5" d="M196,-108 L330,-52 M12,-92 L-120,-50 M-176,-84 L-60,-46"/>
+        <path stroke-width="1.6" opacity=".6" d="M190,-112 L360,-52 M14,-96 L150,-44"/>
+      </g>
+      <g fill="currentColor">
+        <path d="M-352,-58 C-362,-34 -350,-6 -322,6 C-200,34 200,34 300,8 C332,-6 356,-30 376,-56 L300,-48 L-250,-44 Z"/>
+        <rect x="-128" y="-64" width="92" height="24" rx="2"/><rect x="60" y="-60" width="70" height="18" rx="2"/>
+      </g>
+    </g>
+  </defs>
+</svg>
+
+<div id="stage">
+  <!-- MAP -->
+  <div id="mapL" class="layer">
+    <svg id="map" viewBox="0 0 1920 1080"><defs id="mdefs"></defs></svg>
+    <div id="shade" class="layer"></div>
+    <div id="cards" class="layer"></div>
+    <div id="hud" class="layer">
+      <div id="brand"><b>Endurance</b><i>IMPERIAL TRANS-ANTARCTIC EXPEDITION · 1914–1916</i></div>
+      <div id="clock"><div id="date">5 DEC 1914</div><div id="day">DAY 000</div></div>
+      <div id="tlbar"><div class="base"></div><div class="fill"></div><div class="knob"></div></div>
+    </div>
+  </div>
+
+  <!-- SHIP SCENE -->
+  <div id="shipL" class="layer">
+    <svg id="shipsvg" viewBox="0 0 1920 1080" width="1920" height="1080">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#051019"/><stop offset=".45" stop-color="#0f3550"/><stop offset=".8" stop-color="#3f6f86"/><stop offset=".93" stop-color="#e9a172"/><stop offset="1" stop-color="#ffd9a8"/>
+        </linearGradient>
+        <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff3d6" stop-opacity="1"/><stop offset=".25" stop-color="#ffc98a" stop-opacity=".75"/><stop offset="1" stop-color="#ff9a5a" stop-opacity="0"/></radialGradient>
+        <linearGradient id="iceg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef6fa"/><stop offset="1" stop-color="#9fbfd0"/></linearGradient>
+        <linearGradient id="iceg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe2ec"/><stop offset="1" stop-color="#6d93a8"/></linearGradient>
+        <clipPath id="above"><rect x="0" y="0" width="1920" height="716"/></clipPath>
+      </defs>
+      <rect width="1920" height="700" fill="url(#sky)"/>
+      <circle cx="1340" cy="690" r="330" fill="url(#sun)"/>
+      <g id="stars" fill="#fff"></g>
+      <!-- far ice -->
+      <path fill="#b9d2de" d="M0,676 L120,660 L210,668 L330,650 L420,664 L560,656 L640,668 L1300,668 L1420,652 L1530,664 L1660,646 L1790,662 L1920,654 L1920,720 L0,720Z" opacity=".85"/>
+      <rect y="690" width="1920" height="390" fill="url(#iceg)"/>
+      <g id="s_shake">
+        <!-- dark water where the hull sits -->
+        <path fill="#0a2536" d="M520,712 L640,700 L1310,700 L1420,714 L1330,740 L620,742Z"/>
+        <g clip-path="url(#above)"><g id="s_ship" color="#07151f"><use href="#ship"/></g></g>
+        <!-- pressure ice, left and right plates -->
+        <g id="s_iceL">
+          <path fill="url(#iceg)" d="M-200,726 L560,704 L650,722 L700,760 L610,800 L-200,840Z"/>
+          <path fill="url(#iceg2)" d="M-200,840 L610,800 L700,760 L760,820 L690,900 L-200,980Z"/>
+          <g id="s_ridgeL"><path fill="#f4fafc" d="M430,712 L500,640 L540,690 L590,610 L640,700 L690,668 L720,740 L560,760Z"/><path fill="#8fb0c2" d="M590,610 L640,700 L690,668 L720,740 L650,748Z"/></g>
+        </g>
+        <g id="s_iceR">
+          <path fill="url(#iceg)" d="M2120,722 L1390,704 L1290,724 L1240,764 L1330,800 L2120,836Z"/>
+          <path fill="url(#iceg2)" d="M2120,836 L1330,800 L1240,764 L1180,826 L1260,900 L2120,972Z"/>
+          <g id="s_ridgeR"><path fill="#f4fafc" d="M1500,712 L1440,646 L1392,694 L1350,618 L1296,702 L1248,672 L1214,744 L1380,762Z"/><path fill="#8fb0c2" d="M1350,618 L1296,702 L1248,672 L1214,744 L1290,750Z"/></g>
+        </g>
+        <!-- foreground ice -->
+        <path fill="#dcebf2" d="M0,930 L300,880 L620,905 L900,860 L1180,900 L1500,868 L1920,915 L1920,1080 L0,1080Z"/>
+        <path fill="#a9c6d5" d="M0,1000 L420,960 L800,990 L1240,952 L1920,1000 L1920,1080 L0,1080Z"/>
+        <g id="s_cracks" fill="none" stroke="#3d6680" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></g>
+      </g>
+    </svg>
+    <div id="s_words"><div>Timbers snap.</div><div>The deck buckles.</div></div>
+    <div id="s_date"><div class="t">21 November 1915</div><div class="s">69° S · 51° W · THE WEDDELL SEA</div></div>
+  </div>
+
+  <!-- HOOK -->
+  <div id="hook" class="layer">
+    <div id="h_title" class="anton">Antarctica, <span>1915</span></div>
+    <div id="h_men"></div>
+    <div id="h_menlab" class="anton"><em>28 men.</em> One dying ship.</div>
+    <svg id="h_ship" viewBox="-520 -400 1040 520"><clipPath id="hclip"><path d="M-520,-400 H520 V14 L330,6 L120,20 L-60,8 L-250,18 L-360,4 L-520,12Z"/></clipPath><g clip-path="url(#hclip)"><g id="h_shipg" color="#cfe3ee"><use href="#ship"/></g></g>
+      <path d="M-520,12 L-360,4 L-250,18 L-60,8 L120,20 L330,6 L520,14" stroke="#cfe3ee" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M-430,44 L-300,38 L-180,50 M40,46 L200,40 L330,52 M-120,74 L20,68 L110,78" stroke="#cfe3ee" stroke-width="3" fill="none" opacity=".35" stroke-linecap="round"/></svg>
+    <div id="h_dist"><div class="num anton"><span id="h_num">0</span> miles</div><div class="ln"></div><div class="cap" style="left:0"></div><div class="cap" id="h_cap2" style="right:0"></div><div class="a">28 MEN ON THE ICE</div><div class="b">THE NEAREST HELP</div></div>
+    <div id="h_last" class="anton">Nobody knows they are here.</div>
+  </div>
+
+  <!-- END -->
+  <div id="endL" class="layer">
+    <div id="e_k">30 AUGUST 1916 · ELEPHANT ISLAND</div>
+    <div id="e_men"></div>
+    <div id="e_big" class="anton">All <em>28</em> survived</div>
+    <div id="e_sub">635 days after leaving South Georgia · not one man lost</div>
+    <div id="deep" class="layer">
+      <svg id="deepsvg" viewBox="0 0 1920 1080" width="1920" height="1080">
+        <defs>
+          <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#bfe9ff" stop-opacity=".55"/><stop offset="1" stop-color="#bfe9ff" stop-opacity="0"/></linearGradient>
+          <radialGradient id="lensbg" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3b2a1c"/><stop offset="1" stop-color="#120c08"/></radialGradient>
+          <linearGradient id="brass" gradientUnits="userSpaceOnUse" x1="-300" y1="0" x2="300" y2="0"><stop offset="0" stop-color="#b98f3d"/><stop offset=".42" stop-color="#c79a45"/><stop offset=".5" stop-color="#fff6cf"/><stop offset=".58" stop-color="#c79a45"/><stop offset="1" stop-color="#b98f3d"/></linearGradient>
+          <clipPath id="lensclip"><circle r="215"/></clipPath>
+          <path id="arc" d="M-170,40 A190,190 0 0 1 170,40"/>
+        </defs>
+        <!-- sea ice from below -->
+        <path fill="#d9ecf4" d="M0,0 H1920 V58 L1800,74 L1690,60 L1560,82 L1410,62 L1290,78 L1120,58 L980,80 L820,64 L690,84 L540,60 L400,78 L250,62 L120,80 L0,64Z"/>
+        <path fill="#9cc3d6" opacity=".7" d="M0,64 L120,80 L250,62 L400,78 L540,60 L690,84 L820,64 L980,80 L1120,58 L1290,78 L1410,62 L1560,82 L1690,60 L1800,74 L1920,58 V70 L1800,90 L1690,76 L1560,100 L1410,78 L1290,96 L1120,74 L980,98 L820,80 L690,102 L540,76 L400,96 L250,78 L120,98 L0,80Z"/>
+        <g id="gauge" font-family="Inter" font-weight="600" font-size="19" fill="#9dbccd" letter-spacing="2"></g>
+        <g id="rov"><path id="rovbeam" d="M0,0 L900,-140 L900,220Z" fill="url(#beam)"/><rect x="-34" y="-16" width="68" height="32" rx="8" fill="#ffd24a"/><rect x="-26" y="-26" width="52" height="12" rx="4" fill="#e9eef2"/><circle cx="30" cy="0" r="7" fill="#fff"/></g>
+        <!-- seabed -->
+        <path fill="#0b1c27" d="M0,946 L300,936 L620,950 L900,940 L1300,952 L1600,938 L1920,948 V1080 H0Z"/>
+        <path fill="#132a38" d="M0,946 L300,936 L620,950 L900,940 L1300,952 L1600,938 L1920,948 V960 L1600,952 L1300,966 L900,954 L620,964 L300,950 L0,960Z"/>
+        <g id="d_ship" transform="translate(1110,936) scale(.86)" color="#7fa9bf" opacity=".12"><use href="#wreck"/></g>
+        <g id="lens" transform="translate(600,500)" opacity="0">
+          <line id="lensline" x1="120" y1="178" x2="208" y2="372" stroke="#fff" stroke-width="2" stroke-dasharray="6 8" opacity=".7"/>
+          <circle r="215" fill="url(#lensbg)"/>
+          <g clip-path="url(#lensclip)">
+            <g stroke="#000" stroke-opacity=".35" stroke-width="3"><path d="M-240,-120 H240 M-240,-50 H240 M-240,20 H240 M-240,90 H240 M-240,160 H240"/></g>
+            <text font-family="Anton" font-size="76" letter-spacing="10" fill="url(#brass)" text-anchor="middle"><textPath href="#arc" startOffset="50%">ENDURANCE</textPath></text>
+            <path id="star" fill="url(#brass)" d="M0,52 L11,84 L45,84 L18,104 L28,137 L0,117 L-28,137 L-18,104 L-45,84 L-11,84Z"/>
+          </g>
+          <circle r="215" fill="none" stroke="#fff" stroke-width="5"/>
+          <text y="262" text-anchor="middle" font-family="Inter" font-weight="700" font-size="20" letter-spacing="6" fill="#fff">THE NAME ON THE STERN</text>
+        </g>
+      </svg>
+      <div id="d_txt"><div class="k">FOUND · 5 MARCH 2022</div><div class="t anton"><span id="d_num">0</span> m</div><div class="s"><span id="d_ft">0</span> feet below the ice</div></div>
+      <div id="d_up">UPRIGHT ON THE SEABED</div>
+    </div>
+  </div>
+
+  <canvas id="snow" width="1920" height="1080"></canvas>
+  <div id="vig"></div>
+  <div id="black"></div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script src="data.js"></script>
+<script src="anim.js"></script>
+</body></html>
