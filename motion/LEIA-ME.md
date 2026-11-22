@@ -46,4 +46,4 @@ Salve cada um sem o sufixo `.txt` numa pasta de trabalho (ex.: /home/claude/vide
 
 ## Roteiros de suspense já escritos
 Documento "Roteiros de suspense: 4 testes": https://claude.ai/artifact/JnNPpUfqQzDabAiT4nT3tA
-(MH370, Museu Gardner, ficção "2:13 A.M.", Cicada 3301). Narração e textos de tela em inglês; relatórios ao dono em português.
+(histórias famosas: Voo 19 / Triângulo das Bermudas, D.B. Cooper, "The Tell-Tale Heart" de Poe, sinal "Wow!"). Narração e textos de tela em inglês; relatórios ao dono em português.
