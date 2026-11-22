@@ -83,5 +83,14 @@
   ],
   "pending": [],
   "note": "hybrid episode made in chat: 18 animated scenes + animated Shorts (Wan 2.2 on rented RunPod GPU); Chernobyl pending Short still on the 'pending' branch"
+ },
+ {
+  "date": "2026-11-22",
+  "slug": "mh370-2014",
+  "title": "MH370, 2014: You Were on the Plane That Vanished",
+  "long_url": "https://youtu.be/6gBti6k0J2Y",
+  "shorts": [],
+  "pending": [],
+  "note": "motion-graphics style (Endurance template, branch claude/modelo-animacao), 3:25, made in chat; no Shorts. YouTube now saves new uploads as private until checks finish: ytUpload left it as draft and it was published by hand"
  }
 ]
