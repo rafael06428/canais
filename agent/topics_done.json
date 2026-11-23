@@ -59,16 +59,11 @@
   "shorts": [
    "https://youtube.com/shorts/LU4NikrcYzU",
    "https://youtube.com/shorts/w0i43wgPxzQ",
-   "https://youtube.com/shorts/JMrCR7S9yQU"
+   "https://youtube.com/shorts/JMrCR7S9yQU",
+   "https://youtube.com/shorts/W8oARJJF5Jc"
   ],
-  "pending": [
-   {
-    "id": null,
-    "title": "How a Pair of Shoes Exposed Chernobyl #Shorts",
-    "job": "https://raw.githubusercontent.com/rafael06428/canais/pending/pending/jobs.json"
-   }
-  ],
-  "note": "daily upload limit hit on the 4th Short; closing the dialog discarded the draft, so the file is on the 'pending' branch (jobs.json = ready ytUpload job)"
+  "pending": [],
+  "note": "daily upload limit hit on the 4th Short; closing the dialog discarded the draft, so the file is on the 'pending' branch (jobs.json = ready ytUpload job); pending Short published 2026-11-23"
  },
  {
   "date": "2026-11-21",
@@ -92,5 +87,19 @@
   "shorts": [],
   "pending": [],
   "note": "motion-graphics style (Endurance template, branch claude/modelo-animacao), 3:25, made in chat; no Shorts. YouTube now saves new uploads as private until checks finish: ytUpload left it as draft and it was published by hand"
+ },
+ {
+  "date": "2026-11-23",
+  "slug": "white-ship-1120",
+  "title": "24 Hours on the White Ship, 1120: Would You Have Survived?",
+  "long_url": "https://youtu.be/gXrUYLvjp08",
+  "shorts": [
+   "https://youtube.com/shorts/7SrBA35IM8w",
+   "https://youtube.com/shorts/xGQYmOuTmFM",
+   "https://youtube.com/shorts/7glZWVwIAv0",
+   "https://youtube.com/shorts/2TZiwRph01Q"
+  ],
+  "pending": [],
+  "note": "subtitles uploaded; Cloudflare quota ran out after 100 images, 13 re-rolls via anonymous Pollinations or reused nearby images; Shorts made from 9:16 crops of long images"
  }
 ]

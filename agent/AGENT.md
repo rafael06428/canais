@@ -105,6 +105,13 @@ In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `
 
 **Daily upload limit:** until the channel is phone-verified YouTube allows only ~10 uploads a day; when reached, `ytUpload` throws `daily upload limit reached` and the video stays as a **draft** (Rascunho). Record such items in `pending` (step 5) and, at the start of the next run's publish step, open each pending draft (`https://studio.youtube.com/video/<ID>/edit` → Visibilidade → Público → Salvar) before uploading new ones.
 **Pending items without an ID** (`"id": null` with a `job` URL): the draft was lost when the dialog closed, so the video file lives on the `pending` branch. At the start of the publish step, fetch the `job` JSON (a list of ready ytUpload jobs, `{LONG_URL}` already filled), upload each with `ytUpload` before today's videos, then set `pending` to [] for that day. When the limit hits, don't close the dialog with X (that discards the upload); leave it open, note the video ID from the dialog's link if shown, or push the file to the `pending` branch as above. `publish.py` force-pushes only `media`, so the `pending` branch is safe; delete the `pending` branch once its jobs are published.
+**Notes from 2026-11-23 (YouTube Studio changes):**
+- The built-in browser may be signed in to another channel (The Getaway Case): if the upload URL gives "Ops, você não tem permissão", open the avatar menu > Mudar de conta > You Were There POV.
+- YouTube now shows "Ainda estamos verificando seu conteúdo" when you click Publicar before checks finish. Don't click "Publicar mesmo assim": click Voltar, then close the dialog with X (once the bytes are done it is saved as a private draft). Upload the other videos meanwhile; ~5-10 min later open each draft (Conteúdo > Editar rascunho), click Avançar 3x, choose Público, click Publicar (checks done, no warning).
+- With the pane hidden the page often doesn't render and `execCommand` fails ("title did not stick"); take a screenshot first to force a render, scroll the title box into view, then set title/description again in the open dialog.
+- Subtitles: Idiomas page now has **Enviar manualmente** > Com marcação de tempo > Continuar; setting `#captions-file-loader` uploads it directly; then Editar legendas > Publicar ("Legendas em inglês enviadas").
+- Shorts from 9:16 center crops of long-video images (pre-filled `shorts/K/img/NNN.jpg` + `.npy`) save the image quota; the quota ran out after ~100 images (CF_KLEIN_MAX=30).
+
 The thumbnail upload is skipped automatically until the channel is phone-verified. Once it is verified, the custom thumbnail goes up with the long video.
 
 ### 5. Wrap up

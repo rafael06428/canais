@@ -1,0 +1,885 @@
+{
+ "slug": "white-ship-1120",
+ "title": "24 Hours on the White Ship",
+ "title_yt": "24 Hours on the White Ship, 1120: Would You Have Survived?",
+ "description": "November 25, 1120. Nearly 300 people board the finest ship in Normandy, among them the heir to the English throne. The crew is drunk, the passengers want a race, and just outside the harbour a rock hides under the tide. By morning, one man is alive: a butcher in a sheepskin coat. Hour by hour, what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Orderic Vitalis, Ecclesiastical History; William of Malmesbury, Deeds of the Kings of the English; British Library, \"900 years since the White Ship disaster\" (2020); Charles Spencer, \"The White Ship\" and History Today; National Geographic History; History Hit; H. Strahl, Journal of Medieval History (Durham University, 2025).\n\nMedieval accounts differ on some details (why Stephen of Blois left the ship, the exact number aboard, the departure time); the narration follows the main chroniclers and flags where they disagree. Visuals and narration are AI-generated, based on historical accounts.\n\n#History #POV #WhiteShip",
+ "tags": [
+  "white ship",
+  "white ship 1120",
+  "white ship disaster",
+  "medieval history",
+  "henry i",
+  "william adelin",
+  "the anarchy",
+  "would you survive",
+  "history",
+  "pov history",
+  "shipwreck",
+  "norman history",
+  "stephen of blois",
+  "history documentary",
+  "medieval shipwreck"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "300 ABOARD\n1 SURVIVED",
+ "thumb_scene": 44,
+ "title_card": {
+  "after_scene": 5,
+  "lines": [
+   "24 HOURS ON THE WHITE SHIP",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "A few hours from now, nearly three hundred people will step onto the finest ship in Normandy. By morning, only one of them will still be alive.",
+     "prompt": "a medieval wooden ship with a single mast, a square sail and oars along the side, 12th century Norman style with a white-painted hull moored in a small stone harbour at golden sunset, Normandy coast",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember the butcher in the cheap sheepskin coat. He's the least important man aboard. Tonight, that coat will matter more than gold.",
+     "prompt": "close-up portrait of Berold, a stocky bearded working man in his thirties wearing a rough shaggy sheepskin coat, standing on a medieval stone quay, evening light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "This is Barfleur, on the coast of Normandy. The date is November twenty-fifth, 1120.",
+     "prompt": "aerial view of a small medieval fishing harbour with stone houses, a stone church and wooden boats on a grey sea coast, late autumn afternoon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "On board will be the heir to the English throne, and the young nobles who were meant to rule beside him.",
+     "prompt": "William, a handsome seventeen-year-old Norman nobleman with shoulder-length light brown hair, clean-shaven, rich red wool tunic and fur-lined cloak, laughing with a group of young medieval nobles in colourful cloaks on a stone quay",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Hour by hour, you'll face their choices. And by the end, you'll know whether you would have survived.",
+     "prompt": "over-the-shoulder view of a sixteen-year-old squire in a plain brown wool tunic and leather belt looking at a wooden ship at a medieval quay at dusk, torches",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "MORNING  ·  BARFLEUR",
+   "yt_chapter": "Morning: Barfleur",
+   "scenes": [
+    {
+     "text": "You wake in a lodging above the harbour. Gulls are screaming, and the air smells of salt, wet rope and woodsmoke.",
+     "prompt": "simple medieval room with a straw bed, a wooden chest and a small window looking over a harbour, soft morning light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You're sixteen, a squire in the household of William Adelin, the king's only legitimate son.",
+     "prompt": "a sixteen-year-old squire in a plain brown wool tunic and leather belt lacing his leather boots in a stone room, morning light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "William is seventeen. Handsome, proud, and used to getting his way. One day, England and Normandy will be his.",
+     "prompt": "portrait of William, a handsome seventeen-year-old Norman nobleman with shoulder-length light brown hair, clean-shaven, rich red wool tunic and fur-lined cloak, confident smile, standing in a stone hall with banners",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "His father is King Henry the First, youngest son of William the Conqueror. He has fought for years to hold on to Normandy.",
+     "prompt": "portrait of King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe, standing in a candlelit stone hall",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Now the fighting is over. William has been made Duke of Normandy, and has paid homage to the King of France.",
+     "prompt": "a young nobleman kneeling before a seated medieval king on a wooden throne in a candlelit stone hall, courtiers watching",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "So the whole court is going home to England, for Christmas. Dozens of ships crowd the little harbour.",
+     "prompt": "busy medieval harbour with many small wooden ships with square sails, people carrying chests on a stone quay, cloudy morning",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Servants haul chests of silver, horses and hunting dogs. Everyone wants to cross before the winter storms close the Channel.",
+     "prompt": "medieval servants carrying wooden chests and leading horses and hounds along a stone quay, grey sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Somewhere in that crowd is a butcher from Rouen called Berold. He has come to collect money that some of the young lords owe him.",
+     "prompt": "Berold, a stocky bearded working man in his thirties wearing a rough shaggy sheepskin coat, walking through a crowded medieval quay, looking up at noblemen in fine cloaks, morning",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "AFTERNOON  ·  THE OFFER",
+   "yt_chapter": "Afternoon: The offer",
+   "scenes": [
+    {
+     "text": "In the afternoon, a sea captain pushes through the crowd to reach the king. His name is Thomas FitzStephen.",
+     "prompt": "portrait of a Norman sea captain in his forties with a grey-streaked beard and a brown wool cloak, on a crowded medieval quay, afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He makes an offer. His family, he says, carried William the Conqueror to England in 1066. Now he asks for the honour of carrying the king.",
+     "prompt": "a Norman sea captain in his forties with a grey-streaked beard and a brown wool cloak bowing before King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe on a stone quay, guards behind",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "His ship is called the White Ship. Newly fitted out, fast, the finest vessel in the harbour.",
+     "prompt": "a medieval wooden ship with a single mast, a square sail and oars along the side, 12th century Norman style with a white-painted hull moored at a stone quay, afternoon sun, calm water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Henry has already chosen his own ship. But he gives Thomas something better. His son.",
+     "prompt": "King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe, resting his hand on the shoulder of a handsome seventeen-year-old nobleman with shoulder-length light brown hair, red wool tunic and fur-lined cloak, on a medieval stone harbour quay, 12th century clothing only",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "William will sail on the White Ship, with his friends, his half-brother Richard, and his half-sister Matilda, the Countess of Perche.",
+     "prompt": "group of young medieval nobles in colourful cloaks on a quay, a young woman in a blue gown and white veil among them, afternoon",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your lord is delighted. A new ship, the best company in Normandy, and no father watching over him.",
+     "prompt": "a handsome seventeen-year-old nobleman with shoulder-length light brown hair, red wool tunic and fur-lined cloak, laughing among young medieval noblemen in colourful wool cloaks and long tunics, 12th century Normandy harbour, golden afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And you? You'll be aboard with him. Unless you find a reason not to be.",
+     "prompt": "point-of-view shot looking up a wooden gangplank toward the deck of a medieval ship, late afternoon",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DUSK  ·  THE KING SAILS",
+   "yt_chapter": "Dusk: The king sails",
+   "scenes": [
+    {
+     "text": "As the light fades, the king's ship slips out of the harbour. Its sail fills, and it heads north into the darkening Channel.",
+     "prompt": "a medieval wooden ship with a single mast, a square sail and oars along the side, 12th century Norman style sailing out of a harbour at dusk, orange and purple sky, calm sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Most of the fleet follows him. The White Ship stays behind.",
+     "prompt": "nearly empty medieval harbour at dusk, one white-hulled wooden ship still moored at the quay, torches being lit",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "On deck, the young nobles are in no hurry. They've found something better to do first.",
+     "prompt": "young medieval nobles in fine cloaks gathered on the deck of a wooden ship at dusk, torches",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Barrels of wine are rolled up the gangplank. William orders that the crew gets a share.",
+     "prompt": "medieval sailors in rough wool tunics and hoods rolling a big wooden wine barrel up a plank onto a wooden ship at night, torchlight, 12th century",
+     "fx": "fire",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "EVENING  ·  THE WINE",
+   "yt_chapter": "Evening: The wine",
+   "scenes": [
+    {
+     "text": "Cups are filled, again and again. Fifty oarsmen sit on their benches, drinking with the lords.",
+     "prompt": "rowdy medieval party on the deck of a wooden ship at night, rugged sailors and nobles raising wooden cups, torchlight",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Then a group of priests walks down the quay with holy water, to bless the voyage. It's the custom.",
+     "prompt": "medieval priests in dark robes carrying a bronze bucket and a wooden cross, walking along a stone quay at night with a lantern",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "According to the monk who later wrote this down, the drunken passengers jeer at them, and drive them away.",
+     "prompt": "medieval priests in dark robes turning away from a ship, laughing young men on the deck above them, torchlight",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Some of the young lords push the rowers aside and grab the oars themselves.",
+     "prompt": "young noblemen in fine cloaks grabbing long wooden oars from sailors on a ship at night, torchlight",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "You look around. Nearly three hundred people on one ship. More than you've ever seen on a single deck.",
+     "prompt": "crowded deck of a medieval wooden ship at night packed with people in cloaks, lanterns",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And you notice something. A few passengers are quietly walking back down the gangplank.",
+     "prompt": "two cloaked men walking down a wooden gangplank onto a stone quay at night, lantern light",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "LATE EVENING  ·  STAY OR GO",
+   "yt_chapter": "Late evening: Stay or go",
+   "scenes": [
+    {
+     "text": "One of them is Stephen of Blois, the king's own nephew. Rich, ambitious, still in his twenties.",
+     "prompt": "portrait of Stephen of Blois, a dark-haired nobleman in his twenties with a short beard and a green tunic, at night, lantern light on his face",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "One chronicler says a sudden stomach upset sent him ashore. Others say he took one look at the drunken crowd and decided against it.",
+     "prompt": "Stephen of Blois, a dark-haired nobleman in his twenties with a short beard and a green tunic, stepping off a ship onto a stone quay at night, looking back with disgust, torchlit ship behind",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "A couple of others go with him. They'll cross later, on another ship.",
+     "prompt": "two medieval knights in cloaks and chainmail walking away along a dark quay with a lantern",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Now it's your choice. Step off, and you abandon your lord on his night of triumph. Your future at court could be over.",
+     "prompt": "a sixteen-year-old squire in a plain brown wool tunic and leather belt standing on a gangplank at night, hesitating, torchlit ship behind him",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Stay, and you're on the fastest ship in Normandy, with a drunk crew and a captain who wants to impress a prince.",
+     "prompt": "a Norman sea captain in his forties with a grey-streaked beard and a brown wool cloak laughing with drunk young nobles at the stern of a wooden ship at night, torchlight",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Most people stayed. It's warm, there's wine, everyone is laughing. What could go wrong?",
+     "prompt": "close-up of hands raising simple carved wooden cups of red wine in warm torchlight, medieval tavern mood",
+     "fx": "fire",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "MIDNIGHT  ·  THE RACE",
+   "yt_chapter": "Midnight: The race",
+   "scenes": [
+    {
+     "text": "It's close to midnight, by one account, when the White Ship finally casts off.",
+     "prompt": "a medieval wooden ship with a single mast, a square sail and oars along the side, 12th century Norman style pulling away from a stone quay at night, oars dipping into black water, lanterns",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The passengers have one demand. Catch the king. Overtake his ship before it reaches England.",
+     "prompt": "young medieval nobles at the bow of a ship pointing out into the dark night sea, cloaks blowing",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Thomas FitzStephen agrees. He has the fastest ship in the fleet, and a prince is watching.",
+     "prompt": "a Norman sea captain in his forties with a grey-streaked beard and a brown wool cloak gripping a big wooden steering oar at the stern, night, determined",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The oars bite. Fifty men, many of them drunk, pull hard into the black water.",
+     "prompt": "rows of rugged oarsmen rowing hard on a medieval ship at night, water splashing",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The ship leaps forward, as one chronicler put it, swifter than an arrow.",
+     "prompt": "low angle view of a wooden ship hull cutting fast through a dark sea at night, white spray",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Behind you, the torches of Barfleur shrink to tiny sparks. Ahead, there's nothing but black water.",
+     "prompt": "view from the stern of a ship at night looking back at the small distant lights of a medieval harbour town across dark water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But just outside the harbour, about a mile to the north-east, there's a rock. At high tide, it hides just under the surface.",
+     "prompt": "dark jagged rock barely breaking the surface of a black sea at night, small waves foaming around it",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Every fisherman in Barfleur knows it's there. Tonight, nobody at the helm is thinking about it.",
+     "prompt": "an old bearded fisherman with a lantern on a rocky shore at night, looking out to sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "A violent jolt runs through the hull. Wood screams against stone.",
+     "prompt": "wooden ship hull smashing into a dark rock at night, splinters and spray",
+     "fx": "none",
+     "shake": 3
+    },
+    {
+     "text": "The rock tears open the side of the ship. Freezing seawater pours in.",
+     "prompt": "seawater pouring through broken wooden planks into the dark hold of a ship, night",
+     "fx": "none",
+     "shake": 2
+    },
+    {
+     "text": "In seconds, the laughter turns to screaming. The deck tilts under your feet.",
+     "prompt": "tilting deck of a medieval ship at night, people in cloaks grabbing ropes in panic, lanterns swinging",
+     "fx": "none",
+     "shake": 2
+    }
+   ]
+  },
+  {
+   "title": "THE SMALL BOAT",
+   "yt_chapter": "The small boat",
+   "scenes": [
+    {
+     "text": "In the chaos, William's bodyguards grab him and push him into the ship's only small boat.",
+     "prompt": "William, a handsome seventeen-year-old Norman nobleman with shoulder-length light brown hair, clean-shaven, rich red wool tunic and fur-lined cloak being helped down into a small wooden rowboat beside a tilting ship at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "A few men row him clear. In the dark, the shore isn't far. He's going to live.",
+     "prompt": "small wooden rowboat with a few men rowing away across a dark sea at night, a tilting ship behind",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then he hears a voice from the sinking ship. His half-sister Matilda, calling to him, begging him to save her.",
+     "prompt": "young woman in a blue gown and white veil reaching out from the rail of a tilting wooden ship at night, desperate",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "This is William's choice. Row to safety, or go back. He orders the boat to turn around.",
+     "prompt": "close-up of William, a handsome seventeen-year-old Norman nobleman with shoulder-length light brown hair, clean-shaven, rich red wool tunic and fur-lined cloak in a small boat at night, faint light on his face, torn and afraid",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "As it comes alongside, desperate people leap down from the deck. Far too many.",
+     "prompt": "many people in cloaks jumping from the side of a sinking ship into dark water near a small boat, night, splashes",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The little boat tips, fills, and goes under. The heir to England disappears into the dark. His body is never found.",
+     "prompt": "overturned small wooden rowboat floating upside down on black water at night, ripples",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "MEANWHILE  ·  THE KING",
+   "yt_chapter": "Meanwhile: The king",
+   "scenes": [
+    {
+     "text": "Meanwhile, miles to the north, King Henry's ship sails on through the night.",
+     "prompt": "a medieval wooden ship with a single mast, a square sail and oars along the side, 12th century Norman style at night on a calm sea, far away, faint lantern",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Henry has many children born outside marriage, but only one legitimate son. Everything he built is meant for William.",
+     "prompt": "King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe, standing at a ship's rail at night, thoughtful, wind in his cloak",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He reaches England safely. He has no idea his son is gone.",
+     "prompt": "medieval wooden ship with one square sail near tall white chalk cliffs at dawn, grey sea, no flags",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "For a day or more, no one at court dares to tell him. Nobles whisper and weep in the corridors.",
+     "prompt": "medieval nobles whispering and weeping in a stone corridor lit by candles",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Finally, Count Theobald of Blois sends in a young boy, who falls weeping at the king's feet and tells him.",
+     "prompt": "a young boy kneeling and crying before King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe seated on a throne in a stone hall",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Henry collapses to the floor. He has to be helped to his chamber. For days, he barely eats.",
+     "prompt": "King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe collapsed to his knees, courtiers holding his arms, stone hall",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "A story told later says he never smiled again. That may be legend. The grief was real.",
+     "prompt": "King Henry I, a stern man in his early fifties with a short dark grey beard, a simple gold crown and a dark blue robe sitting alone in a dark stone chamber, one candle, staring into nothing",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "1 AM  ·  THE MAST",
+   "yt_chapter": "1 AM: The mast",
+   "scenes": [
+    {
+     "text": "Back off Barfleur, the White Ship has gone down. Only the top of its mast still pokes out of the sea.",
+     "prompt": "top of a wooden ship mast and a crossbeam sticking out of a dark sea at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The water is November cold. Heavy wool and silk drag swimmers down within minutes.",
+     "prompt": "an empty embroidered red cloak floating flat on dark black sea water at night, no person",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Two men reach the mast and hang on. One is Geoffrey, a young nobleman. The other is Berold, the butcher from Rouen.",
+     "prompt": "two shipwreck survivors in the dark sea at night clinging to a broken wooden ship mast floating on the water, one in a shaggy sheepskin coat, one in a soaked medieval tunic, only heads and shoulders above water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember Berold, the butcher who came aboard to chase his debts? He's the poorest man on the ship.",
+     "prompt": "close-up of Berold, a stocky bearded working man in his thirties wearing a rough shaggy sheepskin coat, soaking wet, clinging to wet wood at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then a head breaks the surface beside them. It's the captain, Thomas FitzStephen.",
+     "prompt": "a bearded man's head and shoulders rising out of a dark sea at night, gasping",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He gasps one question. What has become of the king's son?",
+     "prompt": "close-up of a wet grey-streaked bearded face in dark water at night, desperate eyes",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "They tell him the truth. No one else has made it.",
+     "prompt": "two exhausted shipwreck survivors in medieval clothes in a dark sea at night, holding on to a floating broken wooden mast, heads and shoulders above water",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Thomas knows what waits for him in England. The monk says he chose to let go, and sank.",
+     "prompt": "circular ripples on a dark sea surface at night, a wooden spar nearby",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Now it's just the two of them, and hours of darkness ahead.",
+     "prompt": "wide shot of two tiny figures clinging to a wooden spar on a vast black sea at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The cold is the real killer now. It creeps into your hands until you can't feel the wood.",
+     "prompt": "close-up of pale numb hands gripping a wet wooden beam at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Geoffrey is dressed to impress at court. His fine clothes soak up the sea and freeze against his skin.",
+     "prompt": "young nobleman in soaked fine clothes shivering on a floating spar at night, exhausted",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Berold has his butcher's coat of sheep and goat skins. Greasy, ugly, and warm.",
+     "prompt": "close-up of a shaggy wet sheepskin coat on a man's shoulders, dark water around",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Some time before dawn, Geoffrey's strength runs out. He lets go, and the sea takes him.",
+     "prompt": "one man alone on a floating spar, looking at the dark empty water beside him, night",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DAWN  ·  THE FISHERMEN",
+   "yt_chapter": "Dawn: The fishermen",
+   "scenes": [
+    {
+     "text": "Grey light spreads over the water. Berold is still there, clinging to the spar.",
+     "prompt": "grey dawn over a calm sea, one man in a sheepskin coat clinging to a floating wooden spar",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "He has been in the freezing water for hours. He can barely move his arms.",
+     "prompt": "close-up of Berold, a stocky bearded working man in his thirties wearing a rough shaggy sheepskin coat, exhausted, eyes half closed, frost-pale skin, grey dawn light, holding on to a floating beam",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Fishermen from the coast row out and find him.",
+     "prompt": "medieval fishermen in a small wooden boat rowing across a grey sea at dawn",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "They haul him into their boat, barely alive, still wrapped in his sheepskins.",
+     "prompt": "fishermen pulling a bearded man in a sheepskin coat into a small wooden boat at dawn",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Of nearly three hundred people, he's the only one known to have survived.",
+     "prompt": "wide view of a small fishing boat on a calm grey sea at dawn, floating debris",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Over the next days, a few of the dead wash ashore on the beaches near Barfleur.",
+     "prompt": "empty grey beach with seaweed and broken wooden planks at dawn, Normandy coast",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "AFTERMATH  ·  THE ANARCHY",
+   "yt_chapter": "Aftermath: The Anarchy",
+   "scenes": [
+    {
+     "text": "One shipwreck changed English history.",
+     "prompt": "stone Norman castle on a hill under dark storm clouds",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In a single night, Henry had lost his heir, two of his other children, and many of the young lords who were meant to lead his kingdom.",
+     "prompt": "rows of candles burning in a dark stone church, an empty royal chair",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Henry remarried within months, hoping for another son. None came.",
+     "prompt": "medieval royal wedding in a candlelit stone church, an older king and a young queen",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "So he made his nobles swear to accept his daughter Matilda as ruler after him.",
+     "prompt": "medieval nobles kneeling with hands raised in oath before a woman in rich robes and a crown, stone hall",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "When Henry died in 1135, one of those nobles broke his oath, and took the crown for himself.",
+     "prompt": "close-up of a gold crown being placed on a man's head in a candlelit abbey",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "It was Stephen of Blois. The man who stepped off the White Ship.",
+     "prompt": "Stephen of Blois, a dark-haired nobleman in his twenties with a short beard and a green tunic, now older, wearing a gold crown, seated on a throne",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Years of civil war followed. Castles burned, villages starved. Later, people called it the Anarchy.",
+     "prompt": "medieval castle burning in the distance, mounted knights on a muddy field, smoke",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "It ended only when Matilda's son became King Henry the Second, in 1154.",
+     "prompt": "young king with red hair being crowned in a stone abbey, candles",
+     "fx": "dust",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "HOW WE KNOW",
+   "yt_chapter": "How we know",
+   "scenes": [
+    {
+     "text": "At least eight medieval writers recorded the disaster. They disagree on details, but agree on the drinking, the rock and the lone survivor.",
+     "prompt": "stack of old leather-bound medieval manuscripts on a wooden table, candlelight",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Most of them were monks. William of Malmesbury wrote that no ship ever brought England so much misery.",
+     "prompt": "medieval monk with a tonsure and a long beard writing with a feather quill on parchment in a candlelit stone scriptorium, 12th century",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Orderic Vitalis, a monk in Normandy, wrote the fullest account, probably built on what Berold himself told.",
+     "prompt": "old medieval monk at a wooden desk with a large manuscript, window light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "He carefully wrote down the names of the dead, so his brother monks would pray for them.",
+     "prompt": "close-up of a quill pen on old parchment beside a candle, ink pot",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "A few historians even suspect murder, a plot to wreck the ship. Most think it was simply wine, darkness and pride.",
+     "prompt": "dark jagged rocks at low tide off a rocky coast, overcast day",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Today, a tall lighthouse stands near those rocks at Gatteville, warning ships away.",
+     "prompt": "tall grey stone lighthouse on a rocky Normandy coast, grey sea, present day",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "Would you have survived?",
+   "scenes": [
+    {
+     "text": "So, would you have survived?",
+     "prompt": "view from the dark wooden deck of a medieval ship at night looking out over a black sea, a simple wooden rail, no lights",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "If you were a young lord in silk, the odds say no. Rank, wealth and youth saved no one that night.",
+     "prompt": "a rich embroidered red cloak floating on dark water at night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The water was so cold that strength and courage mattered less than what you happened to be wearing.",
+     "prompt": "close-up of a rugged bearded man's hand gripping the collar of a shaggy wet sheepskin coat, dark sea water around, night",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "The only one known to survive was the poorest man aboard, saved by a coat no noble would be seen in.",
+     "prompt": "portrait of Berold, a stocky bearded working man in his thirties wearing a rough shaggy sheepskin coat, wrapped in his sheepskin, grey dawn light behind him",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "According to Orderic, Berold lived for another twenty years, and told the story again and again.",
+     "prompt": "older bearded man in a sheepskin coat telling a story by a fireside to listeners in a medieval inn",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "But the surest way to survive was the choice Stephen made on the quay. Get off the ship.",
+     "prompt": "empty wooden gangplank leading from a medieval stone quay to a wooden ship at night, burning torches, 12th century harbour",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Would you have walked away from a prince's party? Or stayed for one more cup of wine? Tell me in the comments.",
+     "prompt": "a simple carved wooden cup of red wine on the wooden rail of a medieval ship at night, blurred torch lights of a harbour behind",
+     "fx": "fire",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "1 SURVIVOR",
+   "title": "300 Boarded the White Ship. Only a Butcher Survived #Shorts",
+   "description": "In 1120, the heir to England drowned with almost everyone aboard. The one survivor was the poorest man on the ship. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#WhiteShip #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "saved by a coat no lord would wear.",
+     "prompt": "vertical crop of long scene 96",
+     "src": 96
+    },
+    {
+     "text": "November 1120. Nearly three hundred people board the finest ship in Normandy, including the heir to the English throne.",
+     "prompt": "vertical crop of long scene 0",
+     "src": 0
+    },
+    {
+     "text": "The crew is drunk. They race into the dark, and hit a rock just outside the harbour.",
+     "prompt": "vertical crop of long scene 44",
+     "src": 44
+    },
+    {
+     "text": "By morning, only one man is still clinging to the wreck. Not a prince. Not a knight.",
+     "prompt": "vertical crop of long scene 73",
+     "src": 73
+    },
+    {
+     "text": "Berold, a butcher from Rouen. The poorest man aboard.",
+     "prompt": "vertical crop of long scene 63",
+     "src": 63
+    },
+    {
+     "text": "The nobles in silk froze in the November sea. Berold wore greasy sheepskins.",
+     "prompt": "vertical crop of long scene 70",
+     "src": 70
+    },
+    {
+     "text": "The only survivor of the White Ship was a butcher,",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "HE STEPPED OFF",
+   "title": "He Stepped Off the Ship… and Became King #Shorts",
+   "description": "Stephen of Blois walked off the White Ship minutes before it sailed. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#WhiteShip #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "took the crown of England.",
+     "prompt": "vertical crop of long scene 84",
+     "src": 84
+    },
+    {
+     "text": "Barfleur, 1120. The White Ship is about to sail, packed with young nobles and barrels of wine.",
+     "prompt": "vertical crop of long scene 23",
+     "src": 23
+    },
+    {
+     "text": "Stephen of Blois, the king's nephew, takes one look and walks back down the gangplank.",
+     "prompt": "vertical crop of long scene 31",
+     "src": 31
+    },
+    {
+     "text": "Hours later, the ship hits a rock. The king's only legitimate son drowns, with almost everyone aboard.",
+     "prompt": "vertical crop of long scene 45",
+     "src": 45
+    },
+    {
+     "text": "Fifteen years later, the grieving king dies. His nobles had sworn to make his daughter queen.",
+     "prompt": "vertical crop of long scene 59",
+     "src": 59
+    },
+    {
+     "text": "One of them breaks that oath, and drags England into years of civil war.",
+     "prompt": "vertical crop of long scene 85",
+     "src": 85
+    },
+    {
+     "text": "He's the man who stepped off the White Ship. Stephen of Blois",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "NO ONE DARED",
+   "title": "Nobody Dared Tell the King His Son Was Dead #Shorts",
+   "description": "In 1120, King Henry I lost his only legitimate son in the White Ship disaster. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#WhiteShip #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "sent a child to tell him.",
+     "prompt": "vertical crop of long scene 57",
+     "src": 57
+    },
+    {
+     "text": "1120. King Henry the First lands safely in England, after crossing from Normandy.",
+     "prompt": "vertical crop of long scene 55",
+     "src": 55
+    },
+    {
+     "text": "His only legitimate son, William, was following on the fastest ship in the fleet. The White Ship.",
+     "prompt": "vertical crop of long scene 7",
+     "src": 7
+    },
+    {
+     "text": "It never arrived. It hit a rock in the dark, and almost everyone aboard drowned.",
+     "prompt": "vertical crop of long scene 52",
+     "src": 52
+    },
+    {
+     "text": "For a day or more, nobles weep in the corridors. Not one of them dares to tell the king.",
+     "prompt": "vertical crop of long scene 56",
+     "src": 56
+    },
+    {
+     "text": "When the boy falls at his feet, Henry collapses. A later story says he never smiled again.",
+     "prompt": "vertical crop of long scene 58",
+     "src": 58
+    },
+    {
+     "text": "The most powerful men in England were so afraid that they",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE RACE",
+   "title": "The Drunken Race That Sank a Royal Dynasty #Shorts",
+   "description": "In 1120, a drunk crew raced into the night to overtake the king. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical accounts.\n\n#WhiteShip #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "to catch the king's ship.",
+     "prompt": "vertical crop of long scene 37",
+     "src": 37
+    },
+    {
+     "text": "Barfleur, 1120. The heir to England and his friends board the White Ship with barrels of wine.",
+     "prompt": "vertical crop of long scene 22",
+     "src": 22
+    },
+    {
+     "text": "They share it with the crew. When priests come to bless the voyage, the passengers jeer them away.",
+     "prompt": "vertical crop of long scene 26",
+     "src": 26
+    },
+    {
+     "text": "Close to midnight, they cast off. Fifty oarsmen pull hard into the dark.",
+     "prompt": "vertical crop of long scene 39",
+     "src": 39
+    },
+    {
+     "text": "Just outside the harbour, a rock hides under the high tide. Every local fisherman knew it was there.",
+     "prompt": "vertical crop of long scene 42",
+     "src": 42
+    },
+    {
+     "text": "The ship rips open. Nearly three hundred people go into the November sea. One survives.",
+     "prompt": "vertical crop of long scene 46",
+     "src": 46
+    },
+    {
+     "text": "All because a drunken crew wanted",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}
