@@ -44,6 +44,21 @@ Salve cada um sem o sufixo `.txt` numa pasta de trabalho (ex.: /home/claude/vide
 - Um momento "ilustrado" por vídeo (no Endurance: o navio em silhueta sendo esmagado) para quebrar o ritmo dos mapas.
 - Som: narração + trilha ambiente gerada + poucos efeitos pontuais nas viradas.
 
+## Motor novo: vídeos de suspense e crime real (pasta `motion/suspense/` do repositório)
+Os 4 testes de suspense (Voo 19, D.B. Cooper, The Tell-Tale Heart, sinal Wow!) usam um motor mais simples, sem GSAP.
+Ele só existe no repositório rafael06428/canais, ramo `claude/modelo-animacao`, pasta `motion/suspense/`:
+- `lib.js` + `base.css`: motor comum (trilhas de valores, cenas, cards, contadores, máquina de escrever, carimbo, partículas, câmera de mapa)
+- `vN.html`: um vídeo por arquivo (v2 = D.B. Cooper é a referência para crime real); `vN_spec.json`: a narração de cada um
+- `mapkit.mjs` + `build_vN.mjs`: geram `vN_map.js` quando o vídeo tem mapa
+- `render.cjs`, `shot.cjs`, `sheet.py`, `mix.py`, `finish.sh`: capturar quadros, renderizar, mixar o áudio e fechar o arquivo
+
+Como usar (os scripts esperam a pasta /home/claude/sus):
+1. Copie `motion/suspense/` para /home/claude/sus; lá: `npm init -y && npm install d3-geo topojson-client world-atlas`.
+2. Narração: `python3 canais/agent/voice.py vN_spec.json vN_voice`, depois gere `vN_timing.js` com `window.TIMING=<conteúdo de vN_voice.json>;`.
+3. `OUT=quadros node shot.cjs vN <tempos>` e `python3 sheet.py quadros/folha quadros/f_*.jpg` para revisar antes de renderizar.
+4. `node render.cjs vN`, `python3 mix.py vN '<marcas>' '<efeitos>'`, `bash finish.sh vN saida.mp4`.
+No código do vídeo, `W(bloco, 'palavra')` devolve o instante em que a narração diz aquela palavra: use para sincronizar tudo.
+
 ## Roteiros de suspense já escritos
 Documento "Roteiros de suspense: 4 testes": https://claude.ai/artifact/JnNPpUfqQzDabAiT4nT3tA
 (histórias famosas: Voo 19 / Triângulo das Bermudas, D.B. Cooper, "The Tell-Tale Heart" de Poe, sinal "Wow!"). Narração e textos de tela em inglês; relatórios ao dono em português.

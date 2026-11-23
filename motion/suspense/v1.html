@@ -1,0 +1,122 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.map .land{fill:#17384c;stroke:#4f86a3}
+#radio{position:absolute;left:110px;top:620px;width:760px;padding:26px 30px;background:rgba(4,14,22,.82);border:1px solid #1d3a4e;border-radius:10px;opacity:0}
+#radio .hd{display:flex;justify-content:space-between;font:700 18px Inter;letter-spacing:.26em;color:var(--mut)}
+#radio .hd b{color:var(--acc)}
+#radio .qt{font:500 italic 40px/1.25 Inter;margin-top:8px;min-height:52px}
+#radio .who{font:600 18px Inter;letter-spacing:.2em;color:var(--mut);margin-top:6px;text-transform:uppercase}
+#big .ln{position:absolute;left:0;right:0;text-align:center;font:400 190px Anton;text-transform:uppercase;letter-spacing:.03em;opacity:0}
+#big .ln em{font-style:normal;color:var(--acc)}
+#fin{position:absolute;left:110px;top:330px;opacity:0}
+#fin .t{font:400 128px Anton;line-height:.98;text-transform:uppercase;letter-spacing:.02em}
+#fin .t em{font-style:normal;color:var(--acc)}
+#fin .s{font:600 24px Inter;letter-spacing:.26em;color:var(--mut);margin-top:22px;text-transform:uppercase}
+</style></head>
+<body><div id="stage">
+<div id="mapL" class="layer" style="background:radial-gradient(1400px 900px at 60% 45%,#0a2233 0%,#061521 55%,#030b12 100%)">
+  <svg id="map" class="map" viewBox="0 0 1920 1080"><defs id="mdefs"></defs></svg>
+  <div id="night" class="layer" style="background:#02060a;opacity:0"></div>
+  <div class="layer shade"></div>
+</div>
+<div id="hudL" class="layer" style="pointer-events:none"><div id="brand"><b>Flight 19</b><i>U.S. Navy · Atlantic Ocean, off Florida</i></div>
+  <div id="clock"><div class="a" id="clk">2:10 PM</div><div class="b">5 December 1945</div></div></div>
+<div id="cards" class="layer" style="pointer-events:none">
+  <div id="radio"><div class="hd"><span>RADIO · <b id="rstat">RECEIVING</b></span><span id="rtime">3:40 PM</span></div>
+    <svg width="700" height="120" viewBox="0 0 700 120"><path id="rwave" fill="none" stroke="#7fd6ff" stroke-width="3" stroke-linejoin="round"/></svg>
+    <div class="qt" id="rq"></div><div class="who" id="rwho"></div></div>
+  <div id="fin"><div class="t">The<br><em>Bermuda</em><br>Triangle</div><div class="s">A name invented in 1964 · 19 years later</div></div>
+</div>
+<div id="big" class="layer" style="background:rgba(2,6,10,.86);opacity:0">
+  <div class="ln" style="top:230px" id="g1"><em>6</em> aircraft</div><div class="ln" style="top:450px" id="g2"><em>27</em> men</div>
+  <div class="ln" style="top:720px;font-size:70px;letter-spacing:.12em" id="g3">Gone in a single evening</div>
+</div>
+<div class="stamp" id="cause" style="left:880px;top:430px">Cause unknown</div>
+<canvas id="fx" width="1920" height="1080"></canvas><div id="vig"></div><div id="black"></div>
+</div>
+<script src="v1_timing.js"></script><script src="v1_map.js"></script><script src="lib.js"></script>
+<script>
+const M = window.MAP, PL = M.places, map = $('#map');
+S('path', { d: M.grat, class: 'grat' }, map); S('path', { d: M.land, class: 'land' }, map);
+const cam = makeCam(map, [773, 470], 3.4);
+const tRadio = W(1, 'Both') - .35, tSun = W(2, 'The', 1), tWx = W(2, 'The', 2), tNo = W(3, 'There'), tRes = W(4, 'It') - .2, tGone = W(4, 'It', 2), tFlame = W(5, 'burst'), tSearch = B(7), tCause = W(7, 'cause', 1) - .05, tTri = W(8, 'But') - .3, tName = W(8, 'The', 1) - .1;
+fadeBlack(DUR - 2.0, 1.7); show('#hudL', .4, tName - .4, { din: .8 });
+particles('rain', t => clamp((t - tWx) / 2) * (1 - clamp((t - tSearch) / 1.5)) * .5 + clamp((t - 72) / 1) * (1 - clamp((t - tTri) / 1)) * .35, 200);
+onRender(t => $('#night').style.opacity = .3 * ramp(t, tSun, tSun + 3) * (1 - .6 * ramp(t, tSearch, tSearch + 2)));
+
+/* routes */
+const mkRoute = (id, cls, color, extra = {}) => S('path', Object.assign({ d: M.routes[id], class: cls, stroke: color }, extra), map);
+const plan = mkRoute('plan', 'rt thin dash', '#ffffff', { opacity: .45 }); const real = mkRoute('real', 'rt', '#ff6b3d'); const resc = mkRoute('rescue', 'rt', '#7fd6ff');
+track('plan', 0, [[W(0, 'Five') - .3, 2.6, 1, 'io2']]);
+track('fly', 0, [[W(0, 'take'), B(1) - W(0, 'take'), .2, 'io2'], [B(1), B(2) - B(1), .3, 'lin'], [B(2), B(3) - B(2), .82, 'io2'], [B(3), tNo - B(3) + 1.2, 1, 'out2']]);
+track('resc', 0, [[tRes, tGone - tRes - .2, 1, 'io2']]);
+{ // planned route revealed with a clip that grows along its length via dashoffset on a mask-free trick: use solid underlay
+  const L = plan.getTotalLength(); const m = S('mask', { id: 'pm', maskUnits: 'userSpaceOnUse', x: -500, y: -500, width: 3000, height: 2200 }, $('#mdefs')); const mp = S('path', { d: M.routes.plan, fill: 'none', stroke: '#fff' }, m); mp.style.strokeWidth = 'calc(20px*var(--ik))'; mp.setAttribute('stroke-dasharray', L + ' ' + L); plan.setAttribute('mask', 'url(#pm)'); onRender(t => { mp.setAttribute('stroke-dashoffset', L * (1 - st.plan)); plan.setAttribute('opacity', .45 * (1 - ramp(t, tSearch, tSearch + 1))); });
+  const L2 = real.getTotalLength(); real.setAttribute('stroke-dasharray', L2 + ' ' + L2); onRender(() => real.setAttribute('stroke-dashoffset', L2 * (1 - st.fly)));
+  const L3 = resc.getTotalLength(); resc.setAttribute('stroke-dasharray', L3 + ' ' + L3); onRender(() => resc.setAttribute('stroke-dashoffset', L3 * (1 - st.resc))); }
+function mark(pt, txt, o = {}) { const g = cam.fix(pt, map); if (!o.nodot) S('circle', { r: o.r || 7, fill: o.color || '#fff', stroke: '#04101a', 'stroke-width': 3 }, g); if (txt) txt.split('|').forEach((l, i) => { const t = S('text', { x: o.dx ?? 18, y: (o.dy ?? 7) + i * 24, 'text-anchor': o.anchor || 'start' }, g); t.textContent = l; if (i) { t.style.fontSize = '15px'; t.style.fill = '#cfe3ee'; } }); return g; }
+const mFtl = mark(PL.ftl, 'Fort Lauderdale|Naval Air Station', { dx: -18, dy: 0, anchor: 'end' }); showS(mFtl, .6, tTri);
+const mBan = mark(PL.banana, 'Banana River|Naval Air Station', { dx: -18, dy: 0, anchor: 'end', color: '#7fd6ff' }); showS(mBan, B(4), tTri);
+const gFl = cam.fix(PL.fl, map); S('text', { class: 'geo', 'text-anchor': 'middle' }, gFl).textContent = 'Florida';
+const gBa = cam.fix([PL.bah[0] + 20, PL.bah[1] + 6], map); S('text', { class: 'geo', 'text-anchor': 'middle', style: 'font-size:19px' }, gBa).textContent = 'Bahamas';
+const gAt = cam.fix([PL.atl[0] - 120, PL.atl[1] - 10], map); S('text', { class: 'sea', 'text-anchor': 'middle' }, gAt).textContent = 'Atlantic Ocean';
+const gEst = cam.fix([PL.last[0] + 34, PL.last[1] + 62], map); { const t = S('text', { style: 'font-size:15px;fill:#ffb199' }, gEst); t.textContent = 'Track after 3:40 PM: estimated'; } showS(gEst, B(2) + 1, tSearch);
+// the five planes
+const fl = cam.fix(PL.ftl, map); const flr = S('g', {}, fl); [[0, 0], [-16, 12], [-16, -12], [-32, 24], [-32, -24]].forEach(([x, y]) => S('path', { d: `M${x + 9},${y} L${x - 7},${y - 6} L${x - 3},${y} L${x - 7},${y + 6}Z`, fill: '#fff', stroke: '#04101a', 'stroke-width': 1.5 }, flr));
+onRender(t => { const p = ptAt(real, st.fly), q = ptAt(real, Math.min(1, st.fly + .01)); fl._p = p; const a = Math.atan2(q[1] - p[1], q[0] - p[0]) * 180 / Math.PI; flr.setAttribute('transform', `rotate(${st.fly < .995 ? a : -60}) scale(1.5)`); fl.setAttribute('opacity', (t > W(0, 'take') - .4 ? 1 : 0) * (1 - ramp(t, tNo + .8, tNo + 2.2))); });
+const lastG = cam.fix(PL.last, map); const lr = S('circle', { r: 30, fill: 'none', stroke: '#ff6b3d', 'stroke-width': 2.5 }, lastG); { const q = S('text', { x: 0, y: 16, 'text-anchor': 'middle', style: 'font:400 44px Anton;fill:#ff6b3d;stroke:none' }, lastG); q.textContent = '?'; const t = S('text', { x: 44, y: -4 }, lastG); t.textContent = 'Contact lost'; }
+showS(lastG, tNo + 1.4, tTri); onRender(t => { const u = (t * .6) % 1; lr.setAttribute('r', 30 + 40 * u); lr.setAttribute('opacity', 1 - u); });
+// compass that spins when the leader reports the failure
+const cp = cam.fix(PL.ftl, map); const cpi = S('g', {}, cp); S('circle', { r: 34, fill: 'rgba(4,14,22,.85)', stroke: '#fff', 'stroke-width': 3 }, cpi); const ndl = S('path', { d: 'M0,-26 L8,0 L0,26 L-8,0Z', fill: '#ff6b3d' }, cpi); S('path', { d: 'M0,-26 L8,0 L-8,0Z', fill: '#fff' }, cpi);
+onRender(t => { const p = ptAt(real, st.fly); cp._p = [p[0] + 26, p[1] - 22]; cp.setAttribute('opacity', ramp(t, tRadio, tRadio + .4) * (1 - ramp(t, tSun, tSun + 1))); ndl.setAttribute('transform', `rotate(${(t - tRadio) * 260 + Math.sin(t * 9) * 40})`); cpi.setAttribute('transform', 'translate(34,-34)'); });
+// rescue plane
+const rh = cam.fix(PL.banana, map); S('circle', { r: 15, fill: '#7fd6ff', opacity: .3 }, rh); S('circle', { r: 7, fill: '#7fd6ff', stroke: '#04101a', 'stroke-width': 3 }, rh);
+onRender(t => { rh._p = ptAt(resc, st.resc); rh.setAttribute('opacity', ramp(t, tRes - .3, tRes) * (1 - ramp(t, tGone, tGone + .8))); });
+// flame burst seen from the tanker
+const fg = cam.fix(PL.flame, map); const f1 = S('circle', { r: 10, fill: '#ffb36b' }, fg), f2 = S('circle', { r: 10, fill: 'none', stroke: '#ff6b3d', 'stroke-width': 4 }, fg), f3 = S('circle', { r: 10, fill: 'none', stroke: '#ffb36b', 'stroke-width': 2 }, fg);
+onRender(t => { const u = t - tFlame; fg.setAttribute('opacity', u > 0 ? 1 - ramp(t, tSearch - 1, tSearch) : 0); const b = clamp(u / .25) * (1 - clamp((u - .25) / 1.2)); f1.setAttribute('r', 8 + 46 * b); f1.setAttribute('opacity', .25 + .75 * b); const w = ((u * .55) % 1 + 1) % 1; f2.setAttribute('r', 12 + 90 * w); f2.setAttribute('opacity', u > 0 ? 1 - w : 0); const w2 = ((u * .55 + .5) % 1 + 1) % 1; f3.setAttribute('r', 12 + 90 * w2); f3.setAttribute('opacity', u > .9 ? 1 - w2 : 0); });
+const ship = cam.fix([PL.flame[0] + 26, PL.flame[1] + 30], map); S('path', { d: 'M-34,0 L34,0 L26,12 L-28,12Z M-12,0 V-12 H4 V0 M10,0 V-20', fill: '#cfe3ee', stroke: '#cfe3ee', 'stroke-width': 3 }, ship); { const t = S('text', { x: 46, y: 10 }, ship); t.textContent = 'Tanker Gaines Mills'; t.style.fontSize = '15px'; } showS(ship, B(5) + .4, tSearch);
+// search grid
+const sg = S('g', {}, map); reseed(21); const cells = []; for (let r = 0; r < 7; r++) for (let c = 0; c < 9; c++) { const x = 790 + c * 46, y = 250 + r * 46; if (x < 830 && y > 380) continue; const e = S('rect', { x, y, width: 44, height: 44, fill: 'rgba(127,214,255,.10)', stroke: 'rgba(127,214,255,.5)' }, sg); e.style.strokeWidth = 'calc(1.5px*var(--ik))'; cells.push([e, tSearch + .6 + (r * 9 + (r % 2 ? 8 - c : c)) / 63 * 4.2]); }
+onRender(t => { for (const [e, t0] of cells) e.setAttribute('opacity', ramp(t, t0, t0 + .3) * (1 - ramp(t, tTri, tTri + .8))); });
+// the triangle
+const tri = S('path', { d: `M${PL.miami} L${PL.bermuda} L${PL.sanjuan} Z`, fill: 'rgba(255,107,61,.10)', stroke: '#ff6b3d', class: 'rt', 'stroke-linejoin': 'round' }, map);
+{ const L = tri.getTotalLength(); tri.setAttribute('stroke-dasharray', L + ' ' + L); onRender(t => { const u = E.io2(ramp(t, tTri + 1.6, tTri + 4.2)); tri.setAttribute('stroke-dashoffset', L * (1 - u)); tri.setAttribute('fill-opacity', ramp(t, tTri + 3.8, tTri + 4.8)); tri.setAttribute('opacity', t > tTri + 1.5 ? 1 : 0); }); }
+[['miami', 'Miami', -18, 'end'], ['bermuda', 'Bermuda', 18, 'start'], ['sanjuan', 'San Juan, Puerto Rico', 18, 'start']].forEach(([k, n, dx, an], i) => showS(mark(PL[k], n, { dx, anchor: an, color: '#ff6b3d' }), tTri + 1.6 + i * .8, 99));
+
+/* camera */
+cam.to(B(2), 8, [870, 430], 3.6, 260, 0, 'sine'); cam.to(tSearch, 3, [960, 400], 2.3, 200, 0); cam.to(tTri, 3.4, [1000, 590], 1.0, 0, 0, 'io3');
+
+/* clock */
+track('clk', 850, [[B(1) - .5, 1.2, 940, 'io2'], [B(2), B(3) - B(2) - .8, 1110, 'lin'], [B(3) - .6, .9, 1144, 'out2'], [W(4, 'takes'), 1.0, 1167, 'out2'], [W(4, 'Three'), 1.2, 1170, 'lin'], [B(5), 1.0, 1190, 'out2']]);
+onRender(() => { const m = Math.round(st.clk), h = Math.floor(m / 60), mm = String(m % 60).padStart(2, '0'); $('#clk').textContent = `${h > 12 ? h - 12 : h}:${mm} PM`; });
+
+/* cards */
+card('#cards', 210, { k: '2:10 PM · Fort Lauderdale', t: 'Flight 19', s: 'Five Navy bombers. Fourteen men. A routine training flight.' }, B(0) + .2, B(1) - .3);
+card('#cards', 210, { k: '3:40 PM', t: 'The compasses<br>fail' }, B(1), B(2) - .3);
+card('#cards', 210, { k: 'Lost', t: 'Which way<br>is Florida?', s: 'He turns the flight one way. Then another.' }, B(2), B(3) - .3);
+card('#cards', 210, { k: '7:04 PM', t: 'The last<br>call' }, B(3), B(4) - .3);
+card('#cards', 210, { k: '7:27 PM · The rescue plane', t: '13 more men', s: 'A flying boat takes off to find them. One radio call at 7:30 PM. Then nothing.' }, B(4), B(5) - .3);
+card('#cards', 210, { k: '7:50 PM', t: 'A burst<br>of flame', s: 'reported on the horizon by a passing tanker' }, B(5), B(6) - .3);
+card('#cards', 210, { k: 'The search', html: '<div class="big">5</div>', s: 'days. Hundreds of planes and ships. They find nothing.' }, tSearch + .2, tCause - .3);
+card('#cards', 210, { k: 'U.S. Navy · final report', t: 'Two words' }, tCause - .2, B(8) - .3);
+card('#cards', 210, { k: 'The likely answer', t: 'Out of fuel', s: 'over a stormy sea, in the dark' }, B(8), tTri - .2);
+show('#fin', tName, 99, { dx: -50, din: .8 });
+
+/* radio panel */
+const RQ = 'Both my compasses are out.';
+onRender(t => { const el = $('#radio'); const a = ramp(t, tRadio - .5, tRadio) * (1 - ramp(t, B(2) - .4, B(2))) + ramp(t, B(3) + .2, B(3) + .7) * (1 - ramp(t, B(4) - .4, B(4))); el.style.opacity = a; el.style.display = a <= 0 ? 'none' : '';
+  const second = t > B(2); $('#rtime').textContent = second ? '7:04 PM' : '3:40 PM'; const dead = second && t > tNo; $('#rstat').textContent = dead ? 'NO ANSWER' : 'RECEIVING'; $('#rstat').style.color = dead ? '#ff4a4a' : '';
+  { const n = Math.floor(RQ.length * ramp(t, tRadio + .3, tRadio + 1.3)); $('#rq').textContent = second ? (dead ? '…' : 'A pilot calls out to his leader.') : (n ? '“' + RQ.slice(0, n) + (t > tRadio + 1.3 ? '”' : '') : ''); }
+  $('#rwho').textContent = second ? (dead ? 'Then, silence' : 'Flight 19') : 'Lt. Charles Taylor · flight leader';
+  const live = second ? (1 - ramp(t, tNo - .2, tNo + .5)) * ramp(t, W(3, 'one'), W(3, 'one') + .3) : ramp(t, tRadio + .2, tRadio + .5) * (1 - ramp(t, tRadio + 1.5, tRadio + 2.1));
+  let d = ''; for (let x = 0; x <= 700; x += 5) { const env = Math.abs(Math.sin(x * .021 + t * 3.1)) * Math.abs(Math.sin(x * .0067 - t * 1.7)); const y = 60 + (Math.sin(x * .19 + t * 31) * 34 * env + Math.sin(x * .43 - t * 47) * 12 * env) * live + Math.sin(x * .9 + t * 20) * 1.5; d += (x ? 'L' : 'M') + x + ',' + y.toFixed(1); } $('#rwave').setAttribute('d', d); $('#rwave').setAttribute('stroke', dead ? '#ff4a4a' : '#7fd6ff'); });
+
+/* totals */
+scene('#big', B(6) - .3, tSearch - .2, .4, .5); show('#g1', B(6), 99, { s0: 1.1 }); show('#g2', W(6, 'Twenty'), 99, { s0: 1.1 }); show('#g3', W(6, 'Gone'), 99, { dy: 20 });
+stamp('#cause', tCause, -8); show('#cause', tCause, B(8) - .3, { din: .01 });
+onRender(t => { const u = clamp((t - tCause) / .22); const o = (u > 0 ? 1 : 0) * (1 - ramp(t, B(8) - .3, B(8))); const c = $('#cause'); c.style.opacity = o; c.style.transform = `rotate(-8deg) scale(${lerp(2.4, 1, E.out3(u))})`;
+  const [x, y] = shakeOf(t, [[tCause, 9, .45], [tFlame, 7, .5]]); $('#mapL').style.transform = `translate(${x}px,${y}px)`; });
+cam.last(); window.seek(0);
+</script></body></html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+:root{--acc:#ff4a3d}
+#stage{background:#030507}
+.bgv3{background:radial-gradient(1200px 800px at 50% 45%,#0c141b 0%,#05080b 65%,#020304 100%)}
+.ln{position:absolute;left:0;right:0;text-align:center;opacity:0}
+.ln.big{font:400 150px Anton;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+.ln.mid{font:400 84px Anton;text-transform:uppercase;letter-spacing:.05em;line-height:1.05}
+.ln.ser{font:italic 400 52px Cardo,serif;color:#d8cfc4;letter-spacing:.01em}
+.ln.sm{font:700 24px Inter;letter-spacing:.34em;color:#9aa9b3;text-transform:uppercase}
+.ln.red{color:var(--acc)}
+#redv{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(255,74,61,0) 35%,rgba(255,40,30,.75) 100%);opacity:0;pointer-events:none}
+#pulse{position:absolute;inset:0;pointer-events:none}
+</style></head>
+<body><div id="stage">
+<svg width="0" height="0" style="position:absolute"><defs><radialGradient id="iris"><stop offset="0" stop-color="#eef4f6"/><stop offset=".55" stop-color="#c2d3da"/><stop offset="1" stop-color="#6e8794"/></radialGradient>
+    <radialGradient id="film"><stop offset="0" stop-color="#fff" stop-opacity=".75"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    </defs><defs><linearGradient id="lightg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#e9a172"/></linearGradient>
+    <linearGradient id="spill" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffd9a8" stop-opacity=".0"/><stop offset="1" stop-color="#ffd9a8" stop-opacity=".28"/></linearGradient></defs></svg>
+
+<div id="s0" class="layer bgv3">
+  <div class="ln big" style="top:300px" id="a1">You are not mad.</div>
+  <div class="ln ser" style="top:500px" id="a2">You want that understood.</div>
+  <div class="ln ser" style="top:590px" id="a3">A madman could never have planned it this carefully.</div>
+</div>
+
+<div id="s1" class="layer bgv3">
+  <div class="ln ser" style="top:150px" id="b1">The old man never wronged you. You even liked him.</div>
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs><clipPath id="eyeclip"><path id="eyeclipp"/></clipPath></defs>
+    <g id="eye" transform="translate(960,560)">
+      <g clip-path="url(#eyeclip)"><rect x="-330" y="-220" width="660" height="440" fill="#d9d2c8"/>
+        <g id="irisg"><circle r="118" fill="url(#iris)"/><circle r="118" fill="none" stroke="#4d6470" stroke-width="5"/><circle r="40" fill="#7d909a"/><ellipse cx="-22" cy="-26" rx="96" ry="78" fill="url(#film)"/></g></g>
+      <path id="eyeline" fill="none" stroke="#e9e2d8" stroke-width="7" stroke-linejoin="round"/>
+    </g>
+  </svg>
+  <div class="ln mid" style="top:785px" id="b2">It was his eye.</div>
+  <div class="ln sm" style="top:895px" id="b3">Pale · clouded · like a vulture’s</div>
+  <div class="ln mid red" style="top:785px" id="b4">Your blood ran cold</div>
+</div>
+
+<div id="s2" class="layer bgv3">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    
+    <g id="tally" transform="translate(190,330)" fill="none" stroke="#e9e2d8" stroke-width="12" stroke-linecap="round"></g>
+    <!-- door seen from the dark hallway -->
+    <g id="door">
+      <rect x="1180" y="150" width="420" height="790" fill="#0a1017" stroke="#2b3a46" stroke-width="6"/>
+      <path id="spillp" fill="url(#spill)"/>
+      <rect id="crack" x="1180" y="156" width="0" height="778" fill="url(#lightg)"/>
+      <circle cx="1560" cy="560" r="13" fill="#2b3a46"/>
+    </g>
+    <g id="eye2" transform="translate(1390,520) scale(.36)" opacity="0"><path d="M-260,0 Q0,-170 260,0 Q0,170 -260,0Z" fill="#d9d2c8"/><circle r="110" fill="url(#iris)"/><circle r="38" fill="#7d909a"/><path d="M-260,0 Q0,-170 260,0 Q0,170 -260,0Z" fill="none" stroke="#e9e2d8" stroke-width="12"/></g>
+  </svg>
+  <div class="abs" style="left:190px;top:170px"><div class="kick" id="c0">Seven nights</div></div>
+  <div class="abs anton" style="left:190px;top:560px;font-size:170px;opacity:0" id="c1">12:00</div>
+  <div class="abs lbl" style="left:196px;top:740px;opacity:0" id="c1b">Midnight</div>
+  <div class="ln ser" style="top:868px" id="c2">So slowly it takes an hour.</div>
+  <div class="ln ser" style="top:868px" id="c3">And you watch him sleep.</div>
+  <div class="ln mid" style="top:850px;right:760px;font-size:76px" id="c4">On the eighth night, he wakes.</div>
+</div>
+
+<div id="s3" class="layer" style="background:#020304">
+  <div class="ln mid" style="top:170px" id="d1">And you hear it.</div>
+  <div class="ln ser" style="top:290px" id="d2">A low, dull, quick sound.</div>
+  <div class="ln big red" style="top:760px" id="d3">His heart.</div>
+  <div class="ln big" style="top:760px" id="d4">Louder.</div>
+  <div class="ln big red" style="top:740px;font-size:210px" id="d5">And louder.</div>
+</div>
+
+<div id="s4" class="layer bgv3">
+  <div class="ln mid" style="top:150px" id="e1">The heart is silent.</div>
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080"><g id="planks"></g></svg>
+  <div class="ln ser" style="top:930px" id="e2">You hide him beneath the floorboards.</div>
+  <div class="ln ser" style="top:930px" id="e3">So neatly that no eye could find a thing.</div>
+</div>
+
+<div id="s5" class="layer bgv3">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <g id="doorway"><rect x="1090" y="130" width="560" height="800" fill="url(#lightg)"/><rect x="1090" y="130" width="560" height="800" fill="none" stroke="#2b3a46" stroke-width="10"/>
+      <g id="cops" fill="#05080b"></g></g>
+  </svg>
+  <div class="abs" style="left:150px;top:230px"><div class="kick" id="f0">The same night</div><div class="anton" style="font-size:190px;margin-top:16px;opacity:0" id="f1">4:00 AM</div></div>
+  <div class="abs" style="left:156px;top:560px;font:italic 400 52px Cardo,serif;color:#d8cfc4;max-width:760px;opacity:0" id="f2">Three policemen knock.<br>A neighbour heard a cry.</div>
+  <div class="abs anton" style="left:150px;top:780px;font-size:110px;opacity:0" id="f3">You smile.</div>
+</div>
+
+<div id="s6" class="layer bgv3">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs><radialGradient id="spot"><stop offset="0" stop-color="#ff4a3d" stop-opacity=".5"/><stop offset="1" stop-color="#ff4a3d" stop-opacity="0"/></radialGradient></defs>
+    <ellipse id="spotg" cx="960" cy="905" rx="520" ry="120" fill="url(#spot)" opacity="0"/>
+    <g id="floor" stroke="#3a4650" stroke-width="5" fill="none"><path d="M0,760 H1920" stroke="#8a97a0" stroke-width="7"/><path d="M0,790 H1920 M0,1040 H1920" opacity=".0"/>
+      <path d="M210,760 V1080 M620,760 V1080 M960,760 V1080 M1300,760 V1080 M1710,760 V1080" opacity=".55"/></g>
+    <g id="chairs"></g><g id="sitters"></g>
+  </svg>
+  <div class="ln ser" style="top:120px" id="g0">You even set their chairs right over the spot.</div>
+  <div class="ln mid" style="top:110px" id="g1">They sit. They chat.</div>
+  <div class="ln ser" style="top:240px" id="g2">And then you hear it again.</div>
+  <div class="ln sm red" style="top:1010px;color:#ff4a3d" id="g3">Coming from under the floor</div>
+</div>
+
+<div id="s7" class="layer" style="background:#020304">
+  <div class="ln mid" style="top:130px" id="h1">They must hear it.</div>
+  <div class="ln ser" style="top:250px" id="h2">They are only pretending not to.</div>
+  <div class="ln big red" style="top:800px" id="h3">You cannot bear it</div>
+</div>
+
+<div id="s8" class="layer" style="background:#020304">
+  <div class="ln sm" style="top:400px" id="i0">Based on</div>
+  <div class="ln big" style="top:450px;font-size:130px" id="i1">The Tell-Tale Heart</div>
+  <div class="ln ser" style="top:620px" id="i2">Edgar Allan Poe · 1843</div>
+</div>
+
+<svg id="pulse" width="1920" height="1080" viewBox="0 0 1920 1080"><path id="pglow" fill="none" stroke="#ff4a3d" stroke-width="16" opacity=".16" stroke-linejoin="round"/><path id="pline" fill="none" stroke="#ff4a3d" stroke-width="4.5" stroke-linejoin="round"/></svg>
+<div id="redv"></div>
+<canvas id="fx" width="1920" height="1080"></canvas><div id="vig"></div><div id="black"></div>
+</div>
+<script src="v3_timing.js"></script><script src="lib.js"></script>
+<script>
+const L = (id, tin, tout, o) => show('#' + id, tin, tout, Object.assign({ dy: 22, din: .6 }, o || {}));
+/* scenes */
+const T3 = B(3), tHear = W(3, 'And'), T4 = B(4), T5 = B(5), tChairs = W(5, 'You', 2), T6 = B(6), T7 = B(7), tCut = W(7, 'truth') + .45, T8 = B(8);
+scene('#s0', 0, B(1) - .5, .6, .5); scene('#s1', B(1) - .5, B(2) - .4); scene('#s2', B(2) - .4, tHear - .3, .5, .4);
+scene('#s3', tHear - .3, T4 - .45, .4, 0); scene('#s4', T4 - .45, T5 - .4, 0, .5); scene('#s5', T5 - .4, tChairs - .3);
+scene('#s6', tChairs - .3, T7 - .3); scene('#s7', T7 - .3, tCut, .4, 0); scene('#s8', T8 - .3, 999, .8);
+fadeBlack(DUR - 2.2, 1.8); particles('dust', t => t < tCut ? .22 : 0, 60);
+
+/* S0 */ L('a1', B(0), 99, { s0: 1.06 }); L('a2', W(0, 'You', 1), 99); L('a3', W(0, 'A'), 99);
+
+/* S1: the eye */
+L('b1', B(1), W(1, 'It') - .2); L('b2', W(1, 'It'), W(1, 'Every') - .3); L('b3', W(1, 'One'), W(1, 'Every') - .3); L('b4', W(1, 'your'), 99, { s0: 1.1 });
+track('open', 0, [[W(1, 'eye') - .3, 1.3, 1, 'out3'], [W(1, 'Every') - .2, .25, .55, 'io2'], [W(1, 'Every') + .15, .5, 1, 'out2']]);
+track('look', -70, [[W(1, 'One'), 1.6, 40, 'io2'], [W(1, 'Every'), .9, 0, 'out3']]); track('pup', 40, [[W(1, 'Every') + .2, .8, 24, 'out2']]);
+onRender(() => { const o = Math.max(.001, st.open), h = 175 * o, d = `M-260,0 Q0,${-h} 260,0 Q0,${h} -260,0Z`; $('#eyeline').setAttribute('d', d); $('#eyeclipp').setAttribute('d', d);
+  $('#irisg').setAttribute('transform', `translate(${st.look},0)`); $('#irisg').children[2].setAttribute('r', st.pup); });
+
+/* S2: seven nights, the door */
+const tal = $('#tally'), tN = W(2, 'seven'); const marks = [];
+for (let i = 0; i < 7; i++) { const p = S('path', { d: i === 4 ? 'M-18,128 L250,18' : `M${(i > 4 ? i - 1 : i) * 62 + (i > 4 ? 56 : 0)},0 V150` }, tal); drawT(p, tN + i * .22, .22, 'lin'); marks.push(p); }
+const m8 = S('path', { d: `M${5 * 62 + 56 + 62},0 V150`, stroke: '#ff4a3d' }, tal); drawT(m8, B(3) + .1, .3, 'lin');
+L('c0', B(2), 99); L('c1', W(2, 'midnight') - .15, 99); L('c1b', W(2, 'midnight') + .2, 99);
+track('crack', 0, [[W(2, 'open'), 3.6, 54, 'lin'], [B(3) + 1.0, .5, 70, 'out2']]);
+onRender(() => { const w = st.crack; $('#crack').setAttribute('width', w); $('#spillp').setAttribute('d', `M1180,160 L${1180 - w * 9},70 L${1180 - w * 9},1010 L1180,930Z`); $('#spillp').setAttribute('opacity', clamp(w / 30)); });
+L('c2', W(2, 'So', 1), W(2, 'And') - .2); L('c3', W(2, 'And'), B(3) - .2); L('c4', B(3), 99, { s0: 1.05 });
+showS('#eye2', W(3, 'He') + .1, 99, .25);
+onRender(t => { $('#c0').textContent = t >= B(3) ? 'The eighth night' : 'Seven nights'; $('#c0').style.color = t >= B(3) ? '#ff4a3d' : ''; });
+
+/* S3: the heartbeat */
+L('d1', tHear, 99); L('d2', W(3, 'A') - .1, 99); L('d3', W(3, 'His'), W(3, 'Louder') - .15, { s0: 1.1 }); L('d4', W(3, 'Louder'), W(3, 'And', 1) - .15, { s0: 1.15, dout: .15 }); L('d5', W(3, 'And', 1), 99, { s0: 1.2, din: .35 });
+
+/* S4: floorboards */
+L('e1', T4, W(4, 'You') - .3); L('e2', W(4, 'You'), W(4, 'So') - .3); L('e3', W(4, 'So'), 99);
+showS('#planks', W(4, 'You') - .4, 99, .6); const pk = $('#planks'), PW = 1300, PH = 78, PX = 310, PY = 300; const loose = [2, 3, 4], tP = W(4, 'beneath') - .2;
+S('rect', { x: PX + 40, y: PY + 2 * (PH + 8), width: PW - 80, height: 3 * (PH + 8) - 8, fill: '#000' }, pk); S('ellipse', { cx: 960, cy: PY + 3.5 * (PH + 8) - 4, rx: 520, ry: 110, fill: '#ff4a3d', opacity: .16 }, pk);
+for (let i = 0; i < 7; i++) { const g = S('g', {}, pk); S('rect', { x: PX, y: PY + i * (PH + 8), width: PW, height: PH, fill: '#1a232b', stroke: '#3a4650', 'stroke-width': 3 }, g);
+  S('path', { d: `M${PX + 60},${PY + i * (PH + 8) + 26} h${300 + i * 37 % 200} M${PX + 520},${PY + i * (PH + 8) + 52} h${420 - i * 53 % 180}`, stroke: '#2b3640', 'stroke-width': 2, fill: 'none' }, g);
+  [PX + 26, PX + PW - 26].forEach(x => S('circle', { cx: x, cy: PY + i * (PH + 8) + PH / 2, r: 5, fill: '#5b6a75' }, g));
+  const k = loose.indexOf(i); if (k >= 0) onRender(t => { const u = E.io3(clamp((t - (tP + k * .55)) / .8)); g.setAttribute('transform', `translate(${(1 - u) * (560 + k * 90)},${(1 - u) * (k - 1) * 46}) rotate(${(1 - u) * (6 - k * 5)} 960 ${PY + i * (PH + 8)})`); }); }
+
+/* S5: the police */
+L('f0', T5, 99); L('f1', T5 + .1, 99); L('f2', W(5, 'three') - .1, 99); L('f3', W(5, 'smile') - .25, 99);
+const cops = $('#cops'); [1210, 1370, 1530].forEach((x, i) => { const g = S('g', {}, cops); const h = i === 1 ? 20 : 0;
+  S('path', { d: `M${x - 78},930 L${x - 66},${440 - h} Q${x},${396 - h} ${x + 66},${440 - h} L${x + 78},930Z` }, g); S('circle', { cx: x, cy: 368 - h, r: 44 }, g);
+  S('path', { d: `M${x - 52},${352 - h} Q${x - 50},${292 - h} ${x},${286 - h} Q${x + 50},${292 - h} ${x + 52},${352 - h} L${x + 62},${362 - h} L${x - 62},${362 - h}Z` }, g); S('circle', { cx: x, cy: 272 - h, r: 9 }, g);
+  showS(g, W(5, 'three') + i * .22, 99, .35); });
+const tK = W(5, 'knock'); onRender(t => { const [x, y] = shakeOf(t, [[tK, 7, .18], [tK + .24, 7, .18], [tK + .48, 7, .2]]); $('#s5').style.transform = `translate(${x}px,${y}px)`; });
+
+/* S6: chairs over the spot, then the sound returns */
+L('g0', tChairs, T6 - .2); L('g1', T6, W(6, 'And') - .2); L('g2', W(6, 'And'), W(6, 'Coming') - .2); L('g3', W(6, 'Coming'), 99);
+const CX = [700, 960, 1220]; const tHear2 = W(6, 'Low');
+CX.forEach((x, i) => { const c = S('g', { stroke: '#cfc6ba', 'stroke-width': 9, 'stroke-linecap': 'round', fill: 'none' }, $('#chairs')); S('path', { d: `M${x - 44},520 V756 M${x - 44},640 H${x + 46} M${x + 46},640 V756 M${x - 44},700 H${x + 46}` }, c);
+  const t0 = W(5, 'chairs') - .2 + i * .3; onRender(t => { const u = E.out3(clamp((t - t0) / .45)); c.setAttribute('opacity', u); c.setAttribute('transform', `translate(0,${(1 - u) * -70})`); });
+  const s = S('g', { fill: '#141f29', stroke: '#8a9aa6', 'stroke-width': 3 }, $('#sitters'));
+  S('path', { d: `M${x - 36},640 L${x - 30},470 Q${x},440 ${x + 34},470 L${x + 40},620 L${x + 92},622 L${x + 96},756 L${x + 56},756 L${x + 54},660 L${x - 36},660Z` }, s); S('circle', { cx: x + 2, cy: 408, r: 38 }, s);
+  showS(s, T6 + i * .18, 99, .4); });
+onRender(t => $('#spotg').setAttribute('opacity', .9 * ramp(t, tHear2, tHear2 + 4)));
+
+/* S7 */
+L('h1', T7, 99); L('h2', W(7, 'They', 1), 99); L('h3', W(7, 'cannot') - .1, 99, { s0: 1.12 });
+/* S8 */ L('i0', T8, 99); L('i1', T8 + .15, 99, { s0: 1.04 }); L('i2', W(8, 'by'), 99);
+
+/* ---- the pulse: a scrolling heart monitor; beats mirror the audio heart() generator ---- */
+const beats = []; const steady = (t0, t1, bpm) => { for (let t = t0; t < t1; t += 60 / bpm) beats.push(t); };
+const rampB = (t0, d, b0, b1) => { let t = 0; while (t < d - .5) { beats.push(t0 + t); t += 60 / (b0 + (b1 - b0) * t / d); } };
+const H1 = tHear + .2, H2 = tHear2 - .3, H3 = T7 - .75; window.HEART = { H1, H2, H3, d1: T4 - .55 - H1, d2: H3 - H2 + .5, d3: tCut - H3 };
+steady(.5, B(2), 58); steady(B(2), H1, 60); rampB(H1, HEART.d1, 66, 158); rampB(H2, HEART.d2, 60, 118); rampB(H3, HEART.d3, 118, 180);
+const kf = (keys, t) => { let v = keys[0][1]; for (let i = 1; i < keys.length; i++) { const [t1, v1] = keys[i], t0 = keys[i - 1][0]; if (t >= t1) { v = v1; continue; } if (t > t0) v = lerp(keys[i - 1][1], v1, (t - t0) / (t1 - t0)); break; } return v; };
+const AMP = [[0, 24], [W(1, 'Every'), 24], [W(1, 'blood'), 54], [B(2), 22], [H1, 26], [T4 - .6, 300], [T4 - .5, 0], [H2, 0], [H2 + .2, 16], [H3, 120], [tCut - .05, 400], [tCut, 0], [999, 0]];
+const PY2 = [[0, 1000], [tHear - .3, 1000], [tHear + 1.2, 560], [T5 - .5, 560], [T5 - .4, 930], [T7 - .3, 930], [T7 + 1.5, 560], [999, 560]];
+const VIS = [[0, 0], [.6, 1], [T4 + 2.2, 1], [T4 + 2.9, 0], [H2 - .1, 0], [H2 + .3, 1], [tCut - .02, 1], [tCut, 0], [999, 0]];
+const SHAPE = [[-.5, 0], [-.2, 0], [-.14, .12], [-.08, 0], [-.035, -.18], [0, 1], [.035, -.34], [.07, 0], [.2, .22], [.3, 0], [.5, 0]];
+const ecg = ph => kf(SHAPE, ph);
+function beatPhase(tau) { let lo = 0, hi = beats.length - 1; if (tau < beats[0] || beats.length < 2) return [.5, 9]; while (lo < hi) { const m = (lo + hi + 1) >> 1; if (beats[m] <= tau) lo = m; else hi = m - 1; }
+  const a = beats[lo], b = lo + 1 < beats.length ? beats[lo + 1] : a + 1; const per = Math.min(b - a, 1.4); let ph = (tau - a) / per; if (ph > .5) { const tb = b - tau; ph = tb < per * .5 ? -tb / per : .5; } return [ph, tau - a]; }
+const SPEED = 330;
+onRender(t => {
+  const vis = kf(VIS, t), y0 = kf(PY2, t); let d = '';
+  if (vis > 0) for (let x = 0; x <= 1920; x += 4) { const tau = t - (1920 - x) / SPEED; const y = y0 - kf(AMP, tau) * ecg(beatPhase(tau)[0]); d += (x ? 'L' : 'M') + x + ',' + y.toFixed(1); }
+  $('#pline').setAttribute('d', d || 'M0,0'); $('#pglow').setAttribute('d', d || 'M0,0'); $('#pulse').style.opacity = vis;
+  const since = beatPhase(t)[1], a = kf(AMP, t); $('#redv').style.opacity = t < tCut ? clamp(a / 420) * Math.exp(-since / .16) * .9 : 0;
+  const k = clamp((a - 150) / 250) * 7, sh = Math.exp(-since / .1); $('#stage').style.transform = t < tCut && k > 0 ? `translate(${Math.sin(t * 91) * k * sh}px,${Math.cos(t * 77) * k * sh}px)` : '';
+});
+window.seek(0);
+</script></body></html>

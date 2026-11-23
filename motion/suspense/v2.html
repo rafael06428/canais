@@ -1,0 +1,219 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="base.css">
+<style>
+.paper{position:absolute;background:#e8dfcc;color:#14202b;font-family:"Anonymous Pro",monospace;border-radius:6px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+#ticket{left:520px;top:400px;width:1180px;height:470px;padding:34px 44px;opacity:0}
+#ticket .hd{display:flex;justify-content:space-between;border-bottom:4px solid #b3261e;padding-bottom:16px;font:700 34px "Anonymous Pro",monospace;letter-spacing:.08em}
+#ticket .hd span:last-child{color:#b3261e}
+#ticket .row{display:flex;gap:60px;margin-top:30px}
+#ticket .f{flex:1}#ticket .f small{display:block;font:700 18px Inter;letter-spacing:.24em;color:#6b6a62}
+#ticket .f b{display:block;font:700 44px "Anonymous Pro",monospace;margin-top:6px;min-height:52px;white-space:nowrap}
+#ticket .perf{position:absolute;right:230px;top:110px;bottom:0;border-left:4px dashed #b9ae97}
+#tdate{position:absolute;left:120px;top:120px;font:400 130px Anton;letter-spacing:.03em;white-space:nowrap}
+#note{left:560px;top:150px;width:1100px;padding:40px 50px;min-height:230px;opacity:0;transform-origin:50% 50%}
+#note div{font:700 46px/1.5 "Anonymous Pro",monospace;min-height:70px;white-space:nowrap}
+.bigc{font:400 250px Anton;line-height:.9;font-variant-numeric:tabular-nums}
+#endL .q{position:absolute;left:0;right:0;text-align:center;font:400 78px Anton;letter-spacing:.05em;text-transform:uppercase;opacity:0}
+.chk{font:700 34px Inter;color:#fff;margin-top:14px;opacity:0}.chk i{color:var(--acc);font-style:normal;margin-right:14px}
+.map .land{fill:#17384c;stroke:#4f86a3}
+</style></head>
+<body><div id="stage">
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="man" viewBox="0 0 24 46"><circle cx="12" cy="7.5" r="7"/><rect x="2.5" y="17" width="19" height="29" rx="9.5"/></symbol>
+  <linearGradient id="nsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#02060a"/><stop offset="1" stop-color="#0c2231"/></linearGradient>
+  <linearGradient id="rsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2233"/><stop offset=".7" stop-color="#3f6f86"/><stop offset="1" stop-color="#e9a172"/></linearGradient>
+  <filter id="cblur" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="22"/></filter>
+</defs></svg>
+
+<!-- 1 ticket -->
+<div id="tk" class="layer bgdeep">
+  <div id="tdate"></div><div class="lbl abs" style="left:126px;top:312px" id="tsub">The day before Thanksgiving</div>
+  <div id="ticket" class="paper"><div class="perf"></div>
+    <div class="hd"><span>NORTHWEST ORIENT AIRLINES</span><span>FLIGHT 305</span></div>
+    <div class="row"><div class="f"><small>FROM</small><b id="t_from"></b></div><div class="f"><small>TO</small><b id="t_to"></b></div></div>
+    <div class="row"><div class="f"><small>FARE</small><b id="t_fare"></b></div><div class="f"><small>NAME OF PASSENGER</small><b id="t_name"></b></div></div>
+  </div>
+</div>
+
+<!-- 2 cabin + note -->
+<div id="cab" class="layer bgdeep">
+  <div id="note" class="paper"><div id="n1"></div><div id="n2"></div></div>
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080"><g id="cabin"></g></svg>
+</div>
+
+<!-- 3 demands -->
+<div id="dem" class="layer bgdeep">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080"><g id="bills"></g><g id="chutes"></g>
+    <text x="1380" y="960" text-anchor="middle" style="font:700 22px Inter;letter-spacing:.3em;fill:#9dbccd" id="chl">FOUR PARACHUTES</text></svg>
+</div>
+
+<!-- 4 map -->
+<div id="mapL" class="layer" style="background:radial-gradient(1400px 900px at 60% 45%,#0a2233 0%,#061521 55%,#030b12 100%)">
+  <svg id="map" class="map" viewBox="0 0 1920 1080"><defs id="mdefs"></defs></svg>
+  <div class="layer shade"></div>
+</div>
+
+<!-- 5 jump -->
+<div id="jump" class="layer">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <rect width="1920" height="1080" fill="url(#nsky)"/>
+    <g id="clouds" fill="#16303f" filter="url(#cblur)" opacity=".9"></g>
+    <g id="alt" font-family="Inter" font-weight="700" font-size="20" letter-spacing="4" fill="#9dbccd"><path d="M1790,560 V985" stroke="rgba(255,255,255,.3)" stroke-width="2"/><path d="M1776,560 H1804 M1776,985 H1804" stroke="rgba(255,255,255,.6)" stroke-width="2"/><text x="1766" y="567" text-anchor="end">10,000 FT</text><text x="1766" y="992" text-anchor="end">GROUND</text></g>
+    <g id="plane" color="#0b1722">
+      <g fill="currentColor" stroke="#5a7d92" stroke-width="2.5" stroke-linejoin="round">
+        <path d="M305,-44 L432,-196 L498,-196 L446,-44Z"/><path d="M388,-198 L536,-212 L548,-196 L404,-184Z"/>
+        <path d="M-450,0 C-450,-28 -400,-44 -340,-46 L330,-46 C392,-46 442,-30 472,-8 L472,6 C422,26 382,34 332,36 L-360,36 C-410,34 -450,22 -450,0Z"/>
+        <ellipse cx="318" cy="-22" rx="66" ry="18"/><path d="M-130,20 L70,24 L176,74 L120,78Z"/>
+        <g id="stairs"><path d="M0,-5 L138,-5 L138,7 L0,7Z"/></g>
+      </g>
+      <g fill="#ffd9a8" opacity=".75" id="wins"></g>
+      <circle id="strobe" cx="545" cy="-204" r="7" fill="#fff"/><circle id="beacon" cx="-20" cy="40" r="6" fill="#ff4a4a"/>
+    </g>
+    <g id="faller" fill="#e6f1f6"><circle r="7" cy="-13"/><rect x="-6" y="-6" width="12" height="20" rx="5"/></g>
+    <g id="trees" fill="#02070b"></g>
+  </svg>
+  <div id="flash" class="layer" style="background:#cfe9ff;opacity:0"></div>
+</div>
+
+<!-- 6 riverbank -->
+<div id="river" class="layer">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <defs><clipPath id="sandclip"><rect x="0" y="0" width="1920" height="842"/></clipPath></defs>
+    <rect width="1920" height="620" fill="url(#rsky)"/>
+    <g id="pines" fill="#06131c"></g>
+    <rect y="600" width="1920" height="190" fill="#17384c"/><g id="ripples" stroke="rgba(190,225,240,.28)" stroke-width="3" stroke-linecap="round"></g>
+    <path d="M0,790 L260,772 L640,796 L1010,770 L1400,798 L1920,776 V1080 H0Z" fill="#3a3a34"/>
+    <g clip-path="url(#sandclip)"><g id="bundles"></g></g>
+    <path d="M0,838 L300,826 L700,846 L1100,824 L1500,848 L1920,830 V1080 H0Z" fill="#4a493f"/><path d="M0,930 L420,905 L900,940 L1380,910 L1920,945 V1080 H0Z" fill="#2c2c27"/>
+  </svg>
+  <div class="layer" style="background:linear-gradient(90deg,rgba(3,9,15,.9) 0%,rgba(3,9,15,.7) 28%,rgba(3,9,15,0) 55%)"></div>
+  <div id="bar" class="abs" style="left:110px;top:840px;width:1040px;opacity:0"><div style="height:22px;background:rgba(255,255,255,.16);border-radius:11px;overflow:hidden"><div id="barfill" style="height:100%;width:0;background:var(--acc)"></div></div>
+    <div style="display:flex;justify-content:space-between;margin-top:14px" class="lbl"><span style="color:var(--acc)">Found: $5,800</span><span>Still missing: $194,200</span></div></div>
+</div>
+
+<!-- 7 end -->
+<div id="endL" class="layer bgdeep">
+  <svg class="abs" width="1920" height="1080" viewBox="0 0 1920 1080"><g id="bust" transform="translate(1330,540)" opacity="0">
+    <path d="M-250,330 C-250,170 -150,120 -60,100 L-44,40 C-96,-10 -104,-150 0,-180 C104,-150 96,-10 44,40 L60,100 C150,120 250,170 250,330Z" fill="#13293a" stroke="#5a8aa6" stroke-width="3"/>
+    <path d="M-78,-78 h64 v30 h-64Z M14,-78 h64 v30 h-64Z M-14,-66 h28" fill="#02070b" stroke="#02070b" stroke-width="6"/>
+    <path d="M-16,104 L0,128 L16,104 L10,250 L0,268 L-10,250Z" fill="#02070b"/>
+    <text y="30" x="0" text-anchor="middle" style="font:400 0px Anton"></text></g></svg>
+  <div class="stamp" id="unsolved" style="left:1040px;top:420px">Unsolved</div>
+  <div class="q" style="top:905px" id="q1">Who was he?</div><div class="q" style="top:905px;color:var(--acc)" id="q2">Did he survive the fall?</div>
+</div>
+
+<div id="hudL" class="layer" style="pointer-events:none"><div id="brand"><b>D.B. Cooper</b><i>Northwest Orient Flight 305 · 1971</i></div></div>
+<div id="cards" class="layer" style="pointer-events:none"></div>
+<canvas id="fx" width="1920" height="1080"></canvas><div id="vig"></div><div id="black"></div>
+</div>
+<script src="v2_timing.js"></script><script src="v2_map.js"></script><script src="lib.js"></script>
+<script>
+const M = window.MAP, PL = M.places;
+const T1 = B(1) - .35, T2 = B(2) - .35, T3 = B(3) - .35, T4 = B(4) - .35, T5 = B(5) - .35, T6 = B(6) - .35, T7 = B(7) - .35;
+scene('#tk', 0, T1, .6); scene('#cab', T1, T2); scene('#dem', T2, T3); scene('#jump', T4, T5); scene('#river', T6, T7); scene('#endL', T7, 999);
+{ const el = $('#mapL'); onRender(t => { const a = Math.max(clamp((t - T3) / .5) * (1 - clamp((t - T4) / .5)), clamp((t - T5) / .5) * (1 - clamp((t - T6) / .5))); el.style.opacity = a; el.style.display = a <= 0 ? 'none' : ''; }); }
+scene('#hudL', T1 + .4, T7 + 8.2, .5, .5); fadeBlack(DUR - 2.1, 1.8);
+particles('rain', t => clamp((t - T4) / .6) * (1 - clamp((t - T5) / .5)) * .75, 220);
+
+/* 1 ticket */
+typer('#tdate', 'NOVEMBER 24, 1971', B(0), 2.8, true); show('#tsub', W(0, 'The'), 99, { dy: 16 });
+show('#ticket', W(0, 'A') - .2, 99, { dy: 60, din: .7 });
+typer('#t_from', 'PORTLAND, ORE.', W(0, 'Portland') - .1, .5); typer('#t_to', 'SEATTLE, WASH.', W(0, 'Seattle') - .1, .5);
+typer('#t_fare', '$20.00  CASH', W(0, 'Twenty') - .1, .7); typer('#t_name', 'DAN COOPER', W(0, 'Dan') - .05, .9, true);
+
+/* 2 cabin */
+show('#note', B(1) + .9, 99, { dy: -40, din: .6 });
+typer('#n1', 'I HAVE A BOMB IN MY BRIEFCASE.', W(1, 'I'), 1.5); typer('#n2', 'I WANT YOU TO SIT NEXT TO ME.', W(1, 'I', 1), 1.1);
+const cb = $('#cabin'); const CX0 = 330, CY = 720;
+S('path', { d: `M${CX0 - 60},${CY} C${CX0 - 60},${CY - 80} ${CX0 + 40},${CY - 118} ${CX0 + 170},${CY - 118} L${CX0 + 1150},${CY - 118} C${CX0 + 1270},${CY - 110} ${CX0 + 1330},${CY - 40} ${CX0 + 1340},${CY} C${CX0 + 1330},${CY + 40} ${CX0 + 1270},${CY + 110} ${CX0 + 1150},${CY + 118} L${CX0 + 170},${CY + 118} C${CX0 + 40},${CY + 118} ${CX0 - 60},${CY + 80} ${CX0 - 60},${CY}Z`, fill: '#0b1c29', stroke: '#3f6d86', 'stroke-width': 3, transform: `translate(${2 * (CX0 + 640)},0) scale(-1,1)` }, cb);
+let seatHot = null; for (let r = 0; r < 18; r++) for (let s = 0; s < 6; s++) { const x = CX0 + 190 + r * 54, y = CY - 96 + s * 30 + (s > 2 ? 22 : 0); const hot = r === 17 && s === 4;
+  const e = S('rect', { x, y, width: 34, height: 22, rx: 5, fill: hot ? '#ff6b3d' : '#1d3a4e' }, cb); if (hot) seatHot = [x + 17, y + 11]; }
+const ringS = S('circle', { cx: seatHot[0], cy: seatHot[1], r: 20, fill: 'none', stroke: '#ff6b3d', 'stroke-width': 3 }, cb);
+const att = S('circle', { r: 11, fill: '#7fd6ff', stroke: '#04101a', 'stroke-width': 3 }, cb);
+const lab1 = S('text', { x: seatHot[0], y: CY + 176, 'text-anchor': 'middle', style: 'font:700 20px Inter;letter-spacing:.24em;fill:#ff6b3d' }, cb); lab1.textContent = 'THE MAN IN THE LAST ROW';
+const lab2 = S('text', { x: CX0 + 60, y: CY - 150, style: 'font:700 20px Inter;letter-spacing:.24em;fill:#9dbccd' }, cb); lab2.textContent = '◀ COCKPIT';
+track('attx', seatHot[0] + 78, [[W(1, 'I', 1) + .2, 1.0, seatHot[0], 'io2']]); track('atty', CY, [[W(1, 'I', 1) + .2, 1.0, seatHot[1] + 30, 'io2']]);
+onRender(t => { att.setAttribute('cx', st.attx); att.setAttribute('cy', st.atty); const u = (t * .9) % 1; ringS.setAttribute('r', 20 + 30 * u); ringS.setAttribute('opacity', 1 - u); });
+card('#cards', 190, { k: 'In the air', t: 'A note' }, B(1) + .1, T2);
+
+/* 3 demands */
+track('money', 0, [[W(2, 'Two') - .1, 2.2, 200000, 'io2']]);
+card('#cards', 240, { k: 'His demands', html: '<div class="bigc" style="font-size:210px">$<span id="mny">0</span></div>', s: 'in twenty-dollar bills' }, B(2) + .1, T3); counter('#mny', 'money');
+const bl = $('#bills'); const billEls = []; for (let c = 0; c < 10; c++) for (let r = 0; r < 10; r++) { const e = S('rect', { x: 1060 + c * 66, y: 520 - r * 22, width: 56, height: 16, rx: 3, fill: r % 2 ? '#c9d8c2' : '#aebfa6', stroke: '#04101a', 'stroke-width': 1.5 }, bl); billEls.push([e, (c * 10 + r) / 100]); }
+onRender(() => { const p = st.money / 200000; for (const [e, th] of billEls) e.setAttribute('opacity', p > th ? 1 : 0); });
+const ch = $('#chutes'); for (let i = 0; i < 4; i++) { const g = S('g', {}, ch); const x = 1120 + i * 174; S('path', { d: `M${x - 60},760 a60,56 0 0,1 120,0 q-15,-14 -30,0 q-15,-14 -30,0 q-15,-14 -30,0 q-15,-14 -30,0Z`, fill: '#e6f1f6' }, g); S('path', { d: `M${x - 60},760 L${x},870 M${x - 30},760 L${x},870 M${x},760 L${x},870 M${x + 30},760 L${x},870 M${x + 60},760 L${x},870`, stroke: '#9dbccd', 'stroke-width': 2, fill: 'none' }, g); S('rect', { x: x - 12, y: 866, width: 24, height: 30, rx: 6, fill: '#ff6b3d' }, g);
+  const t0 = W(2, 'four') - .1 + i * .16; onRender(t => { const u = E.back(clamp((t - t0) / .4)); g.setAttribute('opacity', clamp((t - t0) / .2)); g.setAttribute('transform', `translate(${x},800) scale(${u}) translate(${-x},-800)`); }); }
+showS('#chl', W(2, 'parachutes'), 99);
+
+/* 4 map */
+const map = $('#map'); S('path', { d: M.grat, class: 'grat' }, map); S('path', { d: M.land, class: 'land' }, map);
+S('path', { d: M.routes.river, class: 'rt thin', stroke: '#2f6f93', opacity: .9 }, map);
+const cam = makeCam(map, [1010, 557], 1.0);
+const leg1 = S('path', { d: M.routes.leg1, class: 'rt', stroke: '#ffffff', opacity: .55 }, map);
+const leg2p = S('path', { d: M.routes.leg2, class: 'rt thin dash', stroke: '#ffffff', opacity: .5 }, map);
+const leg2 = S('path', { d: M.routes.leg2, class: 'rt', stroke: '#ff6b3d' }, map);
+// fraction of leg2 at Ariel
+let pA = 0, best = 1e9; { const L = leg2.getTotalLength(); for (let i = 0; i <= 400; i++) { const q = leg2.getPointAtLength(L * i / 400); const d = Math.hypot(q.x - PL.ariel[0], q.y - PL.ariel[1]); if (d < best) { best = d; pA = i / 400; } } }
+track('plan', 0, [[W(3, 'Then') + .2, 3.4, 1, 'io2']]); track('fly', 0, [[W(3, 'Fly') - .2, 2.6, pA * .55, 'lin'], [T4 + 1, .1, pA, 'lin']]);
+{ const L = leg2.getTotalLength(); leg2.setAttribute('stroke-dasharray', L + ' ' + L); onRender(() => leg2.setAttribute('stroke-dashoffset', L * (1 - st.fly)));
+  const mk = S('clipPath', { id: 'planclip' }, $('#mdefs')); const r = S('rect', { x: -2000, y: -2000, width: 6000, height: 0 }, mk); leg2p.setAttribute('clip-path', 'url(#planclip)'); onRender(() => r.setAttribute('height', 2000 + lerp(PL.sea[1], 2400, st.plan))); }
+function mark(pt, txt, o = {}) { const g = cam.fix(pt, map); S('circle', { r: o.r || 7, fill: o.color || '#fff', stroke: '#04101a', 'stroke-width': 3 }, g); if (txt) txt.split('|').forEach((l, i) => { const t = S('text', { x: o.dx ?? 18, y: (o.dy ?? 7) + i * 24, 'text-anchor': o.anchor || 'start' }, g); t.textContent = l; if (i) { t.style.fontSize = '15px'; t.style.fill = '#cfe3ee'; } }); return g; }
+mark(PL.pdx, 'Portland', { dx: 18 }); mark(PL.sea, 'Seattle', { dx: 18 });
+const gW = cam.fix(PL.wa, map); S('text', { class: 'geo', 'text-anchor': 'middle' }, gW).textContent = 'Washington';
+const gO = cam.fix([PL.or[0], 1010], map); S('text', { class: 'geo', 'text-anchor': 'middle' }, gO).textContent = 'Oregon';
+const gR = cam.fix([PL.tena[0] - 150, PL.tena[1] + 34], map); const rt = S('text', { class: 'sea', 'text-anchor': 'middle' }, gR); rt.textContent = 'Columbia River'; rt.style.fontSize = '17px';
+const gM = cam.fix([PL.south[0] + 10, 1030], map); const mt = S('text', { 'text-anchor': 'start', x: 22 }, gM); mt.textContent = '▼ To Mexico City'; showS(gM, W(3, 'Mexico') - .2, T4 + .5);
+const head = cam.fix(PL.sea, map); S('circle', { r: 16, fill: '#ff6b3d', opacity: .3 }, head); S('circle', { r: 7, fill: '#ff6b3d', stroke: '#04101a', 'stroke-width': 3 }, head);
+onRender(() => { head._p = st.fly > 0 ? ptAt(leg2, st.fly) : PL.sea; });
+const jz = cam.fix(PL.ariel, map); const jr1 = S('circle', { r: 90, fill: 'rgba(255,107,61,.10)', stroke: '#ff6b3d', 'stroke-width': 3, 'stroke-dasharray': '10 9' }, jz); const jr2 = S('circle', { r: 90, fill: 'none', stroke: '#ff6b3d', 'stroke-width': 2 }, jz);
+{ const t = S('text', { x: 108, y: -8 }, jz); t.textContent = 'Search area'; const t2 = S('text', { x: 108, y: 18 }, jz); t2.textContent = 'near Ariel, Washington'; t2.style.fontSize = '15px'; t2.style.fill = '#cfe3ee'; }
+showS(jz, T5 + .3, 99); onRender(t => { const u = (t * .5) % 1; jr2.setAttribute('r', 90 + 60 * u); jr2.setAttribute('opacity', 1 - u); });
+cam.to(W(3, 'Then'), 5.5, [1010, 640], 1.08, 0, 0, 'sine'); cam.to(T4 + 1, .2, PL.ariel, 2.5, 330, 30); cam.to(T5 + .2, 6.5, PL.ariel, 2.9, 330, 30, 'sine');
+// map cards
+const cA = card('#cards', 230, { k: 'Seattle', t: 'He gets both', html: '<div class="chk" id="k1"><i>✓</i>$200,000 in cash</div><div class="chk" id="k2"><i>✓</i>Four parachutes</div>' }, B(3), W(3, 'He', 1) - .2);
+show('#k1', B(3) + .5, 99, { dx: -20 }); show('#k2', B(3) + .8, 99, { dx: -20 });
+track('pax', 0, [[W(3, 'thirty') - .2, 1.3, 36, 'out2']]);
+card('#cards', 230, { k: 'Released', html: '<div class="bigc"><span id="pax">0</span></div>', s: 'passengers walk free. The crew stays on board.' }, W(3, 'He', 1), W(3, 'Then') - .2); counter('#pax', 'pax');
+card('#cards', 230, { k: 'Next order', t: 'Take off<br>again', s: 'Heading south, for Mexico.' }, W(3, 'Then'), W(3, 'Fly') - .25);
+card('#cards', 230, { k: 'His instructions', t: 'Fly low.<br>Fly slow.', s: 'Under 10,000 feet. Under 200 knots.' }, W(3, 'Fly') - .1, T4);
+card('#cards', 230, { k: 'After the jump', t: 'Never<br>seen again', html: '<div class="chk" id="k3"><i>✕</i>No body</div><div class="chk" id="k4"><i>✕</i>No parachute</div>' }, B(5), W(5, 'The') - .25);
+show('#k3', W(5, 'No') - .1, 99, { dx: -20 }); show('#k4', W(5, 'No', 1) - .1, 99, { dx: -20 });
+track('sus', 0, [[W(5, 'The'), 2.4, 800, 'out2']]);
+card('#cards', 230, { k: 'The FBI investigation', html: '<div class="bigc"><span id="sus">0</span>+</div>', s: 'suspects considered. None charged.' }, W(5, 'The') - .05, T6); counter('#sus', 'sus');
+
+/* 5 jump */
+reseed(5); const cl = $('#clouds'); const CL = Array.from({ length: 9 }, () => ({ x: rnd() * 2600, y: 120 + rnd() * 620, rx: 200 + rnd() * 260, ry: 40 + rnd() * 60, v: 60 + rnd() * 90 })); CL.forEach(c => c.e = S('ellipse', { rx: c.rx, ry: c.ry, cy: c.y }, cl));
+const tr = $('#trees'); let dt = 'M-200,1080 L-200,1000'; reseed(8); const TW = 2400; for (let x = -200; x < TW * 2; x += 46) { const h = 60 + rnd() * 90; dt += ` L${x},1000 L${x + 23},${1000 - h} L${x + 46},1000`; } S('path', { d: dt + ` L${TW * 2},1080Z` }, tr);
+const wn = $('#wins'); for (let i = 0; i < 24; i++) S('rect', { x: -330 + i * 26, y: -18, width: 12, height: 9, rx: 2 }, wn);
+const tLow = W(4, 'lowers'), tJump = W(4, 'jumps') - .05; track('stairs', 0, [[tLow, 1.6, 40, 'io2']]);
+onRender(t => { const u = t - T4; CL.forEach(c => c.e.setAttribute('cx', ((c.x + u * c.v) % 2600) - 340)); tr.setAttribute('transform', `translate(${(u * 240) % 46 - 46},0)`);
+  const bob = Math.sin(t * 1.3) * 7, px = 1080 + Math.sin(t * .37) * 14, py = 560 + bob; $('#plane').setAttribute('transform', `translate(${px},${py}) rotate(${Math.sin(t * .9) * .8})`);
+  $('#stairs').setAttribute('transform', `translate(404,34) rotate(${st.stairs})`); $('#strobe').setAttribute('opacity', (t * 1.1) % 1 < .12 ? 1 : .12); $('#beacon').setAttribute('opacity', (t * .8) % 1 < .5 ? 1 : .25);
+  const a = st.stairs * Math.PI / 180, sx = px + 404 + Math.cos(a) * 126, sy = py + 34 + Math.sin(a) * 126; const f = $('#faller');
+  if (t < tLow + 1.2) f.setAttribute('opacity', 0); else if (t < tJump) { f.setAttribute('opacity', clamp((t - tLow - 1.2) / .4)); f.setAttribute('transform', `translate(${sx - 8},${sy - 14})`); }
+  else { const v = t - tJump; f.setAttribute('opacity', 1 - clamp((v - .55) / .5)); f.setAttribute('transform', `translate(${sx - 8 + v * 150},${sy - 14 + 620 * v * v}) rotate(${v * 260})`); }
+  const fl = (t0) => { const v = t - t0; return v > 0 && v < .5 ? (v < .08 ? 1 : v < .16 ? .15 : v < .24 ? .75 : (1 - (v - .24) / .26) * .5) : 0; }; $('#flash').style.opacity = Math.max(fl(W(4, 'dark') - .1), fl(W(4, 'storm') + .15)) * .55; });
+card('#cards', 190, { k: 'Around 8 PM', t: 'Over<br>Washington', s: 'At night. In a storm.' }, B(4) + .1, tLow - .3);
+card('#cards', 190, { k: 'Under the tail', t: 'The rear<br>stairs open' }, tLow - .1, T5);
+
+/* 6 river */
+reseed(12); let dp = 'M0,640 L0,560'; for (let x = 0; x < 1960; x += 38) { const h = 50 + rnd() * 80; dp += ` L${x},600 L${x + 19},${600 - h} L${x + 38},600`; } S('path', { d: dp + ' L1960,640Z' }, $('#pines'));
+const rp = $('#ripples'); const RP = Array.from({ length: 16 }, () => ({ x: rnd() * 1920, y: 625 + rnd() * 150, w: 60 + rnd() * 140, v: 20 + rnd() * 40 })); RP.forEach(r => r.e = S('path', {}, rp));
+const bd = $('#bundles'); const BN = [[1250, -14], [1400, 9], [1560, -6]]; const tFind = W(6, 'finds');
+BN.forEach(([x, rot], i) => { const g = S('g', {}, bd); for (let k = 0; k < 5; k++) S('rect', { x: -90, y: -k * 9, width: 180, height: 74, rx: 4, fill: k % 2 ? '#8d927c' : '#a3a78f', stroke: '#3b3d33', 'stroke-width': 2 }, g); S('rect', { x: -14, y: -36, width: 28, height: 74, fill: '#6f745f' }, g);
+  const tx = S('text', { x: -58, y: 12, style: 'font:700 30px "Anonymous Pro";fill:#3b3d33' }, g); tx.textContent = '20';
+  onRender(t => { const u = E.out3(clamp((t - (tFind + i * .35)) / 1.1)); g.setAttribute('transform', `translate(${x},${880 - u * 96}) rotate(${rot})`); }); });
+onRender(t => RP.forEach(r => { const x = ((r.x + t * r.v) % 2100) - 100; r.e.setAttribute('d', `M${x},${r.y} h${r.w}`); }));
+card('#cards', 190, { k: 'Nine years later · 1980', t: 'A boy on<br>a riverbank', s: 'Eight years old, digging in the sand of the Columbia River.' }, B(6) + .1, W(6, 'Five') - .25);
+track('found', 0, [[W(6, 'Five') - .1, 1.6, 5800, 'out2']]);
+card('#cards', 190, { k: 'What he finds', html: '<div class="bigc" style="font-size:230px">$<span id="fnd">0</span></div>', s: 'in rotting twenty-dollar bills', }, W(6, 'Five') - .1, T7); counter('#fnd', 'found');
+const kser = H('div', 'chk', '<i>✓</i>The serial numbers match', $('#cards')); kser.style.cssText += 'position:absolute;left:146px;top:720px'; show(kser, W(6, 'The'), T7, { dx: -20 });
+show('#bar', W(6, 'The', 1) - .2, T7, { dy: 20 }); track('barp', 0, [[W(6, 'The', 1), 1.2, 2.9, 'out2']]); onRender(() => $('#barfill').style.width = st.barp + '%');
+
+/* 7 end */
+card('#cards', 230, { k: '2016', t: 'The FBI closes<br>the case', s: 'After forty-five years of investigation.' }, B(7) + .1, 999);
+showS('#bust', B(7) + .5, 99, .8); stamp('#unsolved', W(7, 'Unsolved'), -9);
+onRender(t => { const [x, y] = shakeOf(t, [[W(7, 'Unsolved'), 9, .45]]); $('#endL').style.transform = `translate(${x}px,${y}px)`; });
+show('#q1', W(7, 'Nobody'), W(7, 'Or') - .2, { dy: 20 }); show('#q2', W(7, 'Or'), 99, { dy: 20 });
+window.seek(0);
+</script></body></html>
