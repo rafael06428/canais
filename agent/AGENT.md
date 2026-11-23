@@ -34,6 +34,7 @@ If either is refused by the proxy, stop. Send the owner one PushNotification say
 ### 1. Pick today's topic (automatic)
 - If `agent/topics_done.json` already has an entry with today's date (America/Sao_Paulo), a video was already published today: stop quietly (no notification).
 - Read `agent/topics_done.json` and never repeat a topic.
+- **Topic chosen by the owner:** if `agent/topic_queue.json` exists, take the first item whose `date` is today or earlier (or that has no `date`) and isn't in `topics_done.json`. Use it as today's topic, follow its `notes`, still do the 6+ research calls, and remove it from the queue in the wrap-up commit. If the queue is empty, choose the topic automatically as below.
 - Do 3 to 5 WebSearches for what's being searched now: history anniversaries this week, recent discoveries, trending documentaries or films, viral history topics. Pick the most clickable topic that fits **"you are there, hour by hour, would you survive?"** Good fits: disasters, sieges, famous last days, escapes, expeditions, plagues, shipwrecks, eruptions, heists, battles seen from a soldier or civilian.
 - Rotate eras and regions. Don't pick the same century or region two days in a row.
 - Then research the facts: at least 6 WebSearch/WebFetch calls on reliable sources (museums, universities, encyclopedias, primary accounts). Note real names, numbers, times and quotes from eyewitnesses.
