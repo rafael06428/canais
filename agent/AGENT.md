@@ -113,6 +113,12 @@ In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `
 - Subtitles: Idiomas page now has **Enviar manualmente** > Com marcação de tempo > Continuar; setting `#captions-file-loader` uploads it directly; then Editar legendas > Publicar ("Legendas em inglês enviadas").
 - Shorts from 9:16 center crops of long-video images (pre-filled `shorts/K/img/NNN.jpg` + `.npy`) save the image quota; the quota ran out after ~100 images (CF_KLEIN_MAX=30).
 
+**Notes from 2026-11-24:**
+- The Cloudflare quota was already spent at the start of the run (429 "used up your daily free allocation") and the Pollinations key answered 402: the anonymous fallback (`env -u CF_ACCOUNT_ID -u CF_API_TOKEN -u POLLINATIONS_KEY`) took ~75 min for 97 images with many 402/503 retries. Wrap `make.py … images` in a retry loop (it exits after 6 failed tries on one image). Don't `pkill -f "make.py … images"` while a watcher loop's own command line contains that text (it kills the loop too).
+- "Ainda estamos verificando seu conteúdo": simplest fix is to click **Ok** in that warning, keep the upload dialog open, wait until the footer says "Verificações concluídas" (~4 min long, ~2 min Short), then click Publicar. No draft step needed.
+- Shorts after the first: real clicks on Criar (top right) then Enviar vídeos keep `ytUpload` defined; check `ytcp-uploads-file-picker input[type=file]` exists before starting (the first menu click sometimes only opens the menu).
+- After uploading the SRT, Editar legendas > Publicar must show the toast "Legendas em Inglês publicadas"; check it.
+
 The thumbnail upload is skipped automatically until the channel is phone-verified. Once it is verified, the custom thumbnail goes up with the long video.
 
 ### 5. Wrap up

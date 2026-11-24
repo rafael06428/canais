@@ -1,0 +1,839 @@
+{
+ "slug": "thera-atlantis",
+ "title": "24 Hours Before Atlantis Sank",
+ "title_yt": "24 Hours Before Atlantis Sank: Would You Have Survived?",
+ "description": "Around 1600 BC, a rich Bronze Age town on the island of Thera (Santorini) felt the ground shake and saw a thin grey ash fall. Hours later, one of the largest eruptions in human history tore the island apart, and its centre sank into the sea. Many think it is the real disaster behind Plato's legend of Atlantis. Hour by hour, what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Plato, Timaeus and Critias; Wikipedia, \"Minoan eruption\" and \"Spyridon Marinatos\"; V. Şahoğlu et al., \"Volcanic ash, victims, and tsunami debris from the Late Bronze Age Thera eruption discovered at Çeşme-Bağlararası (Turkey)\", PNAS 2021; World History Encyclopedia, Akrotiri and Atlantis; Cornell University on the radiocarbon dating of the eruption; National Geographic.\n\nAtlantis is a story told by Plato around 360 BC; most historians think it is fiction, and the link to Thera is a popular theory, not an established fact. The exact date of the eruption is still debated (radiocarbon points to around 1600 BC, some archaeologists prefer a later date), and the hour-by-hour timeline is a reconstruction. The main character and his family are fictional. Visuals and narration are AI-generated, based on historical and scientific accounts.\n\n#History #POV #Atlantis",
+ "tags": [
+  "atlantis",
+  "santorini",
+  "thera eruption",
+  "minoan eruption",
+  "akrotiri",
+  "bronze age",
+  "plato atlantis",
+  "volcano",
+  "would you survive",
+  "history",
+  "pov history",
+  "minoans",
+  "ancient history",
+  "history documentary",
+  "tsunami"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "ATLANTIS\nSANK IN 1 DAY",
+ "thumb_scene": 47,
+ "title_card": {
+  "after_scene": 5,
+  "lines": [
+   "24 HOURS BEFORE ATLANTIS SANK",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "Twenty-four hours from now, the island you were born on will tear itself apart, and its heart will sink into the sea.",
+     "prompt": "aerial view of a green volcanic island in a calm blue sea at dawn, a tall volcanic mountain in the middle, a small ancient stone town on its southern shore, no modern buildings",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember the wooden bed in your room. Thirty-six centuries from now, strangers will find its shape, hollow, inside the ash.",
+     "prompt": "a simple ancient wooden bed frame with woven rope and a wool blanket in a small stone room with a painted plaster wall, soft morning light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "This is Akrotiri, a busy harbour town on the island of Thera, in the Aegean Sea. The year is around 1600 BC.",
+     "prompt": "aerial view of a small ancient village of flat-roofed grey stone houses on a dry brown hillside above a bay, Bronze Age, no tiled roofs, no modern buildings, morning sun",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Some people believe this island is the real story behind the most famous lost city of all. Atlantis.",
+     "prompt": "a mysterious ancient island at golden hour seen from the sea, flat-roofed stone houses on a hillside, small wooden boats with oars",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Hour by hour, you'll face the choices its people faced. And by the end, you'll know whether you would have survived.",
+     "prompt": "over-the-shoulder view of a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border on a flat stone rooftop looking at a tall volcanic mountain at sunrise",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DAWN  ·  A TOWN OF COLOUR",
+   "yt_chapter": "Dawn: A town of colour",
+   "scenes": [
+    {
+     "text": "You wake to the sound of gulls and potters' wheels. You're twenty, the son of a family of sea traders.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border sitting up in a wooden bed in a small stone room with painted walls, morning light through a small window",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Your house has three floors. Stone walls, timber beams, and a flat roof where your family sleeps on hot nights.",
+     "prompt": "exterior of an ancient three storey house of rough stone with timber beams and small windows on a narrow paved street, morning sun, Bronze Age Aegean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "On the wall of your room, someone painted swallows swooping over red lilies. Every house you know is full of colour.",
+     "prompt": "an ancient wall painting on plaster showing swallows flying over red lilies on colourful rocky hills, inside a small stone room, warm light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Under the street runs a stone drain. Some houses here even have a toilet connected to it. For the Bronze Age, that's luxury.",
+     "prompt": "a narrow ancient paved stone street between stone houses with a long stone drain channel covered by flat slabs, morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Your mother is already in the storeroom, checking the tall clay jars of olive oil, grain and wine.",
+     "prompt": "a Bronze Age Aegean woman in her forties with dark hair tied up, wearing a modest long flounced linen dress checking a row of tall painted clay storage jars in a dim stone storeroom",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Your little sister is on the roof, watching the harbour. Ships come here from Crete, from the Greek mainland, even from Cyprus.",
+     "prompt": "a ten-year-old Bronze Age Aegean girl with long dark braided hair in a simple white linen dress on a flat stone rooftop looking down at a harbour full of ancient wooden ships, blue sea, morning",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Crete, home of the great palace of Knossos, lies just over a hundred kilometres south. Your father is there right now, trading.",
+     "prompt": "a simple ancient wooden boat with one small square sail and a row of oars, Bronze Age, no rigging sailing on a bright blue sea, dolphins jumping beside it, sunny day",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "On the hills, women gather saffron from purple crocus flowers. Weighed out in tiny pinches, it's worth a fortune.",
+     "prompt": "young women in long linen dresses picking small purple crocus flowers on a rocky sunny hillside, baskets, Bronze Age Aegean",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Life here is good. But look closer, and you'll see that your town is broken.",
+     "prompt": "a long crack running through the stone wall of an ancient house, a wooden beam propped against it, narrow street, morning light",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "8:00 AM  ·  THE CRACKED TOWN",
+   "yt_chapter": "8 AM: The cracked town",
+   "scenes": [
+    {
+     "text": "A few months ago, an earthquake shook the island. Walls split. Staircases collapsed.",
+     "prompt": "a collapsed stone staircase inside a damaged ancient stone house, dust in the light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Since then, the whole town has been cleaning up. Rubble is piled in the streets, and broken pots are stacked in corners.",
+     "prompt": "piles of stones and broken pottery heaped along a narrow ancient street between stone houses, morning",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Archaeologists will later find exactly this: debris cleared out of the houses, and repairs that were never finished.",
+     "prompt": "ancient workers in short linen kilts carrying baskets of stones out of a damaged stone house, dusty sunlight",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "You spend the morning mixing clay and straw to patch the wall of your father's workshop. While he's away, the house is your job.",
+     "prompt": "close-up of strong hands mixing wet clay and straw in a wooden trough next to a stone wall, morning sun",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Then, at mid-morning, the ground trembles again. Not a big one. Just enough to rattle the jars.",
+     "prompt": "tall clay jars on a stone floor shaking, dust falling from wooden ceiling beams, dim storeroom",
+     "fx": "dust",
+     "shake": 1
+    },
+    {
+     "text": "Dogs start barking all over town. The goats in the pen above the harbour won't stop crying.",
+     "prompt": "nervous goats in a dry stone pen on a hillside above an ancient harbour, a barking dog, hazy morning",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "And on the wind, there's a smell you've never noticed before. Rotten eggs. Sulfur, drifting from the mountain.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border covering his nose, looking toward a volcanic mountain with thin white steam rising from its top",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Nobody here has ever seen this mountain erupt. Its last great eruption happened thousands of years before anyone was born.",
+     "prompt": "a quiet green volcanic mountain above a Bronze Age stone town, thin steam on the summit, blue sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "So most people do what people always do. They tell themselves it will pass.",
+     "prompt": "bareheaded ancient Bronze Age men and women in simple linen tunics talking in a small stone square, looking up at a mountain",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "11:00 AM  ·  THE FIRST ASH",
+   "yt_chapter": "11 AM: The first ash",
+   "scenes": [
+    {
+     "text": "Just before noon, there's a dull thud from the centre of the island. Then another.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border looking up in alarm in a narrow stone street, a flock of birds scattering into the sky",
+     "fx": "none",
+     "shake": 1
+    },
+    {
+     "text": "A grey cloud rises above the mountain. A few minutes later, a fine powder starts falling on the town.",
+     "prompt": "a thick grey ash cloud rising from the summit of a volcanic mountain, seen from a dry hillside of ancient flat-roofed stone huts, hazy light",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "It's not much. A thin dusting on the roofs and in your hair. Geologists will find this layer, just a few centimetres thick, under everything else.",
+     "prompt": "close-up of fine grey volcanic ash settling on clay pots and a flat stone rooftop",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "But it's a warning. And now you have a choice.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border standing alone in an empty narrow ancient street with grey ash drifting down",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Stay and guard the house, the oil, the grain, everything your family owns? Or leave the island now, with only what you can carry?",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border hesitating in a dim storeroom full of tall clay storage jars, ash drifting through a doorway",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Your neighbour decides to stay. Someone has to stop thieves, he says. The mountain has rumbled before.",
+     "prompt": "a rugged bearded middle-aged man with stubble in a plain wool tunic standing in a stone doorway with arms folded, ash in the air",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Your mother decides for you. She's already wrapping bread, dried fish and a water jar in a blanket.",
+     "prompt": "a Bronze Age Aegean woman in her forties with dark hair tied up, wearing a modest long flounced linen dress quickly wrapping round loaves of bread and a small clay water jar in a wool blanket on a wooden table",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "And here is something remarkable. In the whole town, almost no gold, no jewellery, no valuables will ever be found.",
+     "prompt": "an empty open wooden chest on the floor of a small stone room, dust in a beam of light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "The people of Akrotiri took their treasures with them. They had time to pack, and they used it.",
+     "prompt": "ancient townspeople carrying baskets, bundles and children down a narrow stone street toward the sea, grey ash falling",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "But the heavy things stay behind. The storage jars. The cooking pots. The furniture. Your bed.",
+     "prompt": "a simple ancient wooden bed with a wool blanket in an empty stone room, grey ash drifting through a small window",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "You take one last look at the swallows on your wall. Then you close the door behind you.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border standing in the wooden doorway of a stone house looking back inside, ash falling",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Down at the harbour, it's chaos. Families are climbing into anything that floats.",
+     "prompt": "crowded ancient harbour with small wooden boats, people with bundles wading and climbing aboard, grey sky",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Your family finds space on a cargo ship heading south, toward Crete. Where everyone else went, nobody knows. Not even today.",
+     "prompt": "a small ancient wooden rowing boat crowded with people in linen clothes leaving a rocky shore under a grey ash-filled sky",
+     "fx": "ash",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "ATHENS  ·  1,200 YEARS LATER",
+   "yt_chapter": "Meanwhile: Plato and Atlantis",
+   "scenes": [
+    {
+     "text": "Now leave the ship for a moment, and jump forward about twelve hundred years, to Athens.",
+     "prompt": "a classical Greek city with white marble temples on a rocky hill, 4th century BC, warm afternoon light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Around 360 BC, the philosopher Plato is writing two dialogues, called the Timaeus and the Critias.",
+     "prompt": "an elderly bearded ancient Greek philosopher in a white robe writing on a papyrus scroll by an oil lamp",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "In them, he tells a story he says came from Solon, an Athenian statesman who heard it from priests in Egypt.",
+     "prompt": "a bearded ancient Greek statesman in a cloak listening to Egyptian priests with shaved heads in white linen, temple courtyard with stone columns",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Long ago, the priests said, a mighty island empire called Atlantis ruled from a city ringed by circles of land and water.",
+     "prompt": "fantasy painting of a legendary ancient round island city with white temples, surrounded by three circular rings of water and land, aerial view, golden light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Its kings hunted bulls in a sacred grove without weapons, using only clubs and ropes.",
+     "prompt": "ancient men holding wooden staffs and ropes surrounding a large black bull in a sacred grove of trees, dramatic light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Then, Plato writes, came violent earthquakes and floods. And in a single terrible day and night, Atlantis sank beneath the sea.",
+     "prompt": "a giant dark ocean wave crashing over an ancient city of temples at night, storm",
+     "fx": "rain",
+     "shake": 1
+    },
+    {
+     "text": "Here's the honest truth: most historians think Atlantis never existed. Plato probably invented it to teach a lesson about pride.",
+     "prompt": "an elderly bearded ancient Greek philosopher sitting in thought in a shaded courtyard, scrolls beside him",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "His details don't fit Thera either. He puts Atlantis in the ocean beyond Gibraltar, nine thousand years before Solon, and bigger than Libya and Asia combined.",
+     "prompt": "tall rocky cliffs on both sides of a narrow sea strait opening onto a dark stormy ocean, ancient world, dramatic sky",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But some researchers have wondered. A rich island culture. Bull rituals. A sudden catastrophe at sea. Does that sound familiar?",
+     "prompt": "an ancient faded wall painting of a young acrobat leaping over a charging bull, cracked plaster",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "If Plato's story holds any real memory at all, many think it's of what happens next, back on your island.",
+     "prompt": "a simple ancient wooden boat with one small square sail and a row of oars, Bronze Age, no rigging at sea, a distant island behind it with a grey plume rising from its mountain",
+     "fx": "ash",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "1:00 PM  ·  THE MOUNTAIN OPENS",
+   "yt_chapter": "1 PM: The mountain opens",
+   "scenes": [
+    {
+     "text": "Your ship is a few kilometres offshore when the sound arrives. It hits your chest before your ears understand it.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border gripping the wooden rail of an ancient ship in shock, looking back, wind in his hair",
+     "fx": "ash",
+     "shake": 2
+    },
+    {
+     "text": "Behind you, a column of ash and pumice blasts out of the island, straight up, higher than anything you have ever imagined.",
+     "prompt": "a gigantic volcanic eruption column rising from an island into the sky, seen from the sea, tiny wooden ship in the foreground",
+     "fx": "ash",
+     "shake": 2
+    },
+    {
+     "text": "Scientists estimate it rose thirty to thirty-five kilometres, into the stratosphere. Almost four times higher than Mount Everest.",
+     "prompt": "enormous mushroom-shaped volcanic ash plume spreading at the top, seen from far away over the sea, afternoon",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "This is one of the largest eruptions in human history. Bigger than Vesuvius. Bigger than Krakatoa.",
+     "prompt": "a colossal black volcanic ash cloud filling the whole sky above an erupting island, lightning, seen from the sea",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The sky turns from blue to brown to black. At one in the afternoon, it's darker than midnight.",
+     "prompt": "a simple ancient wooden boat with one small square sail and a row of oars, Bronze Age, no rigging on a dark sea under a black ash-filled sky, a single oil lamp glowing on deck",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Then the stones start falling. Pumice, light as bread, grey and white, rattling on the deck like hail.",
+     "prompt": "close-up of many small grey pumice stones scattered on old wooden deck planks, falling ash, dim light",
+     "fx": "ash",
+     "shake": 1
+    },
+    {
+     "text": "Your mother pulls your sister under the blanket. The sailors throw cloaks over their heads and keep rowing.",
+     "prompt": "a Bronze Age Aegean woman in her forties with dark hair tied up, wearing a modest long flounced linen dress holding a ten-year-old Bronze Age Aegean girl with long dark braided hair in a simple white linen dress under a wool blanket on the deck of an ancient ship, falling ash",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "On the island behind you, pumice is burying Akrotiri. In some places, up to seven metres of it will fall.",
+     "prompt": "an ancient stone town being buried by falling grey pumice, only rooftops and upper walls visible, dark sky",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Your neighbour, the one who stayed? Archaeologists have never found a single body in the town. Maybe he ran in time. Maybe not.",
+     "prompt": "an empty stone doorway half-filled with grey pumice stones, dark ash-filled air",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The sea around your ship is now covered with floating pumice, so thick the oars push through it like porridge.",
+     "prompt": "sea surface completely covered with floating grey pumice stones, wooden oars pushing through, dim light",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The captain wants to turn east and shelter at the next island. Your mother begs him to keep going south, to Crete.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border and a rugged bearded ship captain with stubble arguing on the deck of an ancient ship, ash falling",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "On that eastern island, Anafi, ash will pile up three metres deep. The captain listens to your mother.",
+     "prompt": "aerial view of a small rocky island being covered in grey volcanic ash under a dark sky",
+     "fx": "ash",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "EVENING  ·  FIRE ON THE WATER",
+   "yt_chapter": "Evening: Fire on the water",
+   "scenes": [
+    {
+     "text": "By evening, the eruption changes. Seawater is pouring into the volcano, and wherever it touches magma, it explodes into steam.",
+     "prompt": "violent volcanic explosions at sea level throwing up white steam and black ash, orange glow, dusk",
+     "fx": "fire",
+     "shake": 2
+    },
+    {
+     "text": "Glowing clouds of hot gas and rock roll down the mountain and race out across the water.",
+     "prompt": "glowing orange pyroclastic cloud rolling down a volcano and spreading across the sea at night",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "From the ship, the whole horizon flickers orange. Lightning crackles inside the ash cloud.",
+     "prompt": "lightning bolts inside a huge volcanic ash cloud at night, orange glow on the horizon, silhouette of a small wooden ship",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "No one still on Thera tonight could survive this.",
+     "prompt": "distant volcanic island glowing red at night, rivers of fire, seen from far across a dark sea",
+     "fx": "fire",
+     "shake": 0
+    },
+    {
+     "text": "Then, sometime in the night, the island itself gives way.",
+     "prompt": "dark silhouette of a volcanic island cracking and sinking, huge clouds of steam, night",
+     "fx": "smoke",
+     "shake": 3
+    },
+    {
+     "text": "With so much magma blasted out, the ground above the empty chamber collapses. The centre of Thera falls into the sea.",
+     "prompt": "aerial view at night of the centre of a volcanic island collapsing into the sea, sea water rushing in, steam",
+     "fx": "smoke",
+     "shake": 3
+    },
+    {
+     "text": "Where a mountain stood this morning, there will be a huge flooded bowl, a caldera, hundreds of metres deep. And when that much rock drops into the sea, the sea pushes back.",
+     "prompt": "aerial view of a ring of tall broken cliffs around a huge flooded volcanic crater bay, steam rising, grey dawn",
+     "fx": "smoke",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "NIGHT  ·  THE WAVES",
+   "yt_chapter": "Night: The waves",
+   "scenes": [
+    {
+     "text": "Out in deep water, you barely notice it. The ship rises slowly, then sinks again, like a giant breathing beneath you.",
+     "prompt": "a small ancient wooden rowing boat without sails rising on a long smooth ocean swell at night, red glowing sky",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "That's a tsunami in the open sea. Low, fast, almost invisible. The danger isn't out here. It's on the shore.",
+     "prompt": "close-up of a rugged bearded ancient sailor with stubble gripping a thick rope at night, red glow behind him",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "On the north coast of Crete, the water pulls back first, leaving fish flapping on the sand.",
+     "prompt": "an ancient stone coastal town at night, the sea pulled far back, exposed wet seabed with stranded boats",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Then it comes. Wave after wave, crashing into harbours and towns.",
+     "prompt": "a huge tsunami wave crashing into an ancient stone harbour town at night, foam and spray",
+     "fx": "rain",
+     "shake": 2
+    },
+    {
+     "text": "At Palaikastro, in eastern Crete, geologists found a layer left by the sea: smashed pottery, building stones and shells, all mixed together.",
+     "prompt": "an archaeological trench wall showing a thick layer of broken pottery, stones and sea shells, modern archaeologist with a trowel, daylight",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Some researchers estimate the waves there reached around nine metres. More than two storeys high.",
+     "prompt": "ruined ancient stone walls on a sunny Mediterranean coast, excavation site, blue sea behind",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "And the waves didn't stop at Crete. In 2021, archaeologists in western Turkey found, inside tsunami debris, the remains of a young man. And beside him, a dog.",
+     "prompt": "archaeologists kneeling in a dusty excavation trench near the sea in Turkey, brushing soil, soft light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "They are the first known victims of this eruption ever identified. Caught by the sea, more than two hundred kilometres from the volcano.",
+     "prompt": "an excavation trench with layers of sediment and broken pottery, measuring tape, soft evening light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Your captain does the one thing that saves you. He keeps the ship out in deep water all night, far from any harbour.",
+     "prompt": "a simple ancient wooden boat with one small square sail and a row of oars, Bronze Age, no rigging alone on a vast dark sea at night, faint red glow on the horizon",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "You don't sleep. Nobody does. Behind you, the sky over your home glows red until dawn.",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border sitting at night on the wooden planks of a small boat, a young girl asleep against his shoulder, red glow in the sky",
+     "fx": "ash",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "DAWN  ·  A CHANGED WORLD",
+   "yt_chapter": "Dawn: A changed world",
+   "scenes": [
+    {
+     "text": "When the sun finally rises, it's a dim brown disc behind the ash.",
+     "prompt": "a dim brown sun seen through thick volcanic haze over a grey calm sea, floating pumice",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "Behind you, your island has changed shape. Its heart is gone, replaced by a bay of black water and steam.",
+     "prompt": "distant volcanic island with tall broken cliffs and a steaming bay in the middle, grey morning haze",
+     "fx": "smoke",
+     "shake": 0
+    },
+    {
+     "text": "Ahead are the mountains of Crete. Your father's ship might be waiting there. Or it might not.",
+     "prompt": "a simple ancient wooden boat with one small square sail and a row of oars, Bronze Age, no rigging approaching a mountainous coastline in grey hazy morning light",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "The eruption did not wipe out Minoan Crete overnight, as people once believed. Most experts now think the Minoans recovered and kept building for generations.",
+     "prompt": "a Bronze Age palace courtyard with red tapered wooden columns and stone stairs in bright sunlight, people in linen clothes",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "But Akrotiri was never rebuilt. Your town would stay hidden under the pumice for more than thirty-five centuries.",
+     "prompt": "a barren landscape of white and grey pumice cliffs above the sea, empty, quiet morning",
+     "fx": "ash",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "1967  ·  HOW WE KNOW",
+   "yt_chapter": "1967: How we know",
+   "scenes": [
+    {
+     "text": "In the 1860s, workers dug volcanic ash on the island to make cement for the Suez Canal. Here and there, they hit ancient walls.",
+     "prompt": "19th century workers with pickaxes in a quarry of white volcanic ash cliffs, sepia photograph look",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "But the real excavation began in 1967, led by the Greek archaeologist Spyridon Marinatos.",
+     "prompt": "a rugged 1960s Greek archaeologist man in his sixties with a hat and short white beard standing at an excavation, black and white photograph",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Back in 1939, Marinatos had argued that this eruption struck Minoan Crete. Many experts weren't convinced.",
+     "prompt": "a 1930s male scholar with a moustache in a suit writing at a desk covered with papers and old photographs, lamp light, sepia",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Under the pumice, his team found streets, squares and houses still standing two and three storeys high, with their stairs in place.",
+     "prompt": "excavated ancient stone town with two storey houses and stone stairs, under a large modern protective roof, archaeologists",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "They found the storage jars, the cooking pots, and the wall paintings. Even the swallows.",
+     "prompt": "excavated stone room with large ancient clay storage jars still standing in place, soft light",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Where wooden furniture had rotted away, they found holes in the ash. They poured in plaster, and got back the shape of a bed.",
+     "prompt": "a white plaster cast of a simple ancient bed in an excavated stone room, archaeologist's brush beside it",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "But no bodies. And almost no gold. Only one tiny golden figure of a wild goat.",
+     "prompt": "small golden figurine of a wild goat with long curved horns on a dark museum stand, spotlight",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Marinatos died at the site in 1974, after a fall during the excavation. He was buried there, beside the streets he uncovered.",
+     "prompt": "quiet ancient excavation site at sunset, stone walls and a simple grave with flowers",
+     "fx": "old",
+     "shake": 0
+    },
+    {
+     "text": "Even the date is still argued over. Radiocarbon points to around 1600 BC. Some archaeologists, using Egyptian records, argue for decades later.",
+     "prompt": "a charred ancient olive branch on a laboratory table next to a microscope, soft light",
+     "fx": "old",
+     "shake": 0
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "Would you have survived?",
+   "scenes": [
+    {
+     "text": "So, would you have survived?",
+     "prompt": "a rugged young Bronze Age Aegean man in his early twenties with stubble and long dark curly hair, tanned, muscular, wearing a short white linen kilt with a red border standing on the deck of an ancient ship looking ahead at a coastline, soft morning light",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "If you stayed to guard your house, almost certainly not.",
+     "prompt": "an empty stone doorway half-buried in grey pumice, silent, grey light",
+     "fx": "ash",
+     "shake": 0
+    },
+    {
+     "text": "But if you listened to the shaking ground, the sulfur and that first thin ash, and you left, you had a real chance. Most of Akrotiri seems to have done exactly that.",
+     "prompt": "small ancient wooden boats full of people rowing away from an island at sunrise, calm sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Where they went, we still don't know. Their story ends at the harbour.",
+     "prompt": "an empty ancient stone harbour at dusk, calm water, a single wooden boat pulled up on the beach",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "In 2025, thousands of earthquakes shook Santorini again, and thousands of people left by ferry and plane. The island had not forgotten.",
+     "prompt": "a modern passenger ferry leaving a harbour below tall dark volcanic cliffs at dusk",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Remember that bed? It stayed behind. Its owner took the one thing that really mattered. Their life.",
+     "prompt": "a white plaster cast of a simple ancient bed in a quiet excavated room, warm beam of light",
+     "fx": "dust",
+     "shake": 0
+    },
+    {
+     "text": "Atlantis may only ever have lived in Plato's mind. But an island that sank in a day and a night was real.",
+     "prompt": "aerial view of a huge flooded volcanic caldera ringed by tall cliffs at sunset, calm sea",
+     "fx": "none",
+     "shake": 0
+    },
+    {
+     "text": "Would you have stayed, or run for the boats? Tell me in the comments.",
+     "prompt": "back view of a rugged bearded young man with broad shoulders and long dark curly hair standing in a small wooden boat, looking at a distant smoking island at sunrise",
+     "fx": "none",
+     "shake": 0
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "THE REAL ATLANTIS?",
+   "title": "The Real Atlantis Sank in One Day? #Shorts",
+   "description": "A Bronze Age island town, an eruption bigger than Krakatoa, and the legend Plato told 1,200 years later. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical and scientific accounts.\n\n#Atlantis #Santorini #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "sank in a single day and night.",
+     "prompt": "vertical crop of long scene 95",
+     "src": 95
+    },
+    {
+     "text": "Around 1600 BC, a rich island town in the Aegean had painted walls, three-storey houses and its own drains.",
+     "prompt": "vertical crop of long scene 2",
+     "src": 2
+    },
+    {
+     "text": "Then the ground started shaking, and a thin grey ash began to fall.",
+     "prompt": "vertical crop of long scene 24",
+     "src": 24
+    },
+    {
+     "text": "Its people packed their valuables and ran for the boats.",
+     "prompt": "vertical crop of long scene 34",
+     "src": 34
+    },
+    {
+     "text": "Hours later, a column of ash thirty kilometres high blasted out of the island.",
+     "prompt": "vertical crop of long scene 47",
+     "src": 47
+    },
+    {
+     "text": "That night, the centre of the island collapsed into the sea.",
+     "prompt": "vertical crop of long scene 63",
+     "src": 63
+    },
+    {
+     "text": "Some think this is the real disaster behind Plato's Atlantis. An island that",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "NO BODIES FOUND",
+   "title": "A Whole Town Buried by a Volcano… and No Bodies #Shorts",
+   "description": "Akrotiri was buried under metres of pumice around 1600 BC. Archaeologists found houses, food and paintings, but almost no one. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical and scientific accounts.\n\n#Akrotiri #Santorini #Archaeology #History #Shorts",
+   "blocks": [
+    {
+     "text": "nobody was home.",
+     "prompt": "vertical crop of long scene 90",
+     "src": 90
+    },
+    {
+     "text": "In 1967, archaeologists dug into a town buried under metres of volcanic pumice.",
+     "prompt": "vertical crop of long scene 83",
+     "src": 83
+    },
+    {
+     "text": "They found streets, staircases, storage jars and beautiful wall paintings.",
+     "prompt": "vertical crop of long scene 84",
+     "src": 84
+    },
+    {
+     "text": "Where furniture had rotted, they poured plaster into the holes. Out came the shape of a bed.",
+     "prompt": "vertical crop of long scene 85",
+     "src": 85
+    },
+    {
+     "text": "But no bodies. And almost no gold.",
+     "prompt": "vertical crop of long scene 30",
+     "src": 30
+    },
+    {
+     "text": "The whole town had packed up and left before the volcano exploded.",
+     "prompt": "vertical crop of long scene 31",
+     "src": 31
+    },
+    {
+     "text": "That's why, when the ash finally buried Akrotiri,",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "THE FIRST VICTIMS",
+   "title": "Found in Tsunami Debris: A Young Man and His Dog #Shorts",
+   "description": "In 2021, archaeologists in Turkey found the first known victims of the Thera eruption. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical and scientific accounts.\n\n#Tsunami #Archaeology #Santorini #History #Shorts",
+   "blocks": [
+    {
+     "text": "more than two hundred kilometres from the volcano.",
+     "prompt": "vertical crop of long scene 72",
+     "src": 72
+    },
+    {
+     "text": "In 2021, archaeologists in western Turkey dug into a layer of debris left by an ancient tsunami.",
+     "prompt": "vertical crop of long scene 71",
+     "src": 71
+    },
+    {
+     "text": "Inside it, they found a young man. And beside him, a dog.",
+     "prompt": "vertical crop of long scene 69",
+     "src": 69
+    },
+    {
+     "text": "The waves came from the eruption of Thera, around 3,600 years ago.",
+     "prompt": "vertical crop of long scene 47",
+     "src": 47
+    },
+    {
+     "text": "When the centre of the island collapsed, the sea surged across the Aegean.",
+     "prompt": "vertical crop of long scene 68",
+     "src": 68
+    },
+    {
+     "text": "They are the first known victims of that eruption ever found. Caught by the sea,",
+     "prompt": null
+    }
+   ]
+  },
+  {
+   "label": "STAY OR RUN?",
+   "title": "Your Island Volcano Is Waking Up. Do You Stay? #Shorts",
+   "description": "Around 1600 BC, the people of Akrotiri had to choose: guard their homes, or run. Full story: {LONG_URL}\n\nAI-generated visuals and narration, based on historical and scientific accounts.\n\n#Santorini #Volcano #History #POV #Shorts",
+   "blocks": [
+    {
+     "text": "or leave everything behind?",
+     "prompt": "vertical crop of long scene 26",
+     "src": 26
+    },
+    {
+     "text": "You live on a Bronze Age island. Months ago, an earthquake cracked your town.",
+     "prompt": "vertical crop of long scene 14",
+     "src": 14
+    },
+    {
+     "text": "Today the ground shakes again. The air smells of sulfur. Then a fine grey ash starts falling.",
+     "prompt": "vertical crop of long scene 25",
+     "src": 25
+    },
+    {
+     "text": "Your neighbour stays to guard his house. Your mother packs bread and water.",
+     "prompt": "vertical crop of long scene 28",
+     "src": 28
+    },
+    {
+     "text": "Hours later, the mountain explodes, and pumice buries the town metres deep.",
+     "prompt": "vertical crop of long scene 53",
+     "src": 53
+    },
+    {
+     "text": "Archaeologists never found a single body there. Most people ran. So what would you do? Stay with your home,",
+     "prompt": null
+    }
+   ]
+  }
+ ]
+}
