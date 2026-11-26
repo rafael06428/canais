@@ -19,6 +19,18 @@ Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 - Be historically accurate. Where historians disagree, say so in the narration ("most historians think…").
 - Nothing graphic: describe danger and death with restraint, as in the Pompeii episode. No gore in prompts.
 
+## Visual style (owner's decision, 2026-11-25): CARTOON
+Since 2026-11-25 every episode is made in the **cartoon style** (round-head characters, flat blurred backgrounds, date badge,
+red chapter banner, speech bubbles, captions with the spoken word in yellow), drawn by code with `agent/cartoon/`.
+**Read `agent/cartoon/README.md` before writing episode.json.** It replaces the image steps below:
+- In step 2, each scene gets a `"v"` visual object instead of a `"prompt"`; Short blocks get `"src"` (a long scene index).
+  Start from the builder script of the last cartoon episode in `episodes/` (`*.build.py`) and write a new, original story.
+- In step 3, build with `agent/cartoon/cartoon.py` (voice, audio, srt, data, shots → read every contact sheet → thumb, long, shorts).
+  No image generation, so the Cloudflare/Pollinations quota no longer matters. Long render ≈ 65 min on 2 CPUs: run it in the background.
+- Step 4 (publish.py + browser upload, subtitles, Shorts) and step 5 are unchanged. In the description, say "Animated story" instead of "AI-generated visuals".
+- Episode length target stays 10-13 min (1,650-1,900 words).
+The image pipeline (make.py images / render_long.py) stays in the repo only as a fallback.
+
 ## Steps
 
 ### 0. Setup (fresh workspace)

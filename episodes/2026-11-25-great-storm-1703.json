@@ -1,0 +1,3118 @@
+{
+ "slug": "great-storm-1703",
+ "title": "24 Hours in the Great Storm of 1703",
+ "title_yt": "24 Hours in the Great Storm of 1703: Would You Have Survived?",
+ "description": "November 26, 1703. You're a 17-year-old sailor on HMS Stirling Castle, anchored off the coast of Kent, a few miles from a sandbank sailors call the Great Ship Swallower. That night, the worst storm in British history tears across England: chimneys fall in London, the Queen hides in a cellar, a lighthouse vanishes with its builder inside, and a whole squadron of warships is driven onto the Goodwin Sands. Hour by hour, what would you have done, and would you have survived?\n\n{CHAPTERS}\n\nSources: Daniel Defoe, The Storm (1704); Royal Museums Greenwich, \"The Great Storm of 1703\"; Goodwin Sands Conservation Trust, \"Deal and the Great Storm of 1703\"; Wikipedia, \"Great storm of 1703\", \"Henry Winstanley\", \"Richard Kidder\"; History Today; University of York Borthwick Institute.\n\nDates use the Julian calendar England used in 1703 (November 26 = December 7 in today's calendar). Death tolls and wind speeds are estimates and sources disagree; the narration follows the most common figures. The main character and his shipmate are fictional; the ships, places and named people are real. Animation and narration are AI-assisted, based on historical accounts.\n\n#History #POV #GreatStorm",
+ "tags": [
+  "great storm 1703",
+  "great storm of 1703",
+  "goodwin sands",
+  "stirling castle",
+  "royal navy history",
+  "daniel defoe",
+  "eddystone lighthouse",
+  "henry winstanley",
+  "would you survive",
+  "history",
+  "pov history",
+  "animated history",
+  "shipwreck",
+  "british history",
+  "queen anne"
+ ],
+ "voice": "en-US-AndrewMultilingualNeural",
+ "thumb_text": "1,000 SAILORS\nIN ONE NIGHT",
+ "thumb_scene": 50,
+ "thumb_t": 2.5,
+ "thumb_dx": 260,
+ "title_card": {
+  "after_scene": 5,
+  "lines": [
+   "24 HOURS IN THE GREAT STORM OF 1703",
+   "WOULD YOU HAVE SURVIVED?"
+  ]
+ },
+ "style": "cartoon",
+ "chapters": [
+  {
+   "title": "",
+   "yt_chapter": "Intro",
+   "scenes": [
+    {
+     "text": "Twenty-four hours from now, the worst storm in British history will tear across England. And you are in exactly the wrong place.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 330,
+        "y": 470,
+        "s": 0.7
+       },
+       {
+        "k": "ship",
+        "x": 700,
+        "y": 455,
+        "s": 0.55
+       },
+       {
+        "k": "ship",
+        "x": 1020,
+        "y": 470,
+        "s": 0.65
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "badge": [
+       "NOV 26, 1703",
+       null
+      ],
+      "focus": 700
+     }
+    },
+    {
+     "text": "You're on a warship, anchored a few miles off the coast of Kent, next to a sandbank sailors have a nickname for. The Great Ship Swallower.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 1050,
+        "y": 450,
+        "s": 0.45
+       },
+       {
+        "k": "text",
+        "text": "THE GREAT SHIP SWALLOWER",
+        "fs": 64,
+        "y": 250,
+        "at": "@swallower"
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Remember that name. Before this is over, it will swallow more than a thousand men.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<path d=\"M500 600 L520 520 L540 600\" stroke=\"#4a3020\" stroke-width=\"10\" fill=\"none\"/><path d=\"M800 610 L815 540\" stroke=\"#4a3020\" stroke-width=\"10\"/>"
+       }
+      ],
+      "time": "dusk",
+      "storm": 1,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Thousands more will die on land and at sea, in a single night.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "roofs",
+        "y": 430,
+        "n": 5,
+        "fall": [
+         null,
+         1.0,
+         null,
+         1.6,
+         null
+        ]
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 560
+     }
+    },
+    {
+     "text": "Hour by hour, you'll face the choices they faced. And by the end, you'll know whether you would have survived.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 560,
+        "y": 640,
+        "s": 1.1,
+        "face": "look"
+       },
+       {
+        "k": "lantern",
+        "x": 900,
+        "y": 380,
+        "s": 1.2
+       }
+      ],
+      "time": "dusk",
+      "storm": 1,
+      "focus": 560
+     }
+    }
+   ]
+  },
+  {
+   "title": "8:00 AM  ·  THE DOWNS",
+   "yt_chapter": "8 AM: The Downs",
+   "scenes": [
+    {
+     "text": "It's Friday, November twenty-sixth, 1703, by the calendar England used at the time. You're seventeen, a sailor on HMS Stirling Castle.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 520,
+        "y": 640,
+        "s": 1.1
+       },
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 820,
+        "y": 640,
+        "s": 1.05,
+        "seed": 2.2,
+        "face": "happy"
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "badge": [
+       "NOV 26, 1703",
+       "8 AM"
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "She's a seventy-gun ship of the Royal Navy, with nearly three hundred men packed on board.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 470,
+        "s": 1.05,
+        "sails": "furled"
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "cam": "in",
+      "focus": 640
+     }
+    },
+    {
+     "text": "Your fleet has just come home from a long campaign in the Mediterranean. Everyone is tired, and everyone wants to go ashore.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 300,
+        "y": 640,
+        "s": 1,
+        "face": "sleep"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.05,
+        "face": "sad"
+       },
+       {
+        "k": "p",
+        "role": "sailor2",
+        "x": 960,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "seed": 4
+       }
+      ],
+      "storm": 1,
+      "focus": 640
+     }
+    },
+    {
+     "text": "This stretch of water is called the Downs. It's usually a safe place to wait, sheltered by the coast of Kent.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "ship",
+        "x": 780,
+        "y": 400,
+        "s": 0.35
+       },
+       {
+        "k": "ship",
+        "x": 1000,
+        "y": 395,
+        "s": 0.3
+       },
+       {
+        "k": "ship",
+        "x": 1180,
+        "y": 405,
+        "s": 0.32
+       },
+       {
+        "k": "boat",
+        "x": 420,
+        "y": 560,
+        "s": 0.7
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "focus": 900
+     }
+    },
+    {
+     "text": "The town of Deal sits right on the beach. You can see its rooftops from the deck.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 520,
+        "y": 620,
+        "s": 0.9,
+        "pose": "walk",
+        "dx": 160,
+        "dxDur": 6
+       },
+       {
+        "k": "p",
+        "role": "woman",
+        "x": 820,
+        "y": 620,
+        "s": 0.85,
+        "seed": 1
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "But a few miles behind you lie the Goodwin Sands. At low tide they look like an island. At high tide they vanish.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "text",
+        "text": "GOODWIN SANDS",
+        "fs": 70,
+        "y": 300,
+        "at": 1.0
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Ships that touch them get stuck, and the sand pulls them down. That's how the bank earned its nickname.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 520,
+        "s": 0.7,
+        "tilt": 12,
+        "tiltDur": 3,
+        "sink": 0.35,
+        "sinkDur": 6,
+        "broken": 2
+       }
+      ],
+      "time": "grey",
+      "storm": 1,
+      "focus": 640
+     }
+    },
+    {
+     "text": "The wind has been blowing hard for days. Nobody aboard thinks much of it. Winter gales are normal here.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 460,
+        "y": 640,
+        "s": 1.05,
+        "seed": 2.2
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 760,
+        "y": 640,
+        "s": 1.05,
+        "face": "calm"
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "fx": [
+       "wind"
+      ],
+      "bubble": {
+       "text": "JUST A GALE.",
+       "x": 520,
+       "y": 160
+      },
+      "focus": 600
+     }
+    },
+    {
+     "text": "The admiral, Sir Cloudesley Shovell, has already taken the biggest ships up the river to safety.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 500,
+        "y": 470,
+        "s": 0.7,
+        "sails": "set",
+        "dx": 420,
+        "dxDur": 8
+       },
+       {
+        "k": "p",
+        "role": "admiral",
+        "x": 1120,
+        "y": 640,
+        "s": 0.8
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "focus": 700
+     }
+    },
+    {
+     "text": "The rest of the squadron, including yours, stays here, under Rear Admiral Basil Beaumont on a ship called the Mary.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 420,
+        "y": 470,
+        "s": 0.6
+       },
+       {
+        "k": "ship",
+        "x": 840,
+        "y": 465,
+        "s": 0.7,
+        "lights": false
+       },
+       {
+        "k": "flag",
+        "x": 1180,
+        "y": 640,
+        "c": "#b8322a"
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "bubble": {
+       "text": "THE MARY",
+       "x": 840,
+       "y": 150
+      },
+      "focus": 840
+     }
+    }
+   ]
+  },
+  {
+   "title": "AFTERNOON  ·  THE FALLING GLASS",
+   "yt_chapter": "Afternoon: The falling glass",
+   "scenes": [
+    {
+     "text": "By the afternoon, the sky has turned a strange copper colour, and the sea is a mess of white crests.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 470,
+        "s": 0.8
+       }
+      ],
+      "time": "dusk",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "badge": [
+       "NOV 26, 1703",
+       "AFTERNOON"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "On land, a clergyman named William Derham is watching his barometer. The needle keeps falling.",
+     "v": {
+      "bg": "room",
+      "items": [
+       {
+        "k": "p",
+        "role": "bishop",
+        "x": 400,
+        "y": 620,
+        "s": 1,
+        "look": {
+         "coat": "#2a2a30"
+        },
+        "face": "worry"
+       },
+       {
+        "k": "gauge",
+        "x": 820,
+        "y": 330,
+        "s": 1,
+        "at": 0.5,
+        "dur": 5,
+        "from": 0.7,
+        "to": 0.05
+       }
+      ],
+      "time": "dusk",
+      "fireplace": true,
+      "wall": "#bfa680",
+      "focus": 600
+     }
+    },
+    {
+     "text": "He'll later record the lowest air pressure he has ever seen. He's never seen a storm like the one that's coming.",
+     "v": {
+      "bg": "room",
+      "items": [
+       {
+        "k": "gauge",
+        "x": 640,
+        "y": 330,
+        "s": 1.3,
+        "at": 0,
+        "dur": 1,
+        "from": 0.05,
+        "to": 0.02
+       },
+       {
+        "k": "text",
+        "text": "LOWEST EVER",
+        "fs": 60,
+        "y": 600,
+        "at": 1.5
+       }
+      ],
+      "time": "dusk",
+      "wall": "#bfa680",
+      "focus": 640
+     }
+    },
+    {
+     "text": "Aboard the Stirling Castle, the officers order extra anchors dropped. Thick ropes groan against the waves.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "officer",
+        "x": 420,
+        "y": 640,
+        "s": 1.05,
+        "pose": "point"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 820,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "pose": "cling"
+       }
+      ],
+      "time": "dusk",
+      "storm": 2,
+      "fx": [
+       "wind",
+       "spray"
+      ],
+      "bubble": {
+       "text": "MORE ANCHORS!",
+       "x": 470,
+       "y": 150
+      },
+      "focus": 560
+     }
+    },
+    {
+     "text": "You ask the old sailor in the next hammock if this is bad. He's been at sea for thirty years.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 460,
+        "y": 640,
+        "s": 1,
+        "face": "worry"
+       },
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 800,
+        "y": 640,
+        "s": 1.05,
+        "seed": 2.2,
+        "face": "stern"
+       },
+       {
+        "k": "lantern",
+        "x": 640,
+        "y": 160,
+        "s": 1.3
+       }
+      ],
+      "storm": 2,
+      "bubble": {
+       "text": "IS THIS BAD?",
+       "x": 420,
+       "y": 160
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "He doesn't answer. He just ties his shoes tighter.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 640,
+        "y": 640,
+        "s": 1.2,
+        "seed": 2.2,
+        "face": "stern",
+        "pose": "kneel"
+       },
+       {
+        "k": "lantern",
+        "x": 900,
+        "y": 160,
+        "s": 1.2
+       }
+      ],
+      "storm": 2,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Here's your first choice. Ships' boats still go to the beach for supplies. You could ask to go with one.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "boat",
+        "x": 640,
+        "y": 470,
+        "s": 0.8,
+        "dx": -200,
+        "dxDur": 8
+       },
+       {
+        "k": "ship",
+        "x": 1120,
+        "y": 390,
+        "s": 0.3
+       }
+      ],
+      "time": "dusk",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "bubble": {
+       "text": "GO ASHORE?",
+       "x": 640,
+       "y": 170,
+       "tail": "center"
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "If you made it ashore tonight, your chances of seeing morning would be far, far better. But you're not allowed. You stay on board.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.1,
+        "face": "sad"
+       },
+       {
+        "k": "p",
+        "role": "officer",
+        "x": 980,
+        "y": 640,
+        "s": 1,
+        "face": "stern"
+       }
+      ],
+      "time": "dusk",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "bubble": {
+       "text": "NO LEAVE.",
+       "x": 980,
+       "y": 150,
+       "tail": "right"
+      },
+      "focus": 760
+     }
+    }
+   ]
+  },
+  {
+   "title": "10:00 PM  ·  THE WIND",
+   "yt_chapter": "10 PM: The wind",
+   "scenes": [
+    {
+     "text": "By ten at night, the wind isn't a sound anymore. It's a weight. It presses on the ship like a giant hand.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 480,
+        "s": 0.9,
+        "lights": true
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "badge": [
+       "NOV 26, 1703",
+       "10 PM"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Below deck, nobody sleeps. Hammocks swing so hard they slam into each other.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 320,
+        "y": 640,
+        "s": 1,
+        "face": "shock"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.05,
+        "face": "shock",
+        "shiver": 1
+       },
+       {
+        "k": "p",
+        "role": "sailor2",
+        "x": 960,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "seed": 3
+       },
+       {
+        "k": "lantern",
+        "x": 640,
+        "y": 150,
+        "s": 1.2
+       }
+      ],
+      "storm": 3,
+      "fx": [
+       "shake"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Men pray out loud. Some of them haven't prayed in years.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 420,
+        "y": 640,
+        "s": 1.05,
+        "pose": "pray",
+        "face": "sad"
+       },
+       {
+        "k": "p",
+        "role": "sailor2",
+        "x": 840,
+        "y": 640,
+        "s": 1.05,
+        "pose": "pray",
+        "face": "sleep",
+        "seed": 5
+       },
+       {
+        "k": "lantern",
+        "x": 640,
+        "y": 150,
+        "s": 1.2
+       }
+      ],
+      "storm": 3,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Some estimates suggest gusts of over a hundred miles an hour. Enough to rip roofs off and flatten whole forests.",
+     "v": {
+      "bg": "fields",
+      "items": [
+       {
+        "k": "tree",
+        "x": 260,
+        "y": 600,
+        "s": 1
+       },
+       {
+        "k": "tree",
+        "x": 560,
+        "y": 590,
+        "s": 0.9,
+        "fallAt": 1.5
+       },
+       {
+        "k": "tree",
+        "x": 880,
+        "y": 600,
+        "s": 1.05
+       },
+       {
+        "k": "tree",
+        "x": 1140,
+        "y": 590,
+        "s": 0.9,
+        "fallAt": 3
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "And it's not just your ship. Across the whole south of England, people are lying awake, listening to their houses shake.",
+     "v": {
+      "bg": "room",
+      "items": [
+       {
+        "k": "bed",
+        "x": 640,
+        "y": 600,
+        "s": 1
+       },
+       {
+        "k": "p",
+        "role": "woman",
+        "x": 560,
+        "y": 520,
+        "s": 0.8,
+        "pose": "sleep",
+        "face": "worry"
+       }
+      ],
+      "time": "night",
+      "fx": [
+       "lightning"
+      ],
+      "shakeAt": 1,
+      "storm": 2,
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "MEANWHILE  ·  LONDON",
+   "yt_chapter": "Meanwhile: London",
+   "scenes": [
+    {
+     "text": "Seventy miles away, London is being torn apart.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "roofs",
+        "y": 430,
+        "n": 5,
+        "fall": [
+         null,
+         0.8,
+         null,
+         null,
+         2.2
+        ]
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "badge": [
+       "NOV 26, 1703",
+       "NIGHT"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Chimneys snap off rooftops and crash through the houses below. Around two thousand chimney stacks come down in a single night.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "roofs",
+        "y": 420,
+        "n": 4,
+        "fall": [
+         0.5,
+         1.2,
+         2.0,
+         2.8
+        ]
+       },
+       {
+        "k": "count",
+        "to": 2000,
+        "at": 1,
+        "dur": 3,
+        "fs": 110,
+        "y": 250,
+        "post": " CHIMNEYS"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Roof tiles fly through the air like knives. Nobody dares to go out into the street.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "debris",
+        "n": 14,
+        "y": 120,
+        "h": 420
+       },
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 640,
+        "y": 640,
+        "s": 1,
+        "pose": "cover",
+        "face": "shock"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "The wind peels the lead off the roof of Westminster Abbey and flings it away.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<path d=\"M640 160 L560 300 L720 300 Z\" fill=\"#7a7a86\" stroke=\"#1a1a1a\" stroke-width=\"4\"/>"
+       },
+       {
+        "k": "debris",
+        "n": 8,
+        "y": 150,
+        "h": 200
+       },
+       {
+        "k": "text",
+        "text": "WESTMINSTER ABBEY",
+        "fs": 54,
+        "y": 560,
+        "c": "#fff",
+        "at": 0.6
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "At St James's Palace, Queen Anne is taken down into a cellar for safety.",
+     "v": {
+      "bg": "cellar",
+      "items": [
+       {
+        "k": "p",
+        "role": "queen",
+        "x": 640,
+        "y": 620,
+        "s": 1.15,
+        "face": "worry"
+       },
+       {
+        "k": "p",
+        "role": "maid",
+        "x": 360,
+        "y": 620,
+        "s": 0.95,
+        "pose": "hold"
+       },
+       {
+        "k": "p",
+        "role": "officer",
+        "x": 920,
+        "y": 620,
+        "s": 1,
+        "face": "stern"
+       }
+      ],
+      "badge": [
+       "NOV 26, 1703",
+       "MIDNIGHT"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "On the river Thames, around seven hundred ships are smashed together in a giant tangle of wood and rope.",
+     "v": {
+      "bg": "river",
+      "items": [
+       {
+        "k": "ship",
+        "x": 260,
+        "y": 470,
+        "s": 0.45,
+        "tilt": -14,
+        "tiltDur": 1
+       },
+       {
+        "k": "ship",
+        "x": 520,
+        "y": 480,
+        "s": 0.5,
+        "tilt": 18,
+        "tiltDur": 1.5,
+        "broken": 1
+       },
+       {
+        "k": "ship",
+        "x": 800,
+        "y": 470,
+        "s": 0.45,
+        "tilt": -8,
+        "tiltDur": 1
+       },
+       {
+        "k": "ship",
+        "x": 1060,
+        "y": 480,
+        "s": 0.5,
+        "tilt": 22,
+        "tiltDur": 2,
+        "broken": 2
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "MIDNIGHT  ·  THE CABLES",
+   "yt_chapter": "Midnight: The cables",
+   "scenes": [
+    {
+     "text": "Back in the Downs, it's around midnight when you hear it. A crack like a cannon shot from the front of the ship.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.1,
+        "face": "shock",
+        "pose": "cling"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "shakeAt": 0.6,
+      "focus": 640
+     }
+    },
+    {
+     "text": "One of the anchor cables has snapped.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 820,
+        "y": 470,
+        "s": 0.7,
+        "lights": true
+       },
+       {
+        "k": "rope",
+        "x1": 560,
+        "y1": 500,
+        "x2": 120,
+        "y2": 700,
+        "snapAt": 0.4
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 560
+     }
+    },
+    {
+     "text": "Then another. The ship is still held by the last ones, but it's straining, jerking, groaning like it's in pain.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 760,
+        "y": 470,
+        "s": 0.75,
+        "lights": true
+       },
+       {
+        "k": "rope",
+        "x1": 520,
+        "y1": 500,
+        "x2": 80,
+        "y2": 690,
+        "snapAt": 0.8
+       },
+       {
+        "k": "rope",
+        "x1": 540,
+        "y1": 520,
+        "x2": 200,
+        "y2": 720
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 560
+     }
+    },
+    {
+     "text": "The officers shout orders nobody can hear. The wind tears the words straight out of their mouths.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "officer",
+        "x": 500,
+        "y": 640,
+        "s": 1.1,
+        "pose": "point",
+        "face": "shock"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 880,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "pose": "cling"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "bubble": {
+       "text": "...!!",
+       "x": 560,
+       "y": 150
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "Now you face the hardest choice of the night. If the ship breaks loose, where do you want to be?",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.15,
+        "face": "worry"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "bubble": {
+       "text": "BELOW DECK",
+       "x": 360,
+       "y": 200
+      },
+      "bubble2": {
+       "text": "UP THE MAST",
+       "x": 920,
+       "y": 200,
+       "tail": "right"
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "Below deck, it's dry. But if the ship rolls over, below deck is a trap with no way out.",
+     "v": {
+      "bg": "below",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.05,
+        "face": "shock"
+       },
+       {
+        "k": "lantern",
+        "x": 640,
+        "y": 150,
+        "s": 1.2
+       }
+      ],
+      "storm": 3,
+      "fx": [
+       "shake"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Up on deck, the waves will try to sweep you away. But if the ship stays upright, the masts and rigging are the last thing to go under.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 600,
+        "s": 1.05,
+        "face": "stern",
+        "pose": "cling"
+       },
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 900,
+        "y": 640,
+        "s": 1,
+        "seed": 2.2,
+        "pose": "cling",
+        "face": "stern"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "spray"
+      ],
+      "focus": 760
+     }
+    },
+    {
+     "text": "The old sailor grabs your arm and pulls you up the ladder. Up. Always up.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 520,
+        "y": 640,
+        "s": 1.05,
+        "seed": 2.2,
+        "pose": "point",
+        "face": "stern"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 820,
+        "y": 640,
+        "s": 1,
+        "face": "shock",
+        "pose": "walk"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "bubble": {
+       "text": "UP! ALWAYS UP!",
+       "x": 520,
+       "y": 150
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "Sometime in the early hours, the last cable gives way. The Stirling Castle is loose, and the wind is pushing her straight toward the Goodwin Sands.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "ship",
+        "x": 400,
+        "y": 470,
+        "s": 0.75,
+        "lights": true,
+        "dx": 500,
+        "dxDur": 7,
+        "tilt": 8,
+        "tiltDur": 4
+       },
+       {
+        "k": "rope",
+        "x1": 300,
+        "y1": 500,
+        "x2": 40,
+        "y2": 700,
+        "snapAt": 0.3
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "badge": [
+       "NOV 27, 1703",
+       "1 AM"
+      ],
+      "focus": 700
+     }
+    }
+   ]
+  },
+  {
+   "title": "MEANWHILE  ·  THE LIGHTHOUSE",
+   "yt_chapter": "Meanwhile: The lighthouse",
+   "scenes": [
+    {
+     "text": "Far to the west, off the coast of Plymouth, a man is living out his dream, and his nightmare.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "lighthouse",
+        "x": 640,
+        "y": 560,
+        "s": 1
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Henry Winstanley is an engineer and inventor. Years ago, he lost two of his own ships on a deadly reef called the Eddystone rocks.",
+     "v": {
+      "bg": "desk",
+      "items": [
+       {
+        "k": "p",
+        "role": "winstanley",
+        "x": 460,
+        "y": 640,
+        "s": 1.1,
+        "face": "sad"
+       },
+       {
+        "k": "table",
+        "x": 860,
+        "y": 500,
+        "w": 380
+       },
+       {
+        "k": "paper",
+        "x": 860,
+        "y": 360,
+        "s": 0.6,
+        "title": "EDDYSTONE",
+        "sub": "ROCKS",
+        "at": 0.8
+       }
+      ],
+      "badge": [
+       "1690s",
+       null
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "So he did something nobody had done before. He built a lighthouse right on top of the rocks, in the open sea.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "lighthouse",
+        "x": 640,
+        "y": 560,
+        "s": 1.1
+       },
+       {
+        "k": "p",
+        "role": "winstanley",
+        "x": 980,
+        "y": 640,
+        "s": 0.8,
+        "face": "happy",
+        "pose": "point"
+       }
+      ],
+      "time": "day",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "He was so proud of it that he said he wanted to be inside it during the greatest storm there ever was.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "lighthouse",
+        "x": 520,
+        "y": 560,
+        "s": 1
+       },
+       {
+        "k": "p",
+        "role": "winstanley",
+        "x": 940,
+        "y": 640,
+        "s": 0.9,
+        "face": "happy",
+        "pose": "cheer"
+       }
+      ],
+      "time": "dusk",
+      "storm": 1,
+      "bubble": {
+       "text": "THE GREATEST STORM!",
+       "x": 880,
+       "y": 140,
+       "tail": "right"
+      },
+      "focus": 760
+     }
+    },
+    {
+     "text": "Tonight, he's there, fixing the light. With him are five other people.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "lighthouse",
+        "x": 640,
+        "y": 560,
+        "s": 1.15
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning",
+       "spray"
+      ],
+      "cam": "zoom",
+      "zoomAt": 0.5,
+      "cy": 250,
+      "badge": [
+       "NOV 27, 1703",
+       "NIGHT"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "By morning, there will be almost nothing left of the lighthouse. Just a few iron bars sticking out of the rock. No trace of the six people inside will ever be found.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "lighthouse",
+        "x": 640,
+        "y": 560,
+        "s": 1.1,
+        "goneAt": 1.5
+       }
+      ],
+      "time": "dawn",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "2:00 AM  ·  THE SANDS",
+   "yt_chapter": "2 AM: The sands",
+   "scenes": [
+    {
+     "text": "Back on the Stirling Castle, you feel it before you understand it. A long, grinding shudder under your feet.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 600,
+        "s": 1.1,
+        "face": "shock",
+        "pose": "cling"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "shake"
+      ],
+      "badge": [
+       "NOV 27, 1703",
+       "2 AM"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "The ship has hit the Goodwin Sands.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 500,
+        "s": 0.8,
+        "tilt": 16,
+        "tiltDur": 1.5,
+        "lights": true
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "shakeAt": 0.2,
+      "focus": 640
+     }
+    },
+    {
+     "text": "She tilts. Waves that were beside you are now on top of you, crashing across the deck.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 600,
+        "s": 1.05,
+        "face": "shock",
+        "pose": "cling"
+       },
+       {
+        "k": "wave",
+        "dur": 1.6,
+        "from": 0.8
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "spray"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "You climb. Your fingers are numb, the rope is soaking wet, and every gust tries to peel you off it.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<rect x=\"620\" y=\"-20\" width=\"40\" height=\"760\" fill=\"#4a3020\" stroke=\"#1a1a1a\" stroke-width=\"4\"/><path d=\"M500 0 L700 720 M780 0 L580 720\" stroke=\"#3a2a1a\" stroke-width=\"6\"/>"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 600,
+        "y": 470,
+        "s": 1,
+        "face": "stern",
+        "pose": "cling",
+        "shiver": 1
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 620
+     }
+    },
+    {
+     "text": "Around you in the darkness, other ships are hitting the sands too.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 300,
+        "y": 510,
+        "s": 0.45,
+        "tilt": -20,
+        "tiltDur": 2,
+        "broken": 1
+       },
+       {
+        "k": "ship",
+        "x": 700,
+        "y": 500,
+        "s": 0.5,
+        "tilt": 14,
+        "tiltDur": 2
+       },
+       {
+        "k": "ship",
+        "x": 1080,
+        "y": 510,
+        "s": 0.45,
+        "tilt": 24,
+        "tiltDur": 2,
+        "broken": 2
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 700
+     }
+    },
+    {
+     "text": "The Northumberland goes down with all of her crew, around two hundred and twenty men.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 510,
+        "s": 0.7,
+        "tilt": 30,
+        "tiltDur": 2,
+        "broken": 2,
+        "sink": 1,
+        "sinkAt": 1.5,
+        "sinkDur": 4
+       },
+       {
+        "k": "count",
+        "to": 220,
+        "at": 1,
+        "dur": 2,
+        "fs": 100,
+        "y": 230,
+        "post": " LOST"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "The Restoration is lost with everyone aboard, nearly four hundred men.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 510,
+        "s": 0.7,
+        "tilt": -26,
+        "tiltDur": 2,
+        "broken": 3,
+        "sink": 1,
+        "sinkAt": 1.2,
+        "sinkDur": 4
+       },
+       {
+        "k": "count",
+        "to": 387,
+        "at": 1,
+        "dur": 2,
+        "fs": 100,
+        "y": 230,
+        "post": " LOST"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain",
+       "lightning"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "And the Mary, the admiral's ship, breaks apart. Rear Admiral Beaumont dies with more than two hundred and sixty of his men.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 510,
+        "s": 0.7,
+        "tilt": 20,
+        "tiltDur": 1.5,
+        "broken": 3,
+        "sink": 1,
+        "sinkAt": 2,
+        "sinkDur": 4
+       },
+       {
+        "k": "p",
+        "role": "admiral",
+        "x": 1080,
+        "y": 640,
+        "s": 0.7,
+        "face": "sad"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "From the whole crew of the Mary, records name just one survivor: a sailor called Thomas Atkins.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "p",
+        "role": "sailor2",
+        "x": 640,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "pose": "cling",
+        "seed": 7
+       },
+       {
+        "k": "text",
+        "text": "1 SURVIVOR",
+        "fs": 90,
+        "y": 200,
+        "at": 1.2
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "You can't see any of this. You can only hear it. Screams, then cracking timber, then nothing but the wind.",
+     "v": {
+      "bg": "black",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<path d=\"M0 360 Q160 300 320 360 T640 360 T960 360 T1280 360\" stroke=\"#3a4a5a\" stroke-width=\"6\" fill=\"none\"/>"
+       }
+      ],
+      "color": "#06090f",
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "MEANWHILE  ·  INLAND",
+   "yt_chapter": "Meanwhile: Inland",
+   "scenes": [
+    {
+     "text": "Inland, the storm is just as merciless.",
+     "v": {
+      "bg": "fields",
+      "items": [
+       {
+        "k": "tree",
+        "x": 300,
+        "y": 600,
+        "s": 1
+       },
+       {
+        "k": "tree",
+        "x": 1000,
+        "y": 600,
+        "s": 1.05,
+        "fallAt": 1.2
+       },
+       {
+        "k": "windmill",
+        "x": 660,
+        "y": 600,
+        "s": 1
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 660
+     }
+    },
+    {
+     "text": "Windmills spin so fast that some of them catch fire from the friction. Hundreds of them are destroyed.",
+     "v": {
+      "bg": "fields",
+      "items": [
+       {
+        "k": "windmill",
+        "x": 640,
+        "y": 620,
+        "s": 1.3,
+        "speed": 9,
+        "fireAt": 1
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "In the New Forest alone, around four thousand oak trees are torn out of the ground.",
+     "v": {
+      "bg": "fields",
+      "items": [
+       {
+        "k": "tree",
+        "x": 180,
+        "y": 600,
+        "s": 0.8,
+        "fallAt": 0.6
+       },
+       {
+        "k": "tree",
+        "x": 420,
+        "y": 600,
+        "s": 0.9,
+        "fallAt": 1.1
+       },
+       {
+        "k": "tree",
+        "x": 660,
+        "y": 600,
+        "s": 0.85,
+        "fallAt": 1.6
+       },
+       {
+        "k": "tree",
+        "x": 900,
+        "y": 600,
+        "s": 0.9,
+        "fallAt": 2.1
+       },
+       {
+        "k": "tree",
+        "x": 1140,
+        "y": 600,
+        "s": 0.8,
+        "fallAt": 2.6
+       },
+       {
+        "k": "count",
+        "to": 4000,
+        "at": 1,
+        "dur": 2.5,
+        "fs": 100,
+        "y": 200,
+        "post": " OAKS"
+       }
+      ],
+      "time": "night",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "focus": 660
+     }
+    },
+    {
+     "text": "In the city of Wells, the Bishop, Richard Kidder, is asleep in bed with his wife when a chimney stack falls through the roof.",
+     "v": {
+      "bg": "room",
+      "items": [
+       {
+        "k": "bed",
+        "x": 640,
+        "y": 600,
+        "s": 1.1,
+        "blanket": "#6a4a7a"
+       },
+       {
+        "k": "p",
+        "role": "bishop",
+        "x": 520,
+        "y": 512,
+        "s": 0.7,
+        "pose": "sleep",
+        "face": "sleep"
+       },
+       {
+        "k": "p",
+        "role": "wife",
+        "x": 600,
+        "y": 512,
+        "s": 0.7,
+        "pose": "sleep",
+        "face": "sleep"
+       }
+      ],
+      "time": "night",
+      "storm": 2,
+      "fx": [
+       "lightning"
+      ],
+      "shakeAt": 4,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Both of them are killed. In the West Country, the sea floods the land, and hundreds drown on the Somerset Levels.",
+     "v": {
+      "bg": "fields",
+      "items": [
+       {
+        "k": "tree",
+        "x": 300,
+        "y": 600,
+        "s": 0.9
+       },
+       {
+        "k": "raw",
+        "svg": "<path d=\"M800 520 L840 470 L880 520 Z\" fill=\"#b08a62\" stroke=\"#1a1a1a\" stroke-width=\"4\"/>"
+       }
+      ],
+      "time": "dawn",
+      "storm": 2,
+      "flood": 1,
+      "fx": [
+       "rain"
+      ],
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "DAWN  ·  DEAL BEACH",
+   "yt_chapter": "Dawn: Deal beach",
+   "scenes": [
+    {
+     "text": "Morning comes, grey and wild. On the beach at Deal, people stare out to sea in horror.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 380,
+        "y": 640,
+        "s": 1,
+        "face": "shock"
+       },
+       {
+        "k": "p",
+        "role": "woman",
+        "x": 600,
+        "y": 640,
+        "s": 0.9,
+        "face": "sad",
+        "seed": 3
+       },
+       {
+        "k": "p",
+        "role": "boatman",
+        "x": 840,
+        "y": 640,
+        "s": 1,
+        "face": "worry"
+       }
+      ],
+      "time": "grey",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "badge": [
+       "NOV 27, 1703",
+       "DAWN"
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "Out on the Goodwin Sands, they can see the wrecks. And on them, tiny figures, waving for help.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 500,
+        "y": 540,
+        "s": 0.5,
+        "tilt": 24,
+        "broken": 2
+       },
+       {
+        "k": "ship",
+        "x": 900,
+        "y": 545,
+        "s": 0.45,
+        "tilt": -18,
+        "broken": 3
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 540,
+        "y": 478,
+        "s": 0.28,
+        "pose": "wave",
+        "face": "worry"
+       }
+      ],
+      "time": "grey",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "One of those figures is you. You've been clinging to the rigging for hours. You can't feel your hands anymore.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<rect x=\"620\" y=\"-20\" width=\"40\" height=\"760\" fill=\"#4a3020\" stroke=\"#1a1a1a\" stroke-width=\"4\"/><path d=\"M500 0 L700 720 M780 0 L580 720\" stroke=\"#3a2a1a\" stroke-width=\"6\"/>"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 600,
+        "y": 480,
+        "s": 1.05,
+        "face": "sad",
+        "pose": "cling",
+        "shiver": 1
+       }
+      ],
+      "time": "grey",
+      "storm": 2,
+      "fx": [
+       "wind",
+       "spray"
+      ],
+      "focus": 620
+     }
+    },
+    {
+     "text": "But the sea is still so violent that boats can't even be launched from the beach.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "boat",
+        "x": 600,
+        "y": 560,
+        "s": 0.8
+       },
+       {
+        "k": "p",
+        "role": "boatman",
+        "x": 380,
+        "y": 640,
+        "s": 1,
+        "face": "stern"
+       },
+       {
+        "k": "p",
+        "role": "boatman",
+        "x": 840,
+        "y": 640,
+        "s": 1,
+        "face": "worry",
+        "seed": 5,
+        "look": {
+         "capc": "#7a3a2a"
+        }
+       }
+      ],
+      "time": "grey",
+      "storm": 3,
+      "fx": [
+       "wind",
+       "spray"
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "And not everyone in Deal is in a hurry to help. Daniel Defoe later accused some boatmen of grabbing what floated ashore instead of saving lives.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "p",
+        "role": "boatman",
+        "x": 520,
+        "y": 640,
+        "s": 1,
+        "face": "happy",
+        "pose": "hold"
+       },
+       {
+        "k": "raw",
+        "svg": "<rect x=\"760\" y=\"560\" width=\"90\" height=\"60\" fill=\"#8a5a34\" stroke=\"#1a1a1a\" stroke-width=\"4\"/>"
+       },
+       {
+        "k": "p",
+        "role": "defoe",
+        "x": 1040,
+        "y": 640,
+        "s": 0.9,
+        "face": "stern",
+        "pose": "point"
+       }
+      ],
+      "time": "grey",
+      "storm": 1,
+      "focus": 760
+     }
+    },
+    {
+     "text": "But one man, a shopkeeper named Thomas Powell, offers his own money: five shillings for every sailor brought back alive.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 560,
+        "y": 640,
+        "s": 1.1,
+        "pose": "armsup",
+        "face": "stern",
+        "look": {
+         "coat": "#3a5a3a"
+        }
+       },
+       {
+        "k": "text",
+        "text": "5 SHILLINGS",
+        "fs": 80,
+        "y": 190,
+        "at": 1.5,
+        "sub": "FOR EVERY SAILOR SAVED"
+       }
+      ],
+      "time": "grey",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "Defoe credits him with saving around two hundred lives.",
+     "v": {
+      "bg": "beach",
+      "items": [
+       {
+        "k": "boat",
+        "x": 640,
+        "y": 470,
+        "s": 0.9,
+        "dx": -250,
+        "dxDur": 6
+       },
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 1000,
+        "y": 640,
+        "s": 1,
+        "face": "happy",
+        "look": {
+         "coat": "#3a5a3a"
+        }
+       }
+      ],
+      "time": "grey",
+      "storm": 2,
+      "fx": [
+       "wind"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "For the men on the Stirling Castle, the night doesn't end at dawn. You hang on through the whole day, and into another night.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 540,
+        "s": 0.6,
+        "tilt": 26,
+        "broken": 2
+       }
+      ],
+      "time": "night",
+      "storm": 2,
+      "fx": [
+       "wind",
+       "rain"
+      ],
+      "badge": [
+       "NOV 27, 1703",
+       "NIGHT"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "By the next morning, the other wrecks around you have disappeared. Only the Stirling Castle is still above the water.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 560,
+        "s": 0.6,
+        "tilt": 30,
+        "broken": 3
+       }
+      ],
+      "time": "dawn",
+      "storm": 1,
+      "badge": [
+       "NOV 28, 1703",
+       "MORNING"
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Finally, the boats reach you. Seventy men are pulled off the Stirling Castle alive. More than two hundred are not.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "boat",
+        "x": 640,
+        "y": 560,
+        "s": 1.1
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 560,
+        "y": 600,
+        "s": 0.6,
+        "face": "sad"
+       },
+       {
+        "k": "p",
+        "role": "boatman",
+        "x": 720,
+        "y": 600,
+        "s": 0.6,
+        "pose": "row"
+       },
+       {
+        "k": "count",
+        "to": 70,
+        "at": 1.5,
+        "dur": 1.5,
+        "fs": 100,
+        "y": 200,
+        "post": " SAVED",
+        "c": "#7fe07f"
+       }
+      ],
+      "time": "dawn",
+      "storm": 1,
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "AFTERMATH",
+   "yt_chapter": "Aftermath",
+   "scenes": [
+    {
+     "text": "When the wind finally dies down, Britain counts its dead.",
+     "v": {
+      "bg": "church",
+      "items": [
+       {
+        "k": "p",
+        "role": "woman",
+        "x": 400,
+        "y": 640,
+        "s": 1,
+        "pose": "pray",
+        "face": "sad"
+       },
+       {
+        "k": "p",
+        "role": "townsman",
+        "x": 640,
+        "y": 640,
+        "s": 1,
+        "pose": "pray",
+        "face": "sad",
+        "seed": 2
+       },
+       {
+        "k": "p",
+        "role": "maid",
+        "x": 880,
+        "y": 640,
+        "s": 0.95,
+        "pose": "pray",
+        "face": "sleep"
+       }
+      ],
+      "badge": [
+       "DEC 1703",
+       null
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Most estimates say at least eight thousand people died, many of them sailors. Some historians think the true number was even higher.",
+     "v": {
+      "bg": "black",
+      "items": [
+       {
+        "k": "count",
+        "to": 8000,
+        "at": 0.4,
+        "dur": 2.5,
+        "fs": 140,
+        "y": 360,
+        "pre": "",
+        "post": "+",
+        "c": "#ffd21f"
+       }
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "The Royal Navy loses more than a dozen ships, and well over a thousand men. On the Goodwin Sands alone, more than a thousand sailors are gone.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<path d=\"M420 600 L440 470 M700 610 L712 500 M930 620 L950 520\" stroke=\"#4a3020\" stroke-width=\"10\"/>"
+       },
+       {
+        "k": "text",
+        "text": "1,000+ SAILORS",
+        "fs": 80,
+        "y": 230,
+        "at": 1.5
+       }
+      ],
+      "time": "grey",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Queen Anne calls it a calamity and orders a national day of fasting and prayer.",
+     "v": {
+      "bg": "church",
+      "items": [
+       {
+        "k": "p",
+        "role": "queen",
+        "x": 640,
+        "y": 640,
+        "s": 1.15,
+        "pose": "pray",
+        "face": "sad"
+       }
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Many preachers say the storm was God's punishment for the sins of the nation.",
+     "v": {
+      "bg": "church",
+      "items": [
+       {
+        "k": "p",
+        "role": "bishop",
+        "x": 640,
+        "y": 640,
+        "s": 1.15,
+        "pose": "point",
+        "face": "stern"
+       }
+      ],
+      "bubble": {
+       "text": "PUNISHMENT!",
+       "x": 700,
+       "y": 140
+      },
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "HOW WE KNOW",
+   "yt_chapter": "How we know",
+   "scenes": [
+    {
+     "text": "So how do we know all this, more than three hundred years later? Partly because of one writer.",
+     "v": {
+      "bg": "desk",
+      "items": [
+       {
+        "k": "p",
+        "role": "defoe",
+        "x": 640,
+        "y": 640,
+        "s": 1.15,
+        "face": "look"
+       }
+      ],
+      "badge": [
+       "1704",
+       null
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Daniel Defoe, who would later write Robinson Crusoe, places newspaper ads asking ordinary people to send him their stories of the storm.",
+     "v": {
+      "bg": "desk",
+      "items": [
+       {
+        "k": "p",
+        "role": "defoe",
+        "x": 420,
+        "y": 640,
+        "s": 1.05,
+        "pose": "write"
+       },
+       {
+        "k": "table",
+        "x": 640,
+        "y": 500,
+        "w": 520
+       },
+       {
+        "k": "candle",
+        "x": 760,
+        "y": 500,
+        "s": 1
+       },
+       {
+        "k": "paper",
+        "x": 950,
+        "y": 320,
+        "s": 0.7,
+        "title": "WANTED:",
+        "sub": "YOUR STORY OF THE STORM",
+        "at": 1.5,
+        "fs": 40
+       }
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Letters pour in from all over the country. He picks around sixty of them and publishes a whole book, called The Storm.",
+     "v": {
+      "bg": "desk",
+      "items": [
+       {
+        "k": "paper",
+        "x": 420,
+        "y": 360,
+        "s": 0.6,
+        "rot": -8,
+        "title": "LETTER",
+        "at": 0
+       },
+       {
+        "k": "paper",
+        "x": 640,
+        "y": 340,
+        "s": 0.6,
+        "rot": 4,
+        "title": "LETTER",
+        "at": 0.5
+       },
+       {
+        "k": "paper",
+        "x": 860,
+        "y": 370,
+        "s": 0.6,
+        "rot": -3,
+        "title": "LETTER",
+        "at": 1
+       },
+       {
+        "k": "paper",
+        "x": 640,
+        "y": 360,
+        "s": 1,
+        "rot": 0,
+        "title": "THE STORM",
+        "sub": "DANIEL DEFOE, 1704",
+        "at": 2.6,
+        "fs": 46
+       }
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "Some people call it one of the first books ever built from readers' own reports. A kind of social media, three centuries early.",
+     "v": {
+      "bg": "plain",
+      "items": [
+       {
+        "k": "paper",
+        "x": 640,
+        "y": 360,
+        "s": 1.05,
+        "rot": -2,
+        "title": "THE STORM",
+        "sub": "DANIEL DEFOE, 1704",
+        "at": 0,
+        "fs": 46
+       }
+      ],
+      "color": "#e9dcc0",
+      "focus": 640
+     }
+    },
+    {
+     "text": "And then there's the sea itself. The Goodwin Sands are always moving. Sometimes they bury things. Sometimes they give them back.",
+     "v": {
+      "bg": "sands",
+      "items": [],
+      "time": "day",
+      "storm": 0,
+      "cam": "out",
+      "focus": 640
+     }
+    },
+    {
+     "text": "In 1979, divers exploring the sands found the wreck of the Stirling Castle, uncovered by the shifting sand.",
+     "v": {
+      "bg": "underwater",
+      "items": [
+       {
+        "k": "p",
+        "role": "diver",
+        "x": 420,
+        "y": 560,
+        "s": 0.9,
+        "pose": "point",
+        "face": "look"
+       },
+       {
+        "k": "raw",
+        "svg": "<path d=\"M700 620 Q820 520 1040 560 L1080 640 L700 650Z\" fill=\"#5a3a22\" stroke=\"#1a1a1a\" stroke-width=\"5\"/><path d=\"M760 600 L760 420 M900 590 L920 450\" stroke=\"#4a3020\" stroke-width=\"12\"/>"
+       }
+      ],
+      "badge": [
+       "1979",
+       null
+      ],
+      "focus": 600
+     }
+    },
+    {
+     "text": "Her cannons were still there. So were the sailors' belongings, the everyday things of men like you.",
+     "v": {
+      "bg": "underwater",
+      "items": [
+       {
+        "k": "cannon",
+        "x": 600,
+        "y": 610,
+        "s": 1,
+        "rot": -6
+       },
+       {
+        "k": "cannon",
+        "x": 900,
+        "y": 620,
+        "s": 0.9,
+        "rot": 8
+       },
+       {
+        "k": "p",
+        "role": "diver",
+        "x": 340,
+        "y": 520,
+        "s": 0.8,
+        "pose": "hold",
+        "face": "happy"
+       }
+      ],
+      "focus": 640
+     }
+    }
+   ]
+  },
+  {
+   "title": "THE ANSWER",
+   "yt_chapter": "Would you have survived?",
+   "scenes": [
+    {
+     "text": "So, would you have survived the Great Storm of 1703?",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 640,
+        "s": 1.15,
+        "face": "look"
+       }
+      ],
+      "time": "dawn",
+      "storm": 0,
+      "badge": [
+       "NOV 26, 1703",
+       null
+      ],
+      "focus": 640
+     }
+    },
+    {
+     "text": "If you'd been on the Mary, almost certainly not. One man in more than two hundred and sixty came back.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "ship",
+        "x": 640,
+        "y": 560,
+        "s": 0.6,
+        "tilt": 30,
+        "broken": 3,
+        "sink": 0.5
+       }
+      ],
+      "time": "grey",
+      "storm": 1,
+      "bubble": {
+       "text": "1 SURVIVOR",
+       "x": 640,
+       "y": 160,
+       "tail": "center"
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "On the Stirling Castle, your odds were about one in four. And they depended on the choice you made at midnight. Up, not down.",
+     "v": {
+      "bg": "sea",
+      "items": [
+       {
+        "k": "raw",
+        "svg": "<rect x=\"620\" y=\"-20\" width=\"40\" height=\"760\" fill=\"#4a3020\" stroke=\"#1a1a1a\" stroke-width=\"4\"/>"
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 600,
+        "y": 480,
+        "s": 1,
+        "face": "stern",
+        "pose": "cling"
+       }
+      ],
+      "time": "dawn",
+      "storm": 1,
+      "bubble": {
+       "text": "UP. ALWAYS UP.",
+       "x": 900,
+       "y": 160,
+       "tail": "left"
+      },
+      "focus": 640
+     }
+    },
+    {
+     "text": "If you'd gone ashore that afternoon, you'd probably have lived, as long as you stayed away from falling chimneys.",
+     "v": {
+      "bg": "london",
+      "items": [
+       {
+        "k": "roofs",
+        "y": 430,
+        "n": 5,
+        "fall": [
+         null,
+         null,
+         1.2,
+         null,
+         null
+        ]
+       },
+       {
+        "k": "p",
+        "role": "you",
+        "x": 640,
+        "y": 660,
+        "s": 0.9,
+        "face": "worry",
+        "pose": "cover"
+       }
+      ],
+      "time": "day",
+      "storm": 1,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Remember the Great Ship Swallower? It took the Stirling Castle in one night. It took almost three hundred years to give her back.",
+     "v": {
+      "bg": "sands",
+      "items": [
+       {
+        "k": "text",
+        "text": "THE GREAT SHIP SWALLOWER",
+        "fs": 60,
+        "y": 250,
+        "at": 0.3
+       }
+      ],
+      "time": "dusk",
+      "storm": 0,
+      "focus": 640
+     }
+    },
+    {
+     "text": "Would you have climbed the mast, or stayed below? Tell me in the comments.",
+     "v": {
+      "bg": "deck",
+      "items": [
+       {
+        "k": "p",
+        "role": "you",
+        "x": 520,
+        "y": 640,
+        "s": 1.1,
+        "face": "happy",
+        "pose": "wave"
+       },
+       {
+        "k": "p",
+        "role": "sailor",
+        "x": 860,
+        "y": 640,
+        "s": 1.05,
+        "seed": 2.2,
+        "face": "happy"
+       }
+      ],
+      "time": "dawn",
+      "storm": 0,
+      "bubble": {
+       "text": "MAST OR BELOW?",
+       "x": 640,
+       "y": 150,
+       "tail": "center"
+      },
+      "focus": 640
+     }
+    }
+   ]
+  }
+ ],
+ "shorts": [
+  {
+   "label": "THE SHIP SWALLOWER",
+   "title": "The Sandbank That Swallowed 1,000 Sailors in One Night #Shorts",
+   "description": "In November 1703, the worst storm in British history drove a Royal Navy squadron onto the Goodwin Sands. Full story: {LONG_URL}\n\nAnimated story based on historical accounts.\n\n#History #GreatStorm #Shipwreck #Shorts",
+   "blocks": [
+    {
+     "text": "in a single night.",
+     "prompt": null,
+     "src": 3
+    },
+    {
+     "text": "Off the coast of Kent lies a sandbank sailors call the Great Ship Swallower.",
+     "prompt": null,
+     "src": 2
+    },
+    {
+     "text": "At low tide it looks like an island. At high tide, it vanishes.",
+     "prompt": null,
+     "src": 10
+    },
+    {
+     "text": "In November 1703, the worst storm in British history drove a whole squadron of warships onto it.",
+     "prompt": null,
+     "src": 42
+    },
+    {
+     "text": "The Northumberland. The Restoration. The admiral's ship, the Mary.",
+     "prompt": null,
+     "src": 55
+    },
+    {
+     "text": "More than a thousand sailors swallowed by the sand",
+     "prompt": null,
+     "src": 65
+    }
+   ]
+  },
+  {
+   "label": "HE WISHED FOR THIS",
+   "title": "He Wished to Be in His Lighthouse During the Greatest Storm Ever #Shorts",
+   "description": "Henry Winstanley built the first lighthouse on the Eddystone rocks, and said he wanted to be inside it during the greatest storm there ever was. Full story: {LONG_URL}\n\nAnimated story based on historical accounts.\n\n#History #Lighthouse #GreatStorm #Shorts",
+   "blocks": [
+    {
+     "text": "there ever was.",
+     "prompt": null,
+     "src": 46
+    },
+    {
+     "text": "Henry Winstanley lost two of his own ships on a deadly reef in the open sea.",
+     "prompt": null,
+     "src": 44,
+     "fx": 560
+    },
+    {
+     "text": "So he built a lighthouse right on top of it. The first of its kind.",
+     "prompt": null,
+     "src": 45
+    },
+    {
+     "text": "He was so proud, he said he wanted to be inside it during the greatest storm there ever was.",
+     "prompt": null,
+     "src": 46
+    },
+    {
+     "text": "In November 1703, he got his wish. He was there, fixing the light, when the storm hit.",
+     "prompt": null,
+     "src": 47
+    },
+    {
+     "text": "By morning, the lighthouse was gone. And so was he. He'd wished for the greatest storm",
+     "prompt": null,
+     "src": 48
+    }
+   ]
+  },
+  {
+   "label": "UP, NOT DOWN",
+   "title": "Your Warship Is Breaking Loose. Do You Go Up or Down? #Shorts",
+   "description": "November 1703: your anchor cables are snapping in the worst storm in British history. Where do you go? Full story: {LONG_URL}\n\nAnimated story based on historical accounts.\n\n#History #POV #Shipwreck #Shorts",
+   "blocks": [
+    {
+     "text": "the mast or below deck?",
+     "prompt": null,
+     "src": 38
+    },
+    {
+     "text": "It's midnight, November 1703. You're seventeen, on a warship off the coast of Kent.",
+     "prompt": null,
+     "src": 5
+    },
+    {
+     "text": "The worst storm in British history is ripping your anchor cables apart.",
+     "prompt": null,
+     "src": 36
+    },
+    {
+     "text": "Below deck is dry, but if the ship rolls over, it's a trap.",
+     "prompt": null,
+     "src": 39
+    },
+    {
+     "text": "Up in the rigging, the wind tries to tear you off. But the masts are the last thing to go under.",
+     "prompt": null,
+     "src": 52
+    },
+    {
+     "text": "Seventy men survived, clinging on for more than a day. So where would you go,",
+     "prompt": null,
+     "src": 73
+    }
+   ]
+  },
+  {
+   "label": "5 SHILLINGS A LIFE",
+   "title": "He Paid 5 Shillings for Every Sailor Saved #Shorts",
+   "description": "After the Great Storm of 1703, a shopkeeper in Deal paid boatmen out of his own pocket to rescue shipwrecked sailors. Full story: {LONG_URL}\n\nAnimated story based on historical accounts.\n\n#History #GreatStorm #Heroes #Shorts",
+   "blocks": [
+    {
+     "text": "five shillings a life.",
+     "prompt": null,
+     "src": 69
+    },
+    {
+     "text": "November 1703. After the worst storm in British history, sailors are stranded on wrecks off the town of Deal.",
+     "prompt": null,
+     "src": 65
+    },
+    {
+     "text": "They wave for help. But not everyone on the beach is in a hurry to save them.",
+     "prompt": null,
+     "src": 68
+    },
+    {
+     "text": "So a local shopkeeper, Thomas Powell, pays boatmen out of his own pocket.",
+     "prompt": null,
+     "src": 70
+    },
+    {
+     "text": "Daniel Defoe later credited him with around two hundred lives. All for",
+     "prompt": null,
+     "src": 73
+    }
+   ]
+  }
+ ]
+}
