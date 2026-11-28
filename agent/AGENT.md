@@ -19,6 +19,28 @@ Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 - Be historically accurate. Where historians disagree, say so in the narration ("most historians think…").
 - Nothing graphic: describe danger and death with restraint, as in the Pompeii episode. No gore in prompts.
 
+## Posting cadence and Shorts plan (owner's decision, 2026-11-27)
+The owner wants **one post every ~5 hours** and Shorts built to win subscribers. Each daily run still makes 1 long video + 4 Shorts,
+but they go out spread over the day:
+- **Long video:** publish right away (Public), as before.
+- **Shorts:** upload all 4 in the same run, but in the Visibility step choose **Programar (Schedule)** instead of Público,
+  at long-publish time **+5 h, +10 h, +15 h, +20 h** (Brasília time; round to :00 or :30). The PC only needs to be on during the upload.
+  `ytUpload` does not do this yet: after the dialog reaches the Visibility step, expand "Programar", set the date and time with real clicks/typing
+  (find + computer tools), then click "Programar". Check on Conteúdo > Shorts that each one shows "Programado" with the right time.
+  If scheduling fails twice for a Short, publish it as Público immediately (never leave it as a private draft) and say so in the push.
+  The first run that gets this working must save the exact working steps here (or in upload.js as an optional `schedule` field).
+- Subtitles on the long video and the audio loop on every Short stay mandatory.
+
+Shorts rules (from our own numbers, 28 days to 2026-11-27: Shorts brought almost all of the 6.5k views; long videos 2-40 views each):
+1. **Title = one concrete, strange detail** (an object, an animal, an exact number or deadline, one person's fate), never a generic question.
+   Winners: "The Whale That Sank a Ship on Purpose" (864), "Found in Tsunami Debris: A Young Man and His Dog" (709),
+   "You Have 2 Hours and 40 Minutes on the Titanic" (618), "Your Ticket Decided If You Survived the Titanic" (582).
+   Losers: "Who Actually Survived Pompeii?" (10), "They Waited 36 Hours to Tell This City" (19), "The Admiral Who Sailed Toward Vesuvius" (24).
+2. **25-35 s**, the hook question or shocking fact in the **first second**, loop at the end (as always).
+3. Each Short must stand alone (no "as we saw"), and its description starts with the hook line and the long video link.
+4. When the Short is published, set the long video as its **Vídeo relacionado / Related video** in the Short's details if the option exists (best effort).
+5. Of the 4 Shorts: 2 "you must choose" POV Shorts, 1 strange-object/animal/number Short, 1 parallel-person Short.
+
 ## Visual style (owner's decision, 2026-11-25): CARTOON
 Since 2026-11-25 every episode is made in the **cartoon style** (round-head characters, flat blurred backgrounds, date badge,
 red chapter banner, speech bubbles, captions with the spoken word in yellow), drawn by code with `agent/cartoon/`.
