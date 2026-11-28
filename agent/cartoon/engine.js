@@ -8,7 +8,7 @@ const ease = x => { x = clamp(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * 
 const back = x => { x = clamp(x); const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
 const rnd = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
-const INDOOR = ['below', 'cellar', 'room', 'desk', 'church', 'plain', 'black', 'underwater'];
+const INDOOR = ['below', 'cellar', 'room', 'desk', 'church', 'plain', 'black', 'underwater', 'club', 'lounge', 'foyer', 'kitchen', 'hospital', 'office'];
 const K = '#1a1a1a';
 let SHORT = null;   // set while drawing a vertical Short: {x0}      // outline colour
 const SW = 4;             // outline width
@@ -44,6 +44,27 @@ const ROLES = {
   wife:     { dress: '#3a3a52', bonnet: '#f3efe6' },
   diver:    { diver: 1 },
   modern:   { coat: '#3c6e5a', hair: '#3a2a1c' },
+  // 1940s
+  you42:    { coat: '#1f2c4a', hat: 'dixie', navy: 1, scarf2: '#1a1a1a' },
+  sailor42: { coat: '#1f2c4a', hat: 'dixie', navy: 1, hair: '#6b4a2a' },
+  soldier42:{ coat: '#6b6a3e', hat: 'garrison', hatc: '#6b6a3e', tie: '#5a5a32' },
+  date:     { dress: '#b8322a', hair: '#6b3a1e', bob: 1 },
+  woman42:  { dress: '#3d5a7a', hair: '#2b2018', bob: 1 },
+  waitress: { dress: '#1f1f24', hair: '#c89a4a', bob: 1, apron: 1 },
+  busboy:   { coat: '#f3efe6', hair: '#3a2a1c', bow: '#1a1a1a', short: 1 },
+  waiter:   { coat: '#f3efe6', hair: '#1f1a14', bow: '#1a1a1a' },
+  bartender:{ coat: '#f3efe6', hair: '#5a3a22', tie: '#7a1f1f', vest: '#3a2a24' },
+  gent:     { coat: '#3a3a42', hat: 'fedora', hatc: '#2a2a30', tie: '#8a2a2a', lapel: 1 },
+  gent2:    { coat: '#5a4636', hat: 'fedora', hatc: '#3a2e24', tie: '#2a4a6a', lapel: 1 },
+  owner:    { coat: '#26262c', hair: '#2a2420', tie: '#b8a040', lapel: 1, glasses: 1 },
+  cowboy:   { coat: '#e9e1cf', hat: 'cowboy', hatc: '#f3efe6', tie: '#1a1a1a', lapel: 1 },
+  fireman:  { coat: '#1f1f24', hat: 'fire', hatc: '#1f1f24', long: 1, cuffs: '#e0b021' },
+  doctor:   { coat: '#f7f7f2', hair: '#8a8a8a', long: 1, glasses: 1, tie: '#2a4a6a' },
+  nurse:    { dress: '#f7f7f2', hat: 'nurse', hair: '#5a3a22', bob: 1 },
+  doughboy: { coat: '#6b6a3e', hat: 'brodie', hatc: '#5a5a38', beard: 0 },
+  major:    { coat: '#7a7448', hat: 'brodie', hatc: '#5a5a38', glasses: 1, sash: '#5a4a2a' },
+  polar:    { coat: '#7a5a3a', hat: 'hood', hatc: '#c8b89a', beard: 1, hair: '#6b4a2a' },
+  scientist:{ coat: '#e0662a', hat: 'beanie', hatc: '#2a4a6a', beard: 1, hair: '#bdbdbd' },
 };
 const FACES = {
   calm:  (b) => b ? `<path d="M-19 -4 L-7 -4 M7 -4 L19 -4" stroke="${K}" stroke-width="4" stroke-linecap="round"/>` : `<ellipse cx="-13" cy="-4" rx="4" ry="6"/><ellipse cx="13" cy="-4" rx="4" ry="6"/>`,
@@ -96,7 +117,7 @@ function person(it, t, lt, wind) {
   // body
   let body;
   if (R.diver) body = `<path d="M-32 56 L32 56 L38 165 L-38 165 Z" fill="#1d1d24" stroke="${K}" stroke-width="${SW}"/><rect x="26" y="62" width="24" height="70" rx="10" fill="#e0b021" stroke="${K}" stroke-width="3"/>`;
-  else if (R.dress) body = `<path d="M-28 56 L28 56 L58 172 L-58 172 Z" fill="${R.dress}" stroke="${K}" stroke-width="${SW}" stroke-linejoin="round"/><path d="M-18 56 L0 84 L18 56" fill="#f3efe6" stroke="${K}" stroke-width="3"/>`;
+  else if (R.dress) body = `<path d="M-28 56 L28 56 L58 172 L-58 172 Z" fill="${R.dress}" stroke="${K}" stroke-width="${SW}" stroke-linejoin="round"/><path d="M-18 56 L0 84 L18 56" fill="#f3efe6" stroke="${K}" stroke-width="3"/>` + (R.apron ? `<path d="M-30 110 L30 110 L36 160 L-36 160 Z" fill="#f7f7f2" stroke="${K}" stroke-width="3"/>` : '');
   else {
     const bot = R.long ? 180 : 165;
     body = `<path d="M-30 56 L30 56 L40 ${bot} L-40 ${bot} Z" fill="${R.coat}" stroke="${K}" stroke-width="${SW}" stroke-linejoin="round"/>`;
@@ -104,15 +125,31 @@ function person(it, t, lt, wind) {
     if (R.long) body += `<path d="M0 60 L0 ${bot}" stroke="${K}" stroke-width="2.5"/>` + [80, 100, 120, 140].map(yy => `<circle cx="7" cy="${yy}" r="3" fill="${R.cuffs || '#c9a54a'}"/>`).join('');
     if (R.scarf) body += `<path d="M-24 58 Q0 74 24 58 L20 66 Q0 82 -20 66 Z" fill="${R.scarf}" stroke="${K}" stroke-width="3"/>`;
     if (R.sash) body += `<path d="M-30 60 L36 150" stroke="${R.sash}" stroke-width="10"/>`;
+    if (R.vest) body += `<path d="M-22 60 L22 60 L26 150 L-26 150 Z" fill="${R.vest}" stroke="${K}" stroke-width="3"/>`;
+    if (R.lapel) body += `<path d="M-16 57 L0 96 L16 57 Z" fill="#f3efe6" stroke="${K}" stroke-width="2.5"/><path d="M-22 57 L0 110 L-12 57 M22 57 L0 110 L12 57" stroke="${K}" stroke-width="3" fill="none"/>`;
+    if (R.tie) body += `<path d="M-5 62 L5 62 L8 104 L0 114 L-8 104 Z" fill="${R.tie}" stroke="${K}" stroke-width="2.5"/>`;
+    if (R.bow) body += `<path d="M0 64 L-16 56 L-16 72 Z M0 64 L16 56 L16 72 Z" fill="${R.bow}" stroke="${K}" stroke-width="2"/>`;
+    if (R.navy) body += `<path d="M-30 56 L-34 88 L0 104 L34 88 L30 56 Z" fill="#26375c" stroke="${K}" stroke-width="3"/><path d="M-30 64 L-31 84 L0 98 L31 84 L30 64" stroke="#fff" stroke-width="2.5" fill="none"/><path d="M-8 92 L0 112 L8 92" fill="#1a1a1a"/>`;
     if (R.bands) body += `<path d="M-6 58 L-8 82 L0 80 L8 82 L6 58Z" fill="#fff" stroke="${K}" stroke-width="2.5"/>`;
   }
   // head
   let back = '', front = '';
   if (R.wig) back += [[-40, 10], [40, 10], [-42, 36], [42, 36], [-36, -20], [36, -20]].map(([a, b]) => `<circle cx="${a}" cy="${b}" r="17" fill="${R.wig}" stroke="${K}" stroke-width="3"/>`).join('');
-  if (R.hair && !R.cap && !R.hat && !R.crown && !R.wig) front += `<path d="M-41 -12 Q-38 -48 0 -47 Q38 -48 41 -12 Q22 -30 0 -28 Q-22 -30 -41 -12Z" fill="${R.hair}" stroke="${K}" stroke-width="3"/>`;
+  if (R.bob) back += `<path d="M-50 -10 Q-56 40 -40 58 Q-20 50 -30 10 L30 10 Q20 50 40 58 Q56 40 50 -10 Q48 -50 0 -50 Q-48 -50 -50 -10Z" fill="${R.hair}" stroke="${K}" stroke-width="3"/>`;
+  if (R.hair && !R.cap && (!R.hat || R.hat === 'dixie' || R.hat === 'nurse') && !R.crown && !R.wig) front += `<path d="M-41 -12 Q-38 -48 0 -47 Q38 -48 41 -12 Q22 -30 0 -28 Q-22 -30 -41 -12Z" fill="${R.hair}" stroke="${K}" stroke-width="3"/>`;
   if (R.hair && R.crown) back += `<path d="M-46 -6 Q-50 50 -30 60 L30 60 Q50 50 46 -6 Z" fill="${R.hair}" stroke="${K}" stroke-width="3"/>`;
   if (R.cap === 'knit') front += `<path d="M-42 -14 Q-40 -58 0 -58 Q40 -58 42 -14 Z" fill="${R.capc}" stroke="${K}" stroke-width="3.5"/><rect x="-44" y="-20" width="88" height="12" rx="5" fill="${R.capc}" stroke="${K}" stroke-width="3"/>`;
   if (R.hat === 'tricorn') front += `<path d="M-62 -18 Q0 -36 62 -18 L42 -46 Q0 -74 -42 -46 Z" fill="#1f1f24" stroke="${K}" stroke-width="3.5"/><path d="M-60 -20 Q0 -36 60 -20" stroke="#d9b44a" stroke-width="3" fill="none"/>`;
+  if (R.hat === 'fedora') front += `<path d="M-64 -16 Q0 -30 64 -16 Q60 -6 0 -12 Q-60 -6 -64 -16Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/><path d="M-38 -18 L-34 -58 Q0 -70 34 -58 L38 -18 Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/><path d="M-37 -26 L37 -26" stroke="#8a2a2a" stroke-width="7"/>`;
+  if (R.hat === 'dixie') front += `<path d="M-40 -30 Q0 -44 40 -30 L44 -44 Q0 -60 -44 -44 Z" fill="#fff" stroke="${K}" stroke-width="3.5"/><path d="M-30 -34 Q-30 -66 0 -66 Q30 -66 30 -34" fill="#fff" stroke="${K}" stroke-width="3.5"/>`;
+  if (R.hat === 'garrison') front += `<path d="M-40 -26 L-34 -52 L40 -40 L40 -26 Q0 -34 -40 -26Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/>`;
+  if (R.hat === 'cowboy') front += `<path d="M-86 -12 Q-70 -30 -40 -22 L40 -22 Q70 -30 86 -12 Q60 -4 0 -14 Q-60 -4 -86 -12Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/><path d="M-36 -22 L-32 -66 Q-10 -56 0 -70 Q10 -56 32 -66 L36 -22 Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/><path d="M-35 -30 L35 -30" stroke="#1a1a1a" stroke-width="6"/>`;
+  if (R.hat === 'fire') front += `<path d="M-70 -6 Q-60 -26 -42 -26 Q-40 -70 0 -72 Q40 -70 42 -26 Q60 -26 74 -2 Q40 -14 0 -16 Q-40 -14 -70 -6Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/><path d="M-12 -70 L12 -70 L10 -36 L-10 -36 Z" fill="#e0b021" stroke="${K}" stroke-width="3"/>`;
+  if (R.hat === 'nurse') front += `<path d="M-30 -40 L30 -40 L24 -62 L-24 -62 Z" fill="#fff" stroke="${K}" stroke-width="3"/><path d="M-6 -56 L6 -56 M0 -62 L0 -50" stroke="#b8322a" stroke-width="4"/>`;
+  if (R.hat === 'brodie') front += `<path d="M-72 -14 Q0 -2 72 -14 Q60 -24 40 -26 Q30 -66 0 -66 Q-30 -66 -40 -26 Q-60 -24 -72 -14Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/>`;
+  if (R.hat === 'hood') { back += `<circle r="60" fill="${R.hatc}" stroke="${K}" stroke-width="4"/>`; front += `<path d="M-58 -2 Q-56 -60 0 -62 Q56 -60 58 -2 Q46 -40 0 -42 Q-46 -40 -58 -2Z" fill="${R.hatc}" stroke="${K}" stroke-width="3"/>`; }
+  if (R.hat === 'beanie') front += `<path d="M-42 -14 Q-40 -58 0 -58 Q40 -58 42 -14 Z" fill="${R.hatc}" stroke="${K}" stroke-width="3.5"/>`;
+  if (R.glasses) front += `<circle cx="-13" cy="-4" r="11" fill="none" stroke="${K}" stroke-width="3"/><circle cx="13" cy="-4" r="11" fill="none" stroke="${K}" stroke-width="3"/><path d="M-2 -4 L2 -4" stroke="${K}" stroke-width="3"/>`;
   if (R.bonnet) front += `<path d="M-48 8 Q-52 -52 0 -54 Q52 -52 48 8 Q40 -30 0 -32 Q-40 -30 -48 8Z" fill="${R.bonnet}" stroke="${K}" stroke-width="3.5"/>`;
   if (R.crown) front += `<path d="M-30 -36 L-30 -64 L-15 -48 L0 -70 L15 -48 L30 -64 L30 -36 Z" fill="#e8c14a" stroke="${K}" stroke-width="3.5"/>`;
   if (R.diver) front += `<rect x="-36" y="-26" width="72" height="34" rx="12" fill="#bfe8ff" fill-opacity=".55" stroke="${K}" stroke-width="4"/><path d="M36 -4 Q60 0 54 40" stroke="${K}" stroke-width="5" fill="none"/>`;
@@ -268,6 +305,74 @@ function bubbleSvg(x, y, text, sc, tail) {
    <text x="0" y="11" text-anchor="middle" font-weight="bold" font-size="30" fill="${K}">${esc(text)}</text></g>`;
 }
 
+
+function palm(it, t, lt) {   // artificial palm; fireAt: fronds catch fire
+  const x = it.x || 640, y = it.y || 560, s = it.s || 1;
+  const f = it.fireAt != null && lt > it.fireAt ? clamp((lt - it.fireAt) / (it.fireDur || 2)) : (it.burning ? 1 : 0);
+  const smk = it.smokeAt != null && lt > it.smokeAt ? clamp((lt - it.smokeAt) / 2) : 0;
+  let o = `<g transform="translate(${x},${y}) scale(${s})"><path d="M-14 0 L-10 -260 L10 -260 L14 0Z" fill="#8a6a3a" stroke="${K}" stroke-width="${SW}"/>${[-200, -140, -80].map(yy => `<path d="M-12 ${yy} L12 ${yy + 10}" stroke="${K}" stroke-width="3"/>`).join('')}`;
+  o += [-2, -1, 0, 1, 2].map(k => `<path d="M0 -262 q${k * 50} -40 ${k * 100} ${10 + Math.abs(k) * 30}" stroke="${f > .5 ? '#5a4a2a' : '#3f8a4a'}" stroke-width="20" fill="none" stroke-linecap="round"/>`).join('');
+  if (smk) o += [0, 1, 2].map(i => { const k = (t * .5 + i / 3) % 1; return `<circle cx="${Math.sin(t + i) * 20}" cy="${-280 - k * 120}" r="${20 + k * 40}" fill="#5a5a60" opacity="${smk * .5 * (1 - k)}"/>`; }).join('');
+  if (f) { o += `<circle cy="-270" r="${110 + 50 * f}" fill="url(#glow)" opacity="${f}"/>` + Array.from({ length: 9 }, (_, i) => { const k = (t * 1.6 + i / 9) % 1, xx = (i - 4) * 26 * (.4 + f); return `<g transform="translate(${xx},${-250 - k * 70 * f}) scale(${.6 + f})"><path d="M0 0 q16 -34 0 -68 q-16 32 0 68" fill="${i % 2 ? '#ff8a2a' : '#ffd24a'}" opacity="${f * (1 - k)}"/></g>`; }).join(''); }
+  return o + `</g>`;
+}
+function flames(it, t, lt) { // a line of flames racing along (ceiling fire), from x0 to x1 starting at "at"
+  const k = clamp((lt - (it.at || 0)) / (it.dur || 2)); if (k <= 0) return '';
+  const x0 = it.x0 ?? 0, x1 = it.x1 ?? 1280, y = it.y ?? 100, xe = x0 + (x1 - x0) * k, n = Math.ceil(Math.abs(xe - x0) / 40);
+  let o = `<rect x="${Math.min(x0, xe)}" y="${y - 70}" width="${Math.abs(xe - x0)}" height="120" fill="url(#glow)" opacity=".7"/>`;
+  for (let i = 0; i < n; i++) { const xx = x0 + (xe - x0) * i / Math.max(n, 1), q = (t * 2.2 + rnd(i)) % 1, h = 70 + rnd(i + 3) * 60 + 20 * Math.sin(t * 9 + i); o += `<path d="M${xx - 26} ${y - 20} Q${xx - 20} ${y + h * .7} ${xx + 4 * Math.sin(t * 7 + i)} ${y + h} Q${xx + 22} ${y + h * .6} ${xx + 26} ${y - 20}Z" fill="${i % 2 ? '#ff8a2a' : '#ffc23a'}" stroke="#d0601a" stroke-width="2" opacity="${.95 - q * .3}"/>`; }
+  return o;
+}
+function revdoor(it, t, lt) { // revolving door seen from inside; spins, then jams at jamAt
+  const x = it.x || 640, y = it.y || 560, s = it.s || 1;
+  const jam = it.jamAt != null && lt > it.jamAt;
+  const sp = it.spin ?? 1.2, a = jam ? sp * it.jamAt + Math.sin(t * 30) * .02 : sp * lt;
+  let o = `<g transform="translate(${x},${y}) scale(${s})"><rect x="-150" y="-330" width="300" height="330" fill="#1c2a44" stroke="${K}" stroke-width="${SW}"/>`;
+  const wings = [0, 1, 2, 3].map(i => { const ang = a + i * Math.PI / 2, c = Math.cos(ang), sn = Math.sin(ang); return { c, sn }; }).sort((p, q) => p.sn - q.sn);
+  o += wings.map(({ c, sn }) => `<path d="M0 -320 L${c * 140} ${-320 + sn * 8} L${c * 140} ${-6 + sn * 8} L0 -6Z" fill="#9fc3e0" fill-opacity="${.35 + .3 * (sn + 1) / 2}" stroke="${K}" stroke-width="4"/>`).join('');
+  o += `<rect x="-8" y="-330" width="16" height="330" fill="#c9a050" stroke="${K}" stroke-width="3"/><path d="M-170 -350 L170 -350 L170 -330 L-170 -330Z" fill="#c9a050" stroke="${K}" stroke-width="3"/>`;
+  if (jam && it.jamMark !== false) o += `<g transform="translate(0,-380)"><path d="M-30 0 L-10 -8 L-24 -30 L0 -12 L10 -36 L14 -10 L36 -20 L18 2 L34 22 L8 10 Z" fill="#ffd21f" stroke="${K}" stroke-width="3" transform="scale(${1 + .3 * Math.sin(t * 8)})"/></g>`;
+  return o + `</g>`;
+}
+function door(it, t, lt) {   // plain door; locked shows a bolt; label below
+  const x = it.x || 640, y = it.y || 560, s = it.s || 1, ok = it.open ? ease((lt - (it.openAt || 0)) / .8) : 0;
+  let o = `<g transform="translate(${x},${y}) scale(${s})"><rect x="-80" y="-280" width="160" height="280" fill="#1a1410" stroke="${K}" stroke-width="${SW}"/>`;
+  o += `<path d="M-74 -274 L${-74 + 148 * (1 - ok * .7)} ${-274 + ok * 20} L${-74 + 148 * (1 - ok * .7)} ${-6 - ok * 20} L-74 -6Z" fill="${it.c || '#6b4226'}" stroke="${K}" stroke-width="4"/><circle cx="${50 - ok * 100}" cy="-140" r="8" fill="#d9b44a" stroke="${K}" stroke-width="2"/>`;
+  if (it.locked) o += `<rect x="-90" y="-160" width="180" height="22" fill="#5a5a60" stroke="${K}" stroke-width="3"/><g transform="translate(0,-110)"><rect x="-22" y="-10" width="44" height="36" rx="5" fill="#8a8a90" stroke="${K}" stroke-width="3"/><path d="M-12 -10 Q-12 -32 0 -32 Q12 -32 12 -10" stroke="${K}" stroke-width="5" fill="none"/></g>`;
+  if (it.brick) o += `<rect x="-80" y="-280" width="160" height="280" fill="#8a4436" stroke="${K}" stroke-width="${SW}"/>${Array.from({ length: 10 }, (_, r) => `<path d="M-80 ${-280 + r * 28} L80 ${-280 + r * 28}" stroke="#5a2a1e" stroke-width="2"/>`).join('')}`;
+  if (it.label) o += `<text y="${it.labelY || -300}" text-anchor="middle" font-size="26" font-weight="bold" fill="#fff" stroke="${K}" stroke-width="6" paint-order="stroke">${esc(it.label)}</text>`;
+  return o + `</g>`;
+}
+function bulb(it, t, lt) {
+  const x = it.x || 640, y = it.y || 150, s = it.s || 1;
+  const on = it.offAt != null ? lt < it.offAt : it.onAt != null ? lt > it.onAt : it.on !== false;
+  return `<g transform="translate(${x},${y}) scale(${s})"><path d="M0 -200 L0 -30" stroke="${K}" stroke-width="3"/>${on ? `<circle r="70" fill="url(#lamp)"/>` : ''}<circle r="22" fill="${on ? '#fff3b0' : '#8a8a80'}" stroke="${K}" stroke-width="3"/><rect x="-10" y="-34" width="20" height="16" fill="#9a9a9a" stroke="${K}" stroke-width="2"/></g>`;
+}
+function match(it, t, lt) {
+  const x = it.x || 640, y = it.y || 400, s = it.s || 1, f = lt > (it.at || 0) ? 1 : 0;
+  return `<g transform="translate(${x},${y}) scale(${s}) rotate(-20)"><rect x="-4" y="0" width="8" height="90" fill="#e8d4a0" stroke="${K}" stroke-width="2"/><circle cy="0" r="8" fill="#b8322a"/>${f ? `<circle cy="-14" r="40" fill="url(#lamp)"/><path d="M0 -6 Q-12 -22 0 ${-44 + Math.sin(t * 20) * 3} Q12 -22 0 -6Z" fill="#ffb02e" stroke="#e07a10" stroke-width="2"/>` : ''}</g>`;
+}
+function pigeon(it, t, lt) {   // flying or standing pigeon; dx/dy move it, flap when flying
+  const k = ease(lt / (it.dur || 4)), x = (it.x || 640) + (it.dx || 0) * k, y = (it.y || 300) + (it.dy || 0) * k + (it.fly ? Math.sin(t * 6) * 6 : 0), s = it.s || 1;
+  const fl = it.fly ? Math.sin(t * 22) * 28 : 0;
+  return `<g transform="translate(${x},${y}) scale(${(it.flip ? -1 : 1) * s},${s})"><path d="M-50 10 Q-10 -30 40 -6 Q60 4 40 18 Q0 34 -50 10Z" fill="#7a8090" stroke="${K}" stroke-width="3.5"/><circle cx="44" cy="-14" r="18" fill="#6a7080" stroke="${K}" stroke-width="3.5"/><path d="M60 -16 L74 -10 L60 -6Z" fill="#e0a040" stroke="${K}" stroke-width="2"/><circle cx="48" cy="-18" r="${it.hurt ? 0 : 3.5}" fill="${K}"/>${it.hurt ? `<path d="M43 -22 L53 -14 M53 -22 L43 -14" stroke="${K}" stroke-width="3"/>` : ''}
+   <path d="M-10 0 Q-30 ${-50 - fl} 10 ${-60 - fl} Q20 -20 10 0Z" fill="#8a90a0" stroke="${K}" stroke-width="3.5"/><path d="M-50 10 L-74 0 L-70 20Z" fill="#5a6070" stroke="${K}" stroke-width="3"/>${it.note ? `<rect x="-6" y="24" width="18" height="12" rx="3" fill="#f3efe6" stroke="${K}" stroke-width="2"/>` : ''}${it.fly ? '' : `<path d="M-6 30 L-8 46 M10 30 L12 46" stroke="#d07a50" stroke-width="4"/>`}</g>`;
+}
+function car(it, t, lt) {   // 1940s car or fire engine (truck: true)
+  const x = (it.x || 640) + (it.dx || 0) * ease(lt / (it.dxDur || 4)), y = it.y || 600, s = it.s || 1, c = it.c || (it.truck ? '#c0302a' : '#2a3a4a');
+  const w = it.truck ? 1.5 : 1, flash = it.truck ? (Math.sin(t * 12) > 0 ? '#ff3a2a' : '#7a1a1a') : '#ffe08a';
+  return `<g transform="translate(${x},${y}) scale(${(it.flip ? -1 : 1) * s},${s})"><path d="M${-160 * w} -20 L${-150 * w} -80 L${-60 * w} -84 L${-30 * w} -140 L${60 * w} -140 L${100 * w} -84 L${160 * w} -70 L${170 * w} -20 Z" fill="${c}" stroke="${K}" stroke-width="${SW}"/><rect x="${-20 * w}" y="-130" width="${70 * w}" height="40" fill="#bfe3f2" stroke="${K}" stroke-width="3"/>
+   ${it.truck ? `<rect x="${-150 * w}" y="-110" width="${130 * w}" height="12" fill="#c9c9c0" stroke="${K}" stroke-width="3"/><circle cx="${40 * w}" cy="-150" r="12" fill="${flash}" stroke="${K}" stroke-width="3"/>` : ''}
+   <circle cx="${-100 * w}" cy="-16" r="30" fill="#1a1a1a"/><circle cx="${-100 * w}" cy="-16" r="12" fill="#8a8a90"/><circle cx="${110 * w}" cy="-16" r="30" fill="#1a1a1a"/><circle cx="${110 * w}" cy="-16" r="12" fill="#8a8a90"/><circle cx="${165 * w}" cy="-56" r="10" fill="${flash}" stroke="${K}" stroke-width="2"/></g>`;
+}
+function piano(it) { const x = it.x || 640, y = it.y || 560, s = it.s || 1; return `<g transform="translate(${x},${y}) scale(${s})"><path d="M-120 -40 L-120 -170 Q40 -200 120 -110 L120 -40 Z" fill="#1a1a1e" stroke="${K}" stroke-width="${SW}"/><rect x="-130" y="-60" width="260" height="24" fill="#f3efe6" stroke="${K}" stroke-width="3"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${-124 + i * 21}" y="-60" width="10" height="14" fill="#1a1a1a"/>`).join('')}<rect x="-110" y="-36" width="14" height="36" fill="#1a1a1e"/><rect x="96" y="-36" width="14" height="36" fill="#1a1a1e"/></g>`; }
+function wreck(it, t, lt) {   // a wooden hull resting on the seabed, with its name
+  const x = it.x || 640, y = it.y || 560, s = it.s || 1, lt2 = clamp((lt - (it.lightAt || 0)) / 1.5);
+  return `<g transform="translate(${x},${y}) scale(${s})"><circle cx="0" cy="-90" r="${200 + 80 * lt2}" fill="url(#lamp)" opacity="${.15 + .5 * lt2}"/><path d="M-300 -40 L-270 30 Q0 60 270 30 L320 -80 L-300 -80 Z" fill="#3a2a1e" stroke="${K}" stroke-width="${SW}"/><path d="M-290 -50 Q0 -30 310 -60" stroke="#e8e0cc" stroke-width="10" fill="none"/>
+   <path d="M-120 -80 L-120 -240 M40 -80 L40 -200" stroke="#2a1e14" stroke-width="12"/><circle cx="220" cy="-130" r="34" fill="none" stroke="#6b4a2a" stroke-width="8"/>${Array.from({ length: 8 }, (_, i) => `<path d="M220 -130 L${220 + Math.cos(i * .785) * 46} ${-130 + Math.sin(i * .785) * 46}" stroke="#6b4a2a" stroke-width="6"/>`).join('')}
+   ${it.name ? `<text x="0" y="0" text-anchor="middle" font-size="40" font-weight="bold" fill="#d9c27a" letter-spacing="8" opacity="${lt2}">${esc(it.name)}</text>` : ''}</g>`;
+}
+
 // ---------- backgrounds ----------
 function waves(t, y0, storm, col, n = 8) {
   const amp = 4 + storm * 9;
@@ -335,6 +440,78 @@ const BG = {
      <path d="M-20 600 Q400 560 800 600 Q1100 630 1300 590 L1300 740 L-20 740Z" fill="#c9b890" stroke="${K}" stroke-width="${SW}"/>${Array.from({ length: 20 }, (_, i) => { const k = ((t * .15 + rnd(i)) % 1); return `<circle cx="${rnd(i + 3) * 1280 + Math.sin(t * 2 + i) * 8}" cy="${700 - k * 720}" r="${3 + rnd(i) * 5}" fill="none" stroke="#dff4ff" stroke-width="2" opacity=".6"/>`; }).join('')}`; },
   sands(v, t) { const key = skyKey(v); return skyBg(v, t, 400) + `<rect y="400" width="1280" height="320" fill="${SEA[key]}"/>${waves(t, 420, v.storm || 0, '#d6eef8')}<path d="M80 600 Q400 520 760 560 Q1050 590 1240 640 L1240 660 L80 660Z" fill="#d9c99a" stroke="${K}" stroke-width="${SW}"/>`; },
   church(v, t) { return `<rect width="1280" height="720" fill="#d8cdb8"/>${[120, 400, 880, 1160].map(x => `<rect x="${x - 40}" y="0" width="80" height="620" fill="#c4b79e" stroke="#a89878" stroke-width="5"/>`).join('')}<path d="M500 420 L500 160 Q640 40 780 160 L780 420Z" fill="#9fc3e0" stroke="#a89878" stroke-width="10"/><rect y="600" width="1280" height="120" fill="#a8977a"/>`; },
+  // ---- 1942 Boston nightclub and friends ----
+  club(v, t) {   // main dining room: teal walls, palm columns, cloth ceiling swags, tables, bandstand
+    const lit = v.dark ? 0 : 1;
+    let o = `<rect width="1280" height="720" fill="#1f4a4f"/><rect y="0" width="1280" height="120" fill="#e6d7b0"/>`;
+    o += Array.from({ length: 9 }, (_, i) => `<path d="M${i * 160 - 40} 110 Q${i * 160 + 40} ${170 + Math.sin(t * .8 + i) * 4} ${i * 160 + 120} 110" fill="#3a6aa0" stroke="${K}" stroke-width="3"/>`).join('');
+    o += `<rect x="860" y="250" width="380" height="250" fill="#6b2f3a" stroke="${K}" stroke-width="${SW}"/><path d="M860 250 Q1050 300 1240 250" fill="#8a3a48" stroke="${K}" stroke-width="3"/><rect x="840" y="480" width="420" height="40" fill="#c9a050" stroke="${K}" stroke-width="${SW}"/>`;
+    o += [120, 700].map(x => `<rect x="${x - 18}" y="120" width="36" height="460" fill="#8a6a3a" stroke="${K}" stroke-width="3"/>${[0, 1, 2, 3, 4].map(k => `<path d="M${x} 140 q${(k - 2) * 50} -10 ${(k - 2) * 90} ${50 + Math.abs(k - 2) * 10}" stroke="#3f8a4a" stroke-width="16" fill="none" stroke-linecap="round"/>`).join('')}`).join('');
+    o += `<rect y="560" width="1280" height="160" fill="#5a3a2a"/>${Array.from({ length: 6 }, (_, i) => `<path d="M0 ${580 + i * 26} L1280 ${580 + i * 26}" stroke="#4a2e20" stroke-width="2"/>`).join('')}`;
+    o += [250, 520, 1000].map(x => `<ellipse cx="${x}" cy="560" rx="110" ry="22" fill="#f7f3e8" stroke="${K}" stroke-width="3"/><path d="M${x - 100} 560 L${x - 90} 610 L${x + 90} 610 L${x + 100} 560" fill="#f7f3e8" stroke="${K}" stroke-width="3"/>${lit ? `<circle cx="${x}" cy="530" r="40" fill="url(#lamp)"/>` : ''}<rect x="${x - 8}" y="520" width="16" height="30" fill="#ffd27a" stroke="${K}" stroke-width="2"/>`).join('');
+    return o;
+  },
+  lounge(v, t) {  // the Melody Lounge: low dark basement bar, blue cloth ceiling, bar at right, narrow stairs at left
+    let o = `<rect width="1280" height="720" fill="#2a2030"/><rect width="1280" height="90" fill="#24345a"/>`;
+    o += Array.from({ length: 8 }, (_, i) => `<path d="M${i * 180 - 40} 80 Q${i * 180 + 50} ${130 + Math.sin(t + i) * 3} ${i * 180 + 140} 80" fill="#2e4470" stroke="${K}" stroke-width="3"/>`).join('');
+    o += Array.from({ length: 16 }, (_, i) => `<circle cx="${rnd(i) * 1280}" cy="${20 + rnd(i + 4) * 50}" r="2" fill="#fff6c0" opacity="${.5 + .4 * Math.sin(t * 2 + i)}"/>`).join('');
+    o += Array.from({ length: 7 }, (_, i) => `<rect x="${i * 200}" y="90" width="12" height="470" fill="#3a2a30"/>`).join('');
+    o += `<path d="M0 560 L0 300 L60 300 L60 340 L110 340 L110 380 L160 380 L160 420 L210 420 L210 560 Z" fill="#4a3a30" stroke="${K}" stroke-width="${SW}"/><path d="M0 300 L200 120" stroke="#8a7a5a" stroke-width="6"/>`;
+    o += `<rect x="900" y="200" width="380" height="20" fill="#5a3a22"/>${Array.from({ length: 12 }, (_, i) => `<rect x="${910 + i * 30}" y="${150 + (i % 3) * 6}" width="16" height="${50 - (i % 3) * 6}" rx="4" fill="${['#5a8a4a', '#8a5a2a', '#b8a050', '#4a6a8a'][i % 4]}" stroke="${K}" stroke-width="2"/>`).join('')}`;
+    o += `<rect x="860" y="430" width="440" height="40" fill="#7a4a2a" stroke="${K}" stroke-width="${SW}"/><rect x="880" y="470" width="420" height="110" fill="#5a3420" stroke="${K}" stroke-width="${SW}"/>`;
+    o += `<rect y="560" width="1280" height="160" fill="#3a2a24"/>`;
+    return o;
+  },
+  foyer(v, t) {   // entrance hall: revolving door in the middle, coat check left, exit sign none
+    let o = `<rect width="1280" height="720" fill="#7a5a48"/><rect width="1280" height="70" fill="#e6d7b0"/>`;
+    o += `<rect x="40" y="250" width="300" height="310" fill="#5a3a2a" stroke="${K}" stroke-width="${SW}"/><rect x="40" y="250" width="300" height="40" fill="#c9a050" stroke="${K}" stroke-width="3"/><text x="190" y="279" text-anchor="middle" font-size="24" font-weight="bold" fill="#3a2010">CHECKROOM</text>`;
+    o += Array.from({ length: 8 }, (_, i) => `<path d="M${70 + i * 34} 310 l0 30 q-14 20 0 60" stroke="${['#3a3a42', '#6b2f3a', '#5a4636', '#2a3a5a'][i % 4]}" stroke-width="22" fill="none"/>`).join('');
+    o += `<rect y="560" width="1280" height="160" fill="#6a4a3a"/><path d="M0 560 L1280 560" stroke="${K}" stroke-width="4"/>`;
+    return o;
+  },
+  street(v, t) {  // Piedmont Street at night: brick club front, neon sign
+    let o = skyBg(v, t, 300) + `<rect x="0" y="120" width="1280" height="460" fill="#7a3a2a"/>`;
+    o += Array.from({ length: 10 }, (_, r) => `<path d="M0 ${150 + r * 44} L1280 ${150 + r * 44}" stroke="#5a2a1e" stroke-width="2"/>`).join('');
+    o += [140, 1060].map(x => `<rect x="${x}" y="200" width="110" height="140" fill="${v.fire ? '#ff9a3a' : '#2b3040'}" stroke="${K}" stroke-width="4"/>`).join('');
+    o += `<rect x="400" y="150" width="480" height="76" rx="12" fill="#1a1a22" stroke="${K}" stroke-width="4"/><text x="640" y="203" text-anchor="middle" font-size="44" font-weight="bold" fill="#ff5a8a" stroke="#ff9ac0" stroke-width="1.5" opacity="${.85 + .15 * Math.sin(t * 9)}">COCOANUT GROVE</text>`;
+    o += `<rect y="580" width="1280" height="140" fill="#3a3a40"/><rect y="572" width="1280" height="14" fill="#8a8a90"/>`;
+    if (v.fire) o += `<circle cx="640" cy="420" r="${260 + Math.sin(t * 7) * 20}" fill="url(#glow)" opacity=".55"/>`;
+    return o;
+  },
+  stadium(v, t) { // Fenway Park, afternoon
+    let o = skyBg(v, t, 260) + `<path d="M-20 260 L1300 260 L1300 430 L-20 430 Z" fill="#4a5a6a" stroke="${K}" stroke-width="${SW}"/>`;
+    o += Array.from({ length: 140 }, (_, i) => `<circle cx="${(i % 35) * 37 + 10 + (Math.floor(i / 35) % 2) * 18}" cy="${280 + Math.floor(i / 35) * 36 + Math.sin(t * 6 + i) * (v.cheer ? 3 : .5)}" r="10" fill="${['#b8322a', '#f3efe6', '#7a1f2a', '#2a3a5a', '#e0b021'][i % 5]}" stroke="${K}" stroke-width="2"/>`).join('');
+    o += `<rect y="430" width="1280" height="290" fill="#4f8a3a"/>${[0, 1, 2, 3, 4, 5].map(i => `<path d="M${i * 230 + 60} 430 L${i * 260 - 40} 720" stroke="#f3efe6" stroke-width="5" opacity=".8"/>`).join('')}`;
+    return o;
+  },
+  kitchen(v, t) { // white tiles, stove, walk-in refrigerator
+    let o = `<rect width="1280" height="720" fill="#e6e6dc"/>${Array.from({ length: 14 }, (_, i) => `<path d="M${i * 100} 0 L${i * 100} 560" stroke="#c8c8bc" stroke-width="2"/>`).join('')}${Array.from({ length: 6 }, (_, i) => `<path d="M0 ${i * 100} L1280 ${i * 100}" stroke="#c8c8bc" stroke-width="2"/>`).join('')}`;
+    o += `<rect x="60" y="380" width="360" height="180" fill="#3a3a40" stroke="${K}" stroke-width="${SW}"/>${[0, 1, 2].map(i => `<circle cx="${130 + i * 110}" cy="380" r="26" fill="#2a2a2e" stroke="${K}" stroke-width="3"/>`).join('')}<rect x="80" y="160" width="320" height="40" fill="#8a8a90" stroke="${K}" stroke-width="3"/>`;
+    const op = v.fridgeOpen ? 1 : 0;
+    o += `<rect x="840" y="160" width="300" height="400" fill="#b9c0c4" stroke="${K}" stroke-width="${SW}"/><rect x="${op ? 1080 : 860}" y="180" width="${op ? 50 : 260}" height="370" fill="#d4dade" stroke="${K}" stroke-width="4"/>${op ? `<rect x="862" y="182" width="216" height="366" fill="#1d2a32"/>` : `<rect x="1080" y="330" width="26" height="70" rx="6" fill="#6a6a70" stroke="${K}" stroke-width="3"/>`}`;
+    o += `<rect y="560" width="1280" height="160" fill="#9a9a8a"/>`;
+    return o;
+  },
+  hospital(v, t) { // ward
+    let o = `<rect width="1280" height="720" fill="#cfe0cf"/><rect y="560" width="1280" height="160" fill="#a8a89a"/><rect x="980" y="110" width="200" height="240" fill="${v.time === 'day' ? '#9fd3ee' : '#1c2a44'}" stroke="#5a6a5a" stroke-width="12"/>`;
+    return o;
+  },
+  office(v, t) { // archive / office: filing cabinets
+    let o = `<rect width="1280" height="720" fill="#b8a888"/>${Array.from({ length: 5 }, (_, i) => `<rect x="${60 + i * 240}" y="200" width="160" height="360" fill="#6a6a62" stroke="${K}" stroke-width="${SW}"/>${[0, 1, 2].map(k => `<rect x="${80 + i * 240}" y="${220 + k * 110}" width="120" height="90" fill="#7a7a72" stroke="${K}" stroke-width="3"/><rect x="${125 + i * 240}" y="${255 + k * 110}" width="30" height="10" fill="#c9c9c0"/>`).join('')}`).join('')}<rect y="560" width="1280" height="160" fill="#6a5a44"/>`;
+    return o;
+  },
+  forest(v, t) {  // Argonne 1918: grey sky, broken trees, mud, wire
+    let o = skyBg(Object.assign({}, v, { time: v.time || 'grey' }), t, 420) + `<path d="M-20 440 Q300 400 640 430 Q980 460 1300 420 L1300 740 L-20 740Z" fill="#6a5a44" stroke="${K}" stroke-width="${SW}"/>`;
+    o += [80, 300, 520, 860, 1100, 1220].map((x, i) => `<path d="M${x - 14} 470 L${x - 6} ${200 + i * 20} L${x + 4} ${230 + i * 18} L${x + 14} 470Z" fill="#4a3a2a" stroke="${K}" stroke-width="3"/><path d="M${x} ${300 + i * 10} l${i % 2 ? 40 : -40} -30" stroke="#4a3a2a" stroke-width="7"/>`).join('');
+    o += `<path d="M-20 600 Q640 560 1300 610 L1300 740 L-20 740Z" fill="#5a4a36"/>${Array.from({ length: 14 }, (_, i) => `<path d="M${i * 100} 560 l20 -14 l20 14 l20 -14 l20 14" stroke="#3a3a3a" stroke-width="3" fill="none"/>`).join('')}`;
+    return o;
+  },
+  ice(v, t) {     // Weddell Sea pack ice
+    let o = skyBg(Object.assign({}, v, { time: v.time || 'grey' }), t, 400) + `<rect y="400" width="1280" height="320" fill="#e9f1f4"/>`;
+    o += Array.from({ length: 9 }, (_, i) => `<path d="M${i * 150 - 40} ${430 + (i % 3) * 70} l${60 + rnd(i) * 80} ${(rnd(i + 2) - .5) * 30} l${40 + rnd(i + 1) * 60} ${(rnd(i + 3) - .5) * 30}" stroke="#7a9aa8" stroke-width="4" fill="none"/>`).join('');
+    o += `<path d="M-20 420 L180 380 L260 420 L420 360 L520 410 L700 390 L900 350 L1000 405 L1300 370 L1300 430 L-20 430Z" fill="#f7fbfc" stroke="${K}" stroke-width="3"/>`;
+    return o;
+  },
   black(v, t) { return `<rect width="1280" height="720" fill="${v.color || '#0c0f14'}"/>`; },
   plain(v, t) { return `<rect width="1280" height="720" fill="${v.color || '#e9e2d0'}"/>`; },
 };
@@ -371,6 +548,16 @@ function items(v, t, lt) {
       case 'wave': { const k = ease((ilt) / (it.dur || 1.4)); const x = -700 + k * 2200; return k > 0 && k < 1 ? `<path d="M${x - 900} 760 L${x - 900} 300 Q${x - 300} 180 ${x} 260 Q${x + 120} 300 ${x + 60} 380 Q${x + 160} 420 ${x + 200} 760Z" fill="#2c5e7a" stroke="${K}" stroke-width="5" opacity=".95"/><path d="M${x - 200} 250 Q${x} 220 ${x + 40} 300" stroke="#fff" stroke-width="10" fill="none"/>` : ''; }
       case 'debris': return Array.from({ length: it.n || 10 }, (_, i) => { const k = ((t * (.5 + rnd(i) * .5) + rnd(i + 5)) % 1); return `<rect x="${-80 + k * 1440}" y="${(it.y || 200) + rnd(i + 2) * (it.h || 300) + Math.sin(t * 5 + i) * 30}" width="${18 + rnd(i) * 20}" height="${8 + rnd(i + 1) * 8}" fill="${['#8a4436', '#3b3b45', '#6b4226'][i % 3]}" stroke="${K}" stroke-width="2" transform="rotate(${t * 400 * rnd(i)} ${-80 + k * 1440} ${(it.y || 200) + rnd(i + 2) * (it.h || 300)})"/>`; }).join('');
       case 'flag': return `<g transform="translate(${it.x},${it.y})"><path d="M0 0 L0 -180" stroke="${K}" stroke-width="6"/><path d="M0 -180 Q40 ${-190 + Math.sin(t * 6) * 10} 90 -175 L90 -125 Q40 ${-140 + Math.sin(t * 6) * 10} 0 -130Z" fill="${it.c || '#b8322a'}" stroke="${K}" stroke-width="3"/></g>`;
+      case 'palm': return palm(it, t, ilt);
+      case 'flames': return flames(it, t, ilt);
+      case 'revdoor': return revdoor(it, t, ilt);
+      case 'door': return door(it, t, ilt);
+      case 'bulb': return bulb(it, t, ilt);
+      case 'match': return match(it, t, ilt);
+      case 'pigeon': return pigeon(it, t, ilt);
+      case 'car': return car(it, t, ilt);
+      case 'piano': return piano(it);
+      case 'wreck': return wreck(it, t, ilt);
       case 'raw': return it.svg || '';
       default: return '';
     }
@@ -386,6 +573,10 @@ function fx(v, t, lt) {
   if (f.includes('snow') || f.includes('ash')) for (let i = 0; i < 60; i++) out += `<circle cx="${(rnd(i) * 1280 + t * 30) % 1280}" cy="${(rnd(i + 9) * 720 + t * (30 + rnd(i) * 40)) % 720}" r="${2 + rnd(i) * 3}" fill="#e8e6e2" opacity=".75"/>`;
   if (f.includes('spray')) for (let i = 0; i < 14; i++) { const k = (t * .9 + rnd(i)) % 1; out += `<circle cx="${rnd(i + 2) * 1280}" cy="${600 - k * 300}" r="${6 + rnd(i) * 10}" fill="#fff" opacity="${.6 * (1 - k)}"/>`; }
   const fl = flashAmt(v, t); if (fl) out += `<rect width="1280" height="720" fill="#eaf2ff" opacity="${fl * .45}"/>`;
+  if (v.smoke) { const k = v.smokeDur ? clamp((lt - (v.smokeAt || 0)) / v.smokeDur) : 1, h = 720 * v.smoke * k; out += `<rect width="1280" height="${h}" fill="#2a2a30" opacity=".66"/>` + Array.from({ length: 12 }, (_, i) => `<ellipse cx="${(i * 120 + t * 30) % 1400 - 60}" cy="${h}" rx="90" ry="${26 + 10 * Math.sin(t + i)}" fill="#2a2a30" opacity=".66"/>`).join(''); }
+  if (f.includes('embers')) for (let i = 0; i < 30; i++) { const k = (t * (.3 + rnd(i) * .4) + rnd(i + 5)) % 1; out += `<circle cx="${rnd(i + 1) * 1280 + Math.sin(t * 3 + i) * 20}" cy="${720 - k * 760}" r="${2 + rnd(i) * 3}" fill="#ffb02e" opacity="${.9 * (1 - k)}"/>`; }
+  if (f.includes('dark')) out += `<rect width="1280" height="720" fill="#05060a" opacity="${.62 + .06 * Math.sin(t * 13)}"/>`;
+  if (f.includes('glow')) out += `<rect width="1280" height="720" fill="#ff6a1a" opacity="${.12 + .05 * Math.sin(t * 9)}"/>`;
   if (f.includes('night') || (v.time === 'night')) out += `<rect width="1280" height="720" fill="#0a1530" opacity=".18"/>`;
   if (f.includes('sepia')) out += `<rect width="1280" height="720" fill="#a07a40" opacity=".18"/>`;
   return out;

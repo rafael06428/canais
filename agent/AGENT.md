@@ -165,6 +165,19 @@ In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `
 - Shorts after the first: real clicks on Criar (top right) then Enviar vídeos keep `ytUpload` defined; check `ytcp-uploads-file-picker input[type=file]` exists before starting (the first menu click sometimes only opens the menu).
 - After uploading the SRT, Editar legendas > Publicar must show the toast "Legendas em Inglês publicadas"; check it.
 
+**Notes from 2026-11-28:**
+- Scheduling: `agent/upload.js` now has `publish_at: 'YYYY-MM-DD HH:MM'` (Brasília) on a job, using the same `gcSchedule` the Getaway agent got working.
+  When `window.__state` is `need-screenshot`, take a `Claude_Browser__computer` screenshot (the calendar renders only after one), then run
+  `window.__shot = true`. Never press Escape with the calendar closed (closes the dialog, video becomes a draft).
+- The Edge voice service dropped ~75% of requests: `voice.py` now retries 40 times and caches every block in `<ep>/voice_cache`, so a failed
+  run only redoes missing blocks (just rerun the step). Voice for 95 scenes took ~20 min; start it early, in the background.
+- New cartoon pieces for the 1940s (engine.js): roles you42, sailor42, soldier42, date, woman42, waitress, busboy, waiter, bartender, gent, gent2,
+  owner, cowboy, fireman, doctor, nurse, doughboy, major, polar, scientist; backgrounds club, lounge, foyer, street, stadium, kitchen, hospital,
+  office, forest (WW1), ice (Antarctic); items palm (fireAt), flames (ceiling fire), revdoor (spin, jamAt), door (locked, brick, open, label),
+  bulb, match, pigeon, car (truck), piano, wreck (name); scene fields `smoke` (0-1, smokeAt/smokeDur) and fx `dark`, `glow`, `embers`.
+  Short blocks accept `offset` (seconds into the picture) so a loop's first second can start mid-action.
+- Cut Shorts: set `"footer"` short (e.g. "Full story: Cocoanut Grove, 1942"); the default "Full story: <title>" is cut off at 1080 px.
+
 The thumbnail upload is skipped automatically until the channel is phone-verified. Once it is verified, the custom thumbnail goes up with the long video.
 
 ### 5. Wrap up

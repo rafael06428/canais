@@ -13,10 +13,16 @@ GAP_BLOCK = 0.55   # pause between blocks (scenes)
 PROXY = os.environ.get("HTTPS_PROXY") or None
 
 
+CACHE = None   # set in build(): per-block cache, so a failed run only redoes the missing blocks
+
+
 async def synth(text, voice, rate):
-    import edge_tts
+    import edge_tts, hashlib
+    key = hashlib.md5(f"{voice}|{rate}|{text}".encode()).hexdigest()
+    if CACHE and os.path.exists(f"{CACHE}/{key}.json"):
+        return open(f"{CACHE}/{key}.mp3", "rb").read(), json.load(open(f"{CACHE}/{key}.json"))
     last = None
-    for attempt in range(12):     # the Edge service drops ~40% of requests at times: retry a lot
+    for attempt in range(40):     # the Edge service drops 40-75% of requests at times: retry a lot
         try:
             com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary", proxy=PROXY)
             audio = bytearray(); words = []
@@ -27,9 +33,11 @@ async def synth(text, voice, rate):
                     t0 = ch["offset"] / 1e7; words.append([ch["text"], t0, t0 + ch["duration"] / 1e7])
             if not audio:
                 raise RuntimeError("empty audio")
+            if CACHE:
+                open(f"{CACHE}/{key}.mp3", "wb").write(bytes(audio)); json.dump(words, open(f"{CACHE}/{key}.json", "w"))
             return bytes(audio), words
         except Exception as e:  # network hiccup: retry
-            last = e; await asyncio.sleep(2 + 2 * attempt)
+            last = e; await asyncio.sleep(min(1.5 + attempt, 6))
     raise last
 
 
@@ -90,6 +98,7 @@ def align(text, words):
 def build(spec, out):
     voice = spec.get("voice", "en-US-AndrewMultilingualNeural"); rate = spec.get("rate", "+0%")
     lead = spec.get("lead", 0.25)
+    global CACHE; CACHE = os.path.join(os.path.dirname(os.path.abspath(out)), "voice_cache"); os.makedirs(CACHE, exist_ok=True)
     parts = [np.zeros(int(SR * lead), np.float32)]; t = lead; allw = []; spans = []
     async def all_blocks():
         sem = asyncio.Semaphore(4)

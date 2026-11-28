@@ -2,7 +2,7 @@
 // Paste this file, then start a job in the background and poll it (the JS tool times out at ~50 s):
 //   window.__res = null; ytUpload(JOB).then(r => window.__res = r).catch(e => window.__res = 'ERR ' + e); 'started'
 //   ... later: window.__state + ' | ' + window.__res
-// JOB = {files: [raw urls, joined in order], name, title, description, tags: [..], thumb: url|null}
+// JOB = {files: [raw urls, joined in order], name, title, description, tags: [..], thumb: url|null, publish_at: 'YYYY-MM-DD HH:MM' (Brasília, optional: Programar)}
 // Publishes as PUBLIC, not made for kids, altered/synthetic content = YES, no paid promotion.
 window.ytUpload = async (job) => {
   const s = ms => new Promise(r => setTimeout(r, ms));
@@ -58,7 +58,8 @@ window.ytUpload = async (job) => {
   if (boxes[0].innerText.trim() !== job.title.slice(0, 100).trim()) throw 'title did not stick: ' + boxes[0].innerText;
   await s(500); st('steps');
   for (let i = 0; i < 3; i++) { d.querySelector('#next-button').click(); await s(1800); }
-  d.querySelector('tp-yt-paper-radio-button[name=PUBLIC]').click(); await s(800);
+  if (job.publish_at) { st('need-screenshot'); window.__shot = false; for (let i = 0; i < 90 && !window.__shot; i++) await s(1000); st('schedule'); await window.gcSchedule(d, job.publish_at); }   // when state is 'need-screenshot': take a screenshot, then set window.__shot = true (calendar renders only after one)
+  else { d.querySelector('tp-yt-paper-radio-button[name=PUBLIC]').click(); await s(800); }
   st('uploading');
   const done = d.querySelector('#done-button');
   for (let i = 0; i < 1800 && done.getAttribute('aria-disabled') === 'true'; i++) {
@@ -72,5 +73,37 @@ window.ytUpload = async (job) => {
   document.querySelector('ytcp-uploads-still-processing-dialog #close-button, ytcp-video-share-dialog #close-button')?.click();
   st('done');
   return link;
+};
+// Programar (agendar) na etapa Visibilidade. when = 'YYYY-MM-DD HH:MM' no horário de Brasília (fuso "(GMT-0300) Horário local").
+// O que funcionou em 28/11/2026: hora PRIMEIRO (digitar + Enter + blur: o modelo só atualiza no blur), depois o dia
+// clicando no calendário (o campo de data não aceita digitação). Com o painel escondido, o calendário só desenha
+// depois de um screenshot: o agente tira um screenshot logo antes. Nunca apertar Escape com o calendário fechado
+// (fecha o diálogo de envio e o vídeo vira rascunho).
+window.gcSchedule = async (d, when) => {
+  const s = ms => new Promise(r => setTimeout(r, ms));
+  const [ymd, hm] = when.split(' '); const [Y, M, D] = ymd.split('-').map(Number); const [hh, mm] = hm.split(':').map(Number);
+  const MON = ['jan.', 'fev.', 'mar.', 'abr.', 'mai.', 'jun.', 'jul.', 'ago.', 'set.', 'out.', 'nov.', 'dez.'];
+  if (!d.querySelector('ytcp-visibility-scheduler')?.offsetParent) { d.querySelector('#second-container-expand-button')?.click(); await s(1200); }
+  const sch = d.querySelector('ytcp-visibility-scheduler'); if (!sch) throw 'no scheduler';
+  // 1) hora
+  const ti = sch.querySelector('tp-yt-paper-input input, input');
+  const hmTxt = String(hh).padStart(2, '0') + ':' + String(mm).padStart(2, '0');
+  ti.focus(); ti.select(); document.execCommand('insertText', false, hmTxt);
+  ti.dispatchEvent(new Event('input', { bubbles: true })); ti.dispatchEvent(new Event('change', { bubbles: true }));
+  for (const t of ['keydown', 'keypress', 'keyup']) ti.dispatchEvent(new KeyboardEvent(t, { key: 'Enter', code: 'Enter', keyCode: 13, which: 13, bubbles: true }));
+  await s(700); ti.blur(); await s(900);
+  // 2) dia (calendário)
+  if (!document.querySelector('ytcp-date-picker')?.offsetParent) { sch.querySelector('#datepicker-trigger ytcp-dropdown-trigger').click(); await s(1200); }
+  let months = [];
+  for (let i = 0; i < 30 && !months.length; i++) { const dp = document.querySelector('ytcp-date-picker'); months = dp ? [...dp.querySelectorAll('.calendar-month')] : []; if (!months.length) await s(500); }
+  const m = months.find(x => (x.getAttribute('aria-label') || '').trim() === `${MON[M - 1]} de ${Y}`);
+  if (!m) throw 'month not found ' + MON[M - 1] + ' ' + Y + ' in [' + months.map(x => x.getAttribute('aria-label')).join(',') + '] (take a screenshot first if empty)';
+  const day = [...m.querySelectorAll('.calendar-day')].find(x => x.innerText.trim() === String(D) && !/disabled/.test(x.className));
+  if (!day) throw 'day not selectable ' + D;
+  day.click(); await s(1200);   // clicar no dia fecha o calendário
+  const mo = JSON.parse(sch.getAttribute('model') || '{}');
+  const ok = mo.date && mo.date.year === Y && mo.date.month === M - 1 && mo.date.day === D && mo.selectedTimeOfDayValue === hh * 3600 + mm * 60 && (mo.selectedTimezoneIndex || 0) === 0;
+  if (!ok) throw 'schedule did not stick: ' + sch.getAttribute('model');
+  if (!/Programar|Schedule/.test(d.querySelector('#done-button').innerText)) throw 'done button is not Programar';
 };
 'ytUpload ready';
