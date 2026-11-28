@@ -19,27 +19,39 @@ Reference episode: https://youtu.be/wCn41oG4bnA (24 Hours in Pompeii).
 - Be historically accurate. Where historians disagree, say so in the narration ("most historians think…").
 - Nothing graphic: describe danger and death with restraint, as in the Pompeii episode. No gore in prompts.
 
-## Posting cadence and Shorts plan (owner's decision, 2026-11-27)
-The owner wants **one post every ~5 hours** and Shorts built to win subscribers. Each daily run still makes 1 long video + 4 Shorts,
-but they go out spread over the day:
-- **Long video:** publish right away (Public), as before.
-- **Shorts:** upload all 4 in the same run, but in the Visibility step choose **Programar (Schedule)** instead of Público,
-  at long-publish time **+5 h, +10 h, +15 h, +20 h** (Brasília time; round to :00 or :30). The PC only needs to be on during the upload.
-  `ytUpload` does not do this yet: after the dialog reaches the Visibility step, expand "Programar", set the date and time with real clicks/typing
-  (find + computer tools), then click "Programar". Check on Conteúdo > Shorts that each one shows "Programado" with the right time.
-  If scheduling fails twice for a Short, publish it as Público immediately (never leave it as a private draft) and say so in the push.
-  The first run that gets this working must save the exact working steps here (or in upload.js as an optional `schedule` field).
-- Subtitles on the long video and the audio loop on every Short stay mandatory.
+## Posting cadence and Shorts plan (owner's decision, 2026-11-27): FOCUS ON VIRAL SHORTS
+Shorts are the growth engine (28 days to 2026-11-27: Shorts brought almost all of the 6.5k views; long videos 2-40 views each).
+The long video stays daily: it is where Shorts send people and what builds watch hours for monetization.
 
-Shorts rules (from our own numbers, 28 days to 2026-11-27: Shorts brought almost all of the 6.5k views; long videos 2-40 views each):
+**Every daily run makes 1 long video + 6 Shorts:**
+- **4 cut Shorts** from today's long video (blocks use `"src"`: long scene indexes).
+- **2 standalone Shorts** on other short, strange, true stories (any era/region), each with its own research (at least 2 sources),
+  and their own visuals: in the cartoon pipeline give every block its own `"v"` object instead of `"src"` (see agent/cartoon/README.md),
+  and set `"footer": "Follow for a new story every day"`. Their description has the hook line and the channel's newest long video link.
+  Never repeat a story already in topics_done.json (log standalone Short titles there too, in the day's `"shorts"` list).
+
+**Schedule (one post every ~3.5 h):** publish the long video right away (Public). Upload the 6 Shorts in the same run but choose
+**Programar (Schedule)** in the Visibility step, at long-publish time **+3.5 h, +7 h, +10.5 h, +14 h, +17.5 h, +21 h** (Brasília; round to :00/:30),
+alternating cut / standalone. The PC only needs to be on during the upload. `ytUpload` does not schedule yet: when the dialog reaches the
+Visibility step, expand "Programar", set date and time with real clicks/typing (find + computer tools), click "Programar", and check on
+Conteúdo > Shorts that each one shows "Programado" at the right time. If scheduling fails twice for a Short, publish it as Público right away
+(never leave a private draft) and say so in the push. The first run that gets this working must write the exact working steps here
+(or add an optional `schedule` field to upload.js). 7 uploads per day stays under the channel's daily limit.
+Subtitles on the long video and the audio loop on every Short stay mandatory.
+
+**Shorts rules:**
 1. **Title = one concrete, strange detail** (an object, an animal, an exact number or deadline, one person's fate), never a generic question.
    Winners: "The Whale That Sank a Ship on Purpose" (864), "Found in Tsunami Debris: A Young Man and His Dog" (709),
    "You Have 2 Hours and 40 Minutes on the Titanic" (618), "Your Ticket Decided If You Survived the Titanic" (582).
    Losers: "Who Actually Survived Pompeii?" (10), "They Waited 36 Hours to Tell This City" (19), "The Admiral Who Sailed Toward Vesuvius" (24).
-2. **25-35 s**, the hook question or shocking fact in the **first second**, loop at the end (as always).
-3. Each Short must stand alone (no "as we saw"), and its description starts with the hook line and the long video link.
-4. When the Short is published, set the long video as its **Vídeo relacionado / Related video** in the Short's details if the option exists (best effort).
-5. Of the 4 Shorts: 2 "you must choose" POV Shorts, 1 strange-object/animal/number Short, 1 parallel-person Short.
+2. **25-35 s** (70-100 words), the hook question or shocking fact in the **first second**, loop at the end (as always).
+3. Each Short stands alone (no "as we saw"); its description starts with the hook line, then the long video link.
+4. After publishing, set the long video as the Short's **Vídeo relacionado / Related video** in its details if the option exists (best effort).
+5. The 4 cuts: 2 "you must choose" POV, 1 strange object/animal/number, 1 parallel person.
+6. **Repeat winners:** at the start of the publish step, open Conteúdo > Shorts sorted by views. Every Short published 3-10 days ago with
+   **500+ views** is a winning formula: one of today's 2 standalone Shorts must copy its formula (same title pattern and hook type, different
+   true story), e.g. the whale → "The [animal] that changed [event]"; the ticket → "Your [object] decided if you survived [event]".
+   Note the formula you copied in the day's topics_done entry (`"copied_formula"`).
 
 ## Visual style (owner's decision, 2026-11-25): CARTOON
 Since 2026-11-25 every episode is made in the **cartoon style** (round-head characters, flat blurred backgrounds, date badge,

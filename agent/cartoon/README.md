@@ -27,6 +27,8 @@ plus `"style": "cartoon"`, and:
 - `thumb_scene` (scene index), `thumb_t` (seconds into that scene), `thumb_dx` (shift its items right to make room for the text)
 - each Short block: `{"text", "prompt": null, "src": <long scene index>, "fx": <optional x to centre the 9:16 crop>}`.
   The last block (the loop) automatically shows the first block's picture.
+- **Standalone Short** (a story that is not in the long video): give each block its own `"v"` object (same format as a scene) instead of `"src"`,
+  and `"focus"` inside it for the 9:16 crop. You can mix: some blocks with `"src"`, some with `"v"`. Add `"footer"` to the Short.
 
 ### The "v" object
 `{"bg": ..., "items": [...], "time": "day|dusk|night|dawn|grey", "storm": 0-3, "fx": [...], "badge": ["NOV 26, 1703", "8 AM"],

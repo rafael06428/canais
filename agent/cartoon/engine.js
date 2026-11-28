@@ -496,15 +496,15 @@ function frameShort(k, t) {
   const S = E.shorts[k], SV = window.SHORTV[k], bl = SV.blocks, n = bl.length;
   const st = bl.map((b, i) => i === 0 ? 0 : b[0] - .12);
   let i = 0; while (i + 1 < n && t >= st[i + 1]) i++;
-  const blk = i === n - 1 ? Object.assign({}, S.blocks[i], { src: S.blocks[0].src, fx: S.blocks[0].fx, offset: (S.blocks[0].offset || 0) }) : S.blocks[i], src = blk.src;
-  const v = SC[src].v, lt = t - st[i] + (blk.offset || 0);
+  const blk = i === n - 1 ? Object.assign({}, S.blocks[i], { src: S.blocks[0].src, v: S.blocks[0].v, fx: S.blocks[0].fx, offset: (S.blocks[0].offset || 0) }) : S.blocks[i], src = blk.src;
+  const v = blk.v || SC[src].v, lt = t - st[i] + (blk.offset || 0);   // standalone Shorts give each block its own "v"
   const fx_ = blk.fx != null ? blk.fx : (v.fx_short != null ? v.fx_short : (v.focus || 640));
   const x0 = clamp(fx_ - 202.5, 0, 1280 - 405);
   SHORT = { x0 };
   const inner = sceneSvg(v, t, lt, 6);
   const cf = clamp((t - st[i]) / .2);
   let prev = '';
-  if (i > 0 && cf < 1) { const pb = S.blocks[i - 1], pv = SC[pb.src].v, pfx = pb.fx != null ? pb.fx : (pv.focus || 640); SHORT = { x0: clamp(pfx - 202.5, 0, 875) }; prev = `<svg x="0" y="0" width="1080" height="1920" viewBox="${clamp(pfx - 202.5, 0, 875)} 0 405 720" preserveAspectRatio="xMidYMid slice">${DEFS}${sceneSvg(pv, t, t - st[i - 1], 6)}</svg>`; }
+  if (i > 0 && cf < 1) { const pb = S.blocks[i - 1], pv = pb.v || SC[pb.src].v, pfx = pb.fx != null ? pb.fx : (pv.focus || 640); SHORT = { x0: clamp(pfx - 202.5, 0, 875) }; prev = `<svg x="0" y="0" width="1080" height="1920" viewBox="${clamp(pfx - 202.5, 0, 875)} 0 405 720" preserveAspectRatio="xMidYMid slice">${DEFS}${sceneSvg(pv, t, t - st[i - 1], 6)}</svg>`; }
   SHORT = { x0 }; const inner2 = inner; SHORT = null;
   const main = `<svg x="0" y="0" width="1080" height="1920" viewBox="${x0} 0 405 720" preserveAspectRatio="xMidYMid slice" opacity="${prev ? ease(cf) : 1}">${DEFS}${inner}</svg>`;
   const lab = S.label, lw = lab.length * 30 + 70;
