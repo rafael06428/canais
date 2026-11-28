@@ -128,5 +128,57 @@
    "https://youtube.com/shorts/uDvcTQjKwDo"
   ],
   "pending": []
+ },
+ {
+  "date": "2026-11-28",
+  "slug": "cocoanut-grove-1942",
+  "title": "24 Hours in the Cocoanut Grove Fire, 1942: Would You Have Survived?",
+  "style": "cartoon",
+  "long_url": "https://youtu.be/djy3Oi7q1vE",
+  "shorts": [
+   {
+    "url": "https://youtube.com/shorts/JCymi-uDfN0",
+    "title": "1,000 People and One Spinning Door. Where Do You Run?",
+    "type": "cut",
+    "scheduled": "2026-11-28 14:00"
+   },
+   {
+    "url": "https://youtube.com/shorts/6MykK9-HvBM",
+    "title": "The Pigeon That Saved 194 Soldiers",
+    "type": "standalone",
+    "story": "Cher Ami, WW1 Lost Battalion 1918",
+    "scheduled": "2026-11-28 17:30"
+   },
+   {
+    "url": "https://youtube.com/shorts/H6QczqcmCuc",
+    "title": "The Palm Tree Is Smoking. Do You Leave Your Drink?",
+    "type": "cut",
+    "scheduled": "2026-11-28 21:00"
+   },
+   {
+    "url": "https://youtube.com/shorts/vi4gnIgOKCA",
+    "title": "Found 3,000 Meters Under the Ice: Shackleton's Lost Ship",
+    "type": "standalone",
+    "story": "Endurance wreck found 2022",
+    "scheduled": "2026-11-29 00:30"
+   },
+   {
+    "url": "https://youtube.com/shorts/CCotRnWI1KA",
+    "title": "Why Every Revolving Door Has a Normal Door Next to It",
+    "type": "cut",
+    "scheduled": "2026-11-29 04:00"
+   },
+   {
+    "url": "https://youtube.com/shorts/2jDZ9hQ4mj4",
+    "title": "He Was 16 and Lit a Match to Fix a Light Bulb",
+    "type": "cut",
+    "scheduled": "2026-11-29 07:30"
+   }
+  ],
+  "copied_formula": [
+   "The Whale That Sank a Ship on Purpose (864 views) -> The Pigeon That Saved 194 Soldiers",
+   "Found in Tsunami Debris: A Young Man and His Dog (712) -> Found 3,000 Meters Under the Ice: Shackleton's Lost Ship"
+  ],
+  "pending": []
  }
 ]

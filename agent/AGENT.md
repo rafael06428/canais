@@ -176,6 +176,14 @@ In the **built-in browser** (`mcp__remote-devices__Claude_Browser__*`), tab on `
   office, forest (WW1), ice (Antarctic); items palm (fireAt), flames (ceiling fire), revdoor (spin, jamAt), door (locked, brick, open, label),
   bulb, match, pigeon, car (truck), piano, wreck (name); scene fields `smoke` (0-1, smokeAt/smokeDur) and fx `dark`, `glow`, `embers`.
   Short blocks accept `offset` (seconds into the picture) so a loop's first second can start mid-action.
+- 2026-11-28 publish flow that worked end to end (long + subtitles + 6 scheduled Shorts in ~20 min): paste upload.js once, then for every
+  Short close the share dialog (`ytcp-video-share-dialog #close-button`), real-click **Criar** then **Enviar vídeos** (find refs), start `ytUpload`
+  with `publish_at`, screenshot at `need-screenshot`, set `window.__shot = true`. If "Ainda estamos verificando" appears, click its **Ok**
+  (JS click works), wait for "Verificações concluídas", then click `#done-button` (Programar/Publicar) until the "Vídeo programado" dialog shows.
+- Related video on Shorts works: Short's `/edit` page → scroll to "Vídeo relacionado" → pencil (≈ x 755, y 330 in an 800x600 frame) →
+  "Escolha um vídeo específico" lists the newest long first → click it → check the field shows the long's title → **Salvar** ("Alterações salvas").
+- Custom thumbnails now upload (the long's own thumb appeared in Studio).
+- Never queue a step with `while pgrep -f "<cmd>"` inside `bash -c`: the loop's own command line matches and it waits forever.
 - Cut Shorts: set `"footer"` short (e.g. "Full story: Cocoanut Grove, 1942"); the default "Full story: <title>" is cut off at 1080 px.
 
 The thumbnail upload is skipped automatically until the channel is phone-verified. Once it is verified, the custom thumbnail goes up with the long video.
