@@ -1,0 +1,22 @@
+{
+ "note": "Fila do The Getaway Case. O agente pega o primeiro item que não está em state.json videos. Prioridade = assuntos famosos (pedido do dono, 26/11/2026). O dono pode reordenar ou incluir itens com notes.",
+ "queue": [
+  {"slug": "db-cooper", "topic": "D.B. Cooper and the hijacking of Northwest Orient Flight 305 (1971)", "kind": "crime", "angle": "the only unsolved US airplane hijacking: what the FBI files say, the 1980 money find, why the case was closed in 2016"},
+  {"slug": "madoff", "topic": "Bernie Madoff's $65 billion Ponzi scheme", "kind": "crime", "angle": "how it ran for decades, the warnings the SEC ignored (Harry Markopolos), how it collapsed in 2008"},
+  {"slug": "alcatraz-1962", "topic": "The 1962 escape from Alcatraz (Morris and the Anglin brothers)", "kind": "crime", "angle": "dummy heads, raincoat raft, what the FBI found, never found"},
+  {"slug": "theranos", "topic": "Elizabeth Holmes and Theranos", "kind": "crime", "angle": "the blood test that never worked; convicted 2022"},
+  {"slug": "mh370", "topic": "The disappearance of Malaysia Airlines Flight MH370 (2014)", "kind": "mystery", "angle": "the last words, the radar turn, the debris; say clearly what is known and what is not, accuse no one"},
+  {"slug": "fyre-festival", "topic": "Fyre Festival (2017)", "kind": "crime", "angle": "luxury festival that became a disaster; organizer convicted of fraud"},
+  {"slug": "anna-delvey", "topic": "Anna Sorokin (Anna Delvey), the fake heiress", "kind": "crime", "angle": "how she fooled New York banks and hotels; convicted 2019"},
+  {"slug": "el-chapo-tunnel", "topic": "El Chapo's 2015 tunnel escape from Altiplano prison", "kind": "crime", "angle": "1.5 km tunnel with a motorbike on rails; no graphic violence"},
+  {"slug": "mona-lisa-1911", "topic": "The 1911 theft of the Mona Lisa", "kind": "crime", "angle": "Vincenzo Peruggia walked out with it; how it made the painting world-famous"},
+  {"slug": "gardner-heist", "topic": "The 1990 Isabella Stewart Gardner Museum heist", "kind": "crime", "angle": "fake police, 13 works, empty frames still on the walls; never accuse living suspects"},
+  {"slug": "tell-tale-heart", "topic": "\"The Tell-Tale Heart\" by Edgar Allan Poe (1843)", "kind": "fiction", "angle": "classic tale retold in the channel's style; mark as fiction in title, narration and description"},
+  {"slug": "antwerp-diamond-heist", "topic": "The 2003 Antwerp Diamond Centre heist", "kind": "crime", "angle": "the 'impenetrable' vault; Leonardo Notarbartolo convicted"},
+  {"slug": "amelia-earhart", "topic": "The disappearance of Amelia Earhart (1937)", "kind": "mystery", "angle": "last radio calls, the main theories and their evidence"},
+  {"slug": "victor-lustig", "topic": "Victor Lustig 'sells' the Eiffel Tower (1925)", "kind": "crime", "angle": "the con, how he did it twice, his later counterfeiting"},
+  {"slug": "great-train-robbery", "topic": "The Great Train Robbery (UK, 1963)", "kind": "crime", "angle": "the mail train heist and Ronnie Biggs's escape to Brazil"},
+  {"slug": "mary-celeste", "topic": "The Mary Celeste (1872)", "kind": "mystery", "angle": "ship found intact with no one aboard; theories vs evidence"},
+  {"slug": "banco-central-fortaleza", "topic": "The 2005 Banco Central tunnel heist in Fortaleza, Brazil", "kind": "crime", "angle": "78 m tunnel from a fake landscaping company"}
+ ]
+}

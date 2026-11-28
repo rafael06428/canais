@@ -1,0 +1,5 @@
+[
+ {"slug": "records", "hook": ["THE \"CATCH ME IF", "YOU CAN\" CON MAN WAS", "*IN PRISON?*"], "segments": [[18.30, 48.45]]},
+ {"slug": "checks", "hook": ["$2.5 MILLION", "IN FAKE CHECKS?", "*THE REAL NUMBER*"], "segments": [[0.0, 9.65], [41.40, 48.45], [60.0, 66.3]]},
+ {"slug": "confession", "hook": ["HE ADMITTED IT", "*IN 2002*"], "segments": [[9.65, 18.35], [48.45, 59.95], [60.0, 66.3]]}
+]
